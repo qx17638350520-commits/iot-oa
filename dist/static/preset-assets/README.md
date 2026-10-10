@@ -1,0 +1,1 @@
+Original vector illustrations authored for the preset teaching demo. Not photographs, not acquired device data. All visible SAMPLE results are fixed fixtures. Training evidence is separately attributed in preset-replay.js.

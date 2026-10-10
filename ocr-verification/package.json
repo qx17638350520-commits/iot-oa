@@ -1,0 +1,17 @@
+{
+  "name": "local-ocr-workbench-tests",
+  "version": "1.0.0",
+  "description": "Self-hosted Chinese and English OCR workbench and genuine CPU/WASM validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd .. && node --require ./ocr-verification/use-bundled-core.cjs ocr-verification/real-ocr.cjs && node --require ./ocr-verification/use-bundled-core.cjs ocr-verification/extended-real-ocr.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "tesseract.js": "6.0.1"
+  },
+  "private": true
+}

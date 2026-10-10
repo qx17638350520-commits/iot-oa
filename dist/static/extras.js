@@ -318,6 +318,7 @@
     action(c,'neural-predict',()=>{const x=s.model.features.map((_,i)=>readNumber(c,'predict-'+i)),result=predict(s.model,x);c.querySelector('#predict-result').innerHTML=`<p>预测类别：<strong>${esc(result[0].label)}</strong></p>${bars(result.map(r=>[r.label,r.probability]),v=>(v*100).toFixed(2)+'%')}`;});
     action(c,'neural-stop',()=>{ctx.cancel=true;c.querySelector('#neural-status').textContent='正在停止并保存最后完成的轮次…';});
     action(c,'neural-train',async()=>{
+      if(root.PresetDemo?.enabled)throw Error('预设演示模式仅支持流程回放，实际训练已关闭。');
       const params={hidden:readNumber(c,'neural-hidden'),rate:readNumber(c,'neural-rate'),epochs:readNumber(c,'neural-epochs'),seed:readNumber(c,'neural-seed')};
       if(![4,8,12,16].includes(params.hidden)||!finite(params.rate)||params.rate<.001||params.rate>1||!Number.isInteger(params.epochs)||params.epochs<1||params.epochs>400||!Number.isInteger(params.seed)||params.seed<1||params.seed>999999)throw new Error('请检查隐藏层、学习率、轮数与随机种子范围');
       ctx.csv=c.querySelector('#neural-csv').value;ctx.training=true;ctx.cancel=false;s.params=params;s.status='running';

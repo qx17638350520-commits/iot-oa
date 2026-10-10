@@ -86,6 +86,7 @@
     })().catch(e=>{modelPromise=null;lastPhase='模型加载失败';throw e;});return modelPromise;
   }
   async function detect(image,options={}){
+    if(host.PresetDemo?.enabled)throw Error('预设演示模式仅支持样例 / 流程回放，实际模型执行已关闭。');
     if(busy)throw new Error('当前已有识别任务，请稍候。');
     const threshold=Number(options.threshold??.5);
     if(!Number.isFinite(threshold)||threshold<.1||threshold>.95)throw new Error('请设置 10%–95% 的置信度阈值');

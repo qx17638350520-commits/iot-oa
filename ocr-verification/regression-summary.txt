@@ -1,0 +1,1 @@
+Both integration lifecycle tests use simulated DOM only. See real-ocr-result.json and extended-real-ocr-result.json for actual same-asset CPU/WASM tests. No browser screenshots or videos were generated.

@@ -11,7 +11,7 @@
   'use strict';
   const TYPES = { single: '单选题', multiple: '多选题', truefalse: '判断题', fill: '填空题', compound: '组合题', custom: '自定义题' };
   const LEVELS = ['初级', '中级', '高级'];
-  const DRAFT_KEY = 'logistics-exam-draft-v1';
+  const DRAFT_KEY = window.PresetDemo?.enabled?window.PresetDemo.storageKey('exam_draft'):'logistics-exam-draft-v1';
   const esc = value => String(value ?? '').replace(/[&<>"']/g, x => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
   const uid = prefix => `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
   const copy = value => JSON.parse(JSON.stringify(value));
@@ -25,7 +25,7 @@
   const round = n => Math.round((Number(n) + Number.EPSILON) * 1000000) / 1000000;
   const object = value => !!value && typeof value === 'object' && !Array.isArray(value);
   const safeId = value => typeof value === 'string' && /^[A-Za-z0-9_\-:.]{1,120}$/.test(value) && !['__proto__','constructor','prototype'].includes(value);
-  const PROFILE_KEY = 'iot-academy-local-student-v1';
+  const PROFILE_KEY = window.PresetDemo?.enabled?window.PresetDemo.storageKey('exam_profile'):'iot-academy-local-student-v1';
   function weightedPoints(rows, points) {
     const total=rows.reduce((n,row)=>n+Number(row.weight),0);let used=0;
     return rows.map((row,i)=>{const part=i===rows.length-1?round(points-used):round(points*row.weight/total);used=round(used+part);return part;});

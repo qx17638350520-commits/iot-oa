@@ -1,0 +1,191 @@
+{
+  "test": "genuine Tesseract.js 7 CPU/WASM bilingual image recognition",
+  "passed": true,
+  "fixture": "chinese-english.png",
+  "expected": [
+    "工业传感器",
+    "温度检测",
+    "INDUSTRIAL SENSOR",
+    "TH-204",
+    "DC 24V",
+    "安全生产",
+    "注意防护"
+  ],
+  "actual": {
+    "schema": "local-text-ocr.v1",
+    "engine": "Tesseract.js",
+    "engineVersion": "6.0.1",
+    "languages": "chi_sim+eng",
+    "text": "工业传感器 进度检测\nINDUSTRIAL SENSOR\n\nMODEL TH-204 POWER DC 24V\n安全生产 注意防护\n",
+    "confidence": 82,
+    "words": [
+      {
+        "text": "工业",
+        "confidence": 96,
+        "bbox": {
+          "x0": 73,
+          "y0": 64,
+          "x1": 205,
+          "y1": 118
+        }
+      },
+      {
+        "text": "传感器",
+        "confidence": 92,
+        "bbox": {
+          "x0": 214,
+          "y0": 60,
+          "x1": 358,
+          "y1": 140
+        }
+      },
+      {
+        "text": "进度",
+        "confidence": 0,
+        "bbox": {
+          "x0": 404,
+          "y0": 64,
+          "x1": 504,
+          "y1": 118
+        }
+      },
+      {
+        "text": "检测",
+        "confidence": 17,
+        "bbox": {
+          "x0": 507,
+          "y0": 64,
+          "x1": 601,
+          "y1": 118
+        }
+      },
+      {
+        "text": "INDUSTRIAL",
+        "confidence": 90,
+        "bbox": {
+          "x0": 76,
+          "y0": 184,
+          "x1": 397,
+          "y1": 229
+        }
+      },
+      {
+        "text": "SENSOR",
+        "confidence": 91,
+        "bbox": {
+          "x0": 415,
+          "y0": 184,
+          "x1": 635,
+          "y1": 229
+        }
+      },
+      {
+        "text": "MODEL",
+        "confidence": 92,
+        "bbox": {
+          "x0": 76,
+          "y0": 299,
+          "x1": 264,
+          "y1": 344
+        }
+      },
+      {
+        "text": "TH-204",
+        "confidence": 91,
+        "bbox": {
+          "x0": 281,
+          "y0": 300,
+          "x1": 470,
+          "y1": 344
+        }
+      },
+      {
+        "text": "POWER",
+        "confidence": 96,
+        "bbox": {
+          "x0": 491,
+          "y0": 299,
+          "x1": 685,
+          "y1": 344
+        }
+      },
+      {
+        "text": "DC",
+        "confidence": 95,
+        "bbox": {
+          "x0": 706,
+          "y0": 299,
+          "x1": 774,
+          "y1": 344
+        }
+      },
+      {
+        "text": "24V",
+        "confidence": 92,
+        "bbox": {
+          "x0": 792,
+          "y0": 300,
+          "x1": 887,
+          "y1": 343
+        }
+      },
+      {
+        "text": "安全",
+        "confidence": 95,
+        "bbox": {
+          "x0": 74,
+          "y0": 409,
+          "x1": 184,
+          "y1": 463
+        }
+      },
+      {
+        "text": "生产",
+        "confidence": 95,
+        "bbox": {
+          "x0": 201,
+          "y0": 409,
+          "x1": 298,
+          "y1": 463
+        }
+      },
+      {
+        "text": "注意",
+        "confidence": 96,
+        "bbox": {
+          "x0": 343,
+          "y0": 408,
+          "x1": 453,
+          "y1": 463
+        }
+      },
+      {
+        "text": "防护",
+        "confidence": 95,
+        "bbox": {
+          "x0": 454,
+          "y0": 409,
+          "x1": 543,
+          "y1": 463
+        }
+      }
+    ],
+    "automaticInference": true,
+    "inferenceLocation": "node_cpu_wasm_test",
+    "semantics": "text_only_no_gauge_or_diagram_understanding",
+    "recognizedAt": "2026-10-10T09:55:43.725Z"
+  },
+  "progressStages": [
+    "loading tesseract core",
+    "initializing tesseract",
+    "loading language traineddata",
+    "initializing api",
+    "recognizing text"
+  ],
+  "knownMisrecognition": {
+    "expected": "温度检测",
+    "actual": "进度检测",
+    "note": "Synthetic fixture has one Chinese character error; users must proofread"
+  },
+  "browserUI": "not_run_in_this_environment"
+}

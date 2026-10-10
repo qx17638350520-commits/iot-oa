@@ -1,0 +1,11 @@
+const fs=require('fs'),path=require('path'),assert=require('assert/strict');
+const Tesseract=require('tesseract.js');
+const {Engine}=require('../dist/static/ocr/local-ocr');
+(async()=>{const engine=new Engine({Tesseract,workerOptions:{workerPath:require.resolve('tesseract.js/src/worker-script/node/index.js'),corePath:undefined,langPath:path.resolve(__dirname,'../dist/static/ocr/vendor/lang'),cacheMethod:'none'}});const progress=[];
+const r=await engine.recognize(path.join(__dirname,'chinese-english.png'),{onProgress:e=>progress.push(e.status)});
+r.inferenceLocation='node_cpu_wasm_test';console.log(r.text);console.log('confidence:',r.confidence,'word boxes:',r.words.length);
+const compact=r.text.replace(/\s/g,'');for(const phrase of ['工业传感器','INDUSTRIALSENSOR','TH-204','DC24V','安全生产','注意防护'])assert(compact.includes(phrase),`Missing: ${phrase}`);assert(r.words.length>10);assert(r.words.every(w=>w.bbox.x1>w.bbox.x0&&w.bbox.y1>w.bbox.y0));assert(progress.includes('recognizing text'));
+const report={test:'genuine Tesseract.js 7 CPU/WASM bilingual image recognition',passed:true,fixture:'chinese-english.png',expected:['工业传感器','温度检测','INDUSTRIAL SENSOR','TH-204','DC 24V','安全生产','注意防护'],actual:r,progressStages:[...new Set(progress)],knownMisrecognition:{expected:'温度检测',actual:'进度检测',note:'Synthetic fixture has one Chinese character error; users must proofread'},browserUI:'not_run_in_this_environment'};
+fs.writeFileSync(path.join(__dirname,'real-ocr-result.json'),JSON.stringify(report,null,2));
+const p=engine.recognize(path.join(__dirname,'chinese-english.png'));setTimeout(()=>engine.cancel(),50);await assert.rejects(p,/取消/);console.log('Cancellation PASS');
+})().catch(e=>{console.error(e);process.exitCode=1;});
