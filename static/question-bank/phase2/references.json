@@ -1,0 +1,1297 @@
+[
+  {
+    "id": "legacy-st-errata",
+    "title": "STMicroelectronics STM32F303x6/x8 Rev Z device limitations — Errata sheet",
+    "url": "https://www.st.com/resource/en/errata_sheet/es0246-stm32f303x6x8-rev-z-device-limitations-stmicroelectronics.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "厂商针对特定硅片版本公布限制和可用规避措施；用于认识文档类型，不要求学生使用该特定芯片。"
+  },
+  {
+    "id": "ti-sar-settling",
+    "title": "TI Precision Hub: Settling time challenge and improvement tips",
+    "url": "https://e2e.ti.com/blogs_/archives/b/precisionhub/posts/settling-time-challenge-and-improvement-tips",
+    "checkedAt": "2026-10-10",
+    "scope": "SAR ADC sample-capacitor settling and acquisition time; used for question hw-014, not a verbatim exam source."
+  },
+  {
+    "id": "gs1-metal-water",
+    "title": "GS1: Does RFID work around metal and water?",
+    "url": "https://support.gs1.org/support/solutions/articles/43000734154-does-rfid-work-around-metal-and-water-",
+    "checkedAt": "2026-10-10",
+    "scope": "Material-dependent RAIN RFID performance and specialized tag design; used for hw-051."
+  },
+  {
+    "id": "nxp-nfc",
+    "title": "NXP NTAG 213/215/216 product documentation",
+    "url": "https://www.nxp.com/products/rfid-nfc/nfc-hf/ntag-for-tags-and-labels/ntag-213-215-216-nfc-forum-type-2-tag-compliant-ic-with-144-504-888-bytes-user-memory:NTAG213_215_216",
+    "checkedAt": "2026-10-10",
+    "scope": "13.56 MHz operating frequency; used for hw-056."
+  },
+  {
+    "id": "bipm-vim-adjustment",
+    "title": "BIPM/JCGM VIM 3.11: adjustment of a measuring system",
+    "url": "https://jcgm.bipm.org/vim/en/3.11.html",
+    "checkedAt": "2026-10-10",
+    "scope": "区分调整和校准；调整包括零点、偏置和跨度调整。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "bipm-vim-calibration",
+    "title": "BIPM/JCGM VIM 2.39: calibration",
+    "url": "https://jcgm.bipm.org/vim/en/2.39.html",
+    "checkedAt": "2026-10-10",
+    "scope": "校准建立量值与示值关系，不等同于调整或验证。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "ti-sar-settling-review",
+    "title": "TI: Driving a SAR ADC directly without a front-end buffer circuit, SBAA256B",
+    "url": "https://www.ti.com/lit/pdf/sbaa256",
+    "checkedAt": "2026-10-10",
+    "scope": "源阻抗、输入电容与采集窗口决定输入建立。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "adi-antialiasing",
+    "title": "Analog Devices: Why is an input filter necessary when digitizing a baseband signal?",
+    "url": "https://www.analog.com/en/resources/faqs/FAQ_antialiasing_filter.html",
+    "checkedAt": "2026-10-10",
+    "scope": "带外成分可能混叠入基带；需在采样前考虑滤波。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "nist-sensor-hysteresis",
+    "title": "NIST/NBS Special Publication 615: Sensor handbook",
+    "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication615.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "迟滞是从上升与下降方向到达同一被测量值时的输出差异；审查建议进一步排除未稳定的动态过程。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "fluke-dc-voltage",
+    "title": "Fluke: How to Measure DC Voltage with a Digital Multimeter",
+    "url": "https://www.fluke.com/en-ca/learn/blog/digital-multimeters/how-to-measure-dc-voltage-with-a-digital-multimeter",
+    "checkedAt": "2026-10-10",
+    "scope": "直流电压档，黑表笔COM、红表笔V；误用A/mA插孔测电压可能短路。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "fluke-capacitance-safety",
+    "title": "Fluke: How to Measure Capacitance with a Digital Multimeter",
+    "url": "https://www.fluke.com/en-us/learn/blog/digital-multimeters/how-to-measure-capacitance",
+    "checkedAt": "2026-10-10",
+    "scope": "测量前断电、确认无电并按安全流程处理电容储能。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "dell-swollen-battery",
+    "title": "Dell: Handling swollen Lithium-ion batteries",
+    "url": "https://dl.dell.com/topicspdf/swollenbattery-3_en-us.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "鼓包电池不应继续使用或挤压、穿刺，应由合适人员更换和处置；不把笔记本专用放电流程外推到教学裸电池。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "impinj-material-effects",
+    "title": "Impinj AutoTune: Optimize RAIN RFID Tag Performance",
+    "url": "https://www.impinj.com/products/technology/key-features/autotune",
+    "checkedAt": "2026-10-10",
+    "scope": "附着材料及周围金属等环境会影响RAIN标签取能和性能。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "nfc-forum-technology",
+    "title": "NFC Forum: NFC Technology",
+    "url": "https://nfc-forum.org/learn/nfc-technology/",
+    "checkedAt": "2026-10-10",
+    "scope": "13.56 MHz载波及NDEF标签数据组织。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "nfc-forum-ndef",
+    "title": "NFC Forum: Data Exchange Format (NDEF) Technical Specification",
+    "url": "https://nfc-forum.org/build/specifications/data-exchange-format-ndef-technical-specification/",
+    "checkedAt": "2026-10-10",
+    "scope": "NFC应用数据的标准封装格式。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "nxp-ntag21x-datasheet",
+    "title": "NXP: NTAG213/215/216 NFC Forum Type 2 Tag IC datasheet",
+    "url": "https://www.nxp.com/docs/en/data-sheet/NTAG213_215_216.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "用户存储区域和锁定机制，部分锁定位不可逆；不得推广为所有NFC芯片完全相同。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "gs1-epcis-identification",
+    "title": "GS1: EPCIS and CBV Implementation Guideline",
+    "url": "https://www.gs1.org/standards/epcis-and-cbv-implementation-guideline/current-standardd",
+    "checkedAt": "2026-10-10",
+    "scope": "实例级唯一标识与可共享的类级标识不同，GTIN加序列号可标识单个实例。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "gs1-rfid",
+    "title": "GS1: RFID standards",
+    "url": "https://www.gs1.org/standards/rfid",
+    "checkedAt": "2026-10-10",
+    "scope": "EPC术语和对象唯一标识。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "proto-ti-rs485",
+    "title": "Texas Instruments: The RS-485 Design Guide (Rev. D)",
+    "url": "https://www.ti.com/lit/an/slla272d/slla272d.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "RS485电气层、总线拓扑、端接、支线、失效保护偏置与共模范围"
+  },
+  {
+    "id": "proto-modbus-app",
+    "title": "Modbus Application Protocol Specification V1.1b3",
+    "url": "https://www.modbus.org/file/secure/modbusprotocolspecification.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "Modbus数据模型、PDU地址、寄存器字节序、标准功能码、数量限制和异常响应"
+  },
+  {
+    "id": "proto-modbus-serial",
+    "title": "Modbus over Serial Line Specification and Implementation Guide V1.02",
+    "url": "https://www.modbus.org/file/secure/modbusoverserial.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "RTU串口设置、从站地址、广播、帧间隔和CRC字段"
+  },
+  {
+    "id": "proto-modbus-address",
+    "title": "Modbus Organization: Introduction to Modbus",
+    "url": "https://www.modbus.org/introduction-to-modbus",
+    "checkedAt": "2026-10-10",
+    "scope": "传统寄存器编号与报文零基地址的区别，设备映射约定"
+  },
+  {
+    "id": "proto-modbus-tcp",
+    "title": "Modbus Messaging on TCP/IP Implementation Guide V1.0b",
+    "url": "https://www.modbus.org/file/secure/messagingimplementationguide.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "MBAP事务标识、Unit Identifier及TCP与串行网关封装"
+  },
+  {
+    "id": "proto-mqtt5",
+    "title": "OASIS MQTT Version 5.0 Standard",
+    "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html",
+    "checkedAt": "2026-10-10",
+    "scope": "客户端ID、遗嘱、QoS、主题和载荷、会话、共享订阅、属性、确认及保活；主要参考第3和第4章"
+  },
+  {
+    "id": "proto-ip-host",
+    "title": "RFC 1122: Requirements for Internet Hosts — Communication Layers",
+    "url": "https://www.rfc-editor.org/rfc/rfc1122.html",
+    "checkedAt": "2026-10-10",
+    "scope": "IPv4本地与远端目的判定、路由、ARP和ICMP的层次边界；现场排障题为原创情境推理"
+  },
+  {
+    "id": "proto-arp",
+    "title": "RFC 826: An Ethernet Address Resolution Protocol",
+    "url": "https://www.rfc-editor.org/info/rfc826/",
+    "checkedAt": "2026-10-10",
+    "scope": "IPv4以太网协议地址到硬件地址的解析机制"
+  },
+  {
+    "id": "proto-tcp",
+    "title": "RFC 9293: Transmission Control Protocol (TCP)",
+    "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+    "checkedAt": "2026-10-10",
+    "scope": "有序字节流、TCP确认、连接建立与关闭、接收窗口和流量控制"
+  },
+  {
+    "id": "proto-dns",
+    "title": "RFC 1035: Domain Names — Implementation and Specification",
+    "url": "https://www.rfc-editor.org/info/rfc1035/",
+    "checkedAt": "2026-10-10",
+    "scope": "DNS记录缓存及TTL；仅用于基础缓存语义，不以旧版其他限制作为当前实现要求"
+  },
+  {
+    "id": "proto-http",
+    "title": "RFC 9110: HTTP Semantics",
+    "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "checkedAt": "2026-10-10",
+    "scope": "HTTP方法语义、状态码、Host与内容类型、ETag及条件请求"
+  },
+  {
+    "id": "proto-http1",
+    "title": "RFC 9112: HTTP/1.1",
+    "url": "https://www.rfc-editor.org/rfc/rfc9112.html",
+    "checkedAt": "2026-10-10",
+    "scope": "HTTP/1.1报文分帧、Content-Length、Transfer-Encoding和chunked"
+  },
+  {
+    "id": "proto-http-rate",
+    "title": "RFC 6585: Additional HTTP Status Codes",
+    "url": "https://www.rfc-editor.org/rfc/rfc6585.html",
+    "checkedAt": "2026-10-10",
+    "scope": "429 Too Many Requests与Retry-After限流提示"
+  },
+  {
+    "id": "proto-wifi-faq",
+    "title": "Espressif ESP-FAQ: Wi-Fi",
+    "url": "https://github.com/espressif/esp-faq/blob/master/docs/en/software-framework/wifi.rst",
+    "checkedAt": "2026-10-10",
+    "scope": "2.4 GHz设备与多频段网络的兼容性；题干已限定终端硬件能力"
+  },
+  {
+    "id": "proto-wifi-api",
+    "title": "Espressif ESP-IDF: Wi-Fi API Reference (ESP32)",
+    "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/network/esp_wifi.html?highlight=wifi_config",
+    "checkedAt": "2026-10-10",
+    "scope": "RSSI读数、BSSID、站点连接与无线统计；现场验收方法为原创设计"
+  },
+  {
+    "id": "proto-wifi-isolation",
+    "title": "Cisco: Peer-to-Peer Client Support, IOS XE 17.16.x",
+    "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-16/config-guide/b_wl_17_16_cg/peer-to-peer-client-support.html",
+    "checkedAt": "2026-10-10",
+    "scope": "WLAN客户端隔离和点对点阻断的影响"
+  },
+  {
+    "id": "proto-wifi-arduino",
+    "title": "Espressif Arduino-ESP32: Wi-Fi API",
+    "url": "https://docs.espressif.com/projects/arduino-esp32/en/latest/api/wifi.html?highlight=wifi",
+    "checkedAt": "2026-10-10",
+    "scope": "WiFi STA与AP工作模式"
+  },
+  {
+    "id": "proto-zigbee-nodes",
+    "title": "Silicon Labs: Zigbee Fundamentals — Network Node Types",
+    "url": "https://docs.silabs.com/zigbee/9.0.2/zigbee-fundamentals/03-network-node-types",
+    "checkedAt": "2026-10-10",
+    "scope": "协调器、路由器、终端与睡眠终端的职责"
+  },
+  {
+    "id": "proto-zigbee-concepts",
+    "title": "Silicon Labs: Zigbee Concepts — Introduction",
+    "url": "https://docs.silabs.com/zigbee/8.2.2/zigbee-concepts/",
+    "checkedAt": "2026-10-10",
+    "scope": "网络扫描与入网、网络身份、16位PAN ID和64位Extended PAN ID"
+  },
+  {
+    "id": "proto-zigbee-binding",
+    "title": "Silicon Labs: Zigbee Concepts — Binding",
+    "url": "https://docs.silabs.com/zigbee/9.0.2/zigbee-concepts-network/binding",
+    "checkedAt": "2026-10-10",
+    "scope": "绑定表中的端点、Cluster ID和目标设备身份"
+  },
+  {
+    "id": "proto-zigbee-findbind",
+    "title": "Silicon Labs: Finding and Binding",
+    "url": "https://docs.silabs.com/zigbee/9.0.0/zigbee-concepts-app-layer/",
+    "checkedAt": "2026-10-10",
+    "scope": "应用簇角色匹配与寻找绑定过程"
+  },
+  {
+    "id": "proto-ble-gatt",
+    "title": "Bluetooth Core Specification 5.4, Vol 3 Part G: Generic Attribute Profile",
+    "url": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/generic-attribute-profile--gatt-.html",
+    "checkedAt": "2026-10-10",
+    "scope": "GATT发现、缓存与服务变化、Notification/Indication、CCCD及访问条件"
+  },
+  {
+    "id": "proto-ble-att",
+    "title": "Bluetooth Core Specification 5.4, Vol 3 Part F: Attribute Protocol",
+    "url": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/attribute-protocol--att-.html",
+    "checkedAt": "2026-10-10",
+    "scope": "ATT确认、MTU与Handle Value Notification报文结构"
+  },
+  {
+    "id": "proto-ble-primer",
+    "title": "Bluetooth SIG: The Bluetooth Low Energy Primer",
+    "url": "https://www.bluetooth.com/bluetooth-resources/the-bluetooth-low-energy-primer/",
+    "checkedAt": "2026-10-10",
+    "scope": "广播发现与连接的基础层次区别"
+  },
+  {
+    "id": "proto-lora-phy",
+    "title": "Semtech: LoRa PHY",
+    "url": "https://www.semtech.com/lora/what-is-lora",
+    "checkedAt": "2026-10-10",
+    "scope": "LoRa物理层技术与LoRaWAN上层网络协议的区别"
+  },
+  {
+    "id": "proto-lorawan-developers",
+    "title": "LoRa Alliance: LoRaWAN for Developers",
+    "url": "https://lora-alliance.org/lorawan-for-developers/",
+    "checkedAt": "2026-10-10",
+    "scope": "LoRaWAN链路层规范范围、消息、入网、通信类别与区域参数"
+  },
+  {
+    "id": "proto-lorawan-classes",
+    "title": "LoRa Alliance: What is LoRaWAN Specification — Classes",
+    "url": "https://lora-alliance.org/about-lorawan-old/",
+    "checkedAt": "2026-10-10",
+    "scope": "Class A上行后的两个下行接收窗口及下行等待机制"
+  },
+  {
+    "id": "proto-lorawan-regional",
+    "title": "LoRa Alliance: RP002-1.0.4 Regional Parameters",
+    "url": "https://resources.lora-alliance.org/home/rp002-1-0-4-regional-parameters",
+    "checkedAt": "2026-10-10",
+    "scope": "不同监管区域的频率、信道和数据率配置；部署时仍应核对当前地区规则"
+  },
+  {
+    "id": "proto-semtech-faq",
+    "title": "Semtech: LoRa Frequently Asked Questions",
+    "url": "https://www.semtech.com/design-support/faq/faq-lora",
+    "checkedAt": "2026-10-10",
+    "scope": "扩频因子、空中时间、链路预算以及载荷与区域限制的权衡"
+  },
+  {
+    "id": "proto-lorawan-adr",
+    "title": "LoRa Alliance Technical Track: Adaptive Data Rate",
+    "url": "https://lora-alliance.org/wp-content/uploads/2020/11/technical_track_final_web.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "ADR名称及链路参数自适应的用途"
+  },
+  {
+    "id": "ops-python-json",
+    "title": "Python 标准库：json",
+    "url": "https://docs.python.org/3/library/json.html",
+    "checkedAt": "2026-10-10",
+    "scope": "JSON 字符串解析、序列化与解析异常；仅采用长期稳定的通用行为。"
+  },
+  {
+    "id": "ops-python-datetime",
+    "title": "Python 标准库：datetime",
+    "url": "https://docs.python.org/3/library/datetime.html",
+    "checkedAt": "2026-10-10",
+    "scope": "具有时区信息和无时区信息的日期时间区别。"
+  },
+  {
+    "id": "ops-python-time",
+    "title": "Python 标准库：time",
+    "url": "https://docs.python.org/3/library/time.html",
+    "checkedAt": "2026-10-10",
+    "scope": "time.monotonic 用于经过时间测量且不受系统校时影响。"
+  },
+  {
+    "id": "ops-python-types",
+    "title": "Python 文档：Built-in Types",
+    "url": "https://docs.python.org/3/builtins/stdtypes.html",
+    "checkedAt": "2026-10-10",
+    "scope": "bool 继承 int；字典成员检查与 get 的区别。"
+  },
+  {
+    "id": "ops-python-errors",
+    "title": "Python 教程：Errors and Exceptions",
+    "url": "https://docs.python.org/3/tutorial/errors.html",
+    "checkedAt": "2026-10-10",
+    "scope": "有针对性的异常捕获和处理。"
+  },
+  {
+    "id": "ops-python-unittest",
+    "title": "Python 标准库：unittest",
+    "url": "https://docs.python.org/3/library/unittest.html",
+    "checkedAt": "2026-10-10",
+    "scope": "测试用例与明确预期；题中数量边界为原创教学设定。"
+  },
+  {
+    "id": "ops-rfc8259",
+    "title": "IETF RFC 8259：The JavaScript Object Notation Data Interchange Format",
+    "url": "https://www.rfc-editor.org/info/rfc8259/",
+    "checkedAt": "2026-10-10",
+    "scope": "JSON 语法、重复键、对象顺序、字符串转义、UTF-8、媒体类型和 eval 风险。"
+  },
+  {
+    "id": "ops-linux-cgroup",
+    "title": "Linux Kernel Documentation：Control Group v2",
+    "url": "https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html",
+    "checkedAt": "2026-10-10",
+    "scope": "进程分组与 CPU、内存等资源控制。"
+  },
+  {
+    "id": "ops-owasp-rest",
+    "title": "OWASP REST Security Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "接口输入验证；题中温度范围是教学约束，不是通用标准。"
+  },
+  {
+    "id": "ops-owasp-logging",
+    "title": "OWASP Logging Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "事件审计字段、日志存储资源、保留及保护。"
+  },
+  {
+    "id": "ops-owasp-tls",
+    "title": "OWASP Transport Layer Security Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "TLS 服务端身份和证书验证。"
+  },
+  {
+    "id": "ops-owasp-mfa",
+    "title": "OWASP Multifactor Authentication Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "不同类别认证要素与多因素认证。"
+  },
+  {
+    "id": "ops-owasp-supply",
+    "title": "OWASP Software Supply Chain Security Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "依赖来源、组件管理和更新风险。"
+  },
+  {
+    "id": "ops-nist-8259a",
+    "title": "NISTIR 8259A：IoT Device Cybersecurity Capability Core Baseline",
+    "url": "https://csrc.nist.gov/pubs/ir/8259/a/final",
+    "checkedAt": "2026-10-10",
+    "scope": "物联网设备数据保护能力背景；具体教学设计仍需环境验证。"
+  },
+  {
+    "id": "ops-nist-sanitization",
+    "title": "NIST SP 800-88 Rev. 2：Guidelines for Media Sanitization",
+    "url": "https://csrc.nist.gov/pubs/sp/800/88/r2/final",
+    "checkedAt": "2026-10-10",
+    "scope": "介质净化与普通删除的区别；具体处置按组织政策与介质选型。"
+  },
+  {
+    "id": "ops-cdc-cold",
+    "title": "CDC Vaccine Storage and Handling Toolkit, March 2024",
+    "url": "https://www.cdc.gov/vaccines/hcp/admin/storage/toolkit/storage-handling-toolkit.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "仅参考计量信息、空气与缓冲探头响应、温度偏离留证和待评估原则；原文为疫苗领域资料，不作为所有冷链货物的通用法规或温区要求。"
+  },
+  {
+    "id": "hw2-i2c",
+    "title": "NXP UM10204 I2C-bus specification and user manual, Rev. 7.0",
+    "url": "https://www.nxp.com/docs/en/user-guide/UM10204.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "I2C transaction phases, seven-bit addressing, open-drain signaling, clock stretching and bus recovery. Numerical classroom scenarios are original, not copied specification examples."
+  },
+  {
+    "id": "hw2-spi",
+    "title": "Analog Devices: Introduction to SPI Interface",
+    "url": "https://www.analog.com/en/resources/analog-dialogue/articles/2018/08/13/15/31/introduction-to-spi-interface.html",
+    "checkedAt": "2026-10-10",
+    "scope": "SPI clock polarity/phase, chip select, shifting and simultaneous transmit/receive. Device transaction contracts in stems are explicitly hypothetical."
+  },
+  {
+    "id": "hw2-nist",
+    "title": "NIST Metrological Traceability: Frequently Asked Questions and NIST Policy",
+    "url": "https://www.nist.gov/metrology/metrological-traceability",
+    "checkedAt": "2026-10-10",
+    "scope": "Traceability attaches to measurement results, calibration chain and uncertainty context. Acceptance rules and numerical models in questions are expressly supplied by the author."
+  },
+  {
+    "id": "hw2-daq",
+    "title": "Texas Instruments TIPD169: 16-bit multiplexed data acquisition reference design",
+    "url": "https://www.ti.com/tool/TIPD169",
+    "checkedAt": "2026-10-10",
+    "scope": "Multiplexed SAR input settling, acquisition front-end and reference architecture; no classroom design is represented as this product."
+  },
+  {
+    "id": "hw2-ads1115",
+    "title": "Texas Instruments ADS111x datasheet, revision E",
+    "url": "https://www.ti.com/lit/ds/symlink/ads1115.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "ADC conversion state, PGA, differential/input limits, two's-complement output and multiplexer context. Hypothetical ADC limits in stems are self-contained and are not asserted to be ADS1115 limits."
+  },
+  {
+    "id": "hw2-uart",
+    "title": "Analog Devices: UART, A Hardware Communication Protocol",
+    "url": "https://www.analog.com/en/resources/analog-dialogue/articles/uart-a-hardware-communication-protocol.html",
+    "checkedAt": "2026-10-10",
+    "scope": "Asynchronous serial start/data/parity/stop framing and device-manual configuration. No universal UART clock-error percentage is claimed."
+  },
+  {
+    "id": "hw2-timers",
+    "title": "STMicroelectronics AN4776 General-purpose timer cookbook",
+    "url": "https://www.st.com/resource/en/application_note/an4776-using-the-stm32-dma-controller-stmicroelectronics.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "Timer counting, input capture and DMA-assisted time measurement. Timer widths and sample values in questions are hypothetical."
+  },
+  {
+    "id": "hw2-gpio",
+    "title": "STMicroelectronics AN4899 GPIO hardware settings and low-power consumption",
+    "url": "https://www.st.com/resource/en/application_note/an4899-stm32-microcontroller-gpio-configuration-for-hardware-settings-and-lowpower-consumption-stmicroelectronics.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "GPIO mode selection, pulls, voltage-domain and low-power constraints; chip-specific exceptions must follow actual manuals."
+  },
+  {
+    "id": "hw2-cache",
+    "title": "STMicroelectronics AN4839 Level 1 cache on STM32F7 series and STM32H7 series",
+    "url": "https://www.st.com/resource/en/application_note/DM00272913-.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "CPU cache coherency and DMA buffers; questions explicitly state when caches or noncoherent DMA are present."
+  },
+  {
+    "id": "hw2-lis3dh",
+    "title": "STMicroelectronics LIS3DH datasheet",
+    "url": "https://www.st.com/resource/en/datasheet/lis3dh.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "MEMS accelerometer selectable ranges, axes, output data and FIFO concepts; no generic sensor is assigned unstated product-specific behavior."
+  },
+  {
+    "id": "hw2-sht4x",
+    "title": "Sensirion SHT4x datasheet",
+    "url": "https://sensirion.com/resource/datasheet/sht4x",
+    "checkedAt": "2026-10-10",
+    "scope": "Humidity sensing, heater operation and measurement timing as background; artificial status codes and limits are supplied in stems."
+  },
+  {
+    "id": "hw2-thermocouple",
+    "title": "Analog Devices: Thermocouple and Cold Junction Compensation Measurements with AD74413R",
+    "url": "https://wiki.analog.com/resources/eval/user-guides/eval-ad7441x/tools/thermocouple",
+    "checkedAt": "2026-10-10",
+    "scope": "Thermocouple reference-junction role and open-wire diagnostics are device-dependent."
+  },
+  {
+    "id": "hw2-drv8833",
+    "title": "Texas Instruments DRV8833 Dual H-Bridge Motor Driver datasheet",
+    "url": "https://www.ti.com/lit/ds/symlink/drv8833.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "Low-voltage driver states, protection and control concepts. All actuator exercises limited to teacher-approved enclosed educational modules."
+  },
+  {
+    "id": "hw2-probes",
+    "title": "Tektronix: ABCs of Probes Primer",
+    "url": "https://www.tek.com/en/documents/whitepaper/abcs-probes-primer",
+    "checkedAt": "2026-10-10",
+    "scope": "Probe attenuation, impedance/capacitance loading, compensation, grounding-loop effects and measurement bandwidth. Classroom numbers and tasks are original."
+  },
+  {
+    "id": "hw2-burden",
+    "title": "Fluke: Can you live with the burden?",
+    "url": "https://www.fluke.com/en-us/learn/blog/electrical/can-you-live-with-the-burden",
+    "checkedAt": "2026-10-10",
+    "scope": "Current-meter burden voltage and measurement-induced circuit changes; only approved low-voltage measurement scenarios."
+  },
+  {
+    "id": "hw2-generator-load",
+    "title": "Keysight BenchVue: Output Load Termination",
+    "url": "https://helpfiles.keysight.com/Standalone_BenchVueSoftware_PW_HelpFiles/PWFGApp/Content/Configure%20Waveforms/Waveform%20Configuration/Output%20Load%20Termination.htm",
+    "checkedAt": "2026-10-10",
+    "scope": "Function-generator load setting versus physical output impedance and high-impedance termination amplitude."
+  },
+  {
+    "id": "hw2-esd-packaging",
+    "title": "Texas Instruments: ESD Protective Semiconductor Packing Materials and Configurations",
+    "url": "https://www.ti.com/lit/an/szza027a/szza027a.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "ESD control across handling and packaging; shielding/protective packing does not substitute for a controlled work process."
+  },
+  {
+    "id": "hw2-stepper-chopping",
+    "title": "Texas Instruments: How to Reduce Audible Noise in Stepper Motors, SLVAES8 Rev. A",
+    "url": "https://www.ti.com/lit/an/slvaes8/slvaes8.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "Current chopping and winding-current control architecture; supply average and winding peak are different measured quantities."
+  },
+  {
+    "id": "hw2-rms-limits",
+    "title": "Fluke: Troubleshooting power harmonics, application note1260362",
+    "url": "https://media.fluke.com/b0661e12-3084-45ae-a177-b10600664b88_original%20file.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "True-RMS accuracy is bounded by crest-factor and bandwidth specifications. Question uses low-voltage instrument capability reasoning only, not mains measurements."
+  },
+  {
+    "id": "net-ti-rs485",
+    "title": "Texas Instruments: RS-485 Design Guide Rev D",
+    "url": "https://www.ti.com/lit/an/slla272d/slla272d.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "差分和共模、端接、支线、负载、边沿与隔离设计；给定电路题使用基础电路推理；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-modbus-app",
+    "title": "Modbus Application Protocol V1.1b3",
+    "url": "https://www.modbus.org/file/secure/modbusprotocolspecification.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "第6章线圈、掩码写、读写顺序、设备标识；第7章异常码。厂商副作用题仅依题干假设；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-modbus-serial",
+    "title": "Modbus over Serial Line V1.02",
+    "url": "https://www.modbus.org/file/secure/modbusoverserial.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "RTU字符格式、t1.5及高速定时建议、单主串行事务；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-modbus-tcp",
+    "title": "Modbus Messaging on TCP/IP V1.0b",
+    "url": "https://www.modbus.org/file/secure/messagingimplementationguide.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "MBAP协议标识、长度、TCP并发和网关队列的结构依据；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-mqtt5",
+    "title": "OASIS MQTT Version 5.0",
+    "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html",
+    "checkedAt": "2026-10-10",
+    "scope": "第3章属性和控制报文、第4章订阅和主题规则。所有题明确使用MQTT5语义；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-ip",
+    "title": "RFC 1122: Internet Hosts—Communication Layers",
+    "url": "https://www.rfc-editor.org/rfc/rfc1122.html",
+    "checkedAt": "2026-10-10",
+    "scope": "IPv4选路、下一跳和主机行为；题中具体地址与路径为原创；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-dhcp",
+    "title": "RFC 2131: Dynamic Host Configuration Protocol",
+    "url": "https://www.rfc-editor.org/rfc/rfc2131.html",
+    "checkedAt": "2026-10-10",
+    "scope": "DHCPv4续租、重绑定、租约失效、DECLINE、NAK和中继；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-dns-negative",
+    "title": "RFC 2308: Negative Caching of DNS Queries",
+    "url": "https://www.rfc-editor.org/rfc/rfc2308.html",
+    "checkedAt": "2026-10-10",
+    "scope": "NXDOMAIN、NODATA与否定缓存；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-ipv6",
+    "title": "RFC 8200: IPv6 Specification",
+    "url": "https://www.rfc-editor.org/rfc/rfc8200.html",
+    "checkedAt": "2026-10-10",
+    "scope": "IPv6转发、分片、无广播和校验和背景；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-nd",
+    "title": "RFC 4861: Neighbor Discovery for IPv6",
+    "url": "https://www.rfc-editor.org/rfc/rfc4861.html",
+    "checkedAt": "2026-10-10",
+    "scope": "邻居发现、路由器通告和链路本地作用域；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-slaac",
+    "title": "RFC 4862: IPv6 Stateless Address Autoconfiguration",
+    "url": "https://www.rfc-editor.org/rfc/rfc4862.html",
+    "checkedAt": "2026-10-10",
+    "scope": "重复地址检测与地址生命周期；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-pmtu6",
+    "title": "RFC 8201: Path MTU Discovery for IPv6",
+    "url": "https://www.rfc-editor.org/rfc/rfc8201.html",
+    "checkedAt": "2026-10-10",
+    "scope": "Packet Too Big与路径MTU；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-tcp",
+    "title": "RFC 9293: Transmission Control Protocol",
+    "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+    "checkedAt": "2026-10-10",
+    "scope": "序列空间、建立关闭、四元组、MSS、套接字与TCP行为；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-udp",
+    "title": "RFC 768: User Datagram Protocol",
+    "url": "https://www.rfc-editor.org/rfc/rfc768.html",
+    "checkedAt": "2026-10-10",
+    "scope": "UDP数据报结构与报文边界；套接字错误情境为实现诊断推理；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-congestion",
+    "title": "RFC 5681: TCP Congestion Control",
+    "url": "https://www.rfc-editor.org/rfc/rfc5681.html",
+    "checkedAt": "2026-10-10",
+    "scope": "拥塞窗口、慢启动及发送约束；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-sack",
+    "title": "RFC 2018: TCP Selective Acknowledgment Options",
+    "url": "https://www.rfc-editor.org/rfc/rfc2018.html",
+    "checkedAt": "2026-10-10",
+    "scope": "选择确认与累计确认的区别；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-http",
+    "title": "RFC 9110: HTTP Semantics",
+    "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "checkedAt": "2026-10-10",
+    "scope": "请求方法、认证、状态码、条件请求、范围和内容协商；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-httpcache",
+    "title": "RFC 9111: HTTP Caching",
+    "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+    "checkedAt": "2026-10-10",
+    "scope": "缓存控制、Age与Vary；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-dns",
+    "title": "RFC 1035: Domain Names",
+    "url": "https://datatracker.ietf.org/doc/html/rfc1035",
+    "checkedAt": "2026-10-10",
+    "scope": "名称记录、别名和截断标志；仅引用基础结构，不以旧传输限制代替当前规范；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-wifi-esp",
+    "title": "Espressif ESP-IDF Wi-Fi Guide",
+    "url": "https://docs.espressif.com/projects/esp-idf/en/release-v4.2/esp32/api-guides/wifi.html",
+    "checkedAt": "2026-10-10",
+    "scope": "关联、扫描、事件、省电及监控机制；采用可读取的release-v4.2基础概念文档，实作API仍须按现场版本核对；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-wifi-roam",
+    "title": "Cisco: Understand 802.11r/11k/11v Fast Roams",
+    "url": "https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/221671-understand-802-11r-11k-11v-fast-roams-on.html",
+    "checkedAt": "2026-10-10",
+    "scope": "k邻居报告、v迁移建议、r快速迁移及终端漫游决策；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-wifi-rf",
+    "title": "Cisco: RF Analysis—Wireless Troubleshooting Tools",
+    "url": "https://developer.cisco.com/docs/wireless-troubleshooting-tools/rf-analysis/",
+    "checkedAt": "2026-10-10",
+    "scope": "无线射频测量与利用率诊断；验收数据及因果边界为原创分析；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-zigbee-network",
+    "title": "Silicon Labs: Zigbee Networking Concepts",
+    "url": "https://docs.silabs.com/zigbee/8.2.3/zigbee-concepts/networking-concepts",
+    "checkedAt": "2026-10-10",
+    "scope": "终端轮询、间接缓存、地址和组网机制；不把实现默认超时当通用标准；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-zigbee-bdb",
+    "title": "Silicon Labs: Zigbee 3.0 Fundamentals",
+    "url": "https://docs.silabs.com/zigbee/latest/zigbee-fundamentals/08-zigbee-3-0",
+    "checkedAt": "2026-10-10",
+    "scope": "入网、安装码、网络形成和BDB基础行为；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-zigbee-zcl",
+    "title": "Silicon Labs: Zigbee Cluster Library",
+    "url": "https://docs.silabs.com/zigbee/latest/zigbee-fundamentals/06-zigbee-cluster-library",
+    "checkedAt": "2026-10-10",
+    "scope": "端点、簇、属性、报告和ZCL通用框架；具体情境显式给出约定；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-ble-att",
+    "title": "Bluetooth Core 5.4 Vol 3 Part F: ATT",
+    "url": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/attribute-protocol--att-.html",
+    "checkedAt": "2026-10-10",
+    "scope": "ATT请求、命令、长读、准备写、错误及MTU；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-ble-gatt",
+    "title": "Bluetooth Core 5.4 Vol 3 Part G: GATT",
+    "url": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/generic-attribute-profile--gatt-.html",
+    "checkedAt": "2026-10-10",
+    "scope": "角色、特征、服务、句柄与UUID、可靠写过程；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-ble-gap",
+    "title": "Bluetooth Core 5.4 Vol 3 Part C: GAP",
+    "url": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/generic-access-profile.html",
+    "checkedAt": "2026-10-10",
+    "scope": "发现、连接参数、广播、扫描、配对、绑定与隐私基础；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-lorawan",
+    "title": "LoRa Alliance: LoRaWAN L2 1.0.4",
+    "url": "https://lora-alliance.org/wp-content/uploads/2021/11/LoRaWAN-Link-Layer-Specification-v1.0.4.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "入网、计数、端口、确认、MAC命令、RX窗口与设备类别，明确1.0.4范围；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-lora-rf",
+    "title": "Semtech: LoRa FAQ",
+    "url": "https://www.semtech.com/design-support/faq/faq-lora",
+    "checkedAt": "2026-10-10",
+    "scope": "链路预算、RSSI、SNR和射频参数基础；天线及路径试验使用题干给定数据；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-lorawan-regional",
+    "title": "LoRa Alliance RP002-1.0.4 Regional Parameters",
+    "url": "https://resources.lora-alliance.org/home/rp002-1-0-4-regional-parameters",
+    "checkedAt": "2026-10-10",
+    "scope": "区域数据率与载荷限制；本题库不提供现行法规结论，题设值不用于现场合规决定；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-ble-ll",
+    "title": "Bluetooth Core 5.4 Vol 6 Part B: Link Layer",
+    "url": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/low-energy-controller/link-layer-specification.html",
+    "checkedAt": "2026-10-10",
+    "scope": "连接事件、外围延迟和监督超时；本题排除子速率等扩展情形；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-zigbee-reporting",
+    "title": "Silicon Labs Reporting Entry API",
+    "url": "https://docs.silabs.com/zigbee/9.0.2/zigbee-af-api/sl-zigbee-af-plugin-reporting-entry-t",
+    "checkedAt": "2026-10-10",
+    "scope": "报告最小最大间隔及Reportable Change；只引用字段语义不推广实现默认值；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-lora-test",
+    "title": "Semtech: Testing Devices Featuring LoRa",
+    "url": "https://blog.semtech.com/expert-series-testing-devices-featuring-lora-how-to?hs_amp=true",
+    "checkedAt": "2026-10-10",
+    "scope": "受控RF测试、RSSI与SNR读数、传导和辐射试验范围；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "net-tcp-performance",
+    "title": "RFC7323: TCP Extensions for High Performance",
+    "url": "https://www.rfc-editor.org/rfc/rfc7323.html",
+    "checkedAt": "2026-10-10",
+    "scope": "窗口缩放、TCP时间戳及PAWS；只引用协议语义不规定现场优化阈值；题目情境、测量数据与选项为原创，不代表来源机构审题或背书。"
+  },
+  {
+    "id": "p2-ops-py-queue",
+    "title": "Python queue",
+    "url": "https://docs.python.org/3/library/queue.html",
+    "checkedAt": "2026-10-10",
+    "scope": "有界队列、近似状态与完成确认"
+  },
+  {
+    "id": "p2-ops-py-asyncio",
+    "title": "Python 3.12 asyncio Tasks",
+    "url": "https://docs.python.org/3.12/library/asyncio-task.html",
+    "checkedAt": "2026-10-10",
+    "scope": "协程调度、阻塞迁移与取消清理"
+  },
+  {
+    "id": "p2-ops-py-codecs",
+    "title": "Python 3.12 codecs",
+    "url": "https://docs.python.org/3.12/library/codecs.html",
+    "checkedAt": "2026-10-10",
+    "scope": "增量解码与错误处理"
+  },
+  {
+    "id": "p2-ops-py-struct",
+    "title": "Python 3.12 struct",
+    "url": "https://docs.python.org/3.12/library/struct.html",
+    "checkedAt": "2026-10-10",
+    "scope": "字节序、有符号整数、缓冲长度"
+  },
+  {
+    "id": "p2-ops-py-json",
+    "title": "Python json",
+    "url": "https://docs.python.org/3/library/json.html",
+    "checkedAt": "2026-10-10",
+    "scope": "编码、解码与数值互操作边界"
+  },
+  {
+    "id": "p2-ops-json-rfc",
+    "title": "RFC 8259 JSON",
+    "url": "https://www.rfc-editor.org/info/rfc8259/",
+    "checkedAt": "2026-10-10",
+    "scope": "数据类型、数值互操作范围、对象与数组"
+  },
+  {
+    "id": "p2-ops-json-schema",
+    "title": "JSON Schema object reference",
+    "url": "https://json-schema.org/understanding-json-schema/reference/object",
+    "checkedAt": "2026-10-10",
+    "scope": "required、properties、additionalProperties与嵌套结构"
+  },
+  {
+    "id": "p2-ops-py-sqlite",
+    "title": "Python sqlite3",
+    "url": "https://docs.python.org/3/library/sqlite3.html",
+    "checkedAt": "2026-10-10",
+    "scope": "参数绑定、事务、备份与连接"
+  },
+  {
+    "id": "p2-ops-sqlite-txn",
+    "title": "SQLite transactions",
+    "url": "https://sqlite.org/lang_transaction.html",
+    "checkedAt": "2026-10-10",
+    "scope": "提交、回滚和事务可见性"
+  },
+  {
+    "id": "p2-ops-sqlite-fk",
+    "title": "SQLite foreign keys",
+    "url": "https://sqlite.org/foreignkeys.html",
+    "checkedAt": "2026-10-10",
+    "scope": "引用完整性及连接级设置"
+  },
+  {
+    "id": "p2-ops-py-logging",
+    "title": "Python 3.12 logging",
+    "url": "https://docs.python.org/3.12/library/logging.html",
+    "checkedAt": "2026-10-10",
+    "scope": "日志级别、异常与日志上下文"
+  },
+  {
+    "id": "p2-ops-py-unittest",
+    "title": "Python 3.12 unittest",
+    "url": "https://docs.python.org/3.12/library/unittest.html",
+    "checkedAt": "2026-10-10",
+    "scope": "测试隔离、断言与测试生命周期"
+  },
+  {
+    "id": "p2-ops-py-types",
+    "title": "Python 3.12 built-in types",
+    "url": "https://docs.python.org/3.12/library/stdtypes.html",
+    "checkedAt": "2026-10-10",
+    "scope": "bytes、真值、字符串与稳定排序"
+  },
+  {
+    "id": "p2-ops-py-control",
+    "title": "Python 3.12 control flow",
+    "url": "https://docs.python.org/3.12/tutorial/controlflow.html",
+    "checkedAt": "2026-10-10",
+    "scope": "默认参数、遍历与生成器"
+  },
+  {
+    "id": "p2-ops-py-subprocess",
+    "title": "Python 3.12 subprocess",
+    "url": "https://docs.python.org/3.12/library/subprocess.html",
+    "checkedAt": "2026-10-10",
+    "scope": "参数列表与shell边界"
+  },
+  {
+    "id": "p2-ops-py-math",
+    "title": "Python 3.12 math",
+    "url": "https://docs.python.org/3.12/library/math.html",
+    "checkedAt": "2026-10-10",
+    "scope": "非有限值与浮点比较"
+  },
+  {
+    "id": "p2-ops-py-futures",
+    "title": "Python 3.12 concurrent.futures",
+    "url": "https://docs.python.org/3.12/library/concurrent.futures.html",
+    "checkedAt": "2026-10-10",
+    "scope": "Future结果和异常"
+  },
+  {
+    "id": "p2-ops-py-copy",
+    "title": "Python 3.12 copy",
+    "url": "https://docs.python.org/3.12/library/copy.html",
+    "checkedAt": "2026-10-10",
+    "scope": "浅复制与共享嵌套对象"
+  },
+  {
+    "id": "p2-ops-py-threading",
+    "title": "Python 3.12 threading",
+    "url": "https://docs.python.org/3.12/library/threading.html",
+    "checkedAt": "2026-10-10",
+    "scope": "线程锁与守护线程退出"
+  },
+  {
+    "id": "p2-ops-json-array",
+    "title": "JSON Schema arrays",
+    "url": "https://json-schema.org/understanding-json-schema/reference/array",
+    "checkedAt": "2026-10-10",
+    "scope": "数组元素结构"
+  },
+  {
+    "id": "p2-ops-json-combine",
+    "title": "JSON Schema combinations",
+    "url": "https://json-schema.org/understanding-json-schema/reference/combining",
+    "checkedAt": "2026-10-10",
+    "scope": "oneOf互斥结构"
+  },
+  {
+    "id": "p2-ops-json-enum",
+    "title": "JSON Schema enum",
+    "url": "https://json-schema.org/understanding-json-schema/reference/enum",
+    "checkedAt": "2026-10-10",
+    "scope": "枚举值约束"
+  },
+  {
+    "id": "p2-ops-py-zoneinfo",
+    "title": "Python 3.12 zoneinfo",
+    "url": "https://docs.python.org/3.12/library/zoneinfo.html",
+    "checkedAt": "2026-10-10",
+    "scope": "夏令时重复瞬间"
+  },
+  {
+    "id": "p2-ops-py-datetime",
+    "title": "Python 3.12 datetime",
+    "url": "https://docs.python.org/3.12/library/datetime.html",
+    "checkedAt": "2026-10-10",
+    "scope": "日历日期合法性"
+  },
+  {
+    "id": "p2-ops-sqlite-table",
+    "title": "SQLite CREATE TABLE",
+    "url": "https://sqlite.org/lang_createtable.html",
+    "checkedAt": "2026-10-10",
+    "scope": "唯一约束及数据完整性"
+  },
+  {
+    "id": "p2-ops-sqlite-index",
+    "title": "SQLite CREATE INDEX",
+    "url": "https://sqlite.org/lang_createindex.html",
+    "checkedAt": "2026-10-10",
+    "scope": "索引与写入维护"
+  },
+  {
+    "id": "p2-ops-sqlite-select",
+    "title": "SQLite SELECT",
+    "url": "https://sqlite.org/lang_select.html",
+    "checkedAt": "2026-10-10",
+    "scope": "ORDER BY排序保证"
+  },
+  {
+    "id": "p2-ops-sqlite-savepoint",
+    "title": "SQLite SAVEPOINT",
+    "url": "https://sqlite.org/lang_savepoint.html",
+    "checkedAt": "2026-10-10",
+    "scope": "保存点与ROLLBACK TO范围"
+  },
+  {
+    "id": "p2-ops-sqlite-wal",
+    "title": "SQLite WAL",
+    "url": "https://sqlite.org/wal.html",
+    "checkedAt": "2026-10-10",
+    "scope": "WAL文件与提交持久化边界"
+  },
+  {
+    "id": "p2-ops-sqlite-backup",
+    "title": "SQLite Backup API",
+    "url": "https://sqlite.org/backup.html",
+    "checkedAt": "2026-10-10",
+    "scope": "在线一致性备份"
+  },
+  {
+    "id": "p2-ops-prom-naming",
+    "title": "Prometheus naming practices",
+    "url": "https://prometheus.io/docs/practices/naming/",
+    "checkedAt": "2026-10-10",
+    "scope": "指标单位与高基数标签"
+  },
+  {
+    "id": "p2-ops-prom-hist",
+    "title": "Prometheus histograms",
+    "url": "https://prometheus.io/docs/practices/histograms/",
+    "checkedAt": "2026-10-10",
+    "scope": "直方图桶与目标边界"
+  },
+  {
+    "id": "p2-ops-nist-rpo",
+    "title": "NIST recovery point objective glossary",
+    "url": "https://csrc.nist.gov/glossary/term/recovery_point_objective",
+    "checkedAt": "2026-10-10",
+    "scope": "RPO定义"
+  },
+  {
+    "id": "p2-ops-nist-rto",
+    "title": "NIST recovery time objective glossary",
+    "url": "https://csrc.nist.gov/glossary/term/recovery_time_objective",
+    "checkedAt": "2026-10-10",
+    "scope": "RTO定义"
+  },
+  {
+    "id": "p2-ops-py-mock",
+    "title": "Python 3.12 unittest.mock",
+    "url": "https://docs.python.org/3.12/library/unittest.mock.html",
+    "checkedAt": "2026-10-10",
+    "scope": "mock接口约束"
+  },
+  {
+    "id": "p2-ops-pip-repeat",
+    "title": "pip repeatable installs",
+    "url": "https://pip.pypa.io/en/stable/topics/repeatable-installs/",
+    "checkedAt": "2026-10-10",
+    "scope": "固定直接间接依赖、离线包及环境条件"
+  },
+  {
+    "id": "p2-ops-semver",
+    "title": "Semantic Versioning 2.0.0",
+    "url": "https://semver.org/",
+    "checkedAt": "2026-10-10",
+    "scope": "预发布版本优先级"
+  },
+  {
+    "id": "p2-ops-owasp-jwt",
+    "title": "OWASP JSON Web Token",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "JWT验证与单纯解码的边界"
+  },
+  {
+    "id": "p2-ops-nist-forensics",
+    "title": "NIST SP800-86 Integration of Forensic Techniques",
+    "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "易失证据采集及取证过程记录"
+  },
+  {
+    "id": "p2-ops-nist-iot",
+    "title": "NISTIR 8259A IoT capability core baseline",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8259A.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "设备身份、逻辑访问及受控软件更新的能力框架；题中流程为原创教学情境"
+  },
+  {
+    "id": "p2-ops-nist-incident",
+    "title": "NIST SP800-61r3 Incident response recommendations",
+    "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+    "checkedAt": "2026-10-10",
+    "scope": "事件响应风险管理、遏制恢复和改进；不主张法定报告期限"
+  },
+  {
+    "id": "p2-ops-nist-privacy",
+    "title": "NIST Privacy Framework",
+    "url": "https://www.nist.gov/privacy-framework",
+    "checkedAt": "2026-10-10",
+    "scope": "目的、数据流、治理及处理风险；具体规则在题设中给定"
+  },
+  {
+    "id": "p2-ops-nist-deid",
+    "title": "NIST SP800-188 De-identifying Government Datasets",
+    "url": "https://csrc.nist.gov/pubs/sp/800/188/final",
+    "checkedAt": "2026-10-10",
+    "scope": "去标识、重新识别风险、数据可用性与合成数据"
+  },
+  {
+    "id": "p2-ops-nist-dp",
+    "title": "NIST SP800-226 Differential Privacy",
+    "url": "https://csrc.nist.gov/pubs/sp/800/226/final",
+    "checkedAt": "2026-10-10",
+    "scope": "差分隐私组合与隐私预算"
+  },
+  {
+    "id": "p2-ops-nist-rbac",
+    "title": "NIST Role Based Access Control",
+    "url": "https://csrc.nist.gov/projects/role-based-access-control",
+    "checkedAt": "2026-10-10",
+    "scope": "角色组织权限的模型概念"
+  },
+  {
+    "id": "p2-ops-owasp-secrets",
+    "title": "OWASP Secrets Management",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "秘密生命周期、复制、轮换与管理责任"
+  },
+  {
+    "id": "p2-ops-owasp-authz",
+    "title": "OWASP Authorization",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "对象级授权、默认拒绝及权限核验"
+  },
+  {
+    "id": "p2-ops-owasp-authn",
+    "title": "OWASP Authentication",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "认证错误响应的信息暴露"
+  },
+  {
+    "id": "p2-ops-owasp-logging",
+    "title": "OWASP Logging",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "审计信息保护和访问记录"
+  },
+  {
+    "id": "p2-ops-owasp-privacy",
+    "title": "OWASP User Privacy Protection",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "用户信息暴露与透明性原则"
+  },
+  {
+    "id": "p2-ops-mitre-cwe",
+    "title": "MITRE CWE About",
+    "url": "https://cwe.mitre.org/about/index.html",
+    "checkedAt": "2026-10-10",
+    "scope": "CWE软件/硬件弱点类别与具体漏洞实例的区别"
+  },
+  {
+    "id": "log-gs1-sscc",
+    "title": "GS1 Serial Shipping Container Code",
+    "url": "https://www.gs1.org/standards/id-keys/sscc",
+    "checkedAt": "2026-10-10",
+    "scope": "SSCC用于标识物流单元，例如箱、托盘和包裹；官方搜索内容核查"
+  },
+  {
+    "id": "log-gs1-idkeys",
+    "title": "GS1 identification keys",
+    "url": "https://www.gs1.org/standards/id-keys",
+    "checkedAt": "2026-10-10",
+    "scope": "GTIN产品类别、GLN参与方与位置、物流单元与资产标识的适用对象；官方搜索内容核查"
+  },
+  {
+    "id": "log-gs1-ai",
+    "title": "GS1 Application Identifiers",
+    "url": "https://ref.gs1.org/ai/",
+    "checkedAt": "2026-10-10",
+    "scope": "AI 00、01、10、17、21的含义及数据结构；官方索引核查"
+  },
+  {
+    "id": "log-gs1-label",
+    "title": "GS1 Logistic Label Guideline 1.3",
+    "url": "https://www.gs1.org/standards/gs1-logistic-label-guideline/1-3",
+    "checkedAt": "2026-10-10",
+    "scope": "SSCC的18位数据部分、物流标签与单元标识；明确版本1.3"
+  },
+  {
+    "id": "log-gs1-trace",
+    "title": "GS1 Global Traceability Standard",
+    "url": "https://www.gs1.org/standards/gs1-global-traceability-standard/current-standard",
+    "checkedAt": "2026-10-10",
+    "scope": "商品类别、批次与序列化追溯层级；事件及关联"
+  },
+  {
+    "id": "log-gs1-datamatrix",
+    "title": "GS1 DataMatrix Guideline 2.5",
+    "url": "https://www.gs1.org/standards/gs1-datamatrix-guideline/25",
+    "checkedAt": "2026-10-10",
+    "scope": "静区、符号质量验证与应用标识解析；未规定通用尺寸"
+  },
+  {
+    "id": "log-gs1-gen2",
+    "title": "GS1 EPC UHF Gen2 air interface",
+    "url": "https://www.gs1.org/sites/default/files/docs/epc/Gen2_Protocol_Standard.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "Gen2标签的EPC与TID存储区语义区别；不假定所有TID均为唯一序列化标识"
+  },
+  {
+    "id": "log-gs1-check",
+    "title": "GS1 How to calculate a check digit manually",
+    "url": "https://www.gs1.org/services/how-calculate-check-digit-manually",
+    "checkedAt": "2026-10-10",
+    "scope": "交替1/3加权和补足10倍数的算法；校验位不校验实物或业务属性"
+  },
+  {
+    "id": "log-gs1-aggregation",
+    "title": "GS1 EPCIS Linked Data Model: AggregationEvent",
+    "url": "https://ref.gs1.org/epcis/AggregationEvent",
+    "checkedAt": "2026-10-10",
+    "scope": "聚合事件的parentID、childEPCs与ADD/DELETE语义"
+  },
+  {
+    "id": "log-gs1-transform",
+    "title": "GS1 official EPCIS TransformationEvent example",
+    "url": "https://github.com/gs1/EPCIS/blob/master/JSON/Example_9.6.4-TransformationEvent.jsonld",
+    "checkedAt": "2026-10-10",
+    "scope": "转换事件具有输入及输出对象，区别于可逆物理聚合"
+  },
+  {
+    "id": "log-gs1-transaction",
+    "title": "GS1 EPCIS Linked Data Model: TransactionEvent",
+    "url": "https://ref.gs1.org/epcis/TransactionEvent",
+    "checkedAt": "2026-10-10",
+    "scope": "对象与业务交易建立或解除关联的事件类型"
+  },
+  {
+    "id": "log-gs1-classlevel",
+    "title": "GS1 EPCIS and CBV Implementation Guideline 2.0",
+    "url": "https://ref.gs1.org/guidelines/epcis-cbv/2.0.0/",
+    "checkedAt": "2026-10-10",
+    "scope": "实例级标识与类级标识/数量表达的区别"
+  },
+  {
+    "id": "log-doe-pcm",
+    "title": "US DOE Bio-Based Phase Change Materials for Thermal Energy Storage",
+    "url": "https://www.energy.gov/cmei/buildings/articles/bio-based-phase-change-materials-pcm-thermal-energy-storage",
+    "checkedAt": "2026-10-10",
+    "scope": "相变/等温吸热的潜热储能概念；不作为冷链产品温区或合格标准"
+  },
+  {
+    "id": "log-gs1-epcis",
+    "title": "GS1 EPCIS and CBV Implementation Guideline",
+    "url": "https://www.gs1.org/standards/epcis-and-cbv-implementation-guideline/current-standardd",
+    "checkedAt": "2026-10-10",
+    "scope": "事件what/when/where/why维度、readPoint与businessLocation、聚合关系；教学不声称完整实现"
+  },
+  {
+    "id": "log-nfc-mode",
+    "title": "NFC Forum Technical Overview",
+    "url": "https://nfc-forum.org/learn/nfc-technology/",
+    "checkedAt": "2026-10-10",
+    "scope": "读写模式与贴触式标签交互；不推断全部手机能力"
+  },
+  {
+    "id": "log-zebra-rfid",
+    "title": "Zebra RFID Programming Guide 3",
+    "url": "https://support.zebra.com/cpws/docs/zd500r/RFID%20Prog%20Guide%203%20P1062165-001.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "读写功率与标签位置需要分别验证；具体工况由题设给出"
+  }
+]

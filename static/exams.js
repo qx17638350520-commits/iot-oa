@@ -77,7 +77,7 @@
   function mergeSupplement(existing, incoming) {
     if(!Array.isArray(existing)||!Array.isArray(incoming))throw Error('增量题库格式错误');
     const additions=incoming.map(q=>validateQuestion(q));
-    if(new Set(additions.map(q=>q.id)).size!==additions.length||additions.some(q=>!q.id.startsWith('iot-ext-')))throw Error('增量题库 ID 无效');
+    if(new Set(additions.map(q=>q.id)).size!==additions.length||additions.some(q=>!/^iot-(?:ext|p2)-/.test(q.id)))throw Error('增量题库 ID 无效');
     const ids=new Set(existing.map(q=>q.id)),titles=new Set(existing.map(q=>normalize(q.title))),added=[],conflicts=[];
     for(const q of additions){if(ids.has(q.id)||titles.has(normalize(q.title))){conflicts.push(q.id);continue;}ids.add(q.id);titles.add(normalize(q.title));added.push(q);}
     return {questions:[...existing,...added],added:added.length,conflicts};
@@ -90,10 +90,39 @@
       const batch=await response.json();if(batch.schema!=='iot-question-supplement/v1')return;
       const merged=mergeSupplement(questions,batch.questions);
       const backupKey=key+'_backup';
-      if(!await api('/api/state/'+backupKey))await api('/api/state/'+backupKey,'POST',questions);
+      if(merged.added&&!await api('/api/state/'+backupKey))await api('/api/state/'+backupKey,'POST',questions);
       if(merged.added){await api('/api/state/questions','POST',merged.questions);questions=merged.questions;}
       await api('/api/state/'+key,'POST',{completed:true,version:batch.version,added:merged.added,conflicts:merged.conflicts,backupKey});
     } catch(error){say('原创增量题库暂未加载，已有题目保留：'+error.message);}
+  }
+  function canonicalQuestion(value){if(Array.isArray(value))return '['+value.map(canonicalQuestion).join(',')+']';if(value&&typeof value==='object')return '{'+Object.keys(value).sort().map(k=>JSON.stringify(k)+':'+canonicalQuestion(value[k])).join(',')+'}';return JSON.stringify(value);}
+  async function applySeedCorrections(existing,corrections){
+    const rows=copy(existing),changed=[],preserved=[];
+    for(const correction of corrections||[]){
+      if(correction.before?.id!==correction.after?.id||correction.before?.id!=='iot-q035')throw Error('种子更正 ID 无效');
+      const index=rows.findIndex(q=>q.id===correction.before.id);if(index<0)continue;
+      if(canonicalQuestion(rows[index])===canonicalQuestion(validateQuestion(correction.after)))continue;
+      if(canonicalQuestion(rows[index])!==canonicalQuestion(correction.before)){preserved.push(rows[index].id);continue;}
+      if(!globalThis.crypto?.subtle)throw Error('当前浏览器不支持安全摘要，保留原题并稍后重试');
+      const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(canonicalQuestion(rows[index])));
+      const hash=Array.from(new Uint8Array(digest)).map(x=>x.toString(16).padStart(2,'0')).join('');
+      if(hash!==correction.beforeCanonicalSha256)throw Error('原题摘要不匹配，已阻止更正');
+      rows[index]=validateQuestion(correction.after);changed.push(rows[index].id);
+    }
+    return {questions:rows,changed,preserved};
+  }
+  async function installPhase2(){
+    const key='question_bank_update_20261010_phase2_v1';
+    try{
+      if((await api('/api/state/'+key))?.completed)return;
+      const response=await fetch('/static/question-bank/phase2/supplement.json');if(!response.ok)throw Error('无法读取第二阶段题库文件');
+      const batch=await response.json();if(batch.schema!=='iot-question-supplement/v2'||batch.version!=='20261010_phase2_v1'||!Array.isArray(batch.questions)||batch.questions.some(q=>!String(q.id).startsWith('iot-p2-')))throw Error('第二阶段题库清单无效');
+      const corrected=await applySeedCorrections(questions,batch.seedCorrections);
+      const merged=mergeSupplement(corrected.questions,batch.questions),backupKey=key+'_backup';
+      if((merged.added||corrected.changed.length)&&!await api('/api/state/'+backupKey))await api('/api/state/'+backupKey,'POST',questions);
+      if(merged.added||corrected.changed.length){await api('/api/state/questions','POST',merged.questions);questions=merged.questions;}
+      await api('/api/state/'+key,'POST',{completed:true,version:batch.version,added:merged.added,conflicts:merged.conflicts,corrected:corrected.changed,preservedEdits:corrected.preserved,backupKey});
+    }catch(error){say('第二阶段原创题库更新未完成，原有数据保留：'+error.message);}
   }
   async function initialize() {
     if (loaded) return;
@@ -108,6 +137,7 @@
         await api('/api/state/questions','POST',questions);
       }
       await installSupplement();
+      await installPhase2();
       if (!Array.isArray(exams)) {
         exams = [
           {id:'exam-foundation',title:'物联网基础能力测评',description:'从感知到连接，检验你的物联网基础知识。',duration:30,passRate:60,published:true,createdAt:new Date().toISOString(),questions:copy(questions.filter(q => ['iot-q001','iot-q002','iot-q003','iot-q005','iot-q006','iot-q008','iot-q010','iot-q011','iot-q013','iot-q025','iot-q026','iot-q033'].includes(q.id)))},
@@ -179,7 +209,7 @@
   }
   function bankMarkup() {
     const list=filterQuestions();
-    return `<div class="ex-toolbar"><div><h2 style="font-size:23px;margin:0 0 8px">题库管理</h2><span class="ex-hint">${questions.length} 道实际题目 · ${Object.keys(TYPES).length} 种题型 · 支持 JSON 导入导出</span></div><div class="ex-flex"><button class="btn" data-action="exportBank">↓ 导出题库</button>${role==='teacher'?'<button class="btn" data-action="import">↑ 导入 JSON</button><input type="file" accept="application/json,.json" id="ex-import-file" class="ex-hidden"><button class="btn primary" data-action="addQuestion">＋ 新建题目</button>':''}</div></div><p class="ex-hint">新增题为原创 AI 草稿，待教师学科审核；机器校验与 AI 检查不等于教师审核。1500 道审定题库尚未完成。<a href="/static/question-bank/references.json" download>下载参考来源</a> · <a href="/static/question-bank/validation-report.json" download>下载校验报告</a></p>${filters()}<div class="ex-toolbar"><span class="ex-hint" style="margin:0">共找到 ${list.length} 道题目${list.length>100?'，当前显示前 100 道，请用搜索缩小范围':''}</span><span class="ex-hint" style="margin:0">导出文件可作为导入格式模板</span></div><div class="ex-bank">${list.slice(0,100).map((q,i)=>`<div class="ex-qrow"><span class="ex-qindex">${String(i+1).padStart(2,'0')}</span><div class="ex-qbody"><div class="ex-qtags"><span class="ex-pill blue">${TYPES[q.type]}</span><span>${esc(q.category)}</span><span>·</span><span>${esc(q.difficulty)}</span><span>· ${q.points} 分</span></div><h4>${esc(q.title)}</h4></div><div class="ex-qactions"><button class="btn small" data-action="previewQuestion" data-id="${esc(q.id)}">查看</button>${role==='teacher'?`<button class="btn small" data-action="editQuestion" data-id="${esc(q.id)}">编辑</button>`:''}</div></div>`).join('')||'<div class="ex-empty"><strong>没有符合条件的题目</strong>试试其他关键词或筛选条件。</div>'}</div>`;
+    return `<div class="ex-toolbar"><div><h2 style="font-size:23px;margin:0 0 8px">题库管理</h2><span class="ex-hint">${questions.length} 道实际题目 · ${Object.keys(TYPES).length} 种题型 · 支持 JSON 导入导出</span></div><div class="ex-flex"><button class="btn" data-action="exportBank">↓ 导出题库</button>${role==='teacher'?'<button class="btn" data-action="import">↑ 导入 JSON</button><input type="file" accept="application/json,.json" id="ex-import-file" class="ex-hidden"><button class="btn primary" data-action="addQuestion">＋ 新建题目</button>':''}</div></div><p class="ex-hint">新增题为原创 AI 草稿，待教师学科审核；机器校验与 AI 检查不等于教师审核。题库默认种子已扩展至 1500 道主问题，教师审核尚未完成。<a href="/static/question-bank/references.json" download>下载参考来源</a> · <a href="/static/question-bank/validation-report.json" download>下载校验报告</a> · <a href="/static/question-bank/phase2/quality-summary.json" download>1500题质量清单</a> · <a href="/static/question-bank/phase2/references.json" download>新增题参考资料</a></p>${filters()}<div class="ex-toolbar"><span class="ex-hint" style="margin:0">共找到 ${list.length} 道题目${list.length>100?'，当前显示前 100 道，请用搜索缩小范围':''}</span><span class="ex-hint" style="margin:0">导出文件可作为导入格式模板</span></div><div class="ex-bank">${list.slice(0,100).map((q,i)=>`<div class="ex-qrow"><span class="ex-qindex">${String(i+1).padStart(2,'0')}</span><div class="ex-qbody"><div class="ex-qtags"><span class="ex-pill blue">${TYPES[q.type]}</span><span>${esc(q.category)}</span><span>·</span><span>${esc(q.difficulty)}</span><span>· ${q.points} 分</span></div><h4>${esc(q.title)}</h4></div><div class="ex-qactions"><button class="btn small" data-action="previewQuestion" data-id="${esc(q.id)}">查看</button>${role==='teacher'?`<button class="btn small" data-action="editQuestion" data-id="${esc(q.id)}">编辑</button>`:''}</div></div>`).join('')||'<div class="ex-empty"><strong>没有符合条件的题目</strong>试试其他关键词或筛选条件。</div>'}</div>`;
   }
   function newBuilder() {
     builder={title:'',description:'',duration:30,passRate:60,published:true,selected:new Set(),points:'',audience:{mode:'all',classIds:[],studentIds:[]},opensAt:'',closesAt:''};
@@ -470,5 +500,5 @@
   }
   window.addEventListener('beforeunload',()=>{if(attempt)saveDraft();});
   function stop() { active=false; renderToken++; clearInterval(ticker); ticker=null; if(attempt){saveDraft();attempt=null;} editor=null; }
-  window.Exams={render,stop,gradeQuestion,validateQuestion,validateExam,validateExamAssignment,normalizeResultItem,helpers:{mergeSupplement,normalizeRoster,examAvailability,weightedPoints,applyManualScores,hasAnswer,answerComplete,validateAnswer}};
+  window.Exams={render,stop,gradeQuestion,validateQuestion,validateExam,validateExamAssignment,normalizeResultItem,helpers:{mergeSupplement,canonicalQuestion,applySeedCorrections,normalizeRoster,examAvailability,weightedPoints,applyManualScores,hasAnswer,answerComplete,validateAnswer}};
 })();

@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-10-10T08:38:55.763Z",
+  "verifiedAt": "2026-10-10T09:19:51.675Z",
   "status": "passed_real_pretrained_embeddings_and_gradient_training",
   "runtime": "4.22.0",
   "backend": "cpu",
@@ -150,10 +150,10 @@
   "cancellationReleasesTensors": true,
   "perImageTensorCleanupVerified": true,
   "timingMs": {
-    "load": 70,
-    "extract18Images": 24555,
-    "trainAndChecks": 1246,
-    "total": 25872
+    "load": 152,
+    "extract18Images": 23010,
+    "trainAndChecks": 1401,
+    "total": 24563
   },
   "deployedFilesRead": [
     {

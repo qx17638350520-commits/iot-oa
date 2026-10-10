@@ -1,0 +1,47 @@
+[
+  {
+    "before": {
+      "id": "iot-q035",
+      "type": "fill",
+      "category": "传感与嵌入式",
+      "difficulty": "中级",
+      "title": "一个 10 位 ADC 理论上可表示____种不同码值。（填写阿拉伯数字）",
+      "answer": [
+        "1024"
+      ],
+      "points": 3,
+      "explanation": "2 的 10 次方等于 1024，常见无符号码值范围为 0 到 1023。"
+    },
+    "after": {
+      "id": "iot-q035",
+      "type": "fill",
+      "category": "传感与嵌入式",
+      "difficulty": "中级",
+      "title": "调试某芯片时怀疑故障与特定硅片版本的已知限制有关。除数据手册和参考手册外，还应核对厂商发布的____。（填写该类更正文档的中文或英文名称）",
+      "answer": [
+        "勘误表",
+        "勘误文档",
+        "芯片勘误表",
+        "勘误手册",
+        "errata",
+        "errata sheet"
+      ],
+      "points": 3,
+      "explanation": "厂商勘误表列出适用器件/版本的已知限制，以及存在时的规避措施；应核对硅片版本和适用条件，不能假定所有版本相同。",
+      "tags": [
+        "芯片调试",
+        "勘误与硅片版本"
+      ],
+      "objective": "识别并核对芯片勘误文档的适用范围",
+      "provenance": {
+        "kind": "original-authored-seed-correction",
+        "reviewStatus": "draft-needs-subject-review",
+        "referenceIds": [
+          "legacy-st-errata"
+        ],
+        "authoredAt": "2026-10-10"
+      }
+    },
+    "policy": "replace-only-unchanged-original-default; never exam snapshots"
+  }
+]
