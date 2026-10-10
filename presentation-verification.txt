@@ -1,0 +1,26 @@
+Focused preset-only presentation verification. 2026-10-10T10:42:04.355881+00:00
+Scope: fixed UI/routes/exports/lifecycle/data isolation and zero engine/network calls. Mock DOM/VM tests, not real browser visual QA. This is NOT a full-suite rerun. No real training or inference test was executed. Historical numerical reports are preserved unchanged.
+Executed: test_preset_mode.cjs, test_preset_data.cjs, test_preset_replay.cjs, test_preset_routes.cjs, test_preset_vision.cjs, test_preset_extensions.cjs, test_preset_logistics_panels.cjs
+
+RUN test_preset_mode.cjs
+PASS: guarded real training, detection and OCR refuse execution before network/tensor/worker initialization.
+PASS: preset initial/default/existing-workspace isolation, idempotent seed, persistence, switching flush, reset confirm and namespace, network-free API, replay route guards, isolated exam drafts/profile.
+
+RUN test_preset_data.cjs
+PASS logistics: 1500 unchanged questions; 12 students; 18 lessons; 6 reports; 3 exams / 8 valid results; PNG annotations; knowledge, twin and untrained transfer schema; isolated fresh returns and zero writes; consistent warehouse ledger / four order states / cold-chain evidence.
+
+RUN test_preset_replay.cjs
+PASS preset replay: exact evidence, 6 pages, all sample selection, step/back/restart, pause, auto-complete, timer cleanup, namespaced persistence, bad storage, no network/model execution
+
+RUN test_preset_routes.cjs
+PASS logistics: preset visual/training routes bypass real renderers; extensions retain original graph/twin/logistics screens; stop cleanup; independent storage.
+
+RUN test_preset_vision.cjs
+PASS: 6 annotation categories, 6 multimodal tabs (including gauge and GAN concept flow), 4 OCR samples, exports, SVGs, state, replay, pause and stop; zero engine/network invocation.
+
+RUN test_preset_extensions.cjs
+Preset extensions: 258 checks passed (both platform fixtures; VM/DOM mock).
+
+RUN test_preset_logistics_panels.cjs
+PASS logistics preset panels: 60 filter combinations, deterministic counts/positions, 3 screen renders, controls, persistence, safety events, lifecycle cleanup, zero network/model calls
+

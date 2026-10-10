@@ -1,0 +1,185 @@
+{
+  "version": "5.5.0",
+  "flags": {
+    "fixed_teaching_sample": true
+  },
+  "shapes": [
+    {
+      "label": "开口扳手",
+      "points": [
+        [
+          75,
+          98
+        ],
+        [
+          360,
+          379
+        ]
+      ],
+      "group_id": "wrench",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "wrench",
+      "parent_id": null
+    },
+    {
+      "label": "螺丝刀",
+      "points": [
+        [
+          407,
+          73
+        ],
+        [
+          478,
+          380
+        ]
+      ],
+      "group_id": "driver",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "driver",
+      "parent_id": null
+    },
+    {
+      "label": "尖嘴钳",
+      "points": [
+        [
+          570,
+          88
+        ],
+        [
+          719,
+          374
+        ]
+      ],
+      "group_id": "pliers",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "pliers",
+      "parent_id": null
+    },
+    {
+      "label": "扳手开口中心",
+      "points": [
+        [
+          126,
+          151
+        ]
+      ],
+      "group_id": "wrench",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "jaw",
+      "parent_id": "wrench"
+    },
+    {
+      "label": "刀头",
+      "points": [
+        [
+          444,
+          80
+        ]
+      ],
+      "group_id": "driver",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "driver-tip",
+      "parent_id": "driver"
+    }
+  ],
+  "imagePath": "common-tools.svg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 800,
+  "labels": [
+    {
+      "id": 0,
+      "name": "工业对象",
+      "parent": null
+    },
+    {
+      "id": 1,
+      "name": "设备",
+      "parent": 0
+    },
+    {
+      "id": 2,
+      "name": "传感与仪表",
+      "parent": 1
+    },
+    {
+      "id": 3,
+      "name": "工具",
+      "parent": 0
+    },
+    {
+      "id": 4,
+      "name": "电气元件",
+      "parent": 0
+    },
+    {
+      "id": 5,
+      "name": "关键点",
+      "parent": 0
+    },
+    {
+      "id": 6,
+      "name": "机械零部件",
+      "parent": 0
+    },
+    {
+      "id": 7,
+      "name": "工业原材料",
+      "parent": 0
+    },
+    {
+      "id": 8,
+      "name": "管道接口",
+      "parent": 0
+    },
+    {
+      "id": 10,
+      "name": "开口扳手",
+      "parent": 3
+    },
+    {
+      "id": 11,
+      "name": "螺丝刀",
+      "parent": 3
+    },
+    {
+      "id": 12,
+      "name": "尖嘴钳",
+      "parent": 3
+    },
+    {
+      "id": 20,
+      "name": "扳手开口中心",
+      "parent": 5
+    },
+    {
+      "id": 21,
+      "name": "刀头",
+      "parent": 5
+    }
+  ],
+  "provenance": {
+    "source": "original_vector_teaching_fixture",
+    "author": "platform_preset",
+    "fixedSample": true,
+    "modelExecuted": false,
+    "trainingExecuted": false,
+    "networkUsed": false,
+    "coordinates": "SVG viewBox pixels; origin top-left; x right; y down"
+  }
+}

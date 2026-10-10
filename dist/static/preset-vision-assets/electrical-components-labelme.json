@@ -1,0 +1,185 @@
+{
+  "version": "5.5.0",
+  "flags": {
+    "fixed_teaching_sample": true
+  },
+  "shapes": [
+    {
+      "label": "断路器",
+      "points": [
+        [
+          87,
+          109
+        ],
+        [
+          265,
+          368
+        ]
+      ],
+      "group_id": "breaker",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "breaker",
+      "parent_id": null
+    },
+    {
+      "label": "继电器",
+      "points": [
+        [
+          322,
+          118
+        ],
+        [
+          486,
+          354
+        ]
+      ],
+      "group_id": "relay",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "relay",
+      "parent_id": null
+    },
+    {
+      "label": "接线端子",
+      "points": [
+        [
+          545,
+          180
+        ],
+        [
+          725,
+          300
+        ]
+      ],
+      "group_id": "terminal",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "terminal",
+      "parent_id": null
+    },
+    {
+      "label": "输入端子",
+      "points": [
+        [
+          570,
+          238
+        ]
+      ],
+      "group_id": "terminal",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "terminal-in",
+      "parent_id": "terminal"
+    },
+    {
+      "label": "线圈引脚",
+      "points": [
+        [
+          351,
+          133
+        ]
+      ],
+      "group_id": "relay",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "relay-pin",
+      "parent_id": "relay"
+    }
+  ],
+  "imagePath": "electrical-components.svg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 800,
+  "labels": [
+    {
+      "id": 0,
+      "name": "工业对象",
+      "parent": null
+    },
+    {
+      "id": 1,
+      "name": "设备",
+      "parent": 0
+    },
+    {
+      "id": 2,
+      "name": "传感与仪表",
+      "parent": 1
+    },
+    {
+      "id": 3,
+      "name": "工具",
+      "parent": 0
+    },
+    {
+      "id": 4,
+      "name": "电气元件",
+      "parent": 0
+    },
+    {
+      "id": 5,
+      "name": "关键点",
+      "parent": 0
+    },
+    {
+      "id": 6,
+      "name": "机械零部件",
+      "parent": 0
+    },
+    {
+      "id": 7,
+      "name": "工业原材料",
+      "parent": 0
+    },
+    {
+      "id": 8,
+      "name": "管道接口",
+      "parent": 0
+    },
+    {
+      "id": 10,
+      "name": "断路器",
+      "parent": 4
+    },
+    {
+      "id": 11,
+      "name": "继电器",
+      "parent": 4
+    },
+    {
+      "id": 12,
+      "name": "接线端子",
+      "parent": 4
+    },
+    {
+      "id": 20,
+      "name": "输入端子",
+      "parent": 5
+    },
+    {
+      "id": 21,
+      "name": "线圈引脚",
+      "parent": 5
+    }
+  ],
+  "provenance": {
+    "source": "original_vector_teaching_fixture",
+    "author": "platform_preset",
+    "fixedSample": true,
+    "modelExecuted": false,
+    "trainingExecuted": false,
+    "networkUsed": false,
+    "coordinates": "SVG viewBox pixels; origin top-left; x right; y down"
+  }
+}
