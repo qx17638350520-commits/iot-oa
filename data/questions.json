@@ -1,0 +1,7603 @@
+[
+  {
+    "id": "iot-q001",
+    "type": "single",
+    "category": "物联网基础",
+    "difficulty": "初级",
+    "title": "物联网系统中，负责把温度、光照等物理量转换为可处理信号的是哪一层？",
+    "options": [
+      "感知层",
+      "网络层",
+      "应用层",
+      "展示层"
+    ],
+    "answer": "A",
+    "points": 2,
+    "explanation": "感知层通过传感器、读写器等设备采集物理世界的信息。"
+  },
+  {
+    "id": "iot-q002",
+    "type": "single",
+    "category": "物联网基础",
+    "difficulty": "初级",
+    "title": "一枚无源 RFID 标签在没有电池的情况下，通常从哪里获得工作能量？",
+    "options": [
+      "环境声波",
+      "读写器产生的电磁场",
+      "互联网服务器",
+      "标签内部时钟"
+    ],
+    "answer": "B",
+    "points": 2,
+    "explanation": "无源 RFID 标签从读写器的射频场中取能，具体耦合方式与工作频段有关。"
+  },
+  {
+    "id": "iot-q003",
+    "type": "single",
+    "category": "传感与嵌入式",
+    "difficulty": "初级",
+    "title": "把连续变化的模拟电压转换成数字量，一般使用哪类模块？",
+    "options": [
+      "DAC",
+      "PWM",
+      "ADC",
+      "RTC"
+    ],
+    "answer": "C",
+    "points": 2,
+    "explanation": "ADC 是模数转换器；DAC 则把数字量转换成模拟量。"
+  },
+  {
+    "id": "iot-q004",
+    "type": "single",
+    "category": "传感与嵌入式",
+    "difficulty": "初级",
+    "title": "两个 I²C 设备接在同一总线上，首先需要避免什么问题？",
+    "options": [
+      "它们使用同一种外壳",
+      "设备的总线地址冲突",
+      "它们都使用 3.3 V 供电",
+      "它们都读取温度"
+    ],
+    "answer": "B",
+    "points": 2,
+    "explanation": "同一 I²C 总线上地址冲突会妨碍主机可靠区分设备，需改变地址或使用多路复用等方案。"
+  },
+  {
+    "id": "iot-q005",
+    "type": "single",
+    "category": "传感与嵌入式",
+    "difficulty": "初级",
+    "title": "在供电电压固定且电路适配的条件下，通过改变 PWM 的占空比通常可以调节什么？",
+    "options": [
+      "LED 的平均亮度",
+      "晶振的物理尺寸",
+      "芯片引脚数量",
+      "Flash 的物理容量"
+    ],
+    "answer": "A",
+    "points": 2,
+    "explanation": "在足够高的 PWM 频率下，改变占空比可改变 LED 的平均电流与视觉亮度。"
+  },
+  {
+    "id": "iot-q006",
+    "type": "single",
+    "category": "网络与协议",
+    "difficulty": "初级",
+    "title": "MQTT 的基本消息分发模式是什么？",
+    "options": [
+      "发布／订阅",
+      "仅点对点文件复制",
+      "广播视频编解码",
+      "内存直接寻址"
+    ],
+    "answer": "A",
+    "points": 2,
+    "explanation": "MQTT 客户端向主题发布消息，代理根据订阅关系分发消息。"
+  },
+  {
+    "id": "iot-q007",
+    "type": "single",
+    "category": "网络与协议",
+    "difficulty": "中级",
+    "title": "MQTT QoS 1 的交付语义是下列哪一项？",
+    "options": [
+      "最多一次",
+      "至少一次，可能重复",
+      "恰好一次且无任何协议开销",
+      "离线永久保证交付"
+    ],
+    "answer": "B",
+    "points": 3,
+    "explanation": "QoS 1 提供至少一次交付，应用仍应考虑重复消息与幂等处理。"
+  },
+  {
+    "id": "iot-q008",
+    "type": "single",
+    "category": "网络与协议",
+    "difficulty": "初级",
+    "title": "在 MQTT 订阅主题 factory/+/temperature 中，+ 通配符匹配什么？",
+    "options": [
+      "任意数量的主题层级",
+      "恰好一个主题层级",
+      "只匹配数字",
+      "只匹配空字符串"
+    ],
+    "answer": "B",
+    "points": 2,
+    "explanation": "+ 是单层通配符；# 是多层通配符，且需遵守对应主题过滤器规则。"
+  },
+  {
+    "id": "iot-q009",
+    "type": "single",
+    "category": "网络与协议",
+    "difficulty": "中级",
+    "title": "边缘网关与云端暂时断网时，为尽量减少采集数据丢失，优先考虑什么方案？",
+    "options": [
+      "关闭所有传感器并删除记录",
+      "本地持久化缓冲，恢复后按策略补传",
+      "不断清空消息队列",
+      "把所有时间戳改为相同值"
+    ],
+    "answer": "B",
+    "points": 3,
+    "explanation": "本地持久化与断点补传可以降低断网造成的数据丢失，同时需要容量、去重与时序策略。"
+  },
+  {
+    "id": "iot-q010",
+    "type": "single",
+    "category": "网络与协议",
+    "difficulty": "初级",
+    "title": "局域网设备自动获取 IP 地址等网络配置，常使用哪个协议？",
+    "options": [
+      "DHCP",
+      "JPEG",
+      "PWM",
+      "SPI"
+    ],
+    "answer": "A",
+    "points": 2,
+    "explanation": "DHCP 可向客户端提供 IP 地址、网关、DNS 等网络配置。"
+  },
+  {
+    "id": "iot-q011",
+    "type": "single",
+    "category": "云平台与数据",
+    "difficulty": "初级",
+    "title": "采集温度数据时同时保存时间戳，最直接的目的是什么？",
+    "options": [
+      "增加传感器量程",
+      "识别测量发生时间并分析变化趋势",
+      "替代设备认证",
+      "自动消除所有测量误差"
+    ],
+    "answer": "B",
+    "points": 2,
+    "explanation": "时间戳支持趋势分析、事件对齐与追溯，其准确性还依赖时钟同步等条件。"
+  },
+  {
+    "id": "iot-q012",
+    "type": "single",
+    "category": "云平台与数据",
+    "difficulty": "中级",
+    "title": "消息可能重复到达时，服务端基于唯一消息 ID 只处理一次业务变更，体现了什么设计？",
+    "options": [
+      "幂等处理",
+      "模拟调制",
+      "频分复用",
+      "无条件重试"
+    ],
+    "answer": "A",
+    "points": 3,
+    "explanation": "基于业务标识去重等幂等设计可避免重试与重复投递导致重复业务变更。"
+  },
+  {
+    "id": "iot-q013",
+    "type": "single",
+    "category": "安全与运维",
+    "difficulty": "初级",
+    "title": "新设备接入平台前，默认管理员密码应如何处理？",
+    "options": [
+      "所有设备继续共用默认密码",
+      "改为唯一且符合安全要求的凭证",
+      "打印在公开网页上",
+      "只修改用户名即可"
+    ],
+    "answer": "B",
+    "points": 2,
+    "explanation": "应避免默认或共享凭证，采用设备唯一身份与可管理的认证机制。"
+  },
+  {
+    "id": "iot-q014",
+    "type": "single",
+    "category": "安全与运维",
+    "difficulty": "中级",
+    "title": "OTA 固件升级前验证固件数字签名，主要用于确认什么？",
+    "options": [
+      "固件压缩率最高",
+      "固件来自可信签名者且内容未被篡改",
+      "设备电池一定充满",
+      "无线信号永远不会中断"
+    ],
+    "answer": "B",
+    "points": 3,
+    "explanation": "签名校验可验证来源与完整性，还应结合版本防回滚和安全恢复策略。"
+  },
+  {
+    "id": "iot-q015",
+    "type": "single",
+    "category": "传感与嵌入式",
+    "difficulty": "中级",
+    "title": "一个 12 位 ADC 理论上能输出多少种不同数字码值？",
+    "options": [
+      "12",
+      "256",
+      "1024",
+      "4096"
+    ],
+    "answer": "D",
+    "points": 3,
+    "explanation": "12 位对应 2 的 12 次方，即 4096 种码值；实际有效分辨率还受噪声等因素影响。"
+  },
+  {
+    "id": "iot-q016",
+    "type": "single",
+    "category": "安全与运维",
+    "difficulty": "初级",
+    "title": "设备采集程序偶发卡死后，需要自动触发复位恢复，常使用什么机制？",
+    "options": [
+      "看门狗",
+      "提高屏幕亮度",
+      "关闭所有日志",
+      "删除设备 ID"
+    ],
+    "answer": "A",
+    "points": 2,
+    "explanation": "看门狗在程序未按期喂狗时触发复位，是故障恢复机制之一。"
+  },
+  {
+    "id": "iot-q017",
+    "type": "multiple",
+    "category": "物联网基础",
+    "difficulty": "初级",
+    "title": "一个智慧农业监测系统通常可能包含哪些组成部分？",
+    "options": [
+      "土壤湿度传感器",
+      "连接设备与平台的网络",
+      "数据分析与告警应用",
+      "完全不需要的设备身份管理"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "points": 4,
+    "explanation": "传感、连接与应用是常见组成部分；设备身份管理也有必要，D 的描述不正确。"
+  },
+  {
+    "id": "iot-q018",
+    "type": "multiple",
+    "category": "传感与嵌入式",
+    "difficulty": "中级",
+    "title": "把传感器模块连接到 MCU 前，哪些检查是合理的？",
+    "options": [
+      "供电电压与电平兼容性",
+      "接口引脚定义",
+      "接口时序与通信协议",
+      "只看连接器颜色，不需要数据手册"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "points": 4,
+    "explanation": "应依据数据手册核对供电、电平、引脚与通信要求，不能仅凭颜色判断。"
+  },
+  {
+    "id": "iot-q019",
+    "type": "multiple",
+    "category": "网络与协议",
+    "difficulty": "中级",
+    "title": "MQTT 设备连接成功却收不到目标消息，哪些信息有助于排查？",
+    "options": [
+      "订阅主题是否匹配",
+      "代理端权限是否允许订阅",
+      "发布端是否实际发送消息",
+      "显示器的壁纸颜色"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "points": 4,
+    "explanation": "应从发布、代理、订阅链路逐步排查，并检查主题、权限和会话状态。"
+  },
+  {
+    "id": "iot-q020",
+    "type": "multiple",
+    "category": "云平台与数据",
+    "difficulty": "中级",
+    "title": "设计温度上报告警规则时，哪些措施有助于降低阈值附近反复告警？",
+    "options": [
+      "设置触发与恢复的不同阈值",
+      "设置持续超限时间",
+      "设置合理的告警去重或冷却策略",
+      "每次采样都强制发出新告警"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "points": 4,
+    "explanation": "迟滞、持续时间判断与去重策略可以减少阈值抖动引起的告警噪声。"
+  },
+  {
+    "id": "iot-q021",
+    "type": "multiple",
+    "category": "安全与运维",
+    "difficulty": "中级",
+    "title": "哪些做法符合设备接入的最小权限原则？",
+    "options": [
+      "设备只可发布自身遥测主题",
+      "设备只可订阅自身所需控制主题",
+      "所有设备使用平台超级管理员密钥",
+      "定期审查并撤销不再需要的权限"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "points": 4,
+    "explanation": "最小权限要求仅授予必要操作范围，共用超级管理员密钥会扩大风险。"
+  },
+  {
+    "id": "iot-q022",
+    "type": "multiple",
+    "category": "传感与嵌入式",
+    "difficulty": "中级",
+    "title": "对于电池供电、间歇采样的节点，哪些措施可能降低平均功耗？",
+    "options": [
+      "合理延长休眠时间",
+      "降低不必要的无线发送频率",
+      "关闭暂时不用的外设",
+      "保持所有外设满负荷运行"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "points": 4,
+    "explanation": "在满足业务需求的前提下，可通过休眠、批量发送与外设电源管理降低平均功耗。"
+  },
+  {
+    "id": "iot-q023",
+    "type": "multiple",
+    "category": "云平台与数据",
+    "difficulty": "中级",
+    "title": "为便于追踪一条设备遥测数据，通常应记录哪些字段？",
+    "options": [
+      "设备标识",
+      "采样时间",
+      "测量值及单位",
+      "操作员的明文密码"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "points": 4,
+    "explanation": "设备、时间、数值和单位有助于理解与追溯数据，不应在遥测中记录明文密码。"
+  },
+  {
+    "id": "iot-q024",
+    "type": "multiple",
+    "category": "安全与运维",
+    "difficulty": "高级",
+    "title": "设计可恢复的 OTA 升级方案时，哪些措施值得考虑？",
+    "options": [
+      "升级前验证固件签名",
+      "预留可回退的有效固件或恢复分区",
+      "监控升级后的健康状态",
+      "在任何供电状态下都直接覆盖唯一可用启动代码"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "points": 4,
+    "explanation": "校验、恢复分区和健康检查可降低升级失败风险；具体回退策略还应避免回退至不安全版本。"
+  },
+  {
+    "id": "iot-q025",
+    "type": "truefalse",
+    "category": "网络与协议",
+    "difficulty": "初级",
+    "title": "MQTT 的发布者和订阅者必须彼此知道对方的 IP 地址，才能通过代理交换消息。",
+    "answer": "false",
+    "points": 2,
+    "explanation": "发布者与订阅者通常只需要连接代理，通过主题进行解耦。"
+  },
+  {
+    "id": "iot-q026",
+    "type": "truefalse",
+    "category": "安全与运维",
+    "difficulty": "初级",
+    "title": "采用 TLS 加密传输后，仍然需要进行设备身份认证与权限控制。",
+    "answer": "true",
+    "points": 2,
+    "explanation": "传输加密不能替代完整的身份认证、授权与凭证管理。"
+  },
+  {
+    "id": "iot-q027",
+    "type": "truefalse",
+    "category": "传感与嵌入式",
+    "difficulty": "初级",
+    "title": "传感器分辨率越高，就一定代表绝对测量准确度越高。",
+    "answer": "false",
+    "points": 2,
+    "explanation": "分辨率与准确度是不同指标；偏差、噪声、校准和环境也会影响准确度。"
+  },
+  {
+    "id": "iot-q028",
+    "type": "truefalse",
+    "category": "云平台与数据",
+    "difficulty": "初级",
+    "title": "同一批数据在重试上传时可能重复，因此服务端需要按业务场景考虑去重。",
+    "answer": "true",
+    "points": 2,
+    "explanation": "网络重试可能产生重复，消息标识与幂等业务处理有助于保持正确性。"
+  },
+  {
+    "id": "iot-q029",
+    "type": "truefalse",
+    "category": "网络与协议",
+    "difficulty": "中级",
+    "title": "MQTT 保留消息与持久会话中的离线消息队列是完全相同的机制。",
+    "answer": "false",
+    "points": 2,
+    "explanation": "保留消息是主题级的最后一条保留消息；离线队列取决于会话、QoS 和代理配置。"
+  },
+  {
+    "id": "iot-q030",
+    "type": "truefalse",
+    "category": "安全与运维",
+    "difficulty": "初级",
+    "title": "为了便于排障，可以将设备私钥完整写入可公开访问的日志。",
+    "answer": "false",
+    "points": 2,
+    "explanation": "私钥等敏感凭据不应进入公开日志，应采用脱敏日志和受控的诊断机制。"
+  },
+  {
+    "id": "iot-q031",
+    "type": "truefalse",
+    "category": "传感与嵌入式",
+    "difficulty": "中级",
+    "title": "连接 UART 接口时，除 TX/RX 的对应关系外，通常还需要核对电平标准和共同参考地。",
+    "answer": "true",
+    "points": 2,
+    "explanation": "UART 参数、电平和参考地都应匹配；RS-232 与 MCU TTL 电平不可直接混接。"
+  },
+  {
+    "id": "iot-q032",
+    "type": "truefalse",
+    "category": "物联网基础",
+    "difficulty": "初级",
+    "title": "边缘计算可以在设备附近处理部分数据，从而减少部分上云流量和响应延迟。",
+    "answer": "true",
+    "points": 2,
+    "explanation": "合适的边缘处理可减少传输量并降低本地业务的响应延迟，但效果取决于任务设计。"
+  },
+  {
+    "id": "iot-q033",
+    "type": "fill",
+    "category": "网络与协议",
+    "difficulty": "初级",
+    "title": "MQTT 中，负责接收发布消息并转发给订阅者的服务组件称为消息____。（填写英文名称或中文名称）",
+    "answer": [
+      "broker",
+      "代理",
+      "消息代理",
+      "代理服务器"
+    ],
+    "points": 3,
+    "explanation": "Broker 即 MQTT 消息代理，负责消息路由和会话等功能。"
+  },
+  {
+    "id": "iot-q034",
+    "type": "fill",
+    "category": "传感与嵌入式",
+    "difficulty": "初级",
+    "title": "I²C 总线通常使用 SDA 与____两条信号线。（填写英文缩写）",
+    "answer": [
+      "SCL"
+    ],
+    "points": 3,
+    "explanation": "SDA 为数据线，SCL 为时钟线；仍需按硬件设计提供供电和参考地等连接。"
+  },
+  {
+    "id": "iot-q035",
+    "type": "fill",
+    "category": "传感与嵌入式",
+    "difficulty": "中级",
+    "title": "一个 10 位 ADC 理论上可表示____种不同码值。（填写阿拉伯数字）",
+    "answer": [
+      "1024"
+    ],
+    "points": 3,
+    "explanation": "2 的 10 次方等于 1024，常见无符号码值范围为 0 到 1023。"
+  },
+  {
+    "id": "iot-q036",
+    "type": "fill",
+    "category": "网络与协议",
+    "difficulty": "中级",
+    "title": "MQTT 中，用于匹配多个主题层级的通配符是____。（填写一个符号）",
+    "answer": [
+      "#"
+    ],
+    "points": 3,
+    "explanation": "# 是多层通配符，必须独占末尾层级，并遵守 MQTT 对特殊主题的匹配规则。"
+  },
+  {
+    "id": "iot-q037",
+    "type": "fill",
+    "category": "云平台与数据",
+    "difficulty": "初级",
+    "title": "用于设备时间同步的常见网络时间协议，其英文缩写是____。",
+    "answer": [
+      "NTP"
+    ],
+    "points": 3,
+    "explanation": "NTP 是网络时间协议，具体同步精度取决于网络、时钟与实现。"
+  },
+  {
+    "id": "iot-q038",
+    "type": "fill",
+    "category": "传感与嵌入式",
+    "difficulty": "初级",
+    "title": "PWM 的中文全称是____。",
+    "answer": [
+      "脉冲宽度调制",
+      "脉宽调制"
+    ],
+    "points": 3,
+    "explanation": "PWM 为 Pulse Width Modulation，即脉冲宽度调制。"
+  },
+  {
+    "id": "iot-q039",
+    "type": "compound",
+    "category": "云平台与数据",
+    "difficulty": "高级",
+    "title": "情境题：仓库每 10 秒采集一次温度，网络中断 20 分钟。请分两部分作答：① 设计本地缓存与恢复补传方案；② 解释如何避免补传引发重复入库及告警风暴。",
+    "answer": "① 本地持久化保存设备 ID、采样时间、唯一消息 ID 与测量值，设置容量上限和溢出策略，恢复后限速补传并确认入库。② 服务端按唯一 ID 幂等入库，区分采样时间与接收时间，对过期数据和告警采用明确的迟滞、去重与补传处理策略。",
+    "points": 10,
+    "explanation": "人工评分建议：持久化与容量策略 3 分，可靠补传 2 分，去重幂等 3 分，历史告警处理 2 分。"
+  },
+  {
+    "id": "iot-q040",
+    "type": "compound",
+    "category": "安全与运维",
+    "difficulty": "高级",
+    "title": "情境题：一批设备共用同一接入密钥，其中一台设备的密钥意外泄露。请分两部分作答：① 写出当下处置步骤；② 给出后续的身份与权限改造方案。",
+    "answer": "① 定位泄露范围，评估并限制受影响权限，按可恢复流程轮换或撤销凭证，监控异常接入并保留脱敏审计证据。② 使用每设备唯一身份与可轮换凭证，按设备限定主题和操作权限，保护凭证存储，建立生命周期吊销与异常检测机制。",
+    "points": 10,
+    "explanation": "人工评分建议：隔离与响应 3 分，凭证轮换与审计 2 分，唯一身份 2 分，最小权限与生命周期管理 3 分。"
+  },
+  {
+    "id": "iot-q041",
+    "type": "custom",
+    "category": "传感与嵌入式",
+    "difficulty": "高级",
+    "title": "开放设计：为一个每 5 分钟上报一次土壤湿度的电池供电节点，提出低功耗设计方案，并说明至少两个可验证的测试指标。",
+    "answer": "可从 MCU 休眠、传感器按需供电、无线链路与重试策略、批量发送等方面设计。测试可包含休眠电流、采样及发送峰值电流、单周期能耗、丢包率和基于实测的续航估算，明确测量方法与假设。",
+    "points": 10,
+    "explanation": "人工评分建议：低功耗方案完整性 5 分，可验证指标与测量方法 3 分，业务与可靠性权衡 2 分。"
+  },
+  {
+    "id": "iot-q042",
+    "type": "custom",
+    "category": "网络与协议",
+    "difficulty": "高级",
+    "title": "开放排障：设备已获得 IP 地址，但无法连接 MQTT 服务。请按从基础网络到应用层的顺序写出排查清单，并说明你会保存哪些证据。",
+    "answer": "核对地址、掩码、网关、DNS 与时间；检查目标域名解析、路由、防火墙和目标端口；检查 TLS 信任链、证书有效期和服务端名称；核对 MQTT 版本、客户端 ID、认证、权限与代理状态；保存脱敏配置、时间戳、错误码、代理日志及必要的抓包摘要。",
+    "points": 10,
+    "explanation": "人工评分建议：网络层排查 3 分，TLS 与认证排查 3 分，MQTT 及代理排查 2 分，脱敏证据与有序方法 2 分。"
+  },
+  {
+    "id": "iot-ext-hw-001",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "温度探头在多个稳定参考点都比参考仪高约 0.8 ℃，首先应检查哪类误差？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "跨多个点近似相同的偏差提示零点项；仍需核对参考仪与测量条件。",
+    "tags": [
+      "传感与校准",
+      "识别零点偏差"
+    ],
+    "objective": "识别零点偏差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只在高温段出现的增益误差",
+      "近似固定的零点偏差",
+      "参考温场每次都完全不同",
+      "量程上限设置过低造成的饱和"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-002",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "某测量链路在低量程端误差小，数值越高偏差按比例扩大，优先检查什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "随输入成比例变化的误差通常提示增益、量程映射或单位比例问题。",
+    "tags": [
+      "传感与校准",
+      "识别增益误差"
+    ],
+    "objective": "识别增益误差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只影响所有点相同数值的偏移项",
+      "仅用于记录的时区",
+      "增益或比例系数",
+      "显示刷新间隔"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-003",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "用参考温度计校准仓库探头时，最合理的比较条件是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "空间温差与热响应未稳定会混入比较结果，不能当作传感器误差。",
+    "tags": [
+      "传感与校准",
+      "控制校准比较条件"
+    ],
+    "objective": "控制校准比较条件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "两支探头放在不同温区后直接比较",
+      "处于尽量相同且稳定的温场并充分平衡",
+      "只比较显示屏刷新频率",
+      "探头通电后立即比较"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-004",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "完成零点调整后，应如何验证测量链路的性能？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "零点调整不等于校准或完整验证。应在量程内多个独立检查点复测，记录调整前后偏差，并按要求重新校准。",
+    "tags": [
+      "传感与校准",
+      "独立点验证校准"
+    ],
+    "objective": "独立点验证校准",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "bipm-vim-adjustment",
+        "bipm-vim-calibration"
+      ],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只确认校准菜单关闭",
+      "删除调整前的数据",
+      "只测刚调整过的那个点",
+      "在量程内多个独立检查点验证并记录残差"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-005",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "压力传感器数据手册写重复性好，但存在固定偏差，这说明什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "重复性关注相同条件下读数的一致性，不能替代准确度判断。",
+    "tags": [
+      "传感与校准",
+      "区分重复性与偏差"
+    ],
+    "objective": "区分重复性与偏差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只需提高读取频率就能校正偏差",
+      "重复性好就表示系统偏差为零",
+      "同条件读数接近即可替代参考仪比较",
+      "多次读数接近并不意味着接近真值"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-006",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "给实时温度曲线使用仅由当前及过去样本组成的更长移动平均窗口，通常带来什么代价？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "平滑可抑制部分波动，但会拖慢阶跃和尖峰响应。",
+    "tags": [
+      "传感与校准",
+      "滤波与延迟权衡"
+    ],
+    "objective": "滤波与延迟权衡",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "使响应变化出现更大延迟",
+      "自动扩大传感器测量量程",
+      "完全保留所有短时尖峰幅度",
+      "保证消除长期零点漂移"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-007",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "需要捕获电机振动的频率成分，选择采样方案时哪项必要？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "采样率须根据目标频带选择，并给实际抗混叠滤波器预留过渡带。采样前未充分抑制的带外信号或噪声可能混叠到关注频带，采样后复制或插值样本不能还原已丢失的信息。",
+    "tags": [
+      "传感与校准",
+      "抗混叠采样设计"
+    ],
+    "objective": "抗混叠采样设计",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "adi-antialiasing"
+      ],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只提高显示小数位",
+      "用重复历史样本提高有效采样率",
+      "考虑最高关注频率及抗混叠滤波",
+      "采样率只需高于信号平均频率"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-008",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "数字温度传感器的总线读取频率高于其内部转换频率，最可能怎样？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "读总线不等于启动或完成一次新转换，应按器件时序识别新数据。",
+    "tags": [
+      "传感与校准",
+      "区分读取与转换速率"
+    ],
+    "objective": "区分读取与转换速率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "每次必有全新测量值",
+      "测量精度自动提高",
+      "连续读取可能得到相同转换结果",
+      "内部转换频率必然随总线读取加速"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-009",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "称重台上放置空容器后按去皮，操作主要实现什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "去皮用于扣除容器重量，不等同于量程校准或增加承重。",
+    "tags": [
+      "传感与校准",
+      "理解去皮与校准"
+    ],
+    "objective": "理解去皮与校准",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "扣除当前容器重量作为零基准",
+      "增加最大承载能力",
+      "改变重力加速度",
+      "校验满量程线性"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-010",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "湿度探头表面出现凝露时，最合适的实验处理是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "凝露可能影响响应和测量有效性，应尊重器件限制并保留异常记录。",
+    "tags": [
+      "传感与校准",
+      "识别凝露测量限制"
+    ],
+    "objective": "识别凝露测量限制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "用当前饱和读数直接证明标定合格",
+      "删除异常标记继续出报告",
+      "按器件要求恢复干燥与稳定条件再评估",
+      "马上扩大显示范围到 200%"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-011",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "环境温度探头紧贴发热网关外壳，读数偏高。首先应改善什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "安装造成的热影响可能超过传感器本身误差，应测量目标环境而非网关外壳。",
+    "tags": [
+      "传感与校准",
+      "避免自热与安装偏差"
+    ],
+    "objective": "避免自热与安装偏差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只把显示的小数位减少",
+      "安装位置及热耦合条件",
+      "采样记录的命名规范",
+      "数据库的保留周期"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-012",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "光照传感器被外壳透明窗口覆盖后整体读数降低，调试时优先考虑什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "窗口材料、角度和污渍都会改变到达感光面的光，需要整体评估。",
+    "tags": [
+      "传感与校准",
+      "评估光学安装影响"
+    ],
+    "objective": "评估光学安装影响",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "数字消息的重发间隔",
+      "趋势图的坐标缩放",
+      "窗口透光特性和安装结构",
+      "存储记录的时区"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-013",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "一个模拟通道总接近 ADC 最大码值，首先应如何判断？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "顶格输出可能是过量程或硬件问题，不能直接解释为有效最大测量值。",
+    "tags": [
+      "传感与校准",
+      "识别模拟饱和"
+    ],
+    "objective": "识别模拟饱和",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只增加小数位",
+      "立即认定云端故障",
+      "认为信号一定非常稳定",
+      "检查输入是否超出量程、参考与接线是否正确"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-014",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "高源阻抗传感器接 SAR ADC 后偏差随采样时间变化，优先检查什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "采样电容需在采集窗口内充分建立；源阻抗和驱动能力会影响误差。",
+    "tags": [
+      "传感与校准",
+      "ADC建立时间"
+    ],
+    "objective": "ADC建立时间",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ti-sar-settling"
+      ],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "上报消息的压缩方式",
+      "采集结果的文件命名",
+      "消息保留标志",
+      "输入采样电容的建立时间"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-015",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "在传感器正常工作范围内，测得同一参考量的读数随室温缓慢漂移，应增加哪项测试？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "环境温度可能影响测量链路，应分离温漂与被测量真实变化。",
+    "tags": [
+      "传感与校准",
+      "验证温度漂移"
+    ],
+    "objective": "验证温度漂移",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只提高数据打包频率",
+      "只在单一室温下反复求平均",
+      "只测试网络连通",
+      "温度变化下的测量偏差试验"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-016",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "数字传感器返回 CRC 校验失败时，哪种处理更可靠？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "校验失败数据不应直接进入有效测量；重试和错误计数有助排障。",
+    "tags": [
+      "传感与校准",
+      "处理传感器CRC错误"
+    ],
+    "objective": "处理传感器CRC错误",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "标记本次无效，按有界策略重读并记录错误",
+      "仍当作正常精确读数",
+      "取本次字节中看起来合理的数",
+      "永久忽略 CRC"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-017",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "反射式光学距离传感器对斜放的光滑目标测量不稳定，优先改变哪项测试条件？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "反射式测距受目标表面与入射角影响，需要控制几何与材料条件。",
+    "tags": [
+      "传感与校准",
+      "测距目标条件"
+    ],
+    "objective": "测距目标条件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "结果日志的轮转周期",
+      "只增加小数位数",
+      "目标角度、表面和传感器视场",
+      "只改变数值显示单位"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-018",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "对手动按键直接统计 GPIO 上升沿，一次按下却计数多次，最可能需要什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "机械触点抖动会产生短时间多次边沿，可通过适当硬件或软件消抖。",
+    "tags": [
+      "传感与校准",
+      "机械按键消抖"
+    ],
+    "objective": "机械按键消抖",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "扩大数据存储容量",
+      "增加消息发送批次",
+      "把每个短时边沿都当成独立有效按键",
+      "消抖处理"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-019",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "4–20 mA 测量链路中的 4 mA 通常对应什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "标准线性映射中4 mA对应下限；故障电流判断还须遵照具体设备定义。",
+    "tags": [
+      "传感与校准",
+      "电流环活零点"
+    ],
+    "objective": "电流环活零点",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "量程中点",
+      "量程下限的活零点",
+      "线路已必然断开",
+      "量程上限"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-020",
+    "type": "single",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "一个规定为 0–100 ℃ 对应 4–20 mA 的理想线性变送器，12 mA 对应多少？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "12 mA位于4–20 mA的中点，因此对应0–100 ℃的中点50 ℃。",
+    "tags": [
+      "传感与校准",
+      "电流环工程量换算"
+    ],
+    "objective": "电流环工程量换算",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "50 ℃",
+      "12 ℃",
+      "20 ℃",
+      "75 ℃"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-021",
+    "type": "multiple",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "制定传感器验收记录时，哪些信息有助于结果追溯？",
+    "points": 4,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "仪器、条件和原始比较结果可帮助复查验收依据。",
+    "tags": [
+      "传感与校准",
+      "校准记录追溯"
+    ],
+    "objective": "校准记录追溯",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "参考仪器标识与有效校准状态",
+      "实验条件和稳定时间",
+      "只保存“合格”两个字",
+      "测量值、参考值与偏差"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-022",
+    "type": "multiple",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "为了判断一个异常峰值是干扰还是实际事件，应检查哪些证据？",
+    "points": 4,
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "交叉证据可支持判断；仅凭外观删除会损害真实性。",
+    "tags": [
+      "传感与校准",
+      "异常峰值证据"
+    ],
+    "objective": "异常峰值证据",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "供电、通信错误与现场操作记录",
+      "只因为峰值不美观就删除",
+      "相关传感器或独立测量",
+      "邻近时刻原始样本"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-023",
+    "type": "multiple",
+    "category": "传感与校准",
+    "difficulty": "中级",
+    "title": "建立称重传感器量程标定时，哪些做法合理？",
+    "points": 4,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "标定须在安全额定范围内，迟滞可通过升降载荷比较。",
+    "tags": [
+      "传感与校准",
+      "称重多点迟滞测试"
+    ],
+    "objective": "称重多点迟滞测试",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "使用已知质量的参考载荷",
+      "记录加载与卸载结果以观察迟滞",
+      "把超额定载荷当作常规必测项",
+      "在额定范围内测试多个载荷点"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-024",
+    "type": "truefalse",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "对含有固定系统偏差的传感器，仅增加同条件下的平均次数，就能保证消除该偏差。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "平均可降低部分随机波动，但固定偏差需通过校准或修正测量条件处理。",
+    "tags": [
+      "传感与校准",
+      "平均不能去固定偏差"
+    ],
+    "objective": "平均不能去固定偏差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-025",
+    "type": "truefalse",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "传感器校准系数更新时，保留系数版本及其生效时间有助于解释历史数据。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "历史值可能使用旧系数，需要版本记录才能追溯计算过程。",
+    "tags": [
+      "传感与校准",
+      "校准系数版本"
+    ],
+    "objective": "校准系数版本",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-026",
+    "type": "truefalse",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "探头的响应时间会影响对短时温度变化的捕获，即使静态校准结果合格。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "静态准确度与动态响应是不同指标，短时事件可能被热惯性平滑。",
+    "tags": [
+      "传感与校准",
+      "动态响应与静态校准"
+    ],
+    "objective": "动态响应与静态校准",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-027",
+    "type": "fill",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "在各点均已充分稳定的条件下，传感器输入由低到高和由高到低变化至同一数值时给出不同读数，这种静态路径差异通常称为____。",
+    "points": 3,
+    "answer": [
+      "迟滞",
+      "回差",
+      "hysteresis"
+    ],
+    "explanation": "充分稳定后仍存在的上行与下行差异是迟滞/回差；不应与尚未稳定造成的动态响应延迟混淆。",
+    "tags": [
+      "传感与校准",
+      "识别迟滞"
+    ],
+    "objective": "识别迟滞",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-028",
+    "type": "fill",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "数字采样中，高频信号折叠成低频表观成分的现象称为____。",
+    "points": 3,
+    "answer": [
+      "混叠",
+      "aliasing"
+    ],
+    "explanation": "采样前限制带宽并选择合适采样率，可减少混叠。",
+    "tags": [
+      "传感与校准",
+      "识别混叠术语"
+    ],
+    "objective": "识别混叠术语",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-029",
+    "type": "fill",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "设规定换算式为温度值 = 原始整数 ÷ 10。原始整数 253 表示____ ℃。（只填数值）",
+    "points": 3,
+    "answer": [
+      "25.3",
+      "25.30"
+    ],
+    "explanation": "按设备明确给定的比例换算，而不是根据显示位数猜单位。",
+    "tags": [
+      "传感与校准",
+      "解释固定小数点编码"
+    ],
+    "objective": "解释固定小数点编码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-030",
+    "type": "fill",
+    "category": "传感与校准",
+    "difficulty": "初级",
+    "title": "一个线性测量链的校正模型写为 y = a×x+b，其中 b 通常用于修正____偏差。（填“零点”或“增益”）",
+    "points": 3,
+    "answer": [
+      "零点"
+    ],
+    "explanation": "加性常数对应零点项，乘性系数a对应增益项。",
+    "tags": [
+      "传感与校准",
+      "校正模型加性项"
+    ],
+    "objective": "校正模型加性项",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-031",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "学校实验板额定 5 V，手边有 12 V 适配器且插头相同，正确做法是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "额定5 V输入不能因插头相同就直接接12 V。应另选符合实验板电压、极性和电流能力要求的电源，并按实验室流程核对后接入。",
+    "tags": [
+      "低压供电与接线安全",
+      "同插头电源兼容性"
+    ],
+    "objective": "同插头电源兼容性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只把插头包上胶带",
+      "直接连接试亮",
+      "确认额定电压、极性和电源能力匹配后才接入",
+      "增加软件延时即可"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-032",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "低压实验板出现焦味或异常发热时，首先应怎样做？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "先停止能量输入并交由有资格人员排查，避免进一步损坏或烫伤。",
+    "tags": [
+      "低压供电与接线安全",
+      "异常发热处置"
+    ],
+    "objective": "异常发热处置",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "徒手触摸最热元件",
+      "用软件提高电流上限",
+      "按实验室流程停止供电并报告指导人员",
+      "继续运行记录最高温度"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-033",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "计划修改低压面包板跳线时，基本前提是什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "断电重接线能减少短路和误接风险；储能元件仍需按规范处理。",
+    "tags": [
+      "低压供电与接线安全",
+      "断电改线"
+    ],
+    "objective": "断电改线",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "数据库已备份",
+      "所有 LED 点亮",
+      "网页已经登录",
+      "先断开供电并确认储能风险已按实验规范处理"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-034",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "中级",
+    "title": "低压电源在无线模块发射瞬间掉压，最值得检查什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "无线发射有瞬时电流需求，电源能力、布线阻抗和储能去耦均可能影响电压。",
+    "tags": [
+      "低压供电与接线安全",
+      "瞬态供电能力"
+    ],
+    "objective": "瞬态供电能力",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "供电峰值能力、线损与去耦",
+      "只看电源外壳标称的最大电压",
+      "先把网络超时时间无限延长",
+      "仅依赖待机电压判定供电合格"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-035",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "用数字万用表测低压直流电源两端电压，表的连接原则是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "测电压须同时核对表笔插孔和电压档，并联测量；电流插孔/电流档误跨电源可能短路，须遵守仪表说明。",
+    "tags": [
+      "低压供电与接线安全",
+      "低压电压测量原则"
+    ],
+    "objective": "低压电压测量原则",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "表笔插孔正确时任意档位均等价",
+      "电阻档用于带电测量",
+      "表笔接入规定的电压测量插孔，选择合适直流电压档并联于两点",
+      "将表置电流档跨接电源"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-036",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "要用电阻档检查实验跳线是否导通，应处于什么条件？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "电阻测量应在无外加电源且储能已安全处理时进行，避免错误或损坏。",
+    "tags": [
+      "低压供电与接线安全",
+      "无电导通检查"
+    ],
+    "objective": "无电导通检查",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "电路正常带电",
+      "断开供电并按规范消除储能影响",
+      "电源处于最低但非零电压",
+      "只停止应用程序而不切断电源"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-037",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "3.3 V MCU 的输入脚未声明可容忍 5 V，而外设输出为 5 V，合理方案是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "电平兼容性是硬件限制，软件读到数据不代表电气安全。",
+    "tags": [
+      "低压供电与接线安全",
+      "非容忍输入电平转换"
+    ],
+    "objective": "非容忍输入电平转换",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "直接接入并看软件是否读到",
+      "采用匹配的电平转换并核对时序",
+      "只降低波特率",
+      "先提高 MCU 主频"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-038",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "中级",
+    "title": "低压实验中接入感性负载驱动模块，应优先确认什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "感性负载关断可能产生瞬态，需要按合格模块说明选择驱动与保护。",
+    "tags": [
+      "低压供电与接线安全",
+      "感性负载保护核对"
+    ],
+    "objective": "感性负载保护核对",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只看模块是否有电源指示灯",
+      "模块额定负载能力及关断瞬态保护",
+      "默认 MCU 引脚可直接驱动任意负载",
+      "只确认开关速度越快越好"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-039",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "一个 GPIO 的最大允许输出电流低于负载所需电流，应如何设计？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "GPIO主要输出逻辑控制，超过能力的负载需适当驱动而非直接供电。",
+    "tags": [
+      "低压供电与接线安全",
+      "GPIO驱动能力"
+    ],
+    "objective": "GPIO驱动能力",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "更换变量名称",
+      "忽略数据手册",
+      "并联未知引脚强行供电",
+      "使用符合额定参数的驱动级"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-040",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "中级",
+    "title": "限流电源接上低压实验板后持续进入限流状态，应怎样处理？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "持续限流需先查明原因，不能用提高限值掩盖短路。",
+    "tags": [
+      "低压供电与接线安全",
+      "限流异常诊断"
+    ],
+    "objective": "限流异常诊断",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "不断提高限流值直到发热",
+      "短接限流保护",
+      "停止供电，检查误接、短路和负载额定需求",
+      "认为这是网络故障"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-041",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "模块仅支持指定极性的直流输入，接线前最可靠的极性依据是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "颜色与外形不是可靠的通用标准，须以明确电气定义核对。",
+    "tags": [
+      "低压供电与接线安全",
+      "供电极性核对"
+    ],
+    "objective": "供电极性核对",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "上一届学生的记忆",
+      "设备标识、原理图或厂商说明及适当测量确认",
+      "插头外径越大越是正极",
+      "同型号插头的极性永远统一"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-042",
+    "type": "single",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "使用锂电池教学模块发现电池鼓包，正确做法是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "鼓包电池有安全风险，不应挤压、刺破或继续充电。",
+    "tags": [
+      "低压供电与接线安全",
+      "异常电池安全边界"
+    ],
+    "objective": "异常电池安全边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "提高充电电压恢复容量",
+      "刺破排气",
+      "停止使用并按实验室电池安全流程交专业人员处理",
+      "压平后继续充电"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-043",
+    "type": "multiple",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "断电检查低压实训台时，发现三处可能的机械接线缺陷。哪些情况应在恢复供电前修正？",
+    "points": 4,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "散股、松动和绝缘破损可能造成短路或间歇接触，应在断电下按批准流程修正并复核；清晰标签是正常状态。",
+    "tags": [
+      "低压供电与接线安全",
+      "机械接线缺陷"
+    ],
+    "objective": "识别机械接线缺陷",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "多股导线有散开的铜丝可能碰到相邻端子",
+      "连接器未插到底且轻碰就松动",
+      "正常绝缘线套有清晰的端点标签",
+      "跳线被机壳锐边挤压导致绝缘层破损"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-044",
+    "type": "multiple",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "在学校低压实训中，哪些任务应停止自行操作并交指导人员处理？",
+    "points": 4,
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "市电和异常电池超出低压学生实训范围，应依实验室流程处理。",
+    "tags": [
+      "低压供电与接线安全",
+      "识别超范围危险任务"
+    ],
+    "objective": "识别超范围危险任务",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "处理鼓包电池",
+      "打开市电适配器外壳排障",
+      "发现裸露市电导体",
+      "在断电后按批准图纸检查低压跳线标签"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-045",
+    "type": "truefalse",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "USB 供电电压较低，所以无论短路电流多大都不会造成导线发热。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "低电压仍可能具有较大短路电流，存在热损伤或火灾风险。",
+    "tags": [
+      "低压供电与接线安全",
+      "低压不等于无热风险"
+    ],
+    "objective": "低压不等于无热风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-046",
+    "type": "truefalse",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "静电敏感模块即使尚未通电，也可能因不当拿取而受损。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "静电放电可能损伤器件，应遵守实验室认可的ESD操作流程。",
+    "tags": [
+      "低压供电与接线安全",
+      "静电敏感防护"
+    ],
+    "objective": "静电敏感防护",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-047",
+    "type": "truefalse",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "保险丝反复熔断时，改用明显更大额定电流的保险丝就是通用修复方法。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "额定保护应符合设计；反复动作应排查故障，不能任意提高保护阈值。",
+    "tags": [
+      "低压供电与接线安全",
+      "不得掩盖保护动作"
+    ],
+    "objective": "不得掩盖保护动作",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-048",
+    "type": "fill",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "直流电路中，按规定关系 I=U/R，3 V 加在 1000 Ω 电阻上，电流为____ mA。（只填数值）",
+    "points": 3,
+    "answer": [
+      "3",
+      "3.0",
+      "3.00"
+    ],
+    "explanation": "3÷1000 A=0.003 A=3 mA；此处为理想低压计算题。",
+    "tags": [
+      "低压供电与接线安全",
+      "欧姆定律毫安换算"
+    ],
+    "objective": "欧姆定律毫安换算",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-049",
+    "type": "fill",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "电路断电后，仍可能储存电能的常见两端器件是____。（填写电容或电阻）",
+    "points": 3,
+    "answer": [
+      "电容"
+    ],
+    "explanation": "电容可能保留电荷；实验中按规定的安全流程处理，不能假定断电即无能量。",
+    "tags": [
+      "低压供电与接线安全",
+      "识别储能元件"
+    ],
+    "objective": "识别储能元件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-050",
+    "type": "fill",
+    "category": "低压供电与接线安全",
+    "difficulty": "初级",
+    "title": "电源电压固定为 5 V、负载平均电流 0.2 A，理想平均输入功率为____ W。（只填数值）",
+    "points": 3,
+    "answer": [
+      "1",
+      "1.0",
+      "1.00"
+    ],
+    "explanation": "直流功率P=UI=5×0.2=1 W；不能据此忽略峰值电流。",
+    "tags": [
+      "低压供电与接线安全",
+      "直流功率计算"
+    ],
+    "objective": "直流功率计算",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-051",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "中级",
+    "title": "仓库 UHF RFID 标签在纸箱上可读，直接贴金属箱后读距明显变化，优先考虑什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "金属会影响普通标签的性能，应针对物体材料选型并实测。",
+    "tags": [
+      "RFID与NFC调试",
+      "金属环境标签选型"
+    ],
+    "objective": "金属环境标签选型",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "gs1-metal-water"
+      ],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只修改标签绑定名称",
+      "金属对天线及电磁场的影响与抗金属标签适配",
+      "增加库存数据库容量",
+      "重新打印入库单"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-052",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "中级",
+    "title": "读写器在通道旁读到邻近货架标签，调试目标应是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "识读不等于通过指定通道，需控制读区并结合业务事件条件。",
+    "tags": [
+      "RFID与NFC调试",
+      "读区越界与通行判定"
+    ],
+    "objective": "读区越界与通行判定",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "把所有读到的标签都算通行",
+      "删除货架库存",
+      "优化读区、天线布置和通行判定证据",
+      "把所有功率设置为最大"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-053",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "中级",
+    "title": "同一托盘在一次已确认的入库通行中，两秒内被读到几十次，入库系统应如何计数？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "同一次通行中的原始重复读应按标签标识和业务事件规则合并；真实再次通行应依据新的事件边界判断，不能仅用固定时间窗口一概丢弃。",
+    "tags": [
+      "RFID与NFC调试",
+      "RFID读数到业务事件"
+    ],
+    "objective": "RFID读数到业务事件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "每次都新建一张入库单",
+      "每读一次增加一件商品",
+      "依据业务事件、标签标识和时间窗口形成一次有效事件",
+      "只保留最弱信号"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-054",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "读写器能识别 EPC，是否说明已验证商品真伪？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "标识本身不一定包含可信认证；真伪需额外机制与业务证据。",
+    "tags": [
+      "RFID与NFC调试",
+      "标识不等于认证"
+    ],
+    "objective": "标识不等于认证",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "能，因为 EPC 永不复制",
+      "不能，标识读取与真实性认证需要区分",
+      "只要读距足够远就能",
+      "能，因为无线电不能重放"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-055",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "把 NFC 标签写入一个网页链接后，手机读取时仍提示是否打开，说明什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "标签承载数据，手机及应用决定如何解释和打开链接。",
+    "tags": [
+      "RFID与NFC调试",
+      "NFC数据与执行分离"
+    ],
+    "objective": "NFC数据与执行分离",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "标签内置浏览器已运行",
+      "数据读取与执行打开链接是不同步骤",
+      "写入必然失败",
+      "无需任何手机软件处理"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-056",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "标准 NFC 近场通信常用的载波频率是多少？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "NFC常用13.56 MHz，不能与UHF RAIN RFID的工作频段混淆。",
+    "tags": [
+      "RFID与NFC调试",
+      "NFC频率"
+    ],
+    "objective": "NFC频率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "nxp-nfc"
+      ],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "2.4 GHz",
+      "5 GHz",
+      "13.56 MHz",
+      "433 MHz"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-057",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "使用 NFC 写入程序前，为什么应核对标签可用用户存储容量？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "NDEF等记录也有结构开销，不能只按屏幕字符数估算存储需求。",
+    "tags": [
+      "RFID与NFC调试",
+      "NFC容量与编码开销"
+    ],
+    "objective": "NFC容量与编码开销",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "容量决定仓库面积",
+      "容量越大手机电量越多",
+      "编码后的记录可能超过标签实际可用空间",
+      "容量决定 WiFi 密码长度"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-058",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "准备把教学 NFC 标签设为永久只读前，应做什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "部分锁定位不可逆，必须按具体芯片文档确认且避免误锁教学器材。",
+    "tags": [
+      "RFID与NFC调试",
+      "不可逆标签锁定边界"
+    ],
+    "objective": "不可逆标签锁定边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "确认数据正确、后续写入需求及锁定不可逆性，并获得明确授权",
+      "随意锁定以便排障",
+      "先锁定再核对内容",
+      "认为重启手机即可解锁"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-059",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "中级",
+    "title": "UHF RFID 盘点时某方向读率较低，旋转标签后改善，优先检查什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "方向与极化匹配会影响耦合，应在真实摆放姿态下验证覆盖。",
+    "tags": [
+      "RFID与NFC调试",
+      "天线极化姿态影响"
+    ],
+    "objective": "天线极化姿态影响",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "仓库货品编号位数",
+      "标签与读写器天线的方向和极化关系",
+      "盘点日志压缩率",
+      "标签数据的字符编码"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-060",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "业务规定每件货品的标签标识应唯一。若两个不同货品被写入相同标识，会造成什么直接风险？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "在题目规定的单件唯一性范围内，标识重复会破坏实体映射；不能把此结论推广到有意共用的类别编码。",
+    "tags": [
+      "RFID与NFC调试",
+      "标签标识唯一性"
+    ],
+    "objective": "标签标识唯一性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "业务系统难以区分两个实体",
+      "必然减少无线碰撞",
+      "无线频率自动分开",
+      "系统能自动区分所有相同标识实体"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-061",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "盘点结果显示“未读到标签”，最严谨的解释是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "漏读可能来自遮挡、摆放、材料或设备状态，不能直接等同于缺货。",
+    "tags": [
+      "RFID与NFC调试",
+      "漏读与缺货区分"
+    ],
+    "objective": "漏读与缺货区分",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "货物必然已经丢失",
+      "本次条件下没有有效识读，需要结合覆盖和现场复核",
+      "标签必然被恶意删除",
+      "库存必须立即清零"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-062",
+    "type": "single",
+    "category": "RFID与NFC调试",
+    "difficulty": "中级",
+    "title": "评估 RFID 仓库门禁方案时，哪种测试最接近实际验收？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "真实使用条件影响识读，需同时观察漏读与读区外误读。",
+    "tags": [
+      "RFID与NFC调试",
+      "RFID场景化验收"
+    ],
+    "objective": "RFID场景化验收",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只统计开机成功次数",
+      "只在空房间测试单个裸标签",
+      "只看厂家最大读距",
+      "按真实包装、载荷、速度与摆放姿态测试读率和误读率"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-063",
+    "type": "multiple",
+    "category": "RFID与NFC调试",
+    "difficulty": "中级",
+    "title": "为分析批量标签漏读问题，哪些变量值得记录？",
+    "points": 4,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "物体、射频配置和运动条件是相关证据，私人密码无关且不应采集。",
+    "tags": [
+      "RFID与NFC调试",
+      "漏读实验变量"
+    ],
+    "objective": "漏读实验变量",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "通行速度与读写器配置",
+      "标签朝向与天线布置",
+      "操作员的私人账号密码",
+      "包装材料与标签安装位置"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-064",
+    "type": "multiple",
+    "category": "RFID与NFC调试",
+    "difficulty": "中级",
+    "title": "RFID 标签写入后，哪些措施有助于确认业务信息正确？",
+    "points": 4,
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "回读、绑定复核及日志可减少误写、错绑与未完成操作。",
+    "tags": [
+      "RFID与NFC调试",
+      "写入与绑定验收"
+    ],
+    "objective": "写入与绑定验收",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "options": [
+      "只听到提示音就永久忽略回读",
+      "核对实体与标识绑定关系",
+      "回读验证写入值",
+      "记录写入操作及失败状态"
+    ]
+  },
+  {
+    "id": "iot-ext-hw-065",
+    "type": "truefalse",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "增加 UHF RFID 发射功率可能扩大读区，但不保证盘点结果更准确。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "功率变化可能增加邻区误读，也受标签、环境与法规限制。",
+    "tags": [
+      "RFID与NFC调试",
+      "功率与盘点准确率"
+    ],
+    "objective": "功率与盘点准确率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-066",
+    "type": "truefalse",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "所有手机都能读取所有频段和协议的 RFID 标签。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "手机NFC能力与特定RFID频段、协议并不通用，需要核对支持范围。",
+    "tags": [
+      "RFID与NFC调试",
+      "手机RFID兼容边界"
+    ],
+    "objective": "手机RFID兼容边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-067",
+    "type": "truefalse",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "无源标签没有电池，就意味着它能在任何距离被普通读写器读取。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "取能和通信受场强、天线、环境与协议等限制。",
+    "tags": [
+      "RFID与NFC调试",
+      "无源读距限制"
+    ],
+    "objective": "无源读距限制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-068",
+    "type": "fill",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "多个 RFID 标签同时处于读写器覆盖区时，协议用于协调标签应答、逐个识别而减少应答冲突的机制通常称为____机制。",
+    "points": 3,
+    "answer": [
+      "防碰撞",
+      "反碰撞",
+      "anti-collision",
+      "anticollision"
+    ],
+    "explanation": "防碰撞机制协调多个标签的应答；它不保证在任意摆放和射频条件下都没有漏读。",
+    "tags": [
+      "RFID与NFC调试",
+      "多标签识别"
+    ],
+    "objective": "RFID多标签防碰撞",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-069",
+    "type": "fill",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "NFC 标签中常见的记录封装格式缩写为____，英文全称是 NFC Data Exchange Format。",
+    "points": 3,
+    "answer": [
+      "NDEF"
+    ],
+    "explanation": "NDEF用于组织可互操作的数据记录，容量和记录类型仍需检查。",
+    "tags": [
+      "RFID与NFC调试",
+      "NDEF格式"
+    ],
+    "objective": "NDEF格式",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-hw-070",
+    "type": "fill",
+    "category": "RFID与NFC调试",
+    "difficulty": "初级",
+    "title": "对一个包含 200 件应盘点物品的已知测试集，准确读到其中 190 件，按本题定义“读到件数/应读件数”，识读率为____%。（只填数值）",
+    "points": 3,
+    "answer": [
+      "95",
+      "95.0",
+      "95.00"
+    ],
+    "explanation": "190÷200×100%=95%；还应独立统计不属于测试集的误读。",
+    "tags": [
+      "RFID与NFC调试",
+      "计算识读率并区分误读"
+    ],
+    "objective": "计算识读率并区分误读",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  {
+    "id": "iot-ext-proto-001",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "初级",
+    "title": "实训台上两台设备都有RS485接口，却不能直接互读数据。首先应核实哪项应用层条件？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "RS485主要规定电气接口；接口相同不代表应用报文相容。",
+    "tags": [
+      "RS485",
+      "协议分层"
+    ],
+    "objective": "区分RS485电气接口与Modbus应用协议",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485",
+        "proto-modbus-app"
+      ]
+    },
+    "options": [
+      "两台设备是否使用相容的应用协议及报文格式",
+      "两台设备的终端电阻是否采用完全相同的封装",
+      "两台设备的串口插座是否具有相同针数",
+      "两台设备是否由同一厂家生产"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-002",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "一条需要端接的双线半双工RS485干线连接多个仪表，终端电阻应优先布置在哪里？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "端接用于抑制干线末端反射，阻值应匹配线缆特性阻抗；每个节点都端接会增加负载。",
+    "tags": [
+      "RS485",
+      "布线",
+      "终端电阻"
+    ],
+    "objective": "确定RS485总线端接位置",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485"
+      ]
+    },
+    "options": [
+      "每个仪表的支线上各放一个",
+      "只放在通信主站旁边",
+      "干线的两个物理末端",
+      "干线中央选择一个节点集中放置"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-003",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "初级",
+    "title": "Modbus RTU仪表设为9600 bit/s，网关设为19200 bit/s，其余串口参数一致。最合理的处理是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "双方速率不一致时无法正确还原串行字符；超时设置不能修复该问题。",
+    "tags": [
+      "Modbus RTU",
+      "串口配置"
+    ],
+    "objective": "识别串口速率不一致造成的帧接收失败",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    },
+    "options": [
+      "只延长响应超时，无需改速率",
+      "将双方通信速率设置一致后再测试",
+      "将从站地址改成0",
+      "把功能码03换成04即可"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-004",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "初级",
+    "title": "同一条Modbus RTU总线接入两块相同型号电表后，轮询地址7时出现响应冲突。最应先检查什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "同一串行总线上的单播从站地址应唯一，否则多个设备可能同时响应。",
+    "tags": [
+      "Modbus RTU",
+      "从站地址",
+      "排障"
+    ],
+    "objective": "定位重复Modbus从站地址引发的争用",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    },
+    "options": [
+      "两块表的应答超时是否相同",
+      "网关是否允许连续读取多个寄存器",
+      "两块表的保持寄存器映射是否相同",
+      "两块表是否都使用了从站地址7"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-005",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "手册明确采用传统40001编号，并注明40001对应报文起始地址0。读取40003时，请求PDU中的起始地址应填什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "按题设编号约定，报文地址为40003−40001＝2；实际项目必须先确认厂商编号规则。",
+    "tags": [
+      "Modbus",
+      "寄存器映射"
+    ],
+    "objective": "将手册寄存器编号换算成零基PDU地址",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-address",
+        "proto-modbus-app"
+      ]
+    },
+    "options": [
+      "40003",
+      "3",
+      "2",
+      "40002"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-006",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "初级",
+    "title": "设备手册把一个只读测量量映射到“输入寄存器”，并明确支持标准读输入寄存器功能。应选哪个功能码？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "0x04读取输入寄存器；0x03读取保持寄存器，0x06和0x10用于写保持寄存器。",
+    "tags": [
+      "Modbus",
+      "功能码",
+      "数据模型"
+    ],
+    "objective": "依据数据模型选择读输入寄存器功能码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    },
+    "options": [
+      "0x04",
+      "0x03",
+      "0x06",
+      "0x10"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-007",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "Modbus寄存器响应数据中，某个16位寄存器的两个字节依次为0x12、0x34。按标准寄存器字节顺序，其值是哪一个？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "Modbus单个16位寄存器先传高字节，因此这两个字节组成0x1234。",
+    "tags": [
+      "Modbus",
+      "字节序",
+      "报文解析"
+    ],
+    "objective": "按Modbus单寄存器大端字节序解码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    },
+    "options": [
+      "0x3412",
+      "0x1234",
+      "0x0012",
+      "0x0034"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-008",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "高级",
+    "title": "读取两个相邻寄存器后，32位浮点温度出现极大异常值，但帧校验正确。下一步最有针对性的检查是什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "单寄存器字节序正确不代表跨寄存器的32位解释正确；应按设备数据映射解码。",
+    "tags": [
+      "Modbus",
+      "浮点解码",
+      "寄存器顺序"
+    ],
+    "objective": "核对跨寄存器32位值的厂商编码约定",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app",
+        "proto-modbus-address"
+      ]
+    },
+    "options": [
+      "把所有负数取绝对值",
+      "把轮询周期改为零",
+      "忽略高16位，只显示低16位",
+      "核对厂商的32位数据类型、寄存器顺序和缩放定义"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-009",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "请求功能码为0x03，设备返回功能码0x83、异常码0x02。最直接的含义是什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "0x83表示0x03的异常响应，0x02表示非法数据地址，应核对起始地址与数量。",
+    "tags": [
+      "Modbus",
+      "异常响应",
+      "错误码"
+    ],
+    "objective": "解析Modbus异常功能码及非法地址错误",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    },
+    "options": [
+      "读取的地址范围对该设备无效",
+      "设备主动通知主站串口速率发生改变",
+      "请求已经正常返回测量数据",
+      "主站应将所有寄存器地址统一增加一个固定偏移"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-010",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "网关记录到来自目标地址的有效Modbus异常响应。与“完全没有响应”相比，这条证据首先支持哪个结论？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "有效异常响应说明该次通信到达了协议处理阶段，但不保证测量、执行或长期链路质量。",
+    "tags": [
+      "Modbus",
+      "排障证据"
+    ],
+    "objective": "利用异常响应缩小Modbus排障范围",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    },
+    "options": [
+      "传感器测量值已经准确",
+      "所有总线参数都在任何条件下可靠",
+      "本次至少完成了可解析的请求与响应交换",
+      "设备执行器已经到达目标位置"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-011",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "高级",
+    "title": "双线半双工RS485主站发完请求后仍持续使能驱动器，导致从站响应被干扰。正确的改进是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "方向控制应依据实际发送完成状态，而不只是软件缓存为空，使从站获得总线发送机会。",
+    "tags": [
+      "RS485",
+      "半双工",
+      "方向控制"
+    ],
+    "objective": "控制半双工收发方向与发送完成时序",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485",
+        "proto-modbus-serial"
+      ]
+    },
+    "options": [
+      "在最后一个字节进入发送缓存时立即断电",
+      "确认最后停止位发出后及时释放驱动并切换接收",
+      "把每个从站都设为持续发送",
+      "关闭接收器直到下一轮轮询结束"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-012",
+    "type": "single",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "标准Modbus功能码0x03一次读取保持寄存器时，在不考虑设备更小限制的前提下，协议规定的寄存器数量上限是多少？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "标准0x03请求数量范围为1至125；还需遵守具体设备可读区域和实现限制。",
+    "tags": [
+      "Modbus",
+      "批量读取",
+      "报文长度"
+    ],
+    "objective": "识别Modbus标准批量读数量上限",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    },
+    "options": [
+      "16",
+      "64",
+      "255",
+      "125"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-013",
+    "type": "multiple",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "调试一条较长的RS485干线时，哪些做法有助于改善信号完整性？",
+    "points": 3,
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "短支线与合理端接可降低反射；参考电位和隔离设计应保证收发器工作在允许范围。",
+    "tags": [
+      "RS485",
+      "信号完整性",
+      "现场布线"
+    ],
+    "objective": "综合检查RS485反射和共模条件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485"
+      ]
+    },
+    "options": [
+      "采用适配的双绞线并缩短支线",
+      "让每个支线任意延长以方便安装",
+      "结合线缆阻抗和收发器参数检查端接",
+      "按收发器要求评估共模范围和隔离需求"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-014",
+    "type": "multiple",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "RS485总线在所有驱动器释放时偶发乱码。关于失效保护偏置，哪些判断正确？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "空闲偏置与接收器阈值、端接和负载有关；重复叠加强偏置可能造成不合适的负载或电平。",
+    "tags": [
+      "RS485",
+      "空闲偏置",
+      "失效保护"
+    ],
+    "objective": "理解RS485空闲偏置的作用与约束",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485"
+      ]
+    },
+    "options": [
+      "应先确认收发器是否已内置适用的失效保护功能",
+      "偏置网络可以帮助总线空闲时保持确定状态",
+      "给每个节点盲目增加强偏置通常总能提高可靠性",
+      "设计偏置时需要同时考虑终端电阻及总线负载"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-015",
+    "type": "multiple",
+    "category": "RS485/Modbus",
+    "difficulty": "高级",
+    "title": "通过Modbus TCP转RTU网关访问多个串口仪表时，哪些说法正确？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "MBAP含事务标识和单元标识；标准Modbus TCP不附带RTU CRC，网关负责重新封装串行帧。",
+    "tags": [
+      "Modbus TCP",
+      "协议网关",
+      "MBAP"
+    ],
+    "objective": "区分Modbus TCP网关的事务关联与下游寻址",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app",
+        "proto-modbus-tcp"
+      ]
+    },
+    "options": [
+      "MBAP事务标识可用于关联TCP请求与响应",
+      "Unit Identifier可供网关定位下游从站",
+      "标准Modbus TCP报文必须保留RTU尾部CRC字段",
+      "网关需要处理TCP报文与串行帧之间的格式转换"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-016",
+    "type": "truefalse",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "一帧Modbus RTU数据通过CRC校验，就足以证明它来自被授权的设备。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "CRC用于检测传输差错，不是密码学身份认证或防伪机制。",
+    "tags": [
+      "Modbus RTU",
+      "CRC",
+      "安全边界"
+    ],
+    "objective": "区分CRC差错检测与发送者认证",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-017",
+    "type": "truefalse",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "写线圈请求收到正常Modbus响应后，就可以不检查反馈信号，直接认定阀门已经机械到位。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "正常响应证明协议写操作得到处理；机械到位还需限位、位置或其他现场反馈。",
+    "tags": [
+      "Modbus",
+      "执行器",
+      "验收"
+    ],
+    "objective": "区分协议写成功与物理动作完成",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-018",
+    "type": "truefalse",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "在标准Modbus串行通信中，向广播地址0发送被支持的写请求后，不应等待各从站逐一返回正常响应。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "广播请求不产生响应，主站仍需给设备足够处理时间；广播不适合读取返回值。",
+    "tags": [
+      "Modbus RTU",
+      "广播"
+    ],
+    "objective": "理解Modbus串行广播的无响应规则",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-019",
+    "type": "fill",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "Modbus RTU报文末尾的16位CRC按字节发送时，先发送____字节。（填“高”或“低”）",
+    "points": 2,
+    "answer": [
+      "低",
+      "低字节",
+      "低位字节"
+    ],
+    "explanation": "RTU CRC字段低字节在前、高字节在后，与单个寄存器的数据字节顺序不同。",
+    "tags": [
+      "Modbus RTU",
+      "CRC",
+      "字节序"
+    ],
+    "objective": "掌握RTU CRC字段的线序",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-020",
+    "type": "fill",
+    "category": "RS485/Modbus",
+    "difficulty": "中级",
+    "title": "按Modbus串行规范，在9600 bit/s下，以字符时间表示的RTU帧间最小静默间隔为____个字符时间。（填数字）",
+    "points": 2,
+    "answer": [
+      "3.5"
+    ],
+    "explanation": "低速RTU使用至少3.5个字符时间的间隔区分帧；较高波特率另有固定时间建议。",
+    "tags": [
+      "Modbus RTU",
+      "帧边界",
+      "时序"
+    ],
+    "objective": "根据低速RTU要求设置帧间间隔",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-021",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "中级",
+    "title": "两台实训设备使用相同Client ID连接同一个MQTT 5.0服务器，出现交替掉线。最有针对性的修复是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "服务器按Client ID识别客户端会话，新连接使用已有ID会使原连接被关闭。",
+    "tags": [
+      "MQTT 5.0",
+      "Client ID",
+      "排障"
+    ],
+    "objective": "定位MQTT客户端标识冲突引发的会话接管",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "让两台设备使用不同主题就足够",
+      "为同时在线的两个客户端分配不同Client ID",
+      "把Keep Alive统一设为0",
+      "让两台设备同时重新连接以抢占会话"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-022",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "初级",
+    "title": "希望设备突然断电后，由MQTT服务器向“设备离线”主题发布预先约定的消息，应配置什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "客户端在连接时登记遗嘱，服务器在满足遗嘱触发条件时发布；断电不会由设备自身发送该消息。",
+    "tags": [
+      "MQTT",
+      "遗嘱",
+      "在线状态"
+    ],
+    "objective": "选择MQTT遗嘱实现异常离线通知",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "订阅标识符",
+      "主题别名",
+      "遗嘱消息",
+      "响应主题"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-023",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "中级",
+    "title": "某条消息发布时使用QoS 2，某订阅被服务器授予的最大QoS为0，且没有其他重叠订阅。服务器向该订阅转发时使用哪个QoS？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "转发QoS不能超过原消息QoS和该订阅获准的最大QoS，本例只能为0。",
+    "tags": [
+      "MQTT",
+      "订阅QoS"
+    ],
+    "objective": "确定MQTT订阅侧实际交付QoS",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "QoS 0",
+      "QoS 1",
+      "QoS 2",
+      "由主题长度决定"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-024",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "中级",
+    "title": "某主题的旧保留状态不应再发给新订阅者。按MQTT标准，应如何清除该主题的保留消息？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "零长度载荷配合RETAIN=1会移除该主题已有保留消息；文本“null”不是零长度。",
+    "tags": [
+      "MQTT",
+      "保留消息",
+      "状态清理"
+    ],
+    "objective": "按MQTT规定删除某主题的保留消息",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "向主题发布字符串“null”，RETAIN为0",
+      "只取消自己的订阅",
+      "发布任意新消息，RETAIN为0",
+      "向该主题发布零长度载荷，RETAIN为1"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-025",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "初级",
+    "title": "设备发布到lab/Room1/temp，界面订阅lab/room1/temp。排除权限等问题后，为什么可能收不到消息？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "Topic Name与Topic Filter的匹配区分大小写，Room1与room1是不同层级内容。",
+    "tags": [
+      "MQTT",
+      "主题命名"
+    ],
+    "objective": "识别MQTT主题大小写匹配规则",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "不同客户端必须把主题中的数字统一补成两位",
+      "MQTT主题区分大小写",
+      "主题会自动按DNS域名规则转换为小写",
+      "同一个主题不允许包含多个斜杠"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-026",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "初级",
+    "title": "网关准备通过MQTT上传一段自定义二进制采样数据。关于PUBLISH载荷，哪个判断正确？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "MQTT载荷可以承载二进制数据；MQTT 5.0声明UTF-8格式时需满足相应格式要求。",
+    "tags": [
+      "MQTT",
+      "二进制载荷",
+      "序列化"
+    ],
+    "objective": "区分MQTT载荷传输与应用数据编码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "只能包含JSON文本",
+      "必须先转成十进制字符串",
+      "可以是二进制字节，双方需约定如何解释",
+      "只能包含UTF-8英文字符"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-027",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "中级",
+    "title": "MQTT 5.0中，一条临时控制消息在服务器等待转发时已经超过设置的Message Expiry Interval。应如何处理该订阅者对应的副本？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "消息过期机制可避免迟到消息继续等待交付；应用仍应自行校验控制指令的业务有效期。",
+    "tags": [
+      "MQTT 5.0",
+      "消息过期"
+    ],
+    "objective": "应用MQTT 5.0消息过期约束处理陈旧指令",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "在尚未开始向该订阅者交付时删除该副本",
+      "改为保留消息永久保存",
+      "自动把载荷改为“超时成功”后发送",
+      "等待客户端上线后无条件执行原控制"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-028",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "高级",
+    "title": "MQTT 5.0接收端在连接协商中设置Receive Maximum，主要限制什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "Receive Maximum用于发布流量控制；单包大小由Maximum Packet Size等另行约束。",
+    "tags": [
+      "MQTT 5.0",
+      "Receive Maximum",
+      "流控"
+    ],
+    "objective": "区分MQTT并发流控与单包大小限制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "单个主题名称的字符数",
+      "可创建的用户数量",
+      "每条消息的总字节数",
+      "同时处于未完成确认状态的QoS 1和QoS 2发布数量"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-029",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "中级",
+    "title": "同一MQTT 5.0客户端既向某主题发布又订阅该主题，希望该订阅不接收自己发布的消息，应考虑哪个非共享订阅选项？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "No Local可阻止该订阅把同Client ID发布的消息回送给客户端。",
+    "tags": [
+      "MQTT 5.0",
+      "订阅选项",
+      "消息回环"
+    ],
+    "objective": "用No Local避免同客户端消息回环",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "Retain As Published",
+      "No Local",
+      "Message Expiry Interval",
+      "Response Information"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-030",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "高级",
+    "title": "三个消费者均成功订阅同一个MQTT 5.0共享订阅$share/workers/lab/events。对一条匹配的新消息，正常分发目标是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "共享订阅用于分担处理任务；具体选择哪一会话由服务器实现决定，不能假定固定轮询。",
+    "tags": [
+      "MQTT 5.0",
+      "共享订阅"
+    ],
+    "objective": "理解MQTT共享订阅的负载分发范围",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "始终发给三个消费者中的最后连接者",
+      "必定各发一份给三个消费者",
+      "选取这个共享订阅中的一个会话分发",
+      "仅存储消息而不允许消费者接收"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-031",
+    "type": "single",
+    "category": "MQTT",
+    "difficulty": "中级",
+    "title": "MQTT 5.0请求消息希望告知处理端“把结果发布到哪个主题”，最直接使用哪个属性？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "Response Topic指定响应发布目的主题；响应与具体请求的关联可另用Correlation Data。",
+    "tags": [
+      "MQTT 5.0",
+      "请求响应"
+    ],
+    "objective": "使用MQTT 5.0响应主题指定回包目的地",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "Response Topic",
+      "Correlation Data",
+      "Topic Alias Maximum",
+      "Session Expiry Interval"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-032",
+    "type": "multiple",
+    "category": "MQTT",
+    "difficulty": "高级",
+    "title": "设备使用MQTT 5.0重连，并希望恢复服务器仍保存的旧会话。哪些条件或检查合理？",
+    "points": 3,
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "恢复依赖旧会话仍存在；Clean Start=1要求丢弃旧会话重新开始，不能强制恢复。",
+    "tags": [
+      "MQTT 5.0",
+      "会话恢复",
+      "重连"
+    ],
+    "objective": "判断MQTT 5.0会话恢复是否真正发生",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "使用原Client ID",
+      "保持Clean Start为1来强制恢复旧会话",
+      "以Clean Start=0请求恢复，并检查CONNACK的Session Present",
+      "确认旧会话未因会话过期或服务端策略而消失"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-033",
+    "type": "multiple",
+    "category": "MQTT",
+    "difficulty": "高级",
+    "title": "用MQTT 5.0主题别名压缩重复的长主题名称时，哪些做法符合规范？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "别名映射仅在当前网络连接内有效，且取值从1开始、受接收端上限约束。",
+    "tags": [
+      "MQTT 5.0",
+      "主题别名",
+      "报文优化"
+    ],
+    "objective": "正确管理MQTT主题别名的范围和生命周期",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "先在当前网络连接内建立别名与非空主题名称的映射",
+      "使用的别名值不超过对端声明的Topic Alias Maximum",
+      "断线重连后直接继续使用旧连接的全部映射",
+      "不把0用作有效主题别名"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-034",
+    "type": "multiple",
+    "category": "MQTT",
+    "difficulty": "高级",
+    "title": "设备获知MQTT 5.0对端的Maximum Packet Size较小。准备发送较大数据时，哪些处理合理？",
+    "points": 3,
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "上限针对完整MQTT控制报文，协议不会自动替应用完成大数据的分片重组。",
+    "tags": [
+      "MQTT 5.0",
+      "报文大小",
+      "应用分片"
+    ],
+    "objective": "针对MQTT最大报文限制设计发送策略",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "只计算载荷长度，忽略报文头和属性",
+      "计算完整MQTT报文长度是否超限",
+      "在业务允许时进行应用层分片并定义重组规则",
+      "精简非必要属性或载荷后重新检查总长度"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-035",
+    "type": "multiple",
+    "category": "MQTT",
+    "difficulty": "中级",
+    "title": "一次MQTT 5.0 SUBSCRIBE包含三个主题过滤器，收到SUBACK后应如何判定各项结果？",
+    "points": 3,
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "SUBACK逐项报告结果，部分成功、部分失败是可能的，获准QoS也可能低于请求值。",
+    "tags": [
+      "MQTT 5.0",
+      "SUBACK",
+      "错误处理"
+    ],
+    "objective": "逐项解析MQTT多主题订阅确认结果",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    },
+    "options": [
+      "按SUBACK原因码与请求中过滤器的顺序逐项对应",
+      "只要收到SUBACK，就把全部订阅标为成功",
+      "分别记录各项成功或失败及失败原因",
+      "使用各项实际获准的QoS，而非一律使用请求值"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-036",
+    "type": "truefalse",
+    "category": "MQTT",
+    "difficulty": "高级",
+    "title": "接收端看到MQTT PUBLISH的DUP标志为1，就能断定自己以前一定处理过这条应用消息。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "DUP表示这可能是报文重传，首次发送可能未到达当前接收端，不能据此直接认定业务已处理。",
+    "tags": [
+      "MQTT",
+      "DUP",
+      "重传"
+    ],
+    "objective": "正确解释MQTT DUP标志的证据边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-037",
+    "type": "truefalse",
+    "category": "MQTT",
+    "difficulty": "初级",
+    "title": "MQTT客户端可以把lab/+/temp作为PUBLISH的主题名称，让服务器自动向多个具体主题发布。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "通配符用于订阅过滤器，不能用在PUBLISH的Topic Name中。",
+    "tags": [
+      "MQTT",
+      "主题合法性"
+    ],
+    "objective": "区分发布主题与订阅过滤器的合法字符用途",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-038",
+    "type": "fill",
+    "category": "MQTT",
+    "difficulty": "初级",
+    "title": "MQTT的QoS 1 PUBLISH报文对应的协议确认报文名称是____。（填写英文报文名）",
+    "points": 2,
+    "answer": [
+      "PUBACK"
+    ],
+    "explanation": "QoS 1以PUBACK完成该次发布确认；它不等同于执行器完成动作的业务回执。",
+    "tags": [
+      "MQTT",
+      "PUBACK",
+      "报文识别"
+    ],
+    "objective": "识别MQTT QoS 1的确认报文",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-039",
+    "type": "fill",
+    "category": "MQTT",
+    "difficulty": "初级",
+    "title": "MQTT客户端在没有其他控制报文可发送、需要维持Keep Alive时，主动发送的心跳请求报文是____。（填写英文报文名）",
+    "points": 2,
+    "answer": [
+      "PINGREQ"
+    ],
+    "explanation": "客户端发送PINGREQ，服务器以PINGRESP回应，用于协议保活检测。",
+    "tags": [
+      "MQTT",
+      "Keep Alive",
+      "心跳"
+    ],
+    "objective": "识别MQTT客户端主动保活请求",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-040",
+    "type": "fill",
+    "category": "MQTT",
+    "difficulty": "中级",
+    "title": "MQTT 5.0请求与响应共用一个响应主题时，用来携带关联标识、帮助请求方匹配具体请求的属性是____。（填写英文名或中文名）",
+    "points": 2,
+    "answer": [
+      "Correlation Data",
+      "CorrelationData",
+      "关联数据",
+      "相关数据"
+    ],
+    "explanation": "Correlation Data可由响应端原样回传，使请求方区分同一响应主题中的多个并发请求。",
+    "tags": [
+      "MQTT 5.0",
+      "关联数据",
+      "并发请求"
+    ],
+    "objective": "使用MQTT关联数据区分并发请求响应",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-041",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "初级",
+    "title": "两台设备在同一二层局域网，分别为192.168.20.10/24与192.168.21.10/24，且未配置路由。为什么通常不能按直连同网段设备通信？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "/24掩码使前三个八位组构成网络前缀；20与21不同，需要合适的三层路由。",
+    "tags": [
+      "IPv4",
+      "子网掩码"
+    ],
+    "objective": "根据IPv4前缀判断直连子网关系",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host"
+      ]
+    },
+    "options": [
+      "最后一段数字相同就会冲突",
+      "/24会使两台设备自动采用相同的默认网关",
+      "它们属于不同的IPv4子网",
+      "两个地址都属于组播地址"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-042",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "IPv4以太网主机判断目标在本地子网内，但ARP缓存没有目标项。发送IP数据前通常先做什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "同链路IPv4以太网通信通常需把目标IP解析为MAC地址，再封装链路层帧。",
+    "tags": [
+      "IPv4",
+      "ARP",
+      "以太网"
+    ],
+    "objective": "说明同子网IPv4发送前的ARP解析",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host",
+        "proto-arp"
+      ]
+    },
+    "options": [
+      "广播ARP请求以获取目标MAC地址",
+      "向DNS查询目标网卡序列号",
+      "把数据直接发给互联网默认网关",
+      "先建立TLS连接再确定目标MAC地址"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-043",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "初级",
+    "title": "网关能访问本地服务器，访问其他网段失败。路由表没有匹配的特定路由，也没有默认路由。应重点补查什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "直连网段可达不意味着存在到远端的路由，应核对默认路由及下一跳可达性。",
+    "tags": [
+      "IP路由",
+      "默认网关"
+    ],
+    "objective": "识别缺少默认路由导致的跨网段失败",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host"
+      ]
+    },
+    "options": [
+      "本地服务器页面是否设置了缓存",
+      "应用请求体中的JSON字段顺序",
+      "本地服务器的HTTP连接是否使用长连接",
+      "可达的下一跳及默认网关配置"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-044",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "传感器通过TCP连续发送两条应用消息，接收端一次read却拿到一条半。正确的程序设计是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "TCP提供有序字节流，不保留应用消息边界；接收程序需处理拆分和合并到达。",
+    "tags": [
+      "TCP",
+      "字节流",
+      "粘包拆包"
+    ],
+    "objective": "为TCP字节流实现应用层分帧",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    },
+    "options": [
+      "要求TCP保证每次read恰好对应一次send",
+      "按应用约定的长度字段或分隔规则缓存并解析消息",
+      "把剩余半条立即当成错误丢弃",
+      "只把TCP端口改成UDP端口即可保持原代码"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-045",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "抓包看到服务器已ACK某次TCP上传的全部字节，但应用接口没有返回入库结果。可以确定什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "TCP确认与应用处理完成处于不同层次，入库成功需接口响应或服务端业务记录验证。",
+    "tags": [
+      "TCP",
+      "ACK",
+      "业务回执"
+    ],
+    "objective": "区分TCP传输确认与业务提交确认",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    },
+    "options": [
+      "数据库事务已经提交",
+      "所有下游服务都已经处理完成",
+      "对端TCP已确认相应字节，业务完成仍需应用证据",
+      "用户界面一定已经展示新记录"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-046",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "云端域名的A记录刚切到新IP，部分采集网关仍连接旧IP。最值得先核对什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "旧DNS缓存可能仍在有效期内；已建立的连接也不会因DNS变更自动迁移。",
+    "tags": [
+      "DNS",
+      "TTL",
+      "迁移排障"
+    ],
+    "objective": "解释DNS切换后客户端仍用旧地址的现象",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-dns"
+      ]
+    },
+    "options": [
+      "DNS缓存记录及其TTL、客户端是否重新解析",
+      "是否需要把DNS记录的TTL直接作为TCP端口号",
+      "是否应该通过跳过TLS证书校验消除DNS缓存影响",
+      "是否把服务器地址的最后一段当作设备编号保存"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-047",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "同一IP承载多个HTTP/1.1网站。调试时直接连接该IP，服务器返回了错误站点。请求中首先应核对哪个字段？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "HTTP/1.1的Host标明请求目标主机及必要端口，服务端可据此选择虚拟主机。",
+    "tags": [
+      "HTTP/1.1",
+      "Host",
+      "虚拟主机"
+    ],
+    "objective": "用HTTP Host定位虚拟主机请求目标",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http",
+        "proto-http1"
+      ]
+    },
+    "options": [
+      "Content-Length",
+      "User-Agent",
+      "Accept-Encoding",
+      "Host"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-048",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "批量导入接口返回HTTP 202 Accepted和任务状态链接。前端最合理的处理是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "202表示请求已接受但处理尚未完成，最终成功或失败需通过业务约定获知。",
+    "tags": [
+      "HTTP",
+      "202",
+      "异步任务"
+    ],
+    "objective": "正确处理HTTP异步接受状态",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    },
+    "options": [
+      "立即宣告全部数据已成功入库",
+      "按接口约定查询任务状态，等待最终结果",
+      "把202当成认证失败反复输入密码",
+      "删除本地原始文件后再检查任务"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-049",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "初级",
+    "title": "设备上传JSON请求体时，要说明“本次请求体是JSON”，应设置哪个HTTP字段？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "Content-Type描述当前内容的媒体类型；Accept表达客户端希望接受的响应类型。",
+    "tags": [
+      "HTTP",
+      "JSON",
+      "Content-Type"
+    ],
+    "objective": "区分HTTP内容类型与响应格式偏好",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    },
+    "options": [
+      "Accept: application/json",
+      "Content-Encoding: json",
+      "Content-Type: application/json",
+      "Transfer-Encoding: json"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-050",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "高级",
+    "title": "两名学生同时编辑设备配置。为避免覆盖别人刚保存的版本，客户端携带旧ETag发起If-Match条件更新，服务器发现不匹配，宜返回什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "If-Match不满足时应拒绝条件写入，412可让客户端重新读取并处理版本冲突。",
+    "tags": [
+      "HTTP",
+      "ETag",
+      "并发控制"
+    ],
+    "objective": "使用ETag与If-Match避免配置丢失更新",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    },
+    "options": [
+      "412 Precondition Failed",
+      "200 OK并覆盖新版本",
+      "301 Moved Permanently",
+      "204 No Content并忽略条件"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-051",
+    "type": "single",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "遥测接口返回429 Too Many Requests，并给出Retry-After: 30。客户端最合适的下一步是什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "429表示请求过多；Retry-After提供等待提示，应配合限速和有界重试避免加重拥塞。",
+    "tags": [
+      "HTTP",
+      "429",
+      "退避"
+    ],
+    "objective": "依据HTTP限流反馈调整客户端发送速率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http-rate",
+        "proto-http"
+      ]
+    },
+    "options": [
+      "同时开启更多上传线程",
+      "把原请求改成每毫秒重发",
+      "忽略响应并立即重试100次",
+      "至少按提示等待约30秒，并按接口策略降速重试"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-052",
+    "type": "multiple",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "为实验室设备配置静态IPv4地址时，哪些检查有助于避免地址冲突？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "单次ping不通不能证明地址空闲，关机设备或过滤ICMP的设备仍可能拥有该地址。",
+    "tags": [
+      "IPv4",
+      "静态地址",
+      "地址管理"
+    ],
+    "objective": "降低静态地址配置与动态分配冲突风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host"
+      ]
+    },
+    "options": [
+      "核对已有地址分配记录",
+      "检查地址是否落在未排除的DHCP动态分配范围内",
+      "认为设备关机时ping不通就一定无人使用",
+      "结合网络探测与管理记录确认地址占用情况"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-053",
+    "type": "multiple",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "按HTTP标准方法语义，哪些方法是幂等方法，即重复相同请求的预期资源效果与执行一次相同？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "GET、PUT、DELETE具有幂等语义；POST没有通用幂等保证。幂等并不要求每次状态码完全相同。",
+    "tags": [
+      "HTTP",
+      "方法语义",
+      "幂等"
+    ],
+    "objective": "依据HTTP方法语义判断安全重试基础",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    },
+    "options": [
+      "GET",
+      "PUT",
+      "POST",
+      "DELETE"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-054",
+    "type": "multiple",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "高级",
+    "title": "排查TCP连接失败时，哪些基于抓包的判断不过度推断？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "握手、拒绝和无响应提供不同层级证据；无回复可能来自链路、策略或主机等多种原因。",
+    "tags": [
+      "TCP",
+      "抓包",
+      "连接排障"
+    ],
+    "objective": "从TCP握手证据区分拒绝和超时而避免误判",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    },
+    "options": [
+      "目标返回RST，可能与端口未监听或中间策略有关",
+      "SYN反复重传但无回复，不能仅凭这一点认定密码错误",
+      "完成三次握手就证明应用数据已成功入库",
+      "应核对抓包方向、目标地址端口及时间以关联日志"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-055",
+    "type": "multiple",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "高级",
+    "title": "实现HTTP/1.1报文解析时，哪些做法符合标准分帧要求？",
+    "points": 3,
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "HTTP/1.1按字节及传输编码分帧；同时发送两种长度机制会带来歧义和安全风险。",
+    "tags": [
+      "HTTP/1.1",
+      "Content-Length",
+      "chunked"
+    ],
+    "objective": "正确实现HTTP/1.1消息体长度判断",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http1"
+      ]
+    },
+    "options": [
+      "把Content-Length理解为字符数量",
+      "在无Transfer-Encoding且允许携带消息体时，以有效Content-Length声明的字节数确定消息体长度",
+      "支持chunked编码的终止块判断，不能靠每次read边界断帧",
+      "发送带Transfer-Encoding的消息时不再同时发送Content-Length"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-056",
+    "type": "truefalse",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "初级",
+    "title": "如果某设备不回应ICMP Echo请求，就能直接断定它提供的HTTP服务一定不可达。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "网络或主机可能过滤ICMP而允许TCP/HTTP，仍需对目标服务进行针对性连接测试。",
+    "tags": [
+      "ICMP",
+      "HTTP",
+      "排障边界"
+    ],
+    "objective": "认识ping结果对应用可达性判断的局限",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host",
+        "proto-tcp"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-057",
+    "type": "truefalse",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "TCP对端通告接收窗口为0时，发送方应遵守流控，不能继续无限量发送普通数据来迫使对端接收。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "零窗口表示当前接收空间不足；TCP有窗口探测机制，应用也应控制缓存和背压。",
+    "tags": [
+      "TCP",
+      "接收窗口",
+      "流控"
+    ],
+    "objective": "理解TCP接收窗口与发送背压",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-058",
+    "type": "truefalse",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "初级",
+    "title": "HTTP 204 No Content响应可以正常携带一段JSON消息体，用于返回新增设备的详细资料。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "204响应不包含内容；需要返回JSON资料时应选择合适的其他成功状态及消息体。",
+    "tags": [
+      "HTTP",
+      "204",
+      "响应解析"
+    ],
+    "objective": "遵守HTTP 204的无消息体语义",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http",
+        "proto-http1"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-059",
+    "type": "fill",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "初级",
+    "title": "TCP一端正常关闭自己的发送方向时，通常通过设置报文段中的____标志表达不再发送数据。（填英文缩写）",
+    "points": 2,
+    "answer": [
+      "FIN"
+    ],
+    "explanation": "FIN表示该方向的数据发送结束；TCP两方向可分别关闭，复位连接使用RST。",
+    "tags": [
+      "TCP",
+      "FIN",
+      "连接关闭"
+    ],
+    "objective": "识别TCP有序半关闭标志",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-060",
+    "type": "fill",
+    "category": "TCP/IP/HTTP",
+    "difficulty": "中级",
+    "title": "客户端发送带If-None-Match的条件GET，服务器确认缓存内容仍可使用时，典型响应状态码是____。（填三位数字）",
+    "points": 2,
+    "answer": [
+      "304"
+    ],
+    "explanation": "304 Not Modified告知客户端使用其已有表示，并按响应中的缓存元数据更新缓存。",
+    "tags": [
+      "HTTP",
+      "304",
+      "缓存校验"
+    ],
+    "objective": "识别HTTP条件读取的未修改响应",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-061",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "初级",
+    "title": "某采集模块规格明确只支持2.4 GHz WiFi，而实验室AP仅开启5 GHz。正确的接入准备是什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "射频频段必须兼容，密码正确也无法让仅2.4 GHz的模块连接只开5 GHz的AP。",
+    "tags": [
+      "WiFi",
+      "频段",
+      "接入调试"
+    ],
+    "objective": "核对WiFi终端与接入点的频段兼容性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-faq"
+      ]
+    },
+    "options": [
+      "先升级JSON解析库",
+      "把MQTT主题改短",
+      "反复重输同一密码即可",
+      "提供模块支持的2.4 GHz网络并核对认证方式"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-062",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "初级",
+    "title": "在同一设备、相近测试条件下，WiFi RSSI从−78 dBm变为−52 dBm，最直接说明什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "dBm数值越大表示接收功率越强；吞吐、丢包与延迟还受干扰和网络负载等影响。",
+    "tags": [
+      "WiFi",
+      "RSSI",
+      "链路测量"
+    ],
+    "objective": "正确比较负dBm的WiFi RSSI读数",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-api"
+      ]
+    },
+    "options": [
+      "接收信号功率变强",
+      "应用延迟必定降为零",
+      "互联网带宽一定翻倍",
+      "AP一定已经更换加密方式"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-063",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "两台WiFi实训终端连接同一AP，都能访问互联网，却不能互访，且地址配置正确。应优先检查AP的哪类配置？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "客户端隔离可允许上网但阻止无线客户端相互访问，需按实验网络策略核对。",
+    "tags": [
+      "WiFi",
+      "客户端隔离",
+      "排障"
+    ],
+    "objective": "定位无线客户端隔离造成的局域网互访失败",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-isolation"
+      ]
+    },
+    "options": [
+      "AP是否隐藏了SSID广播",
+      "客户端隔离或点对点阻断策略",
+      "两台终端是否使用了不同的DHCP租约到期时间",
+      "AP的设备名称是否与SSID完全相同"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-064",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "走廊与教室AP广播同一个SSID。为了确认采集器实际关联哪一个基本服务集，日志应补记什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "SSID可以由多个AP共用，BSSID可区分具体基本服务集，适合关联位置与漫游问题。",
+    "tags": [
+      "WiFi",
+      "BSSID",
+      "漫游排障"
+    ],
+    "objective": "用BSSID区分同SSID下的实际无线连接对象",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-api"
+      ]
+    },
+    "options": [
+      "当前客户端的DHCP租约时长",
+      "SSID字符串的字节长度",
+      "BSSID",
+      "当前连接的DNS缓存命中数"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-065",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "初级",
+    "title": "计划让一只电池供电、长期休眠的Zigbee温度节点为其他节点转发消息。为什么这个计划不适合普通睡眠终端角色？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "Zigbee终端依赖父节点通信，路由器承担转发并通常保持接收能力。",
+    "tags": [
+      "Zigbee",
+      "节点角色",
+      "睡眠终端"
+    ],
+    "objective": "区分Zigbee睡眠终端与路由器职责",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-zigbee-nodes"
+      ]
+    },
+    "options": [
+      "只要延长轮询间隔，睡眠终端就会自动获得路由器角色",
+      "网络中只有协调器能够转发任何数据",
+      "路由是否可用只取决于PAN ID，与节点类型无关",
+      "睡眠终端不承担其他节点的路由转发"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-066",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "一只恢复出厂设置的Zigbee节点能扫描到目标网络，但加入被拒绝。最有针对性的下一项核对是什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "扫描到网络不代表获准加入，还需满足Permit Join状态及网络采用的安全入网条件。",
+    "tags": [
+      "Zigbee",
+      "Permit Join",
+      "入网排障"
+    ],
+    "objective": "区分Zigbee网络发现与获准入网",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-zigbee-concepts"
+      ]
+    },
+    "options": [
+      "目标网络是否处于允许入网窗口，以及入网安全参数是否匹配",
+      "两个节点是否设置为完全相同的短地址",
+      "应用层温度报告的单位是否一致",
+      "网络中是否已经存在同型号传感器"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-067",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "BLE固件更新后，原来的特征值句柄发生变化。客户端避免把温度读成其他数据的合理做法是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "句柄是属性表中的位置标识，UUID说明服务或特征类型；数据库变化时需处理缓存有效性。 若存在相同 UUID 的多个实例，还需按应用设计定位目标实例。",
+    "tags": [
+      "BLE",
+      "GATT",
+      "UUID",
+      "服务发现"
+    ],
+    "objective": "正确处理BLE GATT属性数据库变化",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-gatt"
+      ]
+    },
+    "options": [
+      "永远写死旧句柄数值",
+      "只凭设备广播名称判断句柄",
+      "按服务和特征UUID重新发现，并按服务变更机制更新缓存",
+      "把所有收到的两个字节都当作温度"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-068",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "BLE GATT服务器希望本次特征值推送得到ATT层确认，应使用哪种方式？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "Indication需要ATT确认，Notification没有该层确认；业务是否完成仍需业务规则判断。",
+    "tags": [
+      "BLE",
+      "Notification",
+      "Indication"
+    ],
+    "objective": "区分BLE通知与指示的ATT确认语义",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-gatt",
+        "proto-ble-att"
+      ]
+    },
+    "options": [
+      "Notification",
+      "Indication",
+      "不可连接广播",
+      "仅修改本地变量"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-069",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "使用普通ATT Handle Value Notification，协商的ATT_MTU为23字节。扣除1字节操作码和2字节句柄，单条通知的特征值最多多少字节？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "该通知头部占3字节，因此值长度上限为23−3＝20字节；更长值需另选传输策略。",
+    "tags": [
+      "BLE",
+      "ATT_MTU",
+      "载荷长度"
+    ],
+    "objective": "根据ATT MTU计算普通BLE通知的可用载荷",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-att"
+      ]
+    },
+    "options": [
+      "23",
+      "22",
+      "21",
+      "20"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-070",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "初级",
+    "title": "两块“支持LoRa”的模块已能点对点通信，是否就证明它们已经完成LoRaWAN入网？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "LoRa是物理层技术，LoRaWAN还定义网络协议、入网与消息处理等机制。",
+    "tags": [
+      "LoRa",
+      "LoRaWAN",
+      "协议分层"
+    ],
+    "objective": "区分LoRa物理通信与LoRaWAN网络接入",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-lora-phy",
+        "proto-lorawan-developers"
+      ]
+    },
+    "options": [
+      "不能，LoRa物理调制支持不等于实现并完成LoRaWAN协议入网",
+      "能，只要射频信号到达就已经入网",
+      "能，只要双方使用同一频率就具备完整网络会话",
+      "不能，因为点对点LoRa和LoRaWAN必须使用完全不同的物理调制"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-071",
+    "type": "single",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "一个LoRaWAN Class A节点很久没有上行，服务器准备下发新的采样周期。为何下行可能不能立即送达？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "Class A在上行后安排下行接收窗口，应用上行节奏会影响可获得的下行时机。",
+    "tags": [
+      "LoRaWAN",
+      "Class A",
+      "接收窗口"
+    ],
+    "objective": "解释LoRaWAN Class A下行时延与上行节奏的关系",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-lorawan-classes"
+      ]
+    },
+    "options": [
+      "Class A永久不支持任何下行",
+      "Class A只有在接收到网关定期TCP心跳后才打开接收机",
+      "Class A的下行接收机会通常跟随该节点上行后的接收窗口",
+      "Class A按所有节点共同的固定广播时隙接收所有下行"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-072",
+    "type": "multiple",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "验收校园WiFi采集点的可靠性时，哪些测试记录有实际价值？",
+    "points": 3,
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "实际覆盖和稳定性应在部署条件下测量，标称速率或单一RSSI都不能代替业务验收。",
+    "tags": [
+      "WiFi",
+      "现场验收",
+      "性能测试"
+    ],
+    "objective": "设计可复现的WiFi现场链路验收",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-api"
+      ]
+    },
+    "options": [
+      "只记录AP宣传的最高物理速率",
+      "在实际安装位置记录RSSI及关联BSSID",
+      "在预期业务负载下记录丢包、延迟和重连情况",
+      "覆盖有人活动或常见干扰时段，并记录测试条件"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-073",
+    "type": "multiple",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "Zigbee开关和灯已经加入同一网络，但应用开关命令无效。检查单播绑定关系时，哪些信息有用？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "入网只完成网络接入，应用通信还依赖正确端点、簇及目的设备绑定。",
+    "tags": [
+      "Zigbee",
+      "Binding",
+      "Cluster",
+      "端点"
+    ],
+    "objective": "检查Zigbee入网后的应用端点和簇绑定",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-zigbee-binding",
+        "proto-zigbee-findbind"
+      ]
+    },
+    "options": [
+      "源端点与目标端点",
+      "相应应用Cluster ID及双方功能角色",
+      "目标设备身份与绑定表条目",
+      "两台设备外壳的印刷颜色"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-074",
+    "type": "multiple",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "BLE客户端已连接但收不到某特征的通知。哪些检查合理？",
+    "points": 3,
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "连接和读取不等于订阅通知，需支持相应属性、成功配置CCCD并满足访问要求。",
+    "tags": [
+      "BLE",
+      "CCCD",
+      "通知订阅"
+    ],
+    "objective": "排查BLE通知订阅配置与权限前提",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-gatt"
+      ]
+    },
+    "options": [
+      "确认该特征声明支持Notify",
+      "读取一次特征就认定已永久启用通知",
+      "确认已对对应CCCD写入启用通知的设置",
+      "检查CCCD写入结果及该操作所需的安全条件"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-075",
+    "type": "multiple",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "准备把LoRaWAN实训设备部署到另一个区域，哪些参数不能未经核对就照搬？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "区域参数和当地法规共同约束无线配置，应按部署地区和设备支持情况核实。",
+    "tags": [
+      "LoRaWAN",
+      "区域参数",
+      "射频配置"
+    ],
+    "objective": "核对LoRaWAN区域参数的部署适配性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-lorawan-regional",
+        "proto-semtech-faq"
+      ]
+    },
+    "options": [
+      "区域信道计划及上下行频率",
+      "当地适用的发射功率、占空比或驻留时间限制",
+      "节点与网络共同支持的数据率和载荷限制",
+      "仅因同为LoRaWAN就认定全球所有射频参数相同"
+    ]
+  },
+  {
+    "id": "iot-ext-proto-076",
+    "type": "truefalse",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "在带宽、载荷和其他可比条件相同的情况下，提高LoRa扩频因子通常会延长空中传输时间，不能只把它看作“免费增加距离”。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "更高扩频因子以较低有效速率换取链路预算，需同时评估空中占用、容量和能耗。",
+    "tags": [
+      "LoRa",
+      "SF",
+      "空中时间"
+    ],
+    "objective": "评估LoRa扩频因子与空中时间的权衡",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-semtech-faq"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-077",
+    "type": "truefalse",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "初级",
+    "title": "手机扫描到了某BLE设备的广播，就可以证明手机已经与它建立了GATT连接。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "广播发现与建立连接是不同步骤，且部分广播类型本身不可连接。",
+    "tags": [
+      "BLE",
+      "广播",
+      "连接"
+    ],
+    "objective": "区分BLE广播发现与连接状态",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-primer"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-078",
+    "type": "fill",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "初级",
+    "title": "采集器作为客户端接入学校现有WiFi AP时，通常使用____模式。（填英文缩写，区别于AP模式）",
+    "points": 2,
+    "answer": [
+      "STA",
+      "Station",
+      "station"
+    ],
+    "explanation": "STA是站点或客户端模式，用于关联现有接入点。",
+    "tags": [
+      "WiFi",
+      "STA",
+      "工作模式"
+    ],
+    "objective": "选择WiFi采集器接入既有AP的工作角色",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-arduino"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-079",
+    "type": "fill",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "Zigbee调试中，短PAN ID是16位，而用于进一步区分网络的Extended PAN ID为____位。（填数字）",
+    "points": 2,
+    "answer": [
+      "64"
+    ],
+    "explanation": "Extended PAN ID是64位网络标识，不应把它与16位短PAN ID或节点短地址混淆。",
+    "tags": [
+      "Zigbee",
+      "Extended PAN ID",
+      "网络标识"
+    ],
+    "objective": "区分Zigbee网络标识的长度和用途",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-zigbee-concepts"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-proto-080",
+    "type": "fill",
+    "category": "WiFi/Zigbee/BLE/LoRa",
+    "difficulty": "中级",
+    "title": "LoRaWAN中，根据链路条件调整数据率等通信参数的自适应数据率机制，英文缩写为____。",
+    "points": 2,
+    "answer": [
+      "ADR"
+    ],
+    "explanation": "ADR即Adaptive Data Rate，可用于匹配链路质量与通信资源，部署时需考虑节点移动性和网络支持。",
+    "tags": [
+      "LoRaWAN",
+      "ADR",
+      "链路自适应"
+    ],
+    "objective": "识别LoRaWAN自适应数据率机制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-lorawan-adr"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-ops-001",
+    "type": "single",
+    "category": "边缘网关",
+    "difficulty": "初级",
+    "title": "现场协议返回某温度点“数据无效”状态，但同时携带上次的数值。网关转换为平台数据格式时，最合适的处理是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "协议转换不应丢失质量语义。历史值可以按约定保留，但必须让平台知道它无效或已过期，不能伪装成有效的新测量。",
+    "tags": [
+      "网关联调",
+      "保留协议转换中的数据质量语义"
+    ],
+    "objective": "保留协议转换中的数据质量语义",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "只传上次数值，省略无效状态",
+      "把无效状态改成正常以便页面展示",
+      "保留或映射无效质量标志，避免把旧值表示成有效新值",
+      "把所有无效数值统一改成 0 并标为正常"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-002",
+    "type": "single",
+    "category": "边缘网关",
+    "difficulty": "中级",
+    "title": "双网口网关的 eth0 接设备网，eth1 接校园上联网。设备网通信正常，但发往校外平台的流量走了 eth0。最直接应检查什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "接口在线不代表路由选择正确，应结合目的地址检查默认路由、静态路由及优先级。",
+    "tags": [
+      "网关联调",
+      "诊断双网口出口选路"
+    ],
+    "objective": "诊断双网口出口选路",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "路由表中的目标网段与默认路由出口",
+      "两块网卡的 MAC 地址长度是否相同",
+      "设备网串口采集的波特率",
+      "应用数据字段的大小写约定"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-003",
+    "type": "single",
+    "category": "边缘网关",
+    "difficulty": "高级",
+    "title": "网关同时运行采集服务和报表压缩任务，压缩时采集延迟明显增加。为了控制资源争用，哪项改进最有针对性？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "资源约束可限制后台任务的影响，但参数仍需在代表性负载下验证，不能凭配置值直接保证时延。",
+    "tags": [
+      "网关联调",
+      "控制边缘进程资源争用"
+    ],
+    "objective": "控制边缘进程资源争用",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-linux-cgroup"
+      ]
+    },
+    "options": [
+      "对后台任务设置合理的 CPU、内存资源约束并压测",
+      "仅增加后台压缩任务的并发线程数",
+      "仅增加采集日志的详细程度",
+      "把所有任务合并为同一高优先级进程"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-004",
+    "type": "single",
+    "category": "边缘网关",
+    "difficulty": "中级",
+    "title": "为 30 台同型号教学网关批量下发配置时，怎样最有利于减少配置漂移？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "公共配置与设备专属参数分开管理，能兼顾一致性和身份唯一性，也便于比较实际配置与预期配置。",
+    "tags": [
+      "网关联调",
+      "管理网关配置漂移"
+    ],
+    "objective": "管理网关配置漂移",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "只记录文件名，不记录配置内容或版本",
+      "让各组随意修改公共模板后直接覆盖全部设备",
+      "使用有版本的公共模板，并显式保留每台设备的唯一参数",
+      "逐台复制上一台设备的完整配置，包括设备标识"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-005",
+    "type": "single",
+    "category": "边缘网关",
+    "difficulty": "中级",
+    "title": "网关程序要判断一次查询是否已等待超过 5 秒，且系统时钟可能被校时调整。Python 中最合适的计时依据是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "单调时钟适合测量经过时间，不受系统时间被校正的影响；它的返回值不能直接当作日历时间。",
+    "tags": [
+      "网关联调",
+      "选择超时测量时钟"
+    ],
+    "objective": "选择超时测量时钟",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-time"
+      ]
+    },
+    "options": [
+      "两次 time.time() 的差值",
+      "两次 time.process_time() 的差值",
+      "两次 time.monotonic() 的差值",
+      "循环中累加的理论 sleep 时长"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-006",
+    "type": "single",
+    "category": "边缘网关",
+    "difficulty": "高级",
+    "title": "网关接收了一个新的点位配置文件。为避免配置只写入一半就被运行进程读取，较合理的发布流程是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "完整校验后再切换可减少半成品配置暴露；原子替换的具体保证需结合文件系统和部署方式验证。",
+    "tags": [
+      "网关联调",
+      "避免半写入配置生效"
+    ],
+    "objective": "避免半写入配置生效",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "把每一行写完都立即让运行进程重新加载",
+      "完整写入临时文件并校验，再按文件系统支持的原子替换方式切换",
+      "直接清空正在使用的配置文件后逐行写入",
+      "先启动新配置，出错时再检查文件是否完整"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-007",
+    "type": "single",
+    "category": "边缘网关",
+    "difficulty": "初级",
+    "title": "某网关持续接收 120 条/秒，处理能力为 100 条/秒，且没有丢弃或限流。队列长期趋势最可能是什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "到达速率高于处理速率，积压会持续增长。扩大队列只能延后容量耗尽，不能解决吞吐缺口。",
+    "tags": [
+      "网关联调",
+      "判断持续过载积压"
+    ],
+    "objective": "判断持续过载积压",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "平均每秒增加约 20 条",
+      "每秒减少约 20 条",
+      "只要内存足够大就永不增长",
+      "稳定在 100 条"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-008",
+    "type": "single",
+    "category": "边缘网关",
+    "difficulty": "中级",
+    "title": "网关重启后时钟尚未同步，但已开始采样。哪种处理更利于后续正确分析这段数据？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "未经同步的采集时刻可能不可靠，应显式标记质量；平台不能把接收时间无条件当成真实采集时间。",
+    "tags": [
+      "网关联调",
+      "表达采集时间可信度"
+    ],
+    "objective": "表达采集时间可信度",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "把时间统一改成上传成功时刻并标为采集时刻",
+      "直接沿用上次关机时刻作为本次所有采集时刻",
+      "标记时间可信度或未同步状态，保留可用的顺序信息",
+      "不标记校时状态，只按未校正的本地时钟排序"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-009",
+    "type": "single",
+    "category": "边缘网关",
+    "difficulty": "高级",
+    "title": "网关根据温度值控制教学演示风扇。传感器超时后，哪项控制策略最合理？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "无效数据必须与有效低温区分。具体安全状态取决于装置风险与教学设计，应预先验证，不能一概规定开或关。",
+    "tags": [
+      "网关联调",
+      "设计无效输入的控制策略"
+    ],
+    "objective": "设计无效输入的控制策略",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "无限期沿用最后一次温度且不提示",
+      "始终把超时解释为温度 0 ℃",
+      "把通信超时仅写入日志，控制层继续按有效数据计算",
+      "按预先评估和验证的失效策略处理，并明确提示数据失效"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-010",
+    "type": "multiple",
+    "category": "边缘网关",
+    "difficulty": "中级",
+    "title": "验证网关的有符号整数解析与字节序配置时，哪些测试输入有辨别力？",
+    "points": 3,
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanation": "负值有助于检验符号处理，各字节不同的已知值有助于区分字节序；只用全零或相同字节的值会掩盖错误。测试应使用安全模拟源。",
+    "tags": [
+      "网关联调",
+      "设计网关数据解码测试"
+    ],
+    "objective": "设计网关数据解码测试",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "一个说明书允许的负值",
+      "只反复输入全零值",
+      "一个各字节不相同的已知数值",
+      "只输入高低字节完全相同的正值"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-011",
+    "type": "multiple",
+    "category": "边缘网关",
+    "difficulty": "中级",
+    "title": "网关服务已配置为开机启动。为了验证无人值守冷启动，哪些检查必要？",
+    "points": 3,
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "冷启动验收需验证真实执行结果及依赖时序，不能只检查静态选项。",
+    "tags": [
+      "网关联调",
+      "验证网关冷启动依赖"
+    ],
+    "objective": "验证网关冷启动依赖",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "只确认配置文件中出现“自动启动”字样",
+      "启动失败可通过状态和日志识别",
+      "依赖设备延迟上线时能按设计等待或重连",
+      "重启后无需人工登录即可进入采集状态"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-012",
+    "type": "multiple",
+    "category": "边缘网关",
+    "difficulty": "高级",
+    "title": "两台网关拟以主备方式控制同一套教学执行器。为减少同时发指令的风险，应考虑哪些设计？",
+    "points": 3,
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "主备切换不仅是检测心跳，还需防止双主。隔离与切换方案必须针对装置风险完成验证。",
+    "tags": [
+      "网关联调",
+      "识别主备网关双主风险"
+    ],
+    "objective": "识别主备网关双主风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "明确主角色的获取与失效条件",
+      "允许两台网关始终独立写入同一执行器",
+      "测试网络分区时两端的实际行为",
+      "采用能阻止失去主角色节点继续控制的隔离机制",
+      "仅把备用网关的设备名称改为“备用”，不限制其控制权限"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-013",
+    "type": "truefalse",
+    "category": "边缘网关",
+    "difficulty": "初级",
+    "title": "平台持续收到网关心跳，仍可能存在某个下挂传感器停止采集的情况。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "网关进程存活与下挂点位健康是不同状态，应分别监测点位最后更新时间、采集错误及质量。",
+    "tags": [
+      "网关联调",
+      "区分网关存活与点位健康"
+    ],
+    "objective": "区分网关存活与点位健康",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-014",
+    "type": "truefalse",
+    "category": "边缘网关",
+    "difficulty": "初级",
+    "title": "网关把串口设备数据转换后通过以太网上传，因此现场设备不一定需要直接支持平台使用的网络协议。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "网关可承担不同接口和协议之间的适配，前提是支持相应驱动与数据映射；不能据此假定任何协议都能自动互通。",
+    "tags": [
+      "网关联调",
+      "理解网关协议适配边界"
+    ],
+    "objective": "理解网关协议适配边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-015",
+    "type": "fill",
+    "category": "边缘网关",
+    "difficulty": "初级",
+    "title": "在常见网关架构术语中，面向上层平台或业务系统的一侧通常称为____接口。（填方向名称）",
+    "points": 2,
+    "answer": [
+      "北向",
+      "北向接口"
+    ],
+    "explanation": "北向接口面向上层平台；南向接口通常面向现场设备。具体传输协议并不由这一方向名称决定。",
+    "tags": [
+      "网关联调",
+      "识别网关接口方向"
+    ],
+    "objective": "识别网关接口方向",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-016",
+    "type": "fill",
+    "category": "边缘网关",
+    "difficulty": "初级",
+    "title": "串口参数“8N1”中，N 表示不使用____校验。（填写校验类型）",
+    "points": 2,
+    "answer": [
+      "奇偶",
+      "奇偶校验",
+      "parity"
+    ],
+    "explanation": "8N1 通常表示 8 个数据位、无奇偶校验、1 个停止位；波特率还需另行匹配。",
+    "tags": [
+      "网关联调",
+      "解读串口帧格式"
+    ],
+    "objective": "解读串口帧格式",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-017",
+    "type": "single",
+    "category": "JSON与Python接口",
+    "difficulty": "初级",
+    "title": "Python 已收到字符串 body = '{\"count\": 3}'，要把它解析为字典，应调用什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "loads 用于解析包含 JSON 文档的字符串；load 接收可读取的文件对象，dumps 执行相反方向的序列化。",
+    "tags": [
+      "接口编程",
+      "选择字符串JSON解析函数"
+    ],
+    "objective": "选择字符串JSON解析函数",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-json"
+      ]
+    },
+    "options": [
+      "dict(body)",
+      "json.load(body)",
+      "json.dumps(body)",
+      "json.loads(body)"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-018",
+    "type": "single",
+    "category": "JSON与Python接口",
+    "difficulty": "初级",
+    "title": "接口约定 temperature 为 -40 至 85 的数值。收到 {\"temperature\": 900} 且 JSON 解析成功后，应怎样处理？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "语法正确不等于符合业务约束；范围、单位和字段语义需单独验证，不能无记录地修改测量值。",
+    "tags": [
+      "接口编程",
+      "区分语法与业务校验"
+    ],
+    "objective": "区分语法与业务校验",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-rest"
+      ]
+    },
+    "options": [
+      "把范围检查完全交给页面展示层，接口仍入库",
+      "继续做字段范围校验，并按约定拒绝或标记异常",
+      "未确认来源就把大数值统一除以 10 后入库",
+      "因为 JSON 语法正确而直接视为有效测量"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-019",
+    "type": "single",
+    "category": "JSON与Python接口",
+    "difficulty": "高级",
+    "title": "Python 3 中，接口要求 count 必须是整数且不能是布尔值。为何只用 isinstance(value, int) 不够？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "需要明确排除 bool，或按接口约定检查确切类型，再检查取值范围。",
+    "tags": [
+      "接口编程",
+      "排除布尔值伪装整数"
+    ],
+    "objective": "排除布尔值伪装整数",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-types"
+      ]
+    },
+    "options": [
+      "JSON 解析后不可能出现布尔值",
+      "isinstance 只接受非负整数",
+      "isinstance 会把所有字符串自动转成整数",
+      "bool 是 int 的子类，True 也会通过该检查"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-020",
+    "type": "single",
+    "category": "JSON与Python接口",
+    "difficulty": "中级",
+    "title": "接口约定省略 alarm 表示“不修改”，alarm 为 null 表示“清空”。如何区分这两种请求？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "不带默认哨兵的 get 会使缺失与显式 None 难以区分；成员存在性检查保留了两种操作语义。",
+    "tags": [
+      "接口编程",
+      "区分字段缺失与显式空值"
+    ],
+    "objective": "区分字段缺失与显式空值",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-types"
+      ]
+    },
+    "options": [
+      "先检查 \"alarm\" in payload，再检查其值是否为 None",
+      "只检查 payload.get(\"alarm\") 是否为 None",
+      "把字典转换成字符串后搜索单词 null",
+      "把所有缺失字段自动填成 null"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-021",
+    "type": "single",
+    "category": "JSON与Python接口",
+    "difficulty": "中级",
+    "title": "不同厂家设备发来 {\"rate\": 10, \"rate\": 20}。为了保证跨实现一致性，接口契约应如何约定？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "重复键在不同实现中可能被覆盖、拒绝或另行处理；接口不应依赖这种差异。",
+    "tags": [
+      "接口编程",
+      "识别JSON重复键互操作风险"
+    ],
+    "objective": "识别JSON重复键互操作风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    },
+    "options": [
+      "禁止同一 JSON 对象出现重复字段名，并在接收端检测",
+      "默认重复字段会被转换成数组",
+      "约定由任意解析器保留全部同名值而不做额外处理",
+      "规定所有 JSON 解析器一定取第一个值"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-022",
+    "type": "single",
+    "category": "JSON与Python接口",
+    "difficulty": "中级",
+    "title": "两个仓库都上报“2026-10-10 08:00:00”，但位于不同时区。要使平台可靠比较事件时刻，接口应怎样改进？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "仅有本地日期时间不足以确定同一绝对时刻。传输约定需要消除时区歧义。",
+    "tags": [
+      "接口编程",
+      "规范跨时区时间表示"
+    ],
+    "objective": "规范跨时区时间表示",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-datetime"
+      ]
+    },
+    "options": [
+      "从仓库编号自动猜测当前时区且不记录规则",
+      "只在页面中按字符串排序",
+      "携带明确的 UTC 偏移或统一使用约定的 UTC 时间表示",
+      "删除日期，只传小时和分钟"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-023",
+    "type": "single",
+    "category": "JSON与Python接口",
+    "difficulty": "中级",
+    "title": "Python 接口程序遇到一条 JSON 语法错误的记录。哪种异常处理最有利于继续排查？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "有针对性的异常处理保留错误类别和定位信息，避免将解析失败伪装成正常成功。日志还应避免记录不必要的敏感正文。",
+    "tags": [
+      "接口编程",
+      "保留JSON解析失败证据"
+    ],
+    "objective": "保留JSON解析失败证据",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-errors",
+        "ops-python-json"
+      ]
+    },
+    "options": [
+      "把所有解析错误都视为可重试网络错误而无限重试",
+      "把失败记录换成空字典，仍记为成功处理",
+      "用空 except 吞掉所有异常并返回成功",
+      "捕获对应解析异常，记录必要的定位信息并按约定处理坏记录"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-024",
+    "type": "single",
+    "category": "JSON与Python接口",
+    "difficulty": "初级",
+    "title": "设备名称包含双引号和换行符。生成 JSON 请求体时，最可靠的做法是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "序列化库按 JSON 规则转义必要字符，避免手工拼接产生格式错误或改变数据内容。",
+    "tags": [
+      "接口编程",
+      "正确转义JSON字符串"
+    ],
+    "objective": "正确转义JSON字符串",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259",
+        "ops-python-json"
+      ]
+    },
+    "options": [
+      "直接用字符串拼接把名称夹在双引号中",
+      "把换行符保留为未转义控制字符",
+      "用 JSON 序列化库编码完整对象",
+      "删除所有非字母字符后发送"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-025",
+    "type": "single",
+    "category": "JSON与Python接口",
+    "difficulty": "初级",
+    "title": "接口传回字符串 \"12.5\"，契约却要求数值。哪项处理最符合可控的接口联调？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "字符串与数值是不同数据类型；是否允许转换需要明确约定，并处理转换失败及范围问题。",
+    "tags": [
+      "接口编程",
+      "处理接口数值类型不一致"
+    ],
+    "objective": "处理接口数值类型不一致",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    },
+    "options": [
+      "默认所有字符串都可直接参与数值计算",
+      "直接按字典序与 \"9\" 比较温度大小",
+      "遇到任何数值字符串都取整数部分，忽略小数",
+      "按契约明确拒绝，或通过已约定且可验证的转换规则处理"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-026",
+    "type": "multiple",
+    "category": "JSON与Python接口",
+    "difficulty": "中级",
+    "title": "为 Python 编写“单批最多接收 100 条记录”的接口测试，哪些用例能帮助验证边界行为？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "下边界、允许上界及越界输入应分别验证是否符合接口契约；测试结果需有明确预期。",
+    "tags": [
+      "接口编程",
+      "设计接口容量边界测试"
+    ],
+    "objective": "设计接口容量边界测试",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-unittest"
+      ]
+    },
+    "options": [
+      "0 条记录的请求",
+      "恰好 100 条记录的请求",
+      "101 条记录的请求",
+      "只用同一个 10 条记录样本重复测试"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-027",
+    "type": "multiple",
+    "category": "JSON与Python接口",
+    "difficulty": "初级",
+    "title": "以下哪些是符合 JSON 标准的完整文本？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "JSON 允许对象、数组或标量作为顶层值；字符串使用双引号，布尔字面量为小写。Python 字面量并不自动等于合法 JSON。",
+    "tags": [
+      "接口编程",
+      "辨认JSON标准文本"
+    ],
+    "objective": "辨认JSON标准文本",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    },
+    "options": [
+      "[1, \"2\", null]",
+      "{\"enabled\": true}",
+      "{'enabled': True}",
+      "\"warehouse-A\""
+    ]
+  },
+  {
+    "id": "iot-ext-ops-028",
+    "type": "multiple",
+    "category": "JSON与Python接口",
+    "difficulty": "中级",
+    "title": "平台查询接口使用 next_cursor 分页，且文档规定游标为空才表示结束。要完整导出记录，哪些做法合理？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "分页结束条件必须遵循该接口契约；部分成功应被标记为不完整，不能静默遗漏后续记录。",
+    "tags": [
+      "接口编程",
+      "正确完成游标分页导出"
+    ],
+    "objective": "正确完成游标分页导出",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "按响应中的 next_cursor 请求下一页",
+      "保存查询条件与页数，便于核对导出范围",
+      "只要某页条数少于上限就忽略仍然存在的游标",
+      "某一页失败时记录失败并停止宣称导出完整"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-029",
+    "type": "truefalse",
+    "category": "JSON与Python接口",
+    "difficulty": "初级",
+    "title": "从不可信设备收到看起来像 JSON 的文本时，可以直接使用 Python 的 eval 解析，因为 JSON 只是数据。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "eval 会解释 Python 表达式，输入并不因此安全；数据解析应使用适当的 JSON 解析器并限制输入规模。",
+    "tags": [
+      "接口编程",
+      "避免将外部数据作为代码执行"
+    ],
+    "objective": "避免将外部数据作为代码执行",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-ops-030",
+    "type": "truefalse",
+    "category": "JSON与Python接口",
+    "difficulty": "初级",
+    "title": "跨厂商 JSON 接口应把对象字段出现的先后顺序作为识别字段含义的唯一依据。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "对象按字段名表达映射关系；跨实现接口应通过字段名读取，不能把字段位置当作稳定语义。",
+    "tags": [
+      "接口编程",
+      "避免依赖JSON对象字段顺序"
+    ],
+    "objective": "避免依赖JSON对象字段顺序",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-ops-031",
+    "type": "fill",
+    "category": "JSON与Python接口",
+    "difficulty": "初级",
+    "title": "使用 Python 的 json.loads 按默认规则解析 JSON 时，JSON 的 null 会转换为 Python 的____。（填写名称）",
+    "points": 2,
+    "answer": [
+      "None"
+    ],
+    "explanation": "JSON 的 null 在 Python 标准库默认解码中对应 None，不是字符串 \"null\" 或数值 0。",
+    "tags": [
+      "接口编程",
+      "识别JSON空值的Python映射"
+    ],
+    "objective": "识别JSON空值的Python映射",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-json"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-ops-032",
+    "type": "fill",
+    "category": "JSON与Python接口",
+    "difficulty": "初级",
+    "title": "按 RFC 8259，开放系统之间交换的 JSON 文本应使用____字符编码。（填写英文编码名称）",
+    "points": 2,
+    "answer": [
+      "UTF-8",
+      "UTF8",
+      "utf-8",
+      "utf8"
+    ],
+    "explanation": "统一使用 UTF-8 有助于不同系统正确交换包括中文在内的文本。",
+    "tags": [
+      "接口编程",
+      "选择JSON互操作编码"
+    ],
+    "objective": "选择JSON互操作编码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-ops-033",
+    "type": "single",
+    "category": "维护与故障诊断",
+    "difficulty": "中级",
+    "title": "仓库采集服务偶发停止，重启通常可以恢复。准备重启前，哪项操作最有助于后续定位根因？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "重启可能清除现场状态。先保存必要证据，可把临时恢复与根因分析分开进行。",
+    "tags": [
+      "运维排障",
+      "保留重启前故障现场"
+    ],
+    "objective": "保留重启前故障现场",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "先清空全部日志以提高重启速度",
+      "立即同时修改采集周期、驱动和网络配置",
+      "在不扩大风险的前提下保存故障时的日志、状态和资源指标",
+      "只记录“已重启”而不记录故障发生时间"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-034",
+    "type": "single",
+    "category": "维护与故障诊断",
+    "difficulty": "初级",
+    "title": "两台同型号教学终端中只有 A 异常。断电并完成接口兼容核对后，若要检验“连接线故障”假设，最合理的试验是什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "一次只改变待验证因素能增强因果判断；多项同时变更即使恢复也难以定位是哪项起效。",
+    "tags": [
+      "运维排障",
+      "使用单变量替换法"
+    ],
+    "objective": "使用单变量替换法",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "只替换 A 的连接线，其他条件保持不变并复测",
+      "保持连接线不变，只恢复 A 的全部出厂设置",
+      "同时替换 A 的主机、探头、连接线和配置",
+      "只比较两根连接线外观，外观相同就排除故障"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-035",
+    "type": "single",
+    "category": "维护与故障诊断",
+    "difficulty": "中级",
+    "title": "网关磁盘空间接近耗尽，确认主要由持续增长的调试日志占用。较合适的长期改进是什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "轮转和保留策略限制日志增长，同时保留必要排障证据；具体清理操作须符合数据保留要求。",
+    "tags": [
+      "运维排障",
+      "治理日志导致的磁盘耗尽"
+    ],
+    "objective": "治理日志导致的磁盘耗尽",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-logging"
+      ]
+    },
+    "options": [
+      "只把日志文件改名而保持无限追加",
+      "停止保存所有错误信息且不再监测",
+      "只手动清理一次日志，不设置后续保留上限",
+      "设置日志级别、轮转及保留策略，并监测剩余空间"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-036",
+    "type": "single",
+    "category": "维护与故障诊断",
+    "difficulty": "初级",
+    "title": "同一配电支路上的 12 个节点在同一时刻离线，而其他支路正常。优先调查哪个方向最合理？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "同一时间、同一共享路径的成组故障提示共同原因，应结合电源、交换机及维护记录验证。涉及电气检查应由合格人员按规程进行。",
+    "tags": [
+      "运维排障",
+      "利用故障范围定位共享原因"
+    ],
+    "objective": "利用故障范围定位共享原因",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "共同供电或共同上联设备等共享故障点",
+      "先逐台重新安装所有节点固件，再核对共享设施",
+      "先逐一重新标定所有节点的传感器",
+      "先假设 12 个传感器恰好同时独立损坏"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-037",
+    "type": "single",
+    "category": "维护与故障诊断",
+    "difficulty": "中级",
+    "title": "接口平均响应时间只有 80 毫秒，但部分学生反馈偶尔等待数秒。补充哪个指标最有帮助？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "平均值会掩盖尾部延迟，高分位数及超时比例更能反映少数慢请求；统计口径需明确。",
+    "tags": [
+      "运维排障",
+      "识别平均值掩盖的尾延迟"
+    ],
+    "objective": "识别平均值掩盖的尾延迟",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "只统计每日成功请求总数",
+      "把所有超时请求从统计中永久排除",
+      "只统计最快的一次响应",
+      "响应时间的高分位数，例如第 95 百分位"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-038",
+    "type": "single",
+    "category": "维护与故障诊断",
+    "difficulty": "中级",
+    "title": "两台硬件相同的扫码采集终端表现不同，网络与外设已核对一致。下一步如何减少无依据猜测？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "相同硬件不保证相同运行软件和参数。配置差异与变更记录是可验证的排查线索。",
+    "tags": [
+      "运维排障",
+      "比较软硬件配置基线"
+    ],
+    "objective": "比较软硬件配置基线",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "直接认定是生产质量问题而不取证",
+      "比较固件版本、有效配置及近期变更记录",
+      "同时恢复两台终端的出厂配置，且不保存差异",
+      "只核对采购批次是否一致"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-039",
+    "type": "single",
+    "category": "维护与故障诊断",
+    "difficulty": "中级",
+    "title": "采集服务写入变慢，观察到 CPU 使用率不高，但磁盘 I/O 延迟和等待队列明显增大。下一步最值得优先验证什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "低 CPU 使用率并不排除等待存储造成的瓶颈，应结合 I/O 延迟、队列、吞吐及进程读写行为验证，不能单凭一个指标就断言磁盘损坏。",
+    "tags": [
+      "运维排障",
+      "识别存储等待型性能瓶颈"
+    ],
+    "objective": "识别存储等待型性能瓶颈",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "存储吞吐、写入模式及其他进程的磁盘竞争",
+      "只要 CPU 使用率低就认定整机没有性能瓶颈",
+      "立即增加写入线程数，并认定吞吐必然提升",
+      "只增加 CPU 核数，不再分析存储指标"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-040",
+    "type": "single",
+    "category": "维护与故障诊断",
+    "difficulty": "初级",
+    "title": "修复一个“连续扫码后漏记录”的故障后，什么证据最能支持关闭故障单？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "验证应覆盖原故障触发条件与关键相邻功能，基础连通性不能替代业务恢复证据。",
+    "tags": [
+      "运维排障",
+      "验证修复与回归结果"
+    ],
+    "objective": "验证修复与回归结果",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "维护人员认为代码看起来没问题",
+      "原先可复现的场景已通过复测，且相关回归检查通过",
+      "只看到服务进程仍在运行",
+      "设备能 ping 通一次"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-041",
+    "type": "single",
+    "category": "维护与故障诊断",
+    "difficulty": "初级",
+    "title": "本月三次故障的修复耗时分别为 20、40、60 分钟，均按相同起止口径计时。平均修复时间是多少？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "按题设口径计算算术平均值：(20+40+60)÷3=40 分钟。实际报表还应说明计时边界及样本范围。",
+    "tags": [
+      "运维排障",
+      "计算平均修复时间"
+    ],
+    "objective": "计算平均修复时间",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "120 分钟",
+      "40 分钟",
+      "60 分钟",
+      "20 分钟"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-042",
+    "type": "multiple",
+    "category": "维护与故障诊断",
+    "difficulty": "中级",
+    "title": "跨班组移交一个尚未解决的设备故障，哪些信息有助于接班人员继续处理？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "交接应传递证据、当前状态和未完成工作，避免重复试错或不知道设备仍处于测试状态。",
+    "tags": [
+      "运维排障",
+      "组织可执行的故障交接"
+    ],
+    "objective": "组织可执行的故障交接",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "已做过的检查、结果及当前设备状态",
+      "下一步验证计划与需要注意的安全限制",
+      "只写“设备坏了，请尽快解决”",
+      "已观察到的现象、影响范围与发生时间",
+      "省略已经失败的试验，只移交最后一次成功操作"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-043",
+    "type": "multiple",
+    "category": "维护与故障诊断",
+    "difficulty": "中级",
+    "title": "更换故障设备前，哪些核对有助于避免备件装上后出现新问题？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B"
+    ],
+    "explanation": "电气接口规范与软硬件功能支持是备件兼容性的重要条件；外壳或插头相同并不能证明电气、协议兼容。",
+    "tags": [
+      "运维排障",
+      "核对备件替换兼容性"
+    ],
+    "objective": "核对备件替换兼容性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "供电与接口规范是否兼容",
+      "所需固件、协议功能与硬件版本是否匹配",
+      "只核对通信插头形状，不核对引脚功能",
+      "只要外壳尺寸一样就认定完全兼容"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-044",
+    "type": "multiple",
+    "category": "维护与故障诊断",
+    "difficulty": "初级",
+    "title": "给仓库物联网机柜制定日常巡检表，哪些项目属于有价值的非侵入式检查？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "巡检应兼顾可观察性与安全边界；涉及开盖和电气操作应遵守资质、断电及现场管理要求。",
+    "tags": [
+      "运维排障",
+      "制定安全的可视巡检项目"
+    ],
+    "objective": "制定安全的可视巡检项目",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "通风口堵塞情况及可读取的温度告警",
+      "电源和网络状态指示是否与正常基线一致",
+      "要求学生打开带电电源外壳观察内部",
+      "可见线缆、标签和固定状态"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-045",
+    "type": "truefalse",
+    "category": "维护与故障诊断",
+    "difficulty": "初级",
+    "title": "某次网络异常恰好发生在软件升级之后，只凭时间先后就能确定升级是唯一原因。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "时间相关性只是线索；仍需结合日志、差异比较、受控复现等证据排除其他同时变化的因素。",
+    "tags": [
+      "运维排障",
+      "区分相关性与故障因果"
+    ],
+    "objective": "区分相关性与故障因果",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-046",
+    "type": "truefalse",
+    "category": "维护与故障诊断",
+    "difficulty": "初级",
+    "title": "备份任务显示成功，仍需要定期在合适的隔离环境验证备份能否恢复使用。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "备份文件存在不保证内容完整、版本匹配或恢复步骤可执行，恢复演练才能检验实际可用性。",
+    "tags": [
+      "运维排障",
+      "验证备份可恢复性"
+    ],
+    "objective": "验证备份可恢复性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-047",
+    "type": "fill",
+    "category": "维护与故障诊断",
+    "difficulty": "初级",
+    "title": "某服务考核窗口为 600 分钟，约定不可用时间为 6 分钟且全部计入。可用率为____%。（仅填数值）",
+    "points": 2,
+    "answer": [
+      "99",
+      "99.0",
+      "99.00"
+    ],
+    "explanation": "可用率=(600−6)÷600×100%=99%。实际考核需先约定窗口与不可用判定规则。",
+    "tags": [
+      "运维排障",
+      "计算服务可用率"
+    ],
+    "objective": "计算服务可用率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-048",
+    "type": "fill",
+    "category": "维护与故障诊断",
+    "difficulty": "初级",
+    "title": "一次测试发出 250 个请求，其中 5 个按统一口径判为失败。失败率为____%。（仅填数值）",
+    "points": 2,
+    "answer": [
+      "2",
+      "2.0",
+      "2.00"
+    ],
+    "explanation": "失败率=5÷250×100%=2%。分母包含本次全部请求，不能只用成功请求数作分母。",
+    "tags": [
+      "运维排障",
+      "计算请求失败率"
+    ],
+    "objective": "计算请求失败率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-049",
+    "type": "single",
+    "category": "冷链物流",
+    "difficulty": "初级",
+    "title": "学校同时模拟运输冷藏试剂与冷冻食品，设置温度阈值前应首先依据什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "冷链对象的允许温区和处置要求不同，应按对象建立规则；不能把某一温区扩展为通用法规。",
+    "tags": [
+      "冷链监测",
+      "确定产品特定冷链要求"
+    ],
+    "objective": "确定产品特定冷链要求",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "任意选择冰箱显示屏上的默认温区",
+      "各物品适用的产品要求、作业规范和经过确认的运输条件",
+      "以最耐温物品的要求覆盖其他物品",
+      "所有冷链物品都固定采用同一温区"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-050",
+    "type": "single",
+    "category": "冷链物流",
+    "difficulty": "中级",
+    "title": "一个新冷藏柜即将用于教学试验，为什么要在有代表性的工况下进行多位置温度分布测试？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "多位置测试揭示空间差异。负载、开门等工况需有代表性，日常监测仍不可省略。",
+    "tags": [
+      "冷链监测",
+      "理解冷藏空间温度分布验证"
+    ],
+    "objective": "理解冷藏空间温度分布验证",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "识别温度不均匀区域，并为布货与监测点位选择提供依据",
+      "替代今后的全部温度记录",
+      "直接确定所有物品的保质期，不再区分产品",
+      "证明柜内任意位置的温度永远完全一致"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-051",
+    "type": "single",
+    "category": "冷链物流",
+    "difficulty": "中级",
+    "title": "选择冷链记录仪时，要判断测量结果是否具有可信的计量依据，哪项资料最直接相关？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "校准信息有助于判断在所需温区的测量能力；显示位数或外观不能代替计量证据。",
+    "tags": [
+      "冷链监测",
+      "核对冷链记录仪计量证据"
+    ],
+    "objective": "核对冷链记录仪计量证据",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-cdc-cold"
+      ]
+    },
+    "options": [
+      "显示屏能显示的小数位越多越好",
+      "厂商宣传页写出的最长无线传输距离",
+      "记录仪能够存储的最大条目数量",
+      "适用量程内的有效校准信息及测量不确定度等结果"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-052",
+    "type": "single",
+    "category": "冷链物流",
+    "difficulty": "中级",
+    "title": "冷藏柜开门后，空气探头迅速升温，但装有模拟货物的缓冲探头变化较慢。最合理的解释是什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "空气与具有热容量的对象响应速度不同，应依据监测目的选择探头与解释方法，不能直接互相替代。",
+    "tags": [
+      "冷链监测",
+      "区分空气温度与货物热响应"
+    ],
+    "objective": "区分空气温度与货物热响应",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-cdc-cold"
+      ]
+    },
+    "options": [
+      "两种被测对象的热响应不同，读数代表的对象需要区分",
+      "空气探头升温证明所有货物中心温度立即相同",
+      "两个探头只要同柜就必须每秒完全一致",
+      "缓冲探头读数较慢就必然已经损坏"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-053",
+    "type": "single",
+    "category": "冷链物流",
+    "difficulty": "初级",
+    "title": "装卸教学中，冷藏箱长时间敞开放在常温月台。哪个改进最直接减少这一环节的温控风险？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "缩短暴露时间需要流程与资源准备；减少记录并不能降低实际温度风险。",
+    "tags": [
+      "冷链监测",
+      "减少装卸温控暴露"
+    ],
+    "objective": "减少装卸温控暴露",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "提前准备交接物品与流程，缩短非受控环境中的停留时间",
+      "等全部单据人工抄写完成后才考虑关箱",
+      "把记录仪采样间隔调大，使曲线更平滑",
+      "只在装卸结束后记录一个温度"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-054",
+    "type": "single",
+    "category": "冷链物流",
+    "difficulty": "初级",
+    "title": "某教学批次规则把两段独立超限时间均计入累计暴露：09:10 至 09:18、10:05 至 10:17。累计超限时长是多少？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "两段时长分别为 8 和 12 分钟，相加为 20 分钟。题设已明确累计口径，不能把两段间的合格时间算入。",
+    "tags": [
+      "冷链监测",
+      "计算分段累计超限时长"
+    ],
+    "objective": "计算分段累计超限时长",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "8 分钟",
+      "67 分钟",
+      "12 分钟",
+      "20 分钟"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-055",
+    "type": "single",
+    "category": "冷链物流",
+    "difficulty": "中级",
+    "title": "一枚温度记录仪从批次甲转移到批次乙继续使用。为避免追溯混淆，交接时最关键的业务动作是什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "设备复用需要明确时间边界与批次关联，才能知道每段记录对应哪批货物。",
+    "tags": [
+      "冷链监测",
+      "维护记录仪批次绑定边界"
+    ],
+    "objective": "维护记录仪批次绑定边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "记录解绑与绑定的批次、时间及记录仪标识",
+      "仅修改记录仪外壳上的昵称",
+      "把两批数据合成一个无分界文件",
+      "沿用甲的绑定关系直到下次充电"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-056",
+    "type": "single",
+    "category": "冷链物流",
+    "difficulty": "中级",
+    "title": "教学演练中发现某批需温控物品曾超出其批准范围，但当前温度已恢复。下一步最合适是什么？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "恢复到正常温度不消除既往暴露。是否可用需要结合对象要求、幅度与时长，由有职责的人员按流程判断。",
+    "tags": [
+      "冷链监测",
+      "处理冷链温度偏离待评估状态"
+    ],
+    "objective": "处理冷链温度偏离待评估状态",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-cdc-cold"
+      ]
+    },
+    "options": [
+      "只凭当前温度正常就直接判定可放行",
+      "按既定流程标识并隔离待评估，保留完整记录并报告负责人员",
+      "自动删除超限片段后重新出具报告",
+      "未经评估立即判定全部报废"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-057",
+    "type": "single",
+    "category": "冷链物流",
+    "difficulty": "中级",
+    "title": "某物品要求避免冻结。制定运输箱装箱方案时，哪项最重要？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "低于下限也可能有风险。包装方案应同时考虑过热、过冷及运输持续时间，不是冷量越大越好。",
+    "tags": [
+      "冷链监测",
+      "防范运输包装的冻结风险"
+    ],
+    "objective": "防范运输包装的冻结风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "以箱外天气预报替代箱内温控验证",
+      "只要箱内最低温越低就认定越安全",
+      "让物品直接紧贴任何刚取出的冻硬冰袋",
+      "使用针对该物品与运输工况验证过的包装和蓄冷配置"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-058",
+    "type": "multiple",
+    "category": "冷链物流",
+    "difficulty": "中级",
+    "title": "核对一次冷链教学运输的温度记录是否覆盖实际运输过程时，应比较哪些信息？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "过程覆盖需要时间范围、连续性与对象关联同时成立，平均值不能证明全程记录完整。",
+    "tags": [
+      "冷链监测",
+      "审查冷链记录覆盖完整性"
+    ],
+    "objective": "审查冷链记录覆盖完整性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "本批次与记录仪序列号的对应关系",
+      "发运、交接和签收时刻",
+      "记录仪启动与停止时刻及缺测区间",
+      "只看报告首页的平均温度"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-059",
+    "type": "multiple",
+    "category": "冷链物流",
+    "difficulty": "中级",
+    "title": "为一次 18 小时冷链模拟运输选择记录仪与采样设置，应考虑哪些因素？",
+    "points": 3,
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "采样过稀可能漏掉短时变化；采样频率、存储及电量要一起核算，并留出合理运输延误余量。",
+    "tags": [
+      "冷链监测",
+      "权衡冷链记录分辨率与续航"
+    ],
+    "objective": "权衡冷链记录分辨率与续航",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "只按机身上显示的最大存储数字判断全部需求",
+      "需要识别的短时温度变化尺度",
+      "在预期环境温度下的可用电量",
+      "记录容量能否覆盖全程与适当余量"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-060",
+    "type": "multiple",
+    "category": "冷链物流",
+    "difficulty": "中级",
+    "title": "调整冷藏库的监测探头位置时，哪些做法有助于测得对目标货物有代表性的数据？",
+    "points": 3,
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanation": "点位选择应考虑空间差异及监测对象，不能只按布线方便布置，也不能随意移走出现异常的探头而丢失追溯信息。",
+    "tags": [
+      "冷链监测",
+      "选择有代表性的冷链监测点"
+    ],
+    "objective": "选择有代表性的冷链监测点",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "参考温度分布测试识别出的关键位置",
+      "每次出现异常读数就移开探头，不记录位置变更",
+      "按监测目的区分送风口空气温度与货物存放区域温度",
+      "只依据布线方便选择位置，不核对区域温度差异"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-061",
+    "type": "truefalse",
+    "category": "冷链物流",
+    "difficulty": "初级",
+    "title": "冷链记录出现一段缺测时，用缺测前后的温度作直线插值后，可以把插值结果当作这一时段的真实采样证据。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "插值是基于假设的估计，不能证明缺测期间真实温度，也不能据此排除未记录的超限。应保留缺测标记，区分原始记录与估计数据。",
+    "tags": [
+      "冷链监测",
+      "区分冷链插值估计与真实采样证据"
+    ],
+    "objective": "区分冷链插值估计与真实采样证据",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-062",
+    "type": "truefalse",
+    "category": "冷链物流",
+    "difficulty": "初级",
+    "title": "冷藏柜出现一次短时空气温度上升，不能仅凭这一点就确定压缩机已损坏。",
+    "points": 2,
+    "answer": "true",
+    "explanation": "开门、除霜、负载变化和探头异常等都可能影响读数，需要结合持续时间及设备状态等证据诊断。",
+    "tags": [
+      "冷链监测",
+      "分析冷藏温升的多种成因"
+    ],
+    "objective": "分析冷藏温升的多种成因",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-063",
+    "type": "fill",
+    "category": "冷链物流",
+    "difficulty": "初级",
+    "title": "在适用的库存管理规则中，优先出库最早到期的合格批次称为“先到期先出”，其常见英文缩写为____。",
+    "points": 2,
+    "answer": [
+      "FEFO",
+      "fefo"
+    ],
+    "explanation": "FEFO 按有效期而非单纯入库先后排序，执行时还应符合放行状态与具体库存规则。",
+    "tags": [
+      "冷链监测",
+      "识别先到期先出库存原则"
+    ],
+    "objective": "识别先到期先出库存原则",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-064",
+    "type": "fill",
+    "category": "冷链物流",
+    "difficulty": "初级",
+    "title": "将低温记录仪移入温暖潮湿环境时，其冷表面可能出现小水滴，这种现象通常称为____。",
+    "points": 2,
+    "answer": [
+      "凝露",
+      "结露",
+      "冷凝"
+    ],
+    "explanation": "周围水汽遇到低于露点的冷表面会凝结。设备转场应遵循说明书，避免带凝露通电或连接接口。",
+    "tags": [
+      "冷链监测",
+      "识别冷链设备转场凝露"
+    ],
+    "objective": "识别冷链设备转场凝露",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-065",
+    "type": "single",
+    "category": "网络安全基础",
+    "difficulty": "初级",
+    "title": "以下哪组登录要素更符合多因素认证的含义？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "多因素认证结合不同类别的要素，例如所知信息和所持设备；同类要素重复并不自动成为多因素。",
+    "tags": [
+      "安全运维",
+      "区分多因素认证要素"
+    ],
+    "objective": "区分多因素认证要素",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-mfa"
+      ]
+    },
+    "options": [
+      "密码加同类的安全问题答案",
+      "密码加独立持有的硬件安全密钥",
+      "密码加另一个密码",
+      "两次输入同一密码"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-066",
+    "type": "single",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "教学 IoT 设备与学校财务终端当前处于可任意互访的网络。为了降低设备被攻破后的横向影响，应优先考虑什么？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "网络分区配合通信边界控制，有助于限制单点失陷的影响范围；仅改名称不能提供访问隔离。",
+    "tags": [
+      "安全运维",
+      "通过网络分区限制横向影响"
+    ],
+    "objective": "通过网络分区限制横向影响",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "按业务分区隔离，并只开放经过批准的跨区通信",
+      "仅隐藏无线网络名称",
+      "给 IoT 设备分配不同网段地址，但不设置访问边界",
+      "只在办公电脑上关闭自动网络发现"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-067",
+    "type": "single",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "网关访问平台时，TLS 证书中的主机名与实际访问域名不匹配。正确的处理方向是什么？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "主机名校验关系到连接目标身份。应查明地址或证书配置问题，不能把绕过校验作为修复。",
+    "tags": [
+      "安全运维",
+      "处理TLS主机名校验失败"
+    ],
+    "objective": "处理TLS主机名校验失败",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-tls"
+      ]
+    },
+    "options": [
+      "关闭证书校验以尽快恢复上传",
+      "改为直接访问服务器 IP，并继续忽略身份不匹配",
+      "只要页面能打开就永久忽略警告",
+      "停止该连接并核对访问地址与证书配置，修复后再连接"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-068",
+    "type": "single",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "厂商公告某漏洞影响硬件版本 H2、固件 3.0 至 3.4。学校设备应如何确定是否受影响？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "漏洞适用性依赖具体版本和条件；运行正常不能证明不存在安全缺陷。",
+    "tags": [
+      "安全运维",
+      "评估漏洞公告适用范围"
+    ],
+    "objective": "评估漏洞公告适用范围",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "只要设备品牌相同就全部认定受影响",
+      "核对实际硬件与固件版本，并结合公告中的功能及配置条件判断",
+      "只看采购年份而不查运行版本",
+      "只看设备是否能正常采集就排除漏洞"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-069",
+    "type": "single",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "外部技术人员获批临时远程维护 2 小时。哪项安排最有助于防止临时入口长期遗留？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "临时授权应有可验证的结束条件，维护完成后检查访问是否实际撤销。",
+    "tags": [
+      "安全运维",
+      "关闭临时远程维护入口"
+    ],
+    "objective": "关闭临时远程维护入口",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "仅要求维护人员口头承诺以后不再登录",
+      "维修结束后保留永久入口以免下次麻烦",
+      "只关闭浏览器窗口，保留服务器端长期授权",
+      "限定有效时段，结束后撤销访问并核对执行记录"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-070",
+    "type": "single",
+    "category": "网络安全基础",
+    "difficulty": "初级",
+    "title": "学生扫描机柜上新贴的二维码，页面要求输入学校账号并提示“紧急升级”。在身份尚未核实前，应怎么做？",
+    "points": 2,
+    "answer": "A",
+    "explanation": "物理位置和紧迫措辞不能证明页面可信。通过独立渠道确认能降低凭证被诱骗的风险。",
+    "tags": [
+      "安全运维",
+      "独立核验可疑登录请求"
+    ],
+    "objective": "独立核验可疑登录请求",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "停止输入，通过已知的官方入口或联系人独立核实",
+      "先输入密码再看是否跳转到校内网页",
+      "只检查页面是否有学校徽标，就据此确认可信",
+      "因二维码贴在机柜上就立即信任"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-071",
+    "type": "single",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "网关会保存含内部业务信息的本地文件，并存在整机丢失风险。哪项措施主要保护丢失介质上的数据机密性？",
+    "points": 2,
+    "answer": "B",
+    "explanation": "静态数据加密针对介质被获取后的读取风险，效果仍取决于密钥管理及设备状态等条件。",
+    "tags": [
+      "安全运维",
+      "区分静态数据加密用途"
+    ],
+    "objective": "区分静态数据加密用途",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-nist-8259a"
+      ]
+    },
+    "options": [
+      "仅设置网页管理界面的登录密码",
+      "使用适当的静态数据加密，并妥善管理解密密钥",
+      "只在平台页面隐藏下载按钮",
+      "只对上云传输启用加密，本地文件仍明文保存"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-072",
+    "type": "single",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "项目依赖的第三方软件包刚发布新版本，学生准备直接用于运行中的仓库网关。更合适的做法是什么？",
+    "points": 2,
+    "answer": "C",
+    "explanation": "依赖更新涉及供应链和兼容性，应保持来源可追踪、组件清单清晰并完成测试。",
+    "tags": [
+      "安全运维",
+      "控制第三方依赖更新风险"
+    ],
+    "objective": "控制第三方依赖更新风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-supply"
+      ]
+    },
+    "options": [
+      "跳过依赖清单，避免留下组件信息",
+      "只要版本号更大就立刻在全部设备更新",
+      "核对官方来源、版本变更与安全信息，在测试环境验证后按流程部署",
+      "优先下载论坛中的同名重新打包文件"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-073",
+    "type": "single",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "普通访问日志仅记录“有人改了告警阈值”，无法追查。为提高审计价值，应补充哪组信息？",
+    "points": 2,
+    "answer": "D",
+    "explanation": "审计记录需要回答谁在何时对什么做了什么以及是否成功，并采用适当的访问保护和保留策略。",
+    "tags": [
+      "安全运维",
+      "建立配置变更审计要素"
+    ],
+    "objective": "建立配置变更审计要素",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-logging"
+      ]
+    },
+    "options": [
+      "只汇总当天页面访问次数，不关联具体修改",
+      "只保存新的阈值，不关联操作事件",
+      "只记录终端 IP，不保存操作目标和结果",
+      "操作者标识、时间、目标、变更内容及结果"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-074",
+    "type": "multiple",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "学生完成实训离组后，清理其项目访问权限时应核对哪些对象？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "退出团队涉及多个访问入口，应按学校授权流程核对并撤销不再需要的访问，避免遗漏长效令牌或会话。",
+    "tags": [
+      "安全运维",
+      "清理人员离组访问残留"
+    ],
+    "objective": "清理人员离组访问残留",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "仍有效的远程维护会话",
+      "平台账号及所属项目组",
+      "只移除通讯录姓名，所有登录能力继续保留",
+      "分配给该学生且仍有效的访问令牌",
+      "仅修改网页显示姓名，继续保留原账号登录"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-075",
+    "type": "multiple",
+    "category": "网络安全基础",
+    "difficulty": "高级",
+    "title": "一个通过身份认证的控制请求被原样截获后重复发送。为了检测这类重放，协议设计可以考虑哪些机制？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "防重放需让旧请求不能被当成新请求重复接受。唯一标记、时间窗及完整性保护应按协议组合设计。",
+    "tags": [
+      "安全运维",
+      "识别控制请求防重放机制"
+    ],
+    "objective": "识别控制请求防重放机制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "校验请求唯一标记并记录其使用状态",
+      "在时钟条件允许时校验有限的有效时间窗",
+      "只对请求文本进行 Base64 编码",
+      "让完整性保护覆盖用于防重放的字段"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-076",
+    "type": "multiple",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "仓库教学系统只需统计每小时区域内人数，哪些设计有助于减少不必要的个人信息处理和暴露？",
+    "points": 3,
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "收集与保留应围绕明确目的，减少可识别信息及不必要访问，有助于降低隐私风险。",
+    "tags": [
+      "安全运维",
+      "减少教学监测个人信息处理与暴露"
+    ],
+    "objective": "减少教学监测个人信息处理与暴露",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    },
+    "options": [
+      "明确必要数据的保留期限",
+      "限制能够接触原始数据的人员范围",
+      "在满足目的时优先保存人数统计而非可识别影像",
+      "因为以后可能有用而无限期保存所有个人轨迹"
+    ]
+  },
+  {
+    "id": "iot-ext-ops-077",
+    "type": "truefalse",
+    "category": "网络安全基础",
+    "difficulty": "初级",
+    "title": "把无线网络名称设置为不广播，就足以阻止未经授权者连接该网络。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "隐藏名称不能替代适当的认证、加密与访问管理，也不能保证网络不可被发现。",
+    "tags": [
+      "安全运维",
+      "认识隐藏SSID的安全局限"
+    ],
+    "objective": "认识隐藏SSID的安全局限",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-078",
+    "type": "truefalse",
+    "category": "网络安全基础",
+    "difficulty": "中级",
+    "title": "报废网关时，在文件管理器中删除业务文件，就必然让存储介质上的数据无法恢复。",
+    "points": 2,
+    "answer": "false",
+    "explanation": "普通文件删除通常不等同于介质净化。处置应根据介质类型和信息风险选择并验证适当的清除、净化或销毁方法。",
+    "tags": [
+      "安全运维",
+      "区分文件删除与介质净化"
+    ],
+    "objective": "区分文件删除与介质净化",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-nist-sanitization"
+      ]
+    }
+  },
+  {
+    "id": "iot-ext-ops-079",
+    "type": "fill",
+    "category": "网络安全基础",
+    "difficulty": "初级",
+    "title": "用于跨厂商公告与工具关联同一公开信息安全漏洞的通用编号体系，其常见三字母英文缩写是____。",
+    "points": 2,
+    "answer": [
+      "CVE",
+      "cve"
+    ],
+    "explanation": "CVE 标识用于跨公告和工具关联具体公开漏洞，不单独表示漏洞严重程度或本机一定受影响。",
+    "tags": [
+      "安全运维",
+      "识别公开漏洞标识"
+    ],
+    "objective": "识别公开漏洞标识",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-ops-080",
+    "type": "fill",
+    "category": "网络安全基础",
+    "difficulty": "初级",
+    "title": "设备对外暴露的服务、端口及管理入口等可被攻击者利用的入口集合，通常称为____。",
+    "points": 2,
+    "answer": [
+      "攻击面",
+      "attack surface",
+      "Attack Surface"
+    ],
+    "explanation": "减少不必要的服务和入口可缩小攻击面，但仍需要对保留入口实施适当保护。",
+    "tags": [
+      "安全运维",
+      "理解设备攻击面"
+    ],
+    "objective": "理解设备攻击面",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  {
+    "id": "iot-ext-case-001",
+    "type": "compound",
+    "category": "传感与校准",
+    "difficulty": "高级",
+    "title": "某仓库温度探头在参考值 0 ℃、20 ℃、40 ℃ 时分别显示 1 ℃、21 ℃、41 ℃。参考仪有效，温场均已稳定。请诊断并制定校验方案。",
+    "points": 10,
+    "answer": "按小题答案和评分标准评分；主观部分须由教师核定。",
+    "explanation": "本题把证据判断与可验证方案结合，客观小题自动评分，方案小题按明示量规人工评分。",
+    "tags": [
+      "传感与校准",
+      "综合实训"
+    ],
+    "objective": "从多点证据推导偏移校正并设计独立验证",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "items": [
+      {
+        "id": "diagnose",
+        "type": "single",
+        "category": "传感与校准",
+        "difficulty": "高级",
+        "title": "这些数据最直接支持哪种初步判断？",
+        "points": 3,
+        "answer": "A",
+        "explanation": "三个点的残差相同，首先考虑固定偏移，但独立验证仍然必要。",
+        "options": [
+          "大致为 +1 ℃ 的固定偏差",
+          "固定为两倍的增益误差",
+          "网络完全断开",
+          "无法得到任何线索"
+        ],
+        "weight": 3
+      },
+      {
+        "id": "correct",
+        "type": "fill",
+        "category": "传感与校准",
+        "difficulty": "高级",
+        "title": "仅按本题线性偏移模型，原始显示 16 ℃ 校正后为____ ℃。（只填数值）",
+        "points": 2,
+        "answer": [
+          "15",
+          "15.0"
+        ],
+        "explanation": "校正值=原始显示−1 ℃。",
+        "weight": 2
+      },
+      {
+        "id": "plan",
+        "type": "custom",
+        "category": "传感与校准",
+        "difficulty": "高级",
+        "title": "说明如何验证修正有效，并保证历史数据可追溯。",
+        "points": 5,
+        "answer": "选用未参与修正的稳定参考点验证残差，记录参考仪与环境条件，保留原始值、修正系数版本和生效时间。",
+        "explanation": "按量规检查证据、实施条件与可验收性；合理等效方案可得分。",
+        "fields": [
+          {
+            "id": "response",
+            "label": "方案、证据与验收方法",
+            "kind": "multiline",
+            "required": true
+          }
+        ],
+        "rubric": [
+          {
+            "id": "r1",
+            "label": "使用独立参考点并比较残差",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r2",
+            "label": "记录参考仪与环境稳定条件",
+            "weight": 1,
+            "fieldId": "response"
+          },
+          {
+            "id": "r3",
+            "label": "保留原始值及修正版本/生效时间",
+            "weight": 2,
+            "fieldId": "response"
+          }
+        ],
+        "weight": 5
+      }
+    ]
+  },
+  {
+    "id": "iot-ext-case-002",
+    "type": "compound",
+    "category": "低压供电与接线安全",
+    "difficulty": "高级",
+    "title": "一个额定 5 V 的无线节点在待机时稳定，发射时反复复位。实验限定为合格低压电源和指导教师批准的测量工具，不涉及打开市电设备。",
+    "points": 10,
+    "answer": "按小题答案和评分标准评分；主观部分须由教师核定。",
+    "explanation": "本题把证据判断与可验证方案结合，客观小题自动评分，方案小题按明示量规人工评分。",
+    "tags": [
+      "低压供电与接线安全",
+      "综合实训"
+    ],
+    "objective": "基于瞬态症状安全验证供电假设",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "items": [
+      {
+        "id": "hypothesis",
+        "type": "single",
+        "category": "低压供电与接线安全",
+        "difficulty": "高级",
+        "title": "哪一个假设最值得先用测量验证？",
+        "points": 3,
+        "answer": "B",
+        "explanation": "仅在发射时复位提示供电瞬态或相关负载问题，但需测量佐证。",
+        "options": [
+          "网页分辨率过低",
+          "发射峰值导致节点供电跌落",
+          "设备 ID 太短",
+          "数据库表名太长"
+        ],
+        "weight": 3
+      },
+      {
+        "id": "power",
+        "type": "fill",
+        "category": "低压供电与接线安全",
+        "difficulty": "高级",
+        "title": "待机电流 0.05 A、5 V 供电时，理想待机输入功率为____ W。（只填数值）",
+        "points": 2,
+        "answer": [
+          "0.25"
+        ],
+        "explanation": "P=UI=5×0.05 W。",
+        "weight": 2
+      },
+      {
+        "id": "plan",
+        "type": "custom",
+        "category": "低压供电与接线安全",
+        "difficulty": "高级",
+        "title": "提出安全排查步骤和复测验收条件。",
+        "points": 5,
+        "answer": "停止供电后核对电源额定值、极性、连接和模块要求；由指导人员使用合适工具观察节点端发射瞬间电压，检查线损和去耦，按设计更换合格部件；在规定发射负载下重复测试复位和最低电压。",
+        "explanation": "按量规检查证据、实施条件与可验收性；合理等效方案可得分。",
+        "fields": [
+          {
+            "id": "response",
+            "label": "方案、证据与验收方法",
+            "kind": "multiline",
+            "required": true
+          }
+        ],
+        "rubric": [
+          {
+            "id": "r1",
+            "label": "断电检查并不擅自打开市电电源",
+            "weight": 1,
+            "fieldId": "response"
+          },
+          {
+            "id": "r2",
+            "label": "观察节点端瞬态电压并核对供电链路",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r3",
+            "label": "给出可重复负载与复位/电压验收指标",
+            "weight": 2,
+            "fieldId": "response"
+          }
+        ],
+        "weight": 5
+      }
+    ]
+  },
+  {
+    "id": "iot-ext-case-003",
+    "type": "compound",
+    "category": "RS485/Modbus",
+    "difficulty": "高级",
+    "title": "厂商说明某温度值使用单个无符号16位寄存器，比例为 0.1 ℃/单位；抓包值为十六进制 00 FA。串口通信可成功，但网页显示 250 ℃。",
+    "points": 10,
+    "answer": "按小题答案和评分标准评分；主观部分须由教师核定。",
+    "explanation": "本题把证据判断与可验证方案结合，客观小题自动评分，方案小题按明示量规人工评分。",
+    "tags": [
+      "RS485/Modbus",
+      "综合实训"
+    ],
+    "objective": "使用厂商映射定位工程量缩放故障",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "items": [
+      {
+        "id": "layer",
+        "type": "single",
+        "category": "RS485/Modbus",
+        "difficulty": "高级",
+        "title": "最应先核对哪个环节？",
+        "points": 3,
+        "answer": "A",
+        "explanation": "FA十六进制为250，直接显示250 ℃提示未按0.1比例缩放。",
+        "options": [
+          "网页单位换算与缩放配置",
+          "无线天线极化",
+          "市电频率",
+          "设备标签颜色"
+        ],
+        "weight": 3
+      },
+      {
+        "id": "temperature",
+        "type": "fill",
+        "category": "RS485/Modbus",
+        "difficulty": "高级",
+        "title": "按题目映射，正确温度应为____ ℃。（只填数值）",
+        "points": 2,
+        "answer": [
+          "25",
+          "25.0"
+        ],
+        "explanation": "250×0.1 ℃=25 ℃。",
+        "weight": 2
+      },
+      {
+        "id": "plan",
+        "type": "custom",
+        "category": "RS485/Modbus",
+        "difficulty": "高级",
+        "title": "给出防止其他寄存器出现类似错误的实施与验收方案。",
+        "points": 5,
+        "answer": "建立带版本的映射表，明确地址基准、数据类型、字节序、比例和单位；用已知输入与原始寄存器值逐项核验，保留抓包和显示结果，不将单个设备映射当作所有设备通用规则。",
+        "explanation": "按量规检查证据、实施条件与可验收性；合理等效方案可得分。",
+        "fields": [
+          {
+            "id": "response",
+            "label": "方案、证据与验收方法",
+            "kind": "multiline",
+            "required": true
+          }
+        ],
+        "rubric": [
+          {
+            "id": "r1",
+            "label": "明确映射表地址/类型/比例/单位",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r2",
+            "label": "已知输入对照原始值和显示值",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r3",
+            "label": "映射版本管理及适用设备范围",
+            "weight": 1,
+            "fieldId": "response"
+          }
+        ],
+        "weight": 5
+      }
+    ]
+  },
+  {
+    "id": "iot-ext-case-004",
+    "type": "compound",
+    "category": "RFID与NFC调试",
+    "difficulty": "高级",
+    "title": "某门区应通过 100 个有标签的货箱，系统读到其中 96 个，同时读到旁边货架的 8 个标签。下题将“识读率”定义为应通过货箱中被读到的比例。",
+    "points": 10,
+    "answer": "按小题答案和评分标准评分；主观部分须由教师核定。",
+    "explanation": "本题把证据判断与可验证方案结合，客观小题自动评分，方案小题按明示量规人工评分。",
+    "tags": [
+      "RFID与NFC调试",
+      "综合实训"
+    ],
+    "objective": "联合识读率与越区误读评估门区方案",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "items": [
+      {
+        "id": "conclusion",
+        "type": "single",
+        "category": "RFID与NFC调试",
+        "difficulty": "高级",
+        "title": "根据现有数据，哪种结论最合理？",
+        "points": 3,
+        "answer": "C",
+        "explanation": "旁区读数不能补偿目标漏读，必须分别观察漏读和误读。",
+        "options": [
+          "总读到104个，所以通过货箱一定是104个",
+          "读到货架标签可直接补足漏读货箱",
+          "存在漏读和读区外误读，需要分别处理",
+          "只要增大发射功率就能保证全正确"
+        ],
+        "weight": 3
+      },
+      {
+        "id": "rate",
+        "type": "fill",
+        "category": "RFID与NFC调试",
+        "difficulty": "高级",
+        "title": "按题目定义，识读率为____%。（只填数值）",
+        "points": 2,
+        "answer": [
+          "96",
+          "96.0"
+        ],
+        "explanation": "96÷100×100%=96%。",
+        "weight": 2
+      },
+      {
+        "id": "plan",
+        "type": "custom",
+        "category": "RFID与NFC调试",
+        "difficulty": "高级",
+        "title": "提出下一轮对照实验与业务判定改进，至少各一项。",
+        "points": 5,
+        "answer": "固定同一货箱样本和通行条件，逐项改变天线角度、读区布置或合规功率，分别记录目标漏读与旁区误读；结合通行触发、方向或时间窗口形成业务事件，再复测，避免只看总读取次数。",
+        "explanation": "按量规检查证据、实施条件与可验收性；合理等效方案可得分。",
+        "fields": [
+          {
+            "id": "response",
+            "label": "方案、证据与验收方法",
+            "kind": "multiline",
+            "required": true
+          }
+        ],
+        "rubric": [
+          {
+            "id": "r1",
+            "label": "可控制变量并可重复的射频实验",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r2",
+            "label": "分别记录目标识读与旁区误读",
+            "weight": 1,
+            "fieldId": "response"
+          },
+          {
+            "id": "r3",
+            "label": "结合通行证据的业务判定并复测",
+            "weight": 2,
+            "fieldId": "response"
+          }
+        ],
+        "weight": 5
+      }
+    ]
+  },
+  {
+    "id": "iot-ext-case-005",
+    "type": "compound",
+    "category": "冷链物流",
+    "difficulty": "高级",
+    "title": "课堂模拟合同规定：温度超过 8 ℃ 连续 5 分钟才触发超温告警；每分钟采样一次，08:00 至 08:06 读数依次为 7、9、9、9、7、9、9 ℃。仅按这些离散采样作课堂判定，不推断采样间变化。",
+    "points": 10,
+    "answer": "按小题答案和评分标准评分；主观部分须由教师核定。",
+    "explanation": "本题把证据判断与可验证方案结合，客观小题自动评分，方案小题按明示量规人工评分。",
+    "tags": [
+      "冷链物流",
+      "综合实训"
+    ],
+    "objective": "按给定合同与离散证据判定持续阈值",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "items": [
+      {
+        "id": "alarm",
+        "type": "single",
+        "category": "冷链物流",
+        "difficulty": "高级",
+        "title": "截至08:06，采样证据是否满足题目连续5分钟超温条件？",
+        "points": 3,
+        "answer": "B",
+        "explanation": "不能把被正常样本分隔的超温段直接累计为连续超温。",
+        "options": [
+          "满足，因为9出现了5次",
+          "不满足，两段超温被7 ℃样本中断",
+          "满足，因为最高温大于8",
+          "温度为7时也应累计超温"
+        ],
+        "weight": 3
+      },
+      {
+        "id": "duration",
+        "type": "fill",
+        "category": "冷链物流",
+        "difficulty": "高级",
+        "title": "若08:10首次记录超过8 ℃，随后每分钟均超限，按时间差计，最早在08:____达到连续5分钟观测跨度。（填两位分钟）",
+        "points": 2,
+        "answer": [
+          "15"
+        ],
+        "explanation": "08:15−08:10=5分钟；需明确离散采样与持续性假设。",
+        "weight": 2
+      },
+      {
+        "id": "plan",
+        "type": "custom",
+        "category": "冷链物流",
+        "difficulty": "高级",
+        "title": "指出这种课堂算法对真实冷链的限制，并设计记录及处置流程。",
+        "points": 5,
+        "answer": "离散采样无法证明采样间温度，需根据商品合同、采样周期和合格探头确定规则；保存原始温度、时间、校准状态及告警确认记录，按授权流程通知与隔离待评估，不仅靠温度记录自行认定货品报废或合格。",
+        "explanation": "按量规检查证据、实施条件与可验收性；合理等效方案可得分。",
+        "fields": [
+          {
+            "id": "response",
+            "label": "方案、证据与验收方法",
+            "kind": "multiline",
+            "required": true
+          }
+        ],
+        "rubric": [
+          {
+            "id": "r1",
+            "label": "说明采样间未知及规则适用范围",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r2",
+            "label": "保留原始记录/时间与校准证据",
+            "weight": 1,
+            "fieldId": "response"
+          },
+          {
+            "id": "r3",
+            "label": "采用授权处置与评估而非自动断言质量",
+            "weight": 2,
+            "fieldId": "response"
+          }
+        ],
+        "weight": 5
+      }
+    ]
+  },
+  {
+    "id": "iot-ext-case-006",
+    "type": "compound",
+    "category": "边缘网关",
+    "difficulty": "高级",
+    "title": "同一设备产生顺序号 101、102、103 的三条遥测。平台到达顺序为102、101、102、103，消息ID为设备ID与顺序号组合；本题假定顺序号在该会话内不重复。",
+    "points": 10,
+    "answer": "按小题答案和评分标准评分；主观部分须由教师核定。",
+    "explanation": "本题把证据判断与可验证方案结合，客观小题自动评分，方案小题按明示量规人工评分。",
+    "tags": [
+      "边缘网关",
+      "综合实训"
+    ],
+    "objective": "区分业务去重与事件时间排序",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "items": [
+      {
+        "id": "duplicate",
+        "type": "single",
+        "category": "边缘网关",
+        "difficulty": "高级",
+        "title": "哪条到达记录属于明确重复？",
+        "points": 3,
+        "answer": "C",
+        "explanation": "在本题唯一性范围内，第二次相同设备与顺序号组合是重复。",
+        "options": [
+          "首次102",
+          "101",
+          "第二次102",
+          "103"
+        ],
+        "weight": 3
+      },
+      {
+        "id": "count",
+        "type": "fill",
+        "category": "边缘网关",
+        "difficulty": "高级",
+        "title": "去重后保留的唯一消息数量为____。（只填数值）",
+        "points": 2,
+        "answer": [
+          "3"
+        ],
+        "explanation": "不同顺序号为101、102、103，共3条。",
+        "weight": 2
+      },
+      {
+        "id": "plan",
+        "type": "custom",
+        "category": "边缘网关",
+        "difficulty": "高级",
+        "title": "设计入库与趋势展示方案，并说明设备重启后编号归零会带来什么风险。",
+        "points": 5,
+        "answer": "入库以稳定业务消息ID做幂等约束，保存采样时间和接收时间，趋势按事件时间排序；若重启后编号复用，应加入持久化序号、启动会话ID或其他唯一性设计，避免误删新数据。",
+        "explanation": "按量规检查证据、实施条件与可验收性；合理等效方案可得分。",
+        "fields": [
+          {
+            "id": "response",
+            "label": "方案、证据与验收方法",
+            "kind": "multiline",
+            "required": true
+          }
+        ],
+        "rubric": [
+          {
+            "id": "r1",
+            "label": "幂等约束而非仅依赖到达顺序",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r2",
+            "label": "区分采样时间/接收时间并排序",
+            "weight": 1,
+            "fieldId": "response"
+          },
+          {
+            "id": "r3",
+            "label": "识别重启编号复用并补足唯一性",
+            "weight": 2,
+            "fieldId": "response"
+          }
+        ],
+        "weight": 5
+      }
+    ]
+  },
+  {
+    "id": "iot-ext-case-007",
+    "type": "compound",
+    "category": "JSON与Python接口",
+    "difficulty": "高级",
+    "title": "接口合同规定 payload.temp 必须是以摄氏度表示的 JSON 数字。实际收到 {\"temp\":\"18.6\",\"unit\":\"C\"}，当前系统尚未定义自动字符串转换政策。",
+    "points": 10,
+    "answer": "按小题答案和评分标准评分；主观部分须由教师核定。",
+    "explanation": "本题把证据判断与可验证方案结合，客观小题自动评分，方案小题按明示量规人工评分。",
+    "tags": [
+      "JSON与Python接口",
+      "综合实训"
+    ],
+    "objective": "按照明确接口合同实施类型校验与审计",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "items": [
+      {
+        "id": "type",
+        "type": "single",
+        "category": "JSON与Python接口",
+        "difficulty": "高级",
+        "title": "为什么不能直接判为符合接口合同？",
+        "points": 3,
+        "answer": "D",
+        "explanation": "引号使该字段成为字符串，是否可转换必须由合同或清洗规则定义。",
+        "options": [
+          "JSON对象不允许键",
+          "18.6超出所有温度传感器范围",
+          "字符串比数字更准确",
+          "temp的值是字符串而非JSON数字"
+        ],
+        "weight": 3
+      },
+      {
+        "id": "json",
+        "type": "fill",
+        "category": "JSON与Python接口",
+        "difficulty": "高级",
+        "title": "若生产端按合同修复，temp 字段的值应写为____。（填JSON字面值，不带单位）",
+        "points": 2,
+        "answer": [
+          "18.6"
+        ],
+        "explanation": "数字字面值不带引号。",
+        "weight": 2
+      },
+      {
+        "id": "plan",
+        "type": "custom",
+        "category": "JSON与Python接口",
+        "difficulty": "高级",
+        "title": "设计处理不合格消息的流程，说明应记录和不应记录的内容。",
+        "points": 5,
+        "answer": "进行类型、必填字段、单位和允许范围校验；不合格消息隔离或返回可定位错误，保留消息ID与脱敏原文/失败原因；若允许转换须显式版本化并测试，日志不保存令牌和私钥。",
+        "explanation": "按量规检查证据、实施条件与可验收性；合理等效方案可得分。",
+        "fields": [
+          {
+            "id": "response",
+            "label": "方案、证据与验收方法",
+            "kind": "multiline",
+            "required": true
+          }
+        ],
+        "rubric": [
+          {
+            "id": "r1",
+            "label": "类型/单位/范围校验并明确失败处理",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r2",
+            "label": "可追溯错误且避免凭据入日志",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r3",
+            "label": "转换政策显式化并测试",
+            "weight": 1,
+            "fieldId": "response"
+          }
+        ],
+        "weight": 5
+      }
+    ]
+  },
+  {
+    "id": "iot-ext-case-008",
+    "type": "compound",
+    "category": "网络安全基础",
+    "difficulty": "高级",
+    "title": "网关作为 TLS 客户端连接服务器。服务器证书在实际当前时间已生效且未过期，但网关时钟因断电回到了证书生效日期之前，网关报告服务器证书尚未生效。请结合给定现象排障。",
+    "points": 10,
+    "answer": "按小题答案和评分标准评分；主观部分须由教师核定。",
+    "explanation": "本题把证据判断与可验证方案结合，客观小题自动评分，方案小题按明示量规人工评分。",
+    "tags": [
+      "网络安全基础",
+      "综合实训"
+    ],
+    "objective": "分离证书时间校验错误与安全绕过",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    },
+    "items": [
+      {
+        "id": "first",
+        "type": "single",
+        "category": "网络安全基础",
+        "difficulty": "高级",
+        "title": "哪项是合理的优先检查？",
+        "points": 3,
+        "answer": "B",
+        "explanation": "错误设备时间可能导致有效证书被判为尚未生效，须恢复可信时间而非绕过认证。",
+        "options": [
+          "永久关闭证书校验",
+          "核对设备时间及可信时间来源",
+          "把私钥发布到论坛",
+          "撤销所有其他设备证书"
+        ],
+        "weight": 3
+      },
+      {
+        "id": "acronym",
+        "type": "fill",
+        "category": "网络安全基础",
+        "difficulty": "高级",
+        "title": "传输层安全协议的常用英文缩写是____。",
+        "points": 2,
+        "answer": [
+          "TLS"
+        ],
+        "explanation": "TLS用于保护传输，但正确证书与时间校验仍重要。",
+        "weight": 2
+      },
+      {
+        "id": "plan",
+        "type": "custom",
+        "category": "网络安全基础",
+        "difficulty": "高级",
+        "title": "提出恢复连接及防止复发的方案，并写出验收证据。",
+        "points": 5,
+        "answer": "按批准流程恢复可信时间，核对服务器身份、证书链与有效期后重连；检查时钟保持与启动同步机制，在断电重启情境复测；保存时间修复、连接结果与脱敏错误日志，不关闭身份校验。",
+        "explanation": "按量规检查证据、实施条件与可验收性；合理等效方案可得分。",
+        "fields": [
+          {
+            "id": "response",
+            "label": "方案、证据与验收方法",
+            "kind": "multiline",
+            "required": true
+          }
+        ],
+        "rubric": [
+          {
+            "id": "r1",
+            "label": "修复可信时间且保持证书与身份验证",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r2",
+            "label": "检查保持/启动同步并断电复测",
+            "weight": 2,
+            "fieldId": "response"
+          },
+          {
+            "id": "r3",
+            "label": "保留可追溯脱敏验收证据",
+            "weight": 1,
+            "fieldId": "response"
+          }
+        ],
+        "weight": 5
+      }
+    ]
+  }
+]

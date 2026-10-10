@@ -1,0 +1,10 @@
+/* Data-first dashboard tests. String-rendered DOM, not browser layout QA. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+global.window={};require('./static/learning.js');
+const source=fs.readFileSync(__dirname+'/static/app.js','utf8');
+const overview=source.slice(source.indexOf('async function overview(c)'),source.indexOf('\nnavigate(location.hash'));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const state={questions:Array(42).fill({})};
+const context={Learning:window.Learning,Experiments:window.Experiments,window:{LOCAL_MODE:true},escapeHTML:esc,api:async k=>state[k]||null,fetch:()=>{throw Error('Unexpected fetch')},Date};vm.createContext(context);vm.runInContext(overview,context);
+(async()=>{const c={innerHTML:''};await context.overview(c);assert.match(c.innerHTML,/还没有成果记录/);assert.match(c.innerHTML,/42 道题/);assert.match(c.innerHTML,/当前浏览器保存的数据/);assert.equal((c.innerHTML.match(/class="overview-metric"/g)||[]).length,4);assert.doesNotMatch(c.innerHTML,/已经就绪|BUILD YOUR|实训教师/);
+state.workspace={name:'<script>bad</script>',notice:'A & B',teacher:'<Admin>'};state.results=[{title:'测试考核',submittedAt:'2026-10-10T06:00:00Z',pending:true}];const course=window.Learning.courses[0],lesson=course.lessons[0];state.learning={lessons:{[lesson.id]:{note:'这是足够长度的实际实践记录，测试已完成状态。',read:true,answer:lesson.quiz.answer,quizChecked:true,completedAt:'2026-10-10T06:00:00Z',openedAt:'2026-10-10T06:00:00Z'}}};await context.overview(c);assert.match(c.innerHTML,/完成主观题评分/);assert.match(c.innerHTML,/测试考核/);assert.match(c.innerHTML,/&lt;script&gt;bad&lt;\/script&gt;/);assert.match(c.innerHTML,/&lt;Admin&gt;/);assert.match(c.innerHTML,/>1\/3</);assert.doesNotMatch(c.innerHTML,/<script>bad/);console.log('PASS: dashboard real normalized progress, real pending counts, empty state, recent records, workspace escaping, 42-question count, and browser storage disclosure.');})().catch(e=>{console.error(e);process.exitCode=1});

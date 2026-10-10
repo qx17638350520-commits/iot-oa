@@ -1,0 +1,418 @@
+{
+  "schema_version": "iot-lora-ui/v1",
+  "kind": "completed_training_record",
+  "status": "completed",
+  "run_id": "qwen-iot-lora-cpu-20261010",
+  "title": "中文物联网 Qwen LoRA 真实训练记录",
+  "execution": "offline_cpu_python",
+  "is_live_job": false,
+  "model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "license": "Apache-2.0",
+    "dtype": "float32",
+    "trust_remote_code": false
+  },
+  "method": {
+    "type": "LoRA",
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "trainable_parameters": 540672,
+    "total_parameters_including_adapter": 494573440,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "batch_size": 1,
+    "seed": 42,
+    "steps": 48,
+    "max_sequence_tokens": 384,
+    "actual_max_sequence_tokens": 124,
+    "assistant_only_loss": true
+  },
+  "dataset": {
+    "provenance": "Original synthetic Chinese instructional Q&A; no real customer or device data",
+    "train_examples": 24,
+    "heldout_examples": 6,
+    "split": "Manually distinct scenarios; heldout never used in optimization or checkpoint selection",
+    "sha256": {
+      "train": "27185a10665ad3f70e5a5cc9e2029f5c0e4efe9ed00c7a804ad0945378335330",
+      "heldout": "2e0cbfcaae41b6991164c9716294943475f467d8dec29bad8a5997c4b80d3ca3"
+    }
+  },
+  "runtime": {
+    "device": "cpu",
+    "threads": 6,
+    "python": "3.12.14",
+    "torch": "2.6.0+cpu",
+    "transformers": "4.51.3",
+    "peft": "0.15.2",
+    "training_seconds": 48.741072107000946,
+    "total_seconds": 110.26794316999985,
+    "peak_rss_mb": 3214.31640625
+  },
+  "metrics": {
+    "heldout_loss_before": 4.13369035232596,
+    "heldout_loss_after": 3.3773535168618474,
+    "heldout_loss_delta": -0.7563368354641127,
+    "relative_loss_reduction_percent": 18.296891421451882,
+    "interpretation": "Descriptive loss on six synthetic held-out examples only; not accuracy or industrial capability."
+  },
+  "training_curve": [
+    {
+      "step": 1,
+      "loss": 4.189034938812256,
+      "seconds": 1.1036492600014753,
+      "rss_mb": 2604.078125
+    },
+    {
+      "step": 2,
+      "loss": 3.879850387573242,
+      "seconds": 1.0505137050004123,
+      "rss_mb": 2736.05859375
+    },
+    {
+      "step": 3,
+      "loss": 4.032066822052002,
+      "seconds": 1.091226550999636,
+      "rss_mb": 2668.3828125
+    },
+    {
+      "step": 4,
+      "loss": 4.358983039855957,
+      "seconds": 1.2782690390013158,
+      "rss_mb": 2611.3828125
+    },
+    {
+      "step": 5,
+      "loss": 4.069014072418213,
+      "seconds": 1.1940864110001712,
+      "rss_mb": 2691.328125
+    },
+    {
+      "step": 6,
+      "loss": 3.8340091705322266,
+      "seconds": 1.000144972000271,
+      "rss_mb": 2623.5625
+    },
+    {
+      "step": 7,
+      "loss": 3.7509267330169678,
+      "seconds": 0.8942031209990091,
+      "rss_mb": 2624.23046875
+    },
+    {
+      "step": 8,
+      "loss": 4.252192497253418,
+      "seconds": 0.9234516579999763,
+      "rss_mb": 2716.7265625
+    },
+    {
+      "step": 9,
+      "loss": 3.5404794216156006,
+      "seconds": 0.8863650610001059,
+      "rss_mb": 2683.3359375
+    },
+    {
+      "step": 10,
+      "loss": 3.5068280696868896,
+      "seconds": 0.9603581200008193,
+      "rss_mb": 2631.78515625
+    },
+    {
+      "step": 11,
+      "loss": 3.285259246826172,
+      "seconds": 1.0912051430004794,
+      "rss_mb": 2719.72265625
+    },
+    {
+      "step": 12,
+      "loss": 3.8012332916259766,
+      "seconds": 0.9551082929992845,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 13,
+      "loss": 4.030512809753418,
+      "seconds": 0.9667620260006515,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 14,
+      "loss": 4.288568019866943,
+      "seconds": 1.0944153420005023,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 15,
+      "loss": 4.083263397216797,
+      "seconds": 0.9983815220002725,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 16,
+      "loss": 3.3664896488189697,
+      "seconds": 0.9915154570007871,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 17,
+      "loss": 4.743920803070068,
+      "seconds": 0.8816570569997566,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 18,
+      "loss": 3.496424436569214,
+      "seconds": 1.066973525999856,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 19,
+      "loss": 3.9513797760009766,
+      "seconds": 0.9695661549994838,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 20,
+      "loss": 3.89414119720459,
+      "seconds": 0.9998719050017826,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 21,
+      "loss": 4.117313861846924,
+      "seconds": 0.9496564390010462,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 22,
+      "loss": 3.1155331134796143,
+      "seconds": 1.0402524979999725,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 23,
+      "loss": 3.4696545600891113,
+      "seconds": 0.9823906700003135,
+      "rss_mb": 2734.3125
+    },
+    {
+      "step": 24,
+      "loss": 4.474381923675537,
+      "seconds": 1.0398959779995494,
+      "rss_mb": 2669.5390625
+    },
+    {
+      "step": 25,
+      "loss": 3.1737611293792725,
+      "seconds": 1.0863991570004146,
+      "rss_mb": 2669.5390625
+    },
+    {
+      "step": 26,
+      "loss": 4.39351224899292,
+      "seconds": 1.0177087550000579,
+      "rss_mb": 2669.5390625
+    },
+    {
+      "step": 27,
+      "loss": 3.9256699085235596,
+      "seconds": 1.0153159430010419,
+      "rss_mb": 2669.5390625
+    },
+    {
+      "step": 28,
+      "loss": 3.7001519203186035,
+      "seconds": 0.9779066920000332,
+      "rss_mb": 2669.5390625
+    },
+    {
+      "step": 29,
+      "loss": 2.9146721363067627,
+      "seconds": 1.1495815610014688,
+      "rss_mb": 2704.15625
+    },
+    {
+      "step": 30,
+      "loss": 3.3008854389190674,
+      "seconds": 1.0294765170001483,
+      "rss_mb": 2704.16015625
+    },
+    {
+      "step": 31,
+      "loss": 4.285703182220459,
+      "seconds": 0.8372085249993688,
+      "rss_mb": 2704.1640625
+    },
+    {
+      "step": 32,
+      "loss": 3.0849192142486572,
+      "seconds": 0.9186333910001849,
+      "rss_mb": 2704.17578125
+    },
+    {
+      "step": 33,
+      "loss": 3.6372833251953125,
+      "seconds": 1.0612137249991065,
+      "rss_mb": 2704.17578125
+    },
+    {
+      "step": 34,
+      "loss": 3.2631759643554688,
+      "seconds": 1.0255637059999572,
+      "rss_mb": 2704.17578125
+    },
+    {
+      "step": 35,
+      "loss": 2.937347173690796,
+      "seconds": 1.0679903499985812,
+      "rss_mb": 2704.18359375
+    },
+    {
+      "step": 36,
+      "loss": 3.662339925765991,
+      "seconds": 0.9725937739985966,
+      "rss_mb": 2670.171875
+    },
+    {
+      "step": 37,
+      "loss": 2.9315989017486572,
+      "seconds": 1.0185838530014735,
+      "rss_mb": 2699.66015625
+    },
+    {
+      "step": 38,
+      "loss": 3.889785051345825,
+      "seconds": 0.9307364359992789,
+      "rss_mb": 2661.84375
+    },
+    {
+      "step": 39,
+      "loss": 3.4400529861450195,
+      "seconds": 1.0980171739993239,
+      "rss_mb": 2661.84375
+    },
+    {
+      "step": 40,
+      "loss": 3.1563968658447266,
+      "seconds": 0.9351260639996326,
+      "rss_mb": 2669.69140625
+    },
+    {
+      "step": 41,
+      "loss": 3.566608190536499,
+      "seconds": 0.8950501630006329,
+      "rss_mb": 2731.19921875
+    },
+    {
+      "step": 42,
+      "loss": 3.1615500450134277,
+      "seconds": 0.9586793069993291,
+      "rss_mb": 2697.4609375
+    },
+    {
+      "step": 43,
+      "loss": 2.6905407905578613,
+      "seconds": 1.1055736250000336,
+      "rss_mb": 2697.4609375
+    },
+    {
+      "step": 44,
+      "loss": 3.5704550743103027,
+      "seconds": 0.9854654049995588,
+      "rss_mb": 2697.4609375
+    },
+    {
+      "step": 45,
+      "loss": 3.1474056243896484,
+      "seconds": 0.9615108500001952,
+      "rss_mb": 2697.4609375
+    },
+    {
+      "step": 46,
+      "loss": 2.9679784774780273,
+      "seconds": 0.9311432520007656,
+      "rss_mb": 2697.4609375
+    },
+    {
+      "step": 47,
+      "loss": 2.7062361240386963,
+      "seconds": 0.9468664699998044,
+      "rss_mb": 2697.46484375
+    },
+    {
+      "step": 48,
+      "loss": 3.3948371410369873,
+      "seconds": 1.115074895998987,
+      "rss_mb": 2697.4765625
+    }
+  ],
+  "reload_verified": true,
+  "generation_comparisons": [
+    {
+      "id": "heldout-001",
+      "prompt": "冷库遥测显示-127摄氏度，但没有协议说明。能确认制冷过强吗？",
+      "before": "依据：温度传感器的输出值为0-5V，当温度低于设定值时，输出电压为负；高于设定值时，输出电压为正。如果温度传感器的输出值为-127V，则表示温度传感器故障或被人为设置为低限报警。\n\n步骤：查看温度传感器是否正常工作，如未发现异常则可能为误报，需进一步检查温度传感器和相关电路是否有问题。\n不确定原因：无法确定是否是制冷过强。",
+      "after": "依据：温度传感器可能有误码或未接通电源；仅凭遥测值无法确定是否过载。步骤：核对数据、检查校验和复位功能、记录异常日志。",
+      "before_truncated": false,
+      "after_truncated": false
+    },
+    {
+      "id": "heldout-002",
+      "prompt": "刚订阅仓库主题就收到昨天的读数，连接是否一定坏了？",
+      "before": "根据您的描述，您提到的是“刚刚订阅了仓库主题”，这意味着您已经成功地订阅了这个主题，并且它正在运行。然而，要确定设备是否真的坏了，需要检查设备的状态和功能。\n\n1. **设备状态**：首先，查看设备是否有任何异常或故障指示灯亮起。\n2. **功能测试**：尝试通过其他方式（如手机APP、网页界面等）验证设备的功能是否正常工作。\n3. **联系客服**：如果以上方法都无法解决问题，可以考虑联系设备制造商或供应商寻求帮助。\n\n在没有具体设备的情况下，无法进行准确判断。因此",
+      "after": "依据：订阅前未检查数据源和时间戳；步骤：核对订阅日志、确认时间戳与实际一致；不确定：仅凭日期可能无法确定故障原因。",
+      "before_truncated": true,
+      "after_truncated": false
+    },
+    {
+      "id": "heldout-003",
+      "prompt": "网关每次重连后同一事件重复出现，业务统计如何避免重复？",
+      "before": "根据您的描述，您可能是在讨论一个网络系统中，当网关（如路由器或交换机）在连接到多个网络接口时，如果某个事件发生多次，可能会导致该事件被记录两次或者多次。为了防止这种情况，可以采取以下措施：\n\n1. **使用唯一标识符**：为每个事件创建唯一的标识符，并在网关上存储这些标识符。这样即使同一个事件在不同的网关之间重复出现，也不会因为标识符的重复而被记录两次。\n\n2. **日志记录**：将所有相关的日志信息都保存下来，包括事件的时间、地点",
+      "after": "依据：可能有误码、数据丢失或网络问题；步骤：仅记录当前事件，未关联到其他事件；不确定是否为重复。",
+      "before_truncated": true,
+      "after_truncated": false
+    }
+  ],
+  "limitations": [
+    "Small synthetic proof of real optimization, not a production or procurement acceptance benchmark.",
+    "Six held-out examples and three greedy generations cannot establish general capability.",
+    "No physical device control; no guarantee of factual correctness.",
+    "Static hosted UI displays this completed run; training requires Python execution."
+  ],
+  "manual_generation_review": {
+    "review_type": "Qualitative inspection of three generated examples; not a scored benchmark",
+    "conclusion": "Loss improved, but reliable IoT answer quality was not established. A clear content regression was observed.",
+    "examples": [
+      {
+        "id": "heldout-001",
+        "finding": "Adapter removes baseline fabricated -127V claim, but conflates cooling with overload and adds unsupported reset-function language. Do not treat as validated diagnostic advice."
+      },
+      {
+        "id": "heldout-002",
+        "finding": "Adapter mentions timestamps but omits the key retained-message explanation."
+      },
+      {
+        "id": "heldout-003",
+        "finding": "Regression: base answer mentions unique event identifiers; adapter answer omits deduplication and is not useful for the asked business-counting problem."
+      }
+    ],
+    "safety": "Do not connect either model to real equipment or follow generated operational instructions without qualified review."
+  },
+  "artifact_sha256": {
+    "adapter/README.md": "75fff4f88d891c7edb45544b3ae08c5a3ef83c29b92f157e1df08fb1ef80b2dc",
+    "adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "adapter/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "adapter/adapter_model.safetensors": "f0cd9ddfa49176ae5dc5d7612198f98718d988b294294eb72a0c4317353ce427",
+    "adapter/adapter_config.json": "5ed97192eb1562f25177a73d07cd630561f35be59a2b573daac0866f8a7bef8c",
+    "adapter/special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "adapter/tokenizer_config.json": "57fea41fa99fce34f91450643e48b3bfbb078c32c6831a3c06834f122c200510",
+    "adapter/tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+  }
+}

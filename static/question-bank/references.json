@@ -1,0 +1,443 @@
+[
+  {
+    "id": "ti-sar-settling",
+    "title": "TI Precision Hub: Settling time challenge and improvement tips",
+    "url": "https://e2e.ti.com/blogs_/archives/b/precisionhub/posts/settling-time-challenge-and-improvement-tips",
+    "checkedAt": "2026-10-10",
+    "scope": "SAR ADC sample-capacitor settling and acquisition time; used for question hw-014, not a verbatim exam source."
+  },
+  {
+    "id": "gs1-metal-water",
+    "title": "GS1: Does RFID work around metal and water?",
+    "url": "https://support.gs1.org/support/solutions/articles/43000734154-does-rfid-work-around-metal-and-water-",
+    "checkedAt": "2026-10-10",
+    "scope": "Material-dependent RAIN RFID performance and specialized tag design; used for hw-051."
+  },
+  {
+    "id": "nxp-nfc",
+    "title": "NXP NTAG 213/215/216 product documentation",
+    "url": "https://www.nxp.com/products/rfid-nfc/nfc-hf/ntag-for-tags-and-labels/ntag-213-215-216-nfc-forum-type-2-tag-compliant-ic-with-144-504-888-bytes-user-memory:NTAG213_215_216",
+    "checkedAt": "2026-10-10",
+    "scope": "13.56 MHz operating frequency; used for hw-056."
+  },
+  {
+    "id": "bipm-vim-adjustment",
+    "title": "BIPM/JCGM VIM 3.11: adjustment of a measuring system",
+    "url": "https://jcgm.bipm.org/vim/en/3.11.html",
+    "checkedAt": "2026-10-10",
+    "scope": "区分调整和校准；调整包括零点、偏置和跨度调整。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "bipm-vim-calibration",
+    "title": "BIPM/JCGM VIM 2.39: calibration",
+    "url": "https://jcgm.bipm.org/vim/en/2.39.html",
+    "checkedAt": "2026-10-10",
+    "scope": "校准建立量值与示值关系，不等同于调整或验证。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "ti-sar-settling-review",
+    "title": "TI: Driving a SAR ADC directly without a front-end buffer circuit, SBAA256B",
+    "url": "https://www.ti.com/lit/pdf/sbaa256",
+    "checkedAt": "2026-10-10",
+    "scope": "源阻抗、输入电容与采集窗口决定输入建立。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "adi-antialiasing",
+    "title": "Analog Devices: Why is an input filter necessary when digitizing a baseband signal?",
+    "url": "https://www.analog.com/en/resources/faqs/FAQ_antialiasing_filter.html",
+    "checkedAt": "2026-10-10",
+    "scope": "带外成分可能混叠入基带；需在采样前考虑滤波。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "nist-sensor-hysteresis",
+    "title": "NIST/NBS Special Publication 615: Sensor handbook",
+    "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication615.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "迟滞是从上升与下降方向到达同一被测量值时的输出差异；审查建议进一步排除未稳定的动态过程。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "fluke-dc-voltage",
+    "title": "Fluke: How to Measure DC Voltage with a Digital Multimeter",
+    "url": "https://www.fluke.com/en-ca/learn/blog/digital-multimeters/how-to-measure-dc-voltage-with-a-digital-multimeter",
+    "checkedAt": "2026-10-10",
+    "scope": "直流电压档，黑表笔COM、红表笔V；误用A/mA插孔测电压可能短路。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "fluke-capacitance-safety",
+    "title": "Fluke: How to Measure Capacitance with a Digital Multimeter",
+    "url": "https://www.fluke.com/en-us/learn/blog/digital-multimeters/how-to-measure-capacitance",
+    "checkedAt": "2026-10-10",
+    "scope": "测量前断电、确认无电并按安全流程处理电容储能。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "dell-swollen-battery",
+    "title": "Dell: Handling swollen Lithium-ion batteries",
+    "url": "https://dl.dell.com/topicspdf/swollenbattery-3_en-us.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "鼓包电池不应继续使用或挤压、穿刺，应由合适人员更换和处置；不把笔记本专用放电流程外推到教学裸电池。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "impinj-material-effects",
+    "title": "Impinj AutoTune: Optimize RAIN RFID Tag Performance",
+    "url": "https://www.impinj.com/products/technology/key-features/autotune",
+    "checkedAt": "2026-10-10",
+    "scope": "附着材料及周围金属等环境会影响RAIN标签取能和性能。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "nfc-forum-technology",
+    "title": "NFC Forum: NFC Technology",
+    "url": "https://nfc-forum.org/learn/nfc-technology/",
+    "checkedAt": "2026-10-10",
+    "scope": "13.56 MHz载波及NDEF标签数据组织。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "nfc-forum-ndef",
+    "title": "NFC Forum: Data Exchange Format (NDEF) Technical Specification",
+    "url": "https://nfc-forum.org/build/specifications/data-exchange-format-ndef-technical-specification/",
+    "checkedAt": "2026-10-10",
+    "scope": "NFC应用数据的标准封装格式。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "nxp-ntag21x-datasheet",
+    "title": "NXP: NTAG213/215/216 NFC Forum Type 2 Tag IC datasheet",
+    "url": "https://www.nxp.com/docs/en/data-sheet/NTAG213_215_216.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "用户存储区域和锁定机制，部分锁定位不可逆；不得推广为所有NFC芯片完全相同。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "gs1-epcis-identification",
+    "title": "GS1: EPCIS and CBV Implementation Guideline",
+    "url": "https://www.gs1.org/standards/epcis-and-cbv-implementation-guideline/current-standardd",
+    "checkedAt": "2026-10-10",
+    "scope": "实例级唯一标识与可共享的类级标识不同，GTIN加序列号可标识单个实例。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "gs1-rfid",
+    "title": "GS1: RFID standards",
+    "url": "https://www.gs1.org/standards/rfid",
+    "checkedAt": "2026-10-10",
+    "scope": "EPC术语和对象唯一标识。（独立AI审查使用，不表示官方认证题目）"
+  },
+  {
+    "id": "proto-ti-rs485",
+    "title": "Texas Instruments: The RS-485 Design Guide (Rev. D)",
+    "url": "https://www.ti.com/lit/an/slla272d/slla272d.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "RS485电气层、总线拓扑、端接、支线、失效保护偏置与共模范围"
+  },
+  {
+    "id": "proto-modbus-app",
+    "title": "Modbus Application Protocol Specification V1.1b3",
+    "url": "https://www.modbus.org/file/secure/modbusprotocolspecification.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "Modbus数据模型、PDU地址、寄存器字节序、标准功能码、数量限制和异常响应"
+  },
+  {
+    "id": "proto-modbus-serial",
+    "title": "Modbus over Serial Line Specification and Implementation Guide V1.02",
+    "url": "https://www.modbus.org/file/secure/modbusoverserial.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "RTU串口设置、从站地址、广播、帧间隔和CRC字段"
+  },
+  {
+    "id": "proto-modbus-address",
+    "title": "Modbus Organization: Introduction to Modbus",
+    "url": "https://www.modbus.org/introduction-to-modbus",
+    "checkedAt": "2026-10-10",
+    "scope": "传统寄存器编号与报文零基地址的区别，设备映射约定"
+  },
+  {
+    "id": "proto-modbus-tcp",
+    "title": "Modbus Messaging on TCP/IP Implementation Guide V1.0b",
+    "url": "https://www.modbus.org/file/secure/messagingimplementationguide.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "MBAP事务标识、Unit Identifier及TCP与串行网关封装"
+  },
+  {
+    "id": "proto-mqtt5",
+    "title": "OASIS MQTT Version 5.0 Standard",
+    "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html",
+    "checkedAt": "2026-10-10",
+    "scope": "客户端ID、遗嘱、QoS、主题和载荷、会话、共享订阅、属性、确认及保活；主要参考第3和第4章"
+  },
+  {
+    "id": "proto-ip-host",
+    "title": "RFC 1122: Requirements for Internet Hosts — Communication Layers",
+    "url": "https://www.rfc-editor.org/rfc/rfc1122.html",
+    "checkedAt": "2026-10-10",
+    "scope": "IPv4本地与远端目的判定、路由、ARP和ICMP的层次边界；现场排障题为原创情境推理"
+  },
+  {
+    "id": "proto-arp",
+    "title": "RFC 826: An Ethernet Address Resolution Protocol",
+    "url": "https://www.rfc-editor.org/info/rfc826/",
+    "checkedAt": "2026-10-10",
+    "scope": "IPv4以太网协议地址到硬件地址的解析机制"
+  },
+  {
+    "id": "proto-tcp",
+    "title": "RFC 9293: Transmission Control Protocol (TCP)",
+    "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+    "checkedAt": "2026-10-10",
+    "scope": "有序字节流、TCP确认、连接建立与关闭、接收窗口和流量控制"
+  },
+  {
+    "id": "proto-dns",
+    "title": "RFC 1035: Domain Names — Implementation and Specification",
+    "url": "https://www.rfc-editor.org/info/rfc1035/",
+    "checkedAt": "2026-10-10",
+    "scope": "DNS记录缓存及TTL；仅用于基础缓存语义，不以旧版其他限制作为当前实现要求"
+  },
+  {
+    "id": "proto-http",
+    "title": "RFC 9110: HTTP Semantics",
+    "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "checkedAt": "2026-10-10",
+    "scope": "HTTP方法语义、状态码、Host与内容类型、ETag及条件请求"
+  },
+  {
+    "id": "proto-http1",
+    "title": "RFC 9112: HTTP/1.1",
+    "url": "https://www.rfc-editor.org/rfc/rfc9112.html",
+    "checkedAt": "2026-10-10",
+    "scope": "HTTP/1.1报文分帧、Content-Length、Transfer-Encoding和chunked"
+  },
+  {
+    "id": "proto-http-rate",
+    "title": "RFC 6585: Additional HTTP Status Codes",
+    "url": "https://www.rfc-editor.org/rfc/rfc6585.html",
+    "checkedAt": "2026-10-10",
+    "scope": "429 Too Many Requests与Retry-After限流提示"
+  },
+  {
+    "id": "proto-wifi-faq",
+    "title": "Espressif ESP-FAQ: Wi-Fi",
+    "url": "https://github.com/espressif/esp-faq/blob/master/docs/en/software-framework/wifi.rst",
+    "checkedAt": "2026-10-10",
+    "scope": "2.4 GHz设备与多频段网络的兼容性；题干已限定终端硬件能力"
+  },
+  {
+    "id": "proto-wifi-api",
+    "title": "Espressif ESP-IDF: Wi-Fi API Reference (ESP32)",
+    "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/network/esp_wifi.html?highlight=wifi_config",
+    "checkedAt": "2026-10-10",
+    "scope": "RSSI读数、BSSID、站点连接与无线统计；现场验收方法为原创设计"
+  },
+  {
+    "id": "proto-wifi-isolation",
+    "title": "Cisco: Peer-to-Peer Client Support, IOS XE 17.16.x",
+    "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-16/config-guide/b_wl_17_16_cg/peer-to-peer-client-support.html",
+    "checkedAt": "2026-10-10",
+    "scope": "WLAN客户端隔离和点对点阻断的影响"
+  },
+  {
+    "id": "proto-wifi-arduino",
+    "title": "Espressif Arduino-ESP32: Wi-Fi API",
+    "url": "https://docs.espressif.com/projects/arduino-esp32/en/latest/api/wifi.html?highlight=wifi",
+    "checkedAt": "2026-10-10",
+    "scope": "WiFi STA与AP工作模式"
+  },
+  {
+    "id": "proto-zigbee-nodes",
+    "title": "Silicon Labs: Zigbee Fundamentals — Network Node Types",
+    "url": "https://docs.silabs.com/zigbee/9.0.2/zigbee-fundamentals/03-network-node-types",
+    "checkedAt": "2026-10-10",
+    "scope": "协调器、路由器、终端与睡眠终端的职责"
+  },
+  {
+    "id": "proto-zigbee-concepts",
+    "title": "Silicon Labs: Zigbee Concepts — Introduction",
+    "url": "https://docs.silabs.com/zigbee/8.2.2/zigbee-concepts/",
+    "checkedAt": "2026-10-10",
+    "scope": "网络扫描与入网、网络身份、16位PAN ID和64位Extended PAN ID"
+  },
+  {
+    "id": "proto-zigbee-binding",
+    "title": "Silicon Labs: Zigbee Concepts — Binding",
+    "url": "https://docs.silabs.com/zigbee/9.0.2/zigbee-concepts-network/binding",
+    "checkedAt": "2026-10-10",
+    "scope": "绑定表中的端点、Cluster ID和目标设备身份"
+  },
+  {
+    "id": "proto-zigbee-findbind",
+    "title": "Silicon Labs: Finding and Binding",
+    "url": "https://docs.silabs.com/zigbee/9.0.0/zigbee-concepts-app-layer/",
+    "checkedAt": "2026-10-10",
+    "scope": "应用簇角色匹配与寻找绑定过程"
+  },
+  {
+    "id": "proto-ble-gatt",
+    "title": "Bluetooth Core Specification 5.4, Vol 3 Part G: Generic Attribute Profile",
+    "url": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/generic-attribute-profile--gatt-.html",
+    "checkedAt": "2026-10-10",
+    "scope": "GATT发现、缓存与服务变化、Notification/Indication、CCCD及访问条件"
+  },
+  {
+    "id": "proto-ble-att",
+    "title": "Bluetooth Core Specification 5.4, Vol 3 Part F: Attribute Protocol",
+    "url": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/attribute-protocol--att-.html",
+    "checkedAt": "2026-10-10",
+    "scope": "ATT确认、MTU与Handle Value Notification报文结构"
+  },
+  {
+    "id": "proto-ble-primer",
+    "title": "Bluetooth SIG: The Bluetooth Low Energy Primer",
+    "url": "https://www.bluetooth.com/bluetooth-resources/the-bluetooth-low-energy-primer/",
+    "checkedAt": "2026-10-10",
+    "scope": "广播发现与连接的基础层次区别"
+  },
+  {
+    "id": "proto-lora-phy",
+    "title": "Semtech: LoRa PHY",
+    "url": "https://www.semtech.com/lora/what-is-lora",
+    "checkedAt": "2026-10-10",
+    "scope": "LoRa物理层技术与LoRaWAN上层网络协议的区别"
+  },
+  {
+    "id": "proto-lorawan-developers",
+    "title": "LoRa Alliance: LoRaWAN for Developers",
+    "url": "https://lora-alliance.org/lorawan-for-developers/",
+    "checkedAt": "2026-10-10",
+    "scope": "LoRaWAN链路层规范范围、消息、入网、通信类别与区域参数"
+  },
+  {
+    "id": "proto-lorawan-classes",
+    "title": "LoRa Alliance: What is LoRaWAN Specification — Classes",
+    "url": "https://lora-alliance.org/about-lorawan-old/",
+    "checkedAt": "2026-10-10",
+    "scope": "Class A上行后的两个下行接收窗口及下行等待机制"
+  },
+  {
+    "id": "proto-lorawan-regional",
+    "title": "LoRa Alliance: RP002-1.0.4 Regional Parameters",
+    "url": "https://resources.lora-alliance.org/home/rp002-1-0-4-regional-parameters",
+    "checkedAt": "2026-10-10",
+    "scope": "不同监管区域的频率、信道和数据率配置；部署时仍应核对当前地区规则"
+  },
+  {
+    "id": "proto-semtech-faq",
+    "title": "Semtech: LoRa Frequently Asked Questions",
+    "url": "https://www.semtech.com/design-support/faq/faq-lora",
+    "checkedAt": "2026-10-10",
+    "scope": "扩频因子、空中时间、链路预算以及载荷与区域限制的权衡"
+  },
+  {
+    "id": "proto-lorawan-adr",
+    "title": "LoRa Alliance Technical Track: Adaptive Data Rate",
+    "url": "https://lora-alliance.org/wp-content/uploads/2020/11/technical_track_final_web.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "ADR名称及链路参数自适应的用途"
+  },
+  {
+    "id": "ops-python-json",
+    "title": "Python 标准库：json",
+    "url": "https://docs.python.org/3/library/json.html",
+    "checkedAt": "2026-10-10",
+    "scope": "JSON 字符串解析、序列化与解析异常；仅采用长期稳定的通用行为。"
+  },
+  {
+    "id": "ops-python-datetime",
+    "title": "Python 标准库：datetime",
+    "url": "https://docs.python.org/3/library/datetime.html",
+    "checkedAt": "2026-10-10",
+    "scope": "具有时区信息和无时区信息的日期时间区别。"
+  },
+  {
+    "id": "ops-python-time",
+    "title": "Python 标准库：time",
+    "url": "https://docs.python.org/3/library/time.html",
+    "checkedAt": "2026-10-10",
+    "scope": "time.monotonic 用于经过时间测量且不受系统校时影响。"
+  },
+  {
+    "id": "ops-python-types",
+    "title": "Python 文档：Built-in Types",
+    "url": "https://docs.python.org/3/builtins/stdtypes.html",
+    "checkedAt": "2026-10-10",
+    "scope": "bool 继承 int；字典成员检查与 get 的区别。"
+  },
+  {
+    "id": "ops-python-errors",
+    "title": "Python 教程：Errors and Exceptions",
+    "url": "https://docs.python.org/3/tutorial/errors.html",
+    "checkedAt": "2026-10-10",
+    "scope": "有针对性的异常捕获和处理。"
+  },
+  {
+    "id": "ops-python-unittest",
+    "title": "Python 标准库：unittest",
+    "url": "https://docs.python.org/3/library/unittest.html",
+    "checkedAt": "2026-10-10",
+    "scope": "测试用例与明确预期；题中数量边界为原创教学设定。"
+  },
+  {
+    "id": "ops-rfc8259",
+    "title": "IETF RFC 8259：The JavaScript Object Notation Data Interchange Format",
+    "url": "https://www.rfc-editor.org/info/rfc8259/",
+    "checkedAt": "2026-10-10",
+    "scope": "JSON 语法、重复键、对象顺序、字符串转义、UTF-8、媒体类型和 eval 风险。"
+  },
+  {
+    "id": "ops-linux-cgroup",
+    "title": "Linux Kernel Documentation：Control Group v2",
+    "url": "https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html",
+    "checkedAt": "2026-10-10",
+    "scope": "进程分组与 CPU、内存等资源控制。"
+  },
+  {
+    "id": "ops-owasp-rest",
+    "title": "OWASP REST Security Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "接口输入验证；题中温度范围是教学约束，不是通用标准。"
+  },
+  {
+    "id": "ops-owasp-logging",
+    "title": "OWASP Logging Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "事件审计字段、日志存储资源、保留及保护。"
+  },
+  {
+    "id": "ops-owasp-tls",
+    "title": "OWASP Transport Layer Security Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "TLS 服务端身份和证书验证。"
+  },
+  {
+    "id": "ops-owasp-mfa",
+    "title": "OWASP Multifactor Authentication Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "不同类别认证要素与多因素认证。"
+  },
+  {
+    "id": "ops-owasp-supply",
+    "title": "OWASP Software Supply Chain Security Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html",
+    "checkedAt": "2026-10-10",
+    "scope": "依赖来源、组件管理和更新风险。"
+  },
+  {
+    "id": "ops-nist-8259a",
+    "title": "NISTIR 8259A：IoT Device Cybersecurity Capability Core Baseline",
+    "url": "https://csrc.nist.gov/pubs/ir/8259/a/final",
+    "checkedAt": "2026-10-10",
+    "scope": "物联网设备数据保护能力背景；具体教学设计仍需环境验证。"
+  },
+  {
+    "id": "ops-nist-sanitization",
+    "title": "NIST SP 800-88 Rev. 2：Guidelines for Media Sanitization",
+    "url": "https://csrc.nist.gov/pubs/sp/800/88/r2/final",
+    "checkedAt": "2026-10-10",
+    "scope": "介质净化与普通删除的区别；具体处置按组织政策与介质选型。"
+  },
+  {
+    "id": "ops-cdc-cold",
+    "title": "CDC Vaccine Storage and Handling Toolkit, March 2024",
+    "url": "https://www.cdc.gov/vaccines/hcp/admin/storage/toolkit/storage-handling-toolkit.pdf",
+    "checkedAt": "2026-10-10",
+    "scope": "仅参考计量信息、空气与缓冲探头响应、温度偏离留证和待评估原则；原文为疫苗领域资料，不作为所有冷链货物的通用法规或温区要求。"
+  }
+]

@@ -1,0 +1,778 @@
+{
+  "reviewKind": "independent-ai-content-review",
+  "reviewedAt": "2026-10-10T08:39:30Z",
+  "sourceFile": "protocol.json",
+  "sourceSha256": "4ff58b7c301c07029e58f1dbc0c29346deb873abc368096bc2eb33c08665940f",
+  "reviewedCount": 80,
+  "humanSubjectReviewCompleted": false,
+  "overallResult": "未发现明确错误答案；存在不影响正确答案的措辞及干扰项改进建议，仍需学科人员终审。",
+  "checks": [
+    "逐题检查 80 道题干、选项、答案与解析的一致性",
+    "检查计算题、标准枚举与判断题的限制条件",
+    "检查引用 ID 均存在于本批参考资料",
+    "重点重新核对 Modbus 数量与时序、MQTT 5 流控与过期、HTTP 分帧、BLE ATT 载荷、LoRaWAN Class A"
+  ],
+  "primarySourceSpotChecks": [
+    {
+      "questionIds": [
+        "iot-ext-proto-012"
+      ],
+      "url": "https://www.modbus.org/file/secure/modbusprotocolspecification.pdf",
+      "finding": "功能码 0x03 标准读取上限 125 个寄存器。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-proto-020"
+      ],
+      "url": "https://www.modbus.org/file/secure/modbusoverserial.pdf",
+      "finding": "RTU 帧间至少 3.5 字符时间；题设 9600 bit/s 规避高速固定时间建议的差异。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-proto-027",
+        "iot-ext-proto-028",
+        "iot-ext-proto-037"
+      ],
+      "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html",
+      "finding": "确认消息开始转发前的过期删除条件、Receive Maximum 的 QoS 1/2 流控及发布主题禁用通配符。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-proto-055",
+        "iot-ext-proto-058"
+      ],
+      "url": "https://www.rfc-editor.org/rfc/rfc9112.html",
+      "finding": "确认长度字段与传输编码的发送限制、长度按字节计、204 无消息体；建议 B 增加“有效”条件。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-proto-068",
+        "iot-ext-proto-069"
+      ],
+      "url": "https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/attribute-protocol--att-.html",
+      "finding": "确认普通通知开销 1 字节操作码加 2 字节句柄，23 字节 MTU 可承载 20 字节值；指示采用确认。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-proto-071"
+      ],
+      "url": "https://lora-alliance.org/about-lorawan-old/",
+      "finding": "确认 Class A 上行后提供两个下行接收窗口。"
+    }
+  ],
+  "issues": [
+    {
+      "id": "proto-review-001",
+      "severity": "low",
+      "questionIds": [
+        "iot-ext-proto-055"
+      ],
+      "kind": "wording-precision",
+      "finding": "答案 B 的常规含义正确；教学用语可再明确 Content-Length 本身必须有效，以免被理解为无条件信任任意长度字段。",
+      "suggestion": "将 B 改为“在无 Transfer-Encoding、存在有效 Content-Length 且协议语义允许携带消息体时，按其声明的字节数确定消息体长度”。答案仍为 B、C、D。",
+      "sourceUrl": "https://www.rfc-editor.org/rfc/rfc9112.html#section-6.3",
+      "blocksUse": false
+    },
+    {
+      "id": "proto-review-002",
+      "severity": "low",
+      "questionIds": [
+        "iot-ext-proto-001",
+        "iot-ext-proto-004",
+        "iot-ext-proto-043",
+        "iot-ext-proto-061",
+        "iot-ext-proto-063",
+        "iot-ext-proto-064",
+        "iot-ext-proto-065",
+        "iot-ext-proto-070",
+        "iot-ext-proto-073"
+      ],
+      "kind": "distractor-quality",
+      "finding": "若干干扰项涉及外壳材料、颜色、显示字体或“禁止无线通信”等显然无关内容，答案清楚但区分度偏低。",
+      "suggestion": "后续学科审阅可用同层次误解替换，例如以串口速率替代外壳颜色、以 DNS 或子网掩码配置替代显示刷新率、以“点对点成功已证明获得 LoRaWAN 会话参数”替代“LoRaWAN 禁止无线通信”。不需要改变正确答案。",
+      "blocksUse": false
+    },
+    {
+      "id": "proto-review-003",
+      "severity": "low",
+      "questionIds": [
+        "iot-ext-proto-067"
+      ],
+      "kind": "advanced-scope-note",
+      "finding": "通过服务与特征 UUID 重新发现并更新缓存是给定选项中的明确正确方案。若设备包含同 UUID 的多个实例，还应区分相应实例。",
+      "suggestion": "可在解析末尾加“若存在同 UUID 的多个实例，还需按服务结构或设备约定定位目标实例”。",
+      "blocksUse": false
+    }
+  ],
+  "questions": [
+    {
+      "id": "iot-ext-proto-001",
+      "answerReviewed": "A",
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-002"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-002",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-003",
+      "answerReviewed": "B",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-004",
+      "answerReviewed": "D",
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-002"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-005",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-006",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-007",
+      "answerReviewed": "B",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-008",
+      "answerReviewed": "D",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-009",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-010",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-011",
+      "answerReviewed": "B",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-012",
+      "answerReviewed": "D",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-013",
+      "answerReviewed": [
+        "A",
+        "C",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-014",
+      "answerReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-015",
+      "answerReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-016",
+      "answerReviewed": "false",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-017",
+      "answerReviewed": "false",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-018",
+      "answerReviewed": "true",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-019",
+      "answerReviewed": [
+        "低",
+        "低字节",
+        "低位字节"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-020",
+      "answerReviewed": [
+        "3.5"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-021",
+      "answerReviewed": "B",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-022",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-023",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-024",
+      "answerReviewed": "D",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-025",
+      "answerReviewed": "B",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-026",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-027",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-028",
+      "answerReviewed": "D",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-029",
+      "answerReviewed": "B",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-030",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-031",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-032",
+      "answerReviewed": [
+        "A",
+        "C",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-033",
+      "answerReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-034",
+      "answerReviewed": [
+        "B",
+        "C",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-035",
+      "answerReviewed": [
+        "A",
+        "C",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-036",
+      "answerReviewed": "false",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-037",
+      "answerReviewed": "false",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-038",
+      "answerReviewed": [
+        "PUBACK"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-039",
+      "answerReviewed": [
+        "PINGREQ"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-040",
+      "answerReviewed": [
+        "Correlation Data",
+        "CorrelationData",
+        "关联数据",
+        "相关数据"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-041",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-042",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-043",
+      "answerReviewed": "D",
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-002"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-044",
+      "answerReviewed": "B",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-045",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-046",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-047",
+      "answerReviewed": "D",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-048",
+      "answerReviewed": "B",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-049",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-050",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-051",
+      "answerReviewed": "D",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-052",
+      "answerReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-053",
+      "answerReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-054",
+      "answerReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-055",
+      "answerReviewed": [
+        "B",
+        "C",
+        "D"
+      ],
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-001"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-056",
+      "answerReviewed": "false",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-057",
+      "answerReviewed": "true",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-058",
+      "answerReviewed": "false",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-059",
+      "answerReviewed": [
+        "FIN"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-060",
+      "answerReviewed": [
+        "304"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-061",
+      "answerReviewed": "D",
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-002"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-062",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-063",
+      "answerReviewed": "B",
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-002"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-064",
+      "answerReviewed": "C",
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-002"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-065",
+      "answerReviewed": "D",
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-002"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-066",
+      "answerReviewed": "A",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-067",
+      "answerReviewed": "C",
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-003"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-068",
+      "answerReviewed": "B",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-069",
+      "answerReviewed": "D",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-070",
+      "answerReviewed": "A",
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-002"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-071",
+      "answerReviewed": "C",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-072",
+      "answerReviewed": [
+        "B",
+        "C",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-073",
+      "answerReviewed": [
+        "A",
+        "B",
+        "C"
+      ],
+      "result": "pass-with-advisory",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": [
+        "proto-review-002"
+      ]
+    },
+    {
+      "id": "iot-ext-proto-074",
+      "answerReviewed": [
+        "A",
+        "C",
+        "D"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-075",
+      "answerReviewed": [
+        "A",
+        "B",
+        "C"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-076",
+      "answerReviewed": "true",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-077",
+      "answerReviewed": "false",
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-078",
+      "answerReviewed": [
+        "STA",
+        "Station",
+        "station"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-079",
+      "answerReviewed": [
+        "64"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    },
+    {
+      "id": "iot-ext-proto-080",
+      "answerReviewed": [
+        "ADR"
+      ],
+      "result": "pass",
+      "correctnessFinding": "未发现题定条件下的错误答案",
+      "advisoryIds": []
+    }
+  ]
+}

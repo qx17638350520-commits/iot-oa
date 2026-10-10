@@ -1,0 +1,81 @@
+127.0.0.1 - - [10/Oct/2026 17:23:41] "POST /api/state/test_bad HTTP/1.1" 400 -
+.127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /api/health HTTP/1.1" 200 -
+.127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /api/state/test_missing HTTP/1.1" 200 -
+.127.0.0.1 - - [10/Oct/2026 17:23:41] code 403, message Forbidden
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /data/platform.sqlite3 HTTP/1.1" 403 -
+.127.0.0.1 - - [10/Oct/2026 17:23:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/twin.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/exams.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/annotation.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/knowledge.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/learning.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/admin.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/detection.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /static/vendor/vision/model.json HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /data/questions.json HTTP/1.1" 200 -
+.127.0.0.1 - - [10/Oct/2026 17:23:41] "POST /api/state/test_scene HTTP/1.1" 200 -
+127.0.0.1 - - [10/Oct/2026 17:23:41] "GET /api/state/test_scene HTTP/1.1" 200 -
+.
+----------------------------------------------------------------------
+Ran 6 tests in 0.533s
+
+OK
+PASS: legacy roster migration, stable class/student references, source immutability, multi-class backup roundtrip, unknown class and duplicate ID rejection.
+PASS: full backup preserves local assignments/time windows, student/class snapshots, structured subquestions, custom rubric scores, and recomputed totals.
+PASS: transfer-learning workspace participates in typed full backup without accepting corrupt versions.
+PASS: annotation lifecycle logic with mocked DOM (not browser QA): immediate save-on-leave, timer cancellation, stale result rejection, failed-save recovery, synthetic-output integration flow, review persistence, inference-error annotation retention.
+PASS: dashboard real normalized progress, real pending counts, empty state, recent records, workspace escaping, 42-question count, and browser storage disclosure.
+PASS: real 80-class map; clipping and filtering; invalid output rejection; reviewed/manual retention; repeated import; metadata; parent repair; SRI and all model shards.
+PASS: 137 pure assignment, time-window, weighted/compound, custom-rubric, backup, and 42-seed compatibility assertions.
+PASS: 220 total assertions, including local-profile visibility and resume binding, deadline submit, failed-save recovery, per-criterion grading persistence, assignment edit, structured editor/import and escaped markup.
+PASS: 218 learning, experiment, topic matching, content integrity, and restore-normalization assertions.
+PASS: mocked-DOM async lifecycle, exit-before-debounce flush, awaited persistence, read-only report reopening, edit invalidation, and saved note/report verification.
+PASS: 225 total assertions. No browser/UI rendering verification is claimed.
+PASS: same normalized key serializes writes until the prior response is parsed
+PASS: each write snapshots nested JSON at invocation, including queued writes
+PASS: a read waits for all earlier writes to its normalized key
+PASS: independent keys can write and read while another key is blocked
+PASS: network rejection propagates but does not poison the next queued write
+PASS: HTTP and response-JSON failures reach the caller and release the queue
+PASS: a failed write does not permanently prevent subsequent reads
+PASS: file and hosted-local modes retain localStorage keys and JSON behavior
+PASS: localStorage failure propagates and a later retry can save
+PASS: Knowledge keeps newer edits dirty when an older save finishes and flushes them on stop
+10/10 persistence regression tests passed (real api, gated fetch, mocked localStorage).
+PASS: class/config validation, deterministic disjoint stratified split, insufficient-class rejection, probabilities/confusion/recall, pixel deduplication, corrupt workspace rejection.
+PASS: real transfer UI handlers under explicit mock DOM: controls, insufficient data, class escaping/duplicates, config rollback, repeated-click guard, pending-save navigation, save failure/retry/export, stale reads, corrupt-load recovery. Not browser UI QA.
+PASS presets expose distinct sensor units and required controls
+PASS all sampling stays within each component range at bounded environmental extremes
+PASS power, current and energy use kW/A/kWh consistently and integrate actual sample interval
+PASS lamp and curtains affect illumination while humidity and temperature remain separate
+PASS binary door/magnetic/alarm controls and curtain position return correct states
+PASS fingerprint is demo allow/deny and never claims or stores biometric data
+PASS legacy scenes keep control settings and archive lux readings with their correct unit
+PASS strict import rejects malformed new sensor/control/authorization data
+PASS integer-cents basket computes count plus weighed grams, net weight and rounding
+PASS insufficient balance or tender fails atomically with basket and receipts intact
+PASS cash receipt preserves purchased lines, exact totals/change and unchanged balance
+PASS balance purchase deducts correct amount; strict roundtrip includes unfinished cart and receipts
+PASS home real handlers update overlays, control snapshots and persist authorization across exit
+PASS building gas scenario triggers local alarm output, records acknowledgement and keeps gas distinct from smoke
+PASS shop UI adds weighed items, rejects insufficient balance, completes cash and autosaves actual receipt
+PASS switching scene templates preserves unfinished basket and previous purchases
+PASS complete-workspace backup validates and preserves control snapshots and checkout data
+17/17 twin demo tests passed (domain logic + mocked DOM/API integration).
+PASS navigation persists real unsaved scene/device edits and restores them on reentry
+PASS stop cancels simulation immediately and waits for persisted generated samples
+PASS failed navigation keeps edited state and a usable canvas; retry saves and navigates
+PASS concurrent stop requests await one write and later stops do not duplicate it
+PASS unused and unchanged modules stop without any persistence writes
+PASS a stopped initial async load cannot remount its old screen
+PASS an older load completing after reentry cannot overwrite the newer scene
+PASS a failed initial read never autosaves a replacement and can be retried
+8/8 digital-twin lifecycle tests passed (mock DOM/Canvas, real module/navigation).
+PASS: JSONL validation, duplicate handling, rule extraction, provenance, extraction deduplication, 42 unique questions / six types.
+PASS: all sample question schemas, exact/multiple/truefalse/fill grading, pending manual grading, invalid answer rejection.
+PASS: reproducible train/validation partition, no overlapping samples, backup format/type/unknown-key validation.
+PASS: malformed exam/result/student/triple backups rejected; normalized question values retained.
+PASS: 3 scene presets and strict restore; 6 courses/18 lessons/6 experiments; MQTT matching edge cases; normalized learning/experiment backup.
+PASS: hosted browser-local adapter save/load roundtrip, endpoint normalization, and zero remote API calls.

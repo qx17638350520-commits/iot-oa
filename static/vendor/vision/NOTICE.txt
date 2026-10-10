@@ -1,0 +1,8 @@
+TensorFlow.js 4.22.0 and TensorFlow.js COCO-SSD 2.2.3
+Copyright Google LLC. Licensed under the Apache License, Version 2.0.
+See LICENSE and PROVENANCE.json for the complete license, source URLs and checksums.
+
+The original unmodified TensorFlow.js lite_mobilenet_v2 COCO-SSD graph and weights
+are provided for local browser inference. The model recognizes 80 general COCO
+classes. It has not been retrained for industrial equipment or defects.
+No test photograph is redistributed in this directory.

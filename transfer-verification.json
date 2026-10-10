@@ -1,0 +1,191 @@
+{
+  "verifiedAt": "2026-10-10T08:38:55.763Z",
+  "status": "passed_real_pretrained_embeddings_and_gradient_training",
+  "runtime": "4.22.0",
+  "backend": "cpu",
+  "environment": "Node v24.19.0; exact deployed browser TensorFlow.js CPU; read-only local-filesystem fetch adapter",
+  "browserInteractionTested": false,
+  "externalInferenceRequests": 0,
+  "model": {
+    "name": "COCO-SSD MobileNetV2 特征提取器",
+    "node": "FeatureExtractor/MobilenetV2/Conv_1/Relu6",
+    "modelUrl": "static/vendor/vision/model.json",
+    "embeddingSize": 1280,
+    "imageSize": 300,
+    "normalization": "Graph: RGB int32 [0,255] → bilinear 300×300 → ×(2/255) − 1",
+    "source": "https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd",
+    "license": "Apache-2.0",
+    "runtime": "TensorFlow.js 4.22.0"
+  },
+  "preprocessingVerified": {
+    "inputDtype": "int32",
+    "inputRange": "0..255",
+    "graphMultiplier": 0.007843137718737125,
+    "graphSubtract": 1
+  },
+  "testData": {
+    "kind": "synthetic RGB colored shapes only; NOT industrial or logistics photographs",
+    "classes": 3,
+    "images": 18,
+    "uniquePixelHashes": [
+      "26768aa310085fb8c31352103502356f9b7e65dc549b596c8b8115cb318aa352",
+      "757084924bbf455fe8a27955942b6602042dff4140d347c2c90eb5eb6e64b073",
+      "697748eab52012fa1141763cadfe0057edbee75d052d6600aa551bff4c778003",
+      "97f1437e9b9f3d8f986c739268cb94a70a7bebb38efe701c30f2234268707fda",
+      "c01417127c91f2617a81993820db4ced9cd2892073831e6ff784657cca236078",
+      "70cf6a80ce1382f9e2bf7028856c4d39cf0a29098c2d5181a9aa2304d9716557",
+      "21031c93d75ad787aa159202eb9fc973ac5a7c95fe3a6f1570bfd54db38fce7a",
+      "0e58f62b52fa9960abcb870f7264685abbfdc2a75dd2f6aa84662a0912cd869c",
+      "7f07937b001ac673ef4bd2bd4cb4cc94a3c74597af04cf2520b0468374532775",
+      "982f568d0ee5acb7f373892da28e0ed87183af5ad215fd88f8276575c800a217",
+      "b713efe0b8c42dd9d33992c816e68eeb77831aeeb68e20d0649c76695546d275",
+      "f1f5b5d8d9a2e8fc1bbfbc45224eb4af6bf81628d1da487a5cf983caa2ed5626",
+      "eb931543d1abe30fb500d497d2d12753e1462c49d25b1b1c7ee9d086fd6fd62e",
+      "e0e73f78ab45e775ae6da7ce49f456642206110f9eba6a0e435e8e6b1c3a1cae",
+      "7035ddcb2dca579a9cfb57015ca6bcba2a3a6ea303f9b4a31b86ac5d3fefbc9a",
+      "7b1c06317b08e05bd31cac07bc53d8a9ba6c31071a5a95f942c784aeb9feb3de",
+      "0c0a8ccab0a1915b3d90313dd295f852c61b8eef81999adc507960f322e868e0",
+      "3c4271d1b71b408c40cdb430267d6d41a790e1b2323ee591ee4d09a0e2f28354"
+    ],
+    "training": 12,
+    "heldOut": 6
+  },
+  "config": {
+    "epochs": 40,
+    "learningRate": 0.001,
+    "hidden": 32,
+    "batchSize": 6,
+    "testFraction": 0.25,
+    "seed": 42
+  },
+  "epochs": 40,
+  "initialTrainLoss": 1.2144393920898438,
+  "finalTrainLoss": 0.4773550033569336,
+  "training": {
+    "accuracy": 0.9166666666666666,
+    "loss": 0.4691997303222155,
+    "total": 12,
+    "correct": 11,
+    "confusion": [
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        4
+      ]
+    ],
+    "perClass": [
+      {
+        "support": 4,
+        "precision": 1,
+        "recall": 0.75
+      },
+      {
+        "support": 4,
+        "precision": 1,
+        "recall": 1
+      },
+      {
+        "support": 4,
+        "precision": 0.8,
+        "recall": 1
+      }
+    ]
+  },
+  "heldOut": {
+    "accuracy": 0.5,
+    "loss": 1.195233176266222,
+    "total": 6,
+    "correct": 3,
+    "confusion": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "perClass": [
+      {
+        "support": 2,
+        "precision": 0,
+        "recall": 0
+      },
+      {
+        "support": 2,
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      {
+        "support": 2,
+        "precision": 0.6666666666666666,
+        "recall": 1
+      }
+    ]
+  },
+  "backboneFrozen": {
+    "weightTensorsChecked": 149,
+    "allWeightHashesUnchanged": true
+  },
+  "classifierWeightsChanged": true,
+  "exportReloadPredictionsMatch": true,
+  "cancellationReleasesTensors": true,
+  "perImageTensorCleanupVerified": true,
+  "timingMs": {
+    "load": 70,
+    "extract18Images": 24555,
+    "trainAndChecks": 1246,
+    "total": 25872
+  },
+  "deployedFilesRead": [
+    {
+      "file": "model.json",
+      "bytes": 527315,
+      "sha256": "3770b2528339b1e3340cb74360e1e40401816b009779aeb8d0cce3a4353ea3a9"
+    },
+    {
+      "file": "group1-shard1of5",
+      "bytes": 4194304,
+      "sha256": "0e7af0f713e98521252321f7f84892c31cefccccec3ac64c84e5065b75ed5646"
+    },
+    {
+      "file": "group1-shard2of5",
+      "bytes": 4194304,
+      "sha256": "74cc6cfc2c4510c9cd81b8ad4cebf6f6a8f305119bb365ce0eb96276da38519a"
+    },
+    {
+      "file": "group1-shard3of5",
+      "bytes": 4194304,
+      "sha256": "50383033f893eae136392a403e8f70ade5efd90867df5695c4ca5ac640e14f38"
+    },
+    {
+      "file": "group1-shard4of5",
+      "bytes": 4194304,
+      "sha256": "d856dc534c780068bbf6c666ce1516df2c8433d87578aa31fcdf197de7058cc2"
+    },
+    {
+      "file": "group1-shard5of5",
+      "bytes": 1257312,
+      "sha256": "3d356f1fb6dfca6af78c56db34d9326706d0196e303f9de6b04f236ca79ed309"
+    }
+  ],
+  "warning": "This is a numerical CPU test, not browser UI QA or evidence of real-world classification accuracy."
+}

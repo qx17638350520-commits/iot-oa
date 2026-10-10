@@ -1,0 +1,24 @@
+PASS provenance round-trip, additive IDs, modified/custom preservation, durable backup, deletion preservation, idempotence and failed-save retry
+PASS completed offline training schema, raw comparison, provenance, escaping and artifact links
+PASS: 375 pure assignment, time-window, weighted/compound, custom-rubric, backup, and original-seed compatibility assertions.
+PASS: 458 total assertions, including local-profile visibility and resume binding, deadline submit, failed-save recovery, per-criterion grading persistence, assignment edit, structured editor/import and escaped markup.
+PASS: JSONL validation, duplicate handling, rule extraction, provenance, extraction deduplication, 280 unique questions / six types.
+PASS: all sample question schemas, exact/multiple/truefalse/fill grading, pending manual grading, invalid answer rejection.
+PASS: reproducible train/validation partition, no overlapping samples, backup format/type/unknown-key validation.
+PASS: malformed exam/result/student/triple backups rejected; normalized question values retained.
+PASS: 3 scene presets and strict restore; 6 courses/18 lessons/6 experiments; MQTT matching edge cases; normalized learning/experiment backup.
+PASS: hosted browser-local adapter save/load roundtrip, endpoint normalization, and zero remote API calls.
+PASS: legacy roster migration, stable class/student references, source immutability, multi-class backup roundtrip, unknown class and duplicate ID rejection.
+PASS: full backup preserves local assignments/time windows, student/class snapshots, structured subquestions, custom rubric scores, and recomputed totals.
+PASS: transfer-learning workspace participates in typed full backup without accepting corrupt versions.
+PASS: same normalized key serializes writes until the prior response is parsed
+PASS: each write snapshots nested JSON at invocation, including queued writes
+PASS: a read waits for all earlier writes to its normalized key
+PASS: independent keys can write and read while another key is blocked
+PASS: network rejection propagates but does not poison the next queued write
+PASS: HTTP and response-JSON failures reach the caller and release the queue
+PASS: a failed write does not permanently prevent subsequent reads
+PASS: file and hosted-local modes retain localStorage keys and JSON behavior
+PASS: localStorage failure propagates and a later retry can save
+PASS: Knowledge keeps newer edits dirty when an older save finishes and flushes them on stop
+10/10 persistence regression tests passed (real api, gated fetch, mocked localStorage).

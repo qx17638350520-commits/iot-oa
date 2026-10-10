@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "independent-ai-content-review",
+  "reviewer": "AI reviewer; not human certification",
+  "reviewedAt": "2026-10-10T08:42:00Z",
+  "verdict": "pass-ai-content-review-teacher-review-pending",
+  "inputFile": {
+    "path": "/workspace/scratch/5c01ab16e6dc/question-bank-work/compound.json",
+    "sha256": "8d3eedf777b8ab6b639cf98ef10da4fa41cfd25b8eee06dc64a7e5c695cf0368"
+  },
+  "coverage": {
+    "questions": 8,
+    "subquestions": 24,
+    "customRubricCriteria": 24,
+    "allStemsOptionsKeysExplanationsRubricsReviewed": true,
+    "arithmeticChecked": [
+      "16-1=15",
+      "5*0.05=0.25",
+      "int(00FA,16)*0.1=25",
+      "96/100*100=96",
+      "08:15-08:10=5 minutes",
+      "unique(102,101,102,103)=3"
+    ],
+    "allQuestionPointTotalsVerified": true,
+    "allCustomRubricWeightTotalsVerified": true,
+    "rubricFieldReferencesVerified": true
+  },
+  "blockingQuestionIds": [],
+  "teacherReviewPending": true,
+  "generalFindings": [
+    {
+      "severity": "low",
+      "finding": "高级标签对应整个综合任务，前两个客观小题多为初级/中级支架。可以保留，但不应宣称已通过学员难度标定。"
+    },
+    {
+      "severity": "medium",
+      "finding": "量规目前给出评分维度和权重，但没有每维度0/部分/满分的表现描述。教师评分时应给一致的部分得分规则，并容许合理等效方案。",
+      "blocking": false
+    },
+    {
+      "severity": "low",
+      "finding": "若使用泛用文本归一化评分，case007的JSON字符串引号不可被去掉后误判成数字；本次未进行应用评分器测试。",
+      "blocking": false
+    }
+  ],
+  "itemReviews": [
+    {
+      "questionId": "iot-ext-case-001",
+      "status": "pass",
+      "review": "三个残差均为+1 ℃，初判固定偏差正确；16−1=15 ℃，模型前提明确。独立点、参考条件和原始数据/版本追溯量规与答案一致。与hw001/004/025的综合应用重叠合理，无既有42题直接重复。",
+      "partChecks": {
+        "diagnose": "A正确",
+        "correct": "15 ℃正确",
+        "plan": "三项量规权重2+1+2=5，与题目目标一致"
+      },
+      "optional": "若用于正式实训验收，可在教师说明中要求学生提出允许误差/不确定度判据。"
+    },
+    {
+      "questionId": "iot-ext-case-002",
+      "status": "pass-with-quality-suggestion",
+      "review": "发射瞬间供电掉压是应先验证的合理假设而非唯一断言；5×0.05=0.25 W。实训范围、工具和指导教师边界明确，方案在断电检查后由指导人员测瞬态并复测负载，安全合理。",
+      "partChecks": {
+        "hypothesis": "B正确",
+        "power": "0.25 W正确",
+        "plan": "权重1+2+2=5；安全、测量、复测三个维度完整"
+      },
+      "optional": "单选三个干扰项仍是网页分辨率/ID/表名，建议换同领域的错误诊断但不改变唯一最佳答案。"
+    },
+    {
+      "questionId": "iot-ext-case-003",
+      "status": "pass-with-editorial-suggestion",
+      "review": "0x00FA为250，乘0.1 ℃/单位得到25 ℃正确；单个无符号16位限制避免多寄存器字序和符号扩展歧义。映射表、已知输入及版本管理量规合理。",
+      "partChecks": {
+        "layer": "A为当前选项中的最佳答案",
+        "temperature": "25 ℃正确",
+        "plan": "权重2+2+1=5；映射、验证、版本三项对应答案"
+      },
+      "optional": "“网页单位换算与缩放配置”可改为“原始寄存器到网页显示之间的工程量换算与缩放配置”，避免误导为错误必在浏览器前端。抓包值可标0x00FA（高字节00、低字节FA）。",
+      "referenceIds": [
+        "modbus-application"
+      ]
+    },
+    {
+      "questionId": "iot-ext-case-004",
+      "status": "pass",
+      "review": "96个目标和8个旁区标签不能相互补偿，存在4个漏读与8个越区误读；题目定义识读率96/100=96%明确。射频对照、分开指标和业务通行证据量规合理。",
+      "partChecks": {
+        "conclusion": "C正确",
+        "rate": "96%正确",
+        "plan": "权重2+1+2=5；控制变量/分别统计/事件判定均可验收"
+      },
+      "optional": "可在题干注明各数字均按去重后的不同货箱/标签统计以彻底排除重复读数。"
+    },
+    {
+      "questionId": "iot-ext-case-005",
+      "status": "pass",
+      "review": "两段超限由7 ℃样本中断，不能把五个9 ℃样本累加成连续5分钟；08:10至08:15观测跨度5分钟正确。题干明确课堂模拟、离散证据且不推断采样间，主观部分反思真实连续性和授权质量处置，安全范围恰当。",
+      "partChecks": {
+        "alarm": "B正确",
+        "duration": "15正确；五分钟跨度需08:10、11、12、13、14、15六个样点",
+        "plan": "权重2+1+2=5；局限/记录/授权处置匹配"
+      },
+      "optional": "duration小题用“另一段独立记录若在08:10首次超限”可避免“首次”与上文08:01相冲突的轻微阅读歧义。"
+    },
+    {
+      "questionId": "iot-ext-case-006",
+      "status": "pass",
+      "review": "题目给同设备、会话内序号唯一，第二次102确定重复，去重后3条。方案区分采样/接收时间，并补重启会话ID或持久化序号，避免把复用编号的新事件误删。与既有q012/q028/q039有幂等概念重叠，但新增乱序与重启编号边界，值得保留。",
+      "partChecks": {
+        "duplicate": "C正确",
+        "count": "3正确",
+        "plan": "权重2+1+2=5；幂等/事件时间/跨重启唯一性均对应目标"
+      },
+      "optional": "主观参考答案可补设备时钟质量及迟到数据策略，非当前题目的必答项。"
+    },
+    {
+      "questionId": "iot-ext-case-007",
+      "status": "pass-with-editorial-suggestion",
+      "review": "带引号的18.6是字符串，不满足明确规定的JSON数字字段；修复字面值18.6正确。题干未授权隐式转换，方案要求显式转换策略并隔离错误、脱敏日志，符合接口契约。",
+      "partChecks": {
+        "type": "D正确",
+        "json": "18.6正确；数值等价字面值18.60或1.86e1也可表示相同JSON数字",
+        "plan": "权重2+2+1=5；验证失败/证据安全/转换策略匹配"
+      },
+      "optional": "若payload是变量名而非外层键，建议明确“收到的payload对象为...”以免读者将payload.temp理解为还缺一层JSON嵌套。数值字面值评分可接受数学等价有效JSON数字，不可接受引号字符串。",
+      "referenceIds": [
+        "rfc8259"
+      ]
+    },
+    {
+      "questionId": "iot-ext-case-008",
+      "status": "pass",
+      "review": "作者已明确网关作为TLS客户端验证服务器证书，并说明实际当前时间内证书已生效且未过期、网关时钟回到生效日期之前。验证主体与时间区间歧义已解决；优先核对可信时间、保留证书身份验证和断电复测方案正确。",
+      "partChecks": {
+        "first": "B正确；网关是验证服务器证书的一方。",
+        "acronym": "TLS正确",
+        "plan": "权重2+2+1=5；时钟恢复/防复发/证据匹配"
+      },
+      "referenceIds": [
+        "rfc5280"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "rfc8259",
+      "title": "RFC Editor: RFC 8259 JSON",
+      "url": "https://www.rfc-editor.org/info/rfc8259/",
+      "supports": "JSON数字与字符串是不同值类型。"
+    },
+    {
+      "id": "rfc5280",
+      "title": "RFC Editor: RFC 5280 X.509 certificate profile",
+      "url": "https://www.rfc-editor.org/info/rfc5280/",
+      "supports": "证书有效期由notBefore与notAfter限定，验证证书的一方要判断当前时间处于有效区间。"
+    },
+    {
+      "id": "modbus-application",
+      "title": "Modbus Organization: Application Protocol V1.1b3",
+      "url": "https://www.modbus.org/file/secure/modbusprotocolspecification.pdf",
+      "supports": "寄存器是16位，标准传输以高位字节在先；工程量比例由具体应用映射给出。"
+    }
+  ],
+  "baselineDuplication": "与既有42题无直接复制；case006与既有幂等知识有应用重叠，但加入乱序、会话重启边界；case001/002/004综合硬件新增知识，属于合理的实践深化。",
+  "resolvedRevisionIds": [
+    "iot-ext-case-008"
+  ],
+  "releaseStatement": "8道综合题及24小题通过本次AI内容复核，可以冻结；未发现仍需阻断的内容或安全问题。教师/学科审查及评分一致性校验仍待完成。"
+}

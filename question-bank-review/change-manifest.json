@@ -1,0 +1,81 @@
+{
+  "version": "2026-10-10-original-increment-1",
+  "status": "content-frozen-ai-reviewed-teacher-review-pending",
+  "changes": [
+    {
+      "operation": "add-only",
+      "namespace": "iot-ext-hw-*",
+      "count": 70
+    },
+    {
+      "operation": "add-only",
+      "namespace": "iot-ext-proto-*",
+      "count": 80
+    },
+    {
+      "operation": "add-only",
+      "namespace": "iot-ext-ops-*",
+      "count": 80
+    },
+    {
+      "operation": "add-only",
+      "namespace": "iot-ext-case-*",
+      "count": 8
+    }
+  ],
+  "originalQuestionIDsPreserved": true,
+  "originalQuestionCount": 42,
+  "incrementQuestionCount": 238,
+  "combinedQuestionCount": 280,
+  "targetQuestionCount": 1500,
+  "remainingToTarget": 1220,
+  "teacherReview": "pending",
+  "appFilesModifiedByQuestionAuthor": false,
+  "integrationOwner": "separate integration worker",
+  "validationAssertions": 1142,
+  "hashes": {
+    "questions-authored.json": "e3bba5cfb795059038c9e34a1a256b400c703f9c9eff6e953d21e05a86e7f05a",
+    "questions-increment.json": "8524e2c2172bba11495e1db8ffb4f66bb2ad777ef835d43d2b281f9f0e208d06",
+    "question-metadata.json": "3a544ca8a9a83cdff6e2daf759857de7ced6a5903a28cbc20ad22c35392f6626",
+    "references.json": "f4867e0daaa5706b09cc45bfb97ec44b1313e3a588ac75fd4682248a0bab38fc"
+  },
+  "sourceParts": {
+    "hardware.json": "e7cb91957cab24513e5794e25560586c1ae98586be63e52b11f1fa8c7d29720c",
+    "protocol.json": "65a6e4bf8312813772f9667a77ec7ce2c1d393a4e0b55f5b9a9bc2712fef7862",
+    "operations.json": "20bc453f0c6cc4b6f56ef701e320d7dc0e55f9df7bde8914ebd2aaaf51360bf1",
+    "compound.json": "8d3eedf777b8ab6b639cf98ef10da4fa41cfd25b8eee06dc64a7e5c695cf0368"
+  },
+  "limitations": [
+    "No human subject-matter approval claimed.",
+    "No psychometric field validation performed.",
+    "Exact and textual similarity checks do not prove semantic uniqueness.",
+    "Some related fundamentals reinforce distinct applications; paper assembly should avoid overconcentration."
+  ],
+  "reviewCorrectionsApplied": [
+    "Distinguished calibration from adjustment and validation.",
+    "Bounded moving-average delay to causal real-time processing.",
+    "Separated static hysteresis from dynamic lag.",
+    "Added multimeter input-jack safety condition.",
+    "Specified RFID inbound passage and item-level identifier scope.",
+    "Replaced three overlapping objectives and a self-revealing CVE stem.",
+    "Separated interpolated cold-chain estimates from actual samples.",
+    "Clarified TLS client/server certificate roles.",
+    "Qualified HTTP content length and repeated BLE UUID instances."
+  ],
+  "reviewFiles": {
+    "hardware-review.json": "abc8e8b8f9dfdaf995b7163dfc50848c738ab3c9a7a0d0604ee906be6a026551",
+    "compound-review.json": "3e1612d9eb457927e372fbb4c2f26b955c3539232ee6e58546d9101b42193f05",
+    "protocol-review.json": "682ae5c1386746d7ff7be1a216e3ab879ff4058c284fb87e1b81fb66b50d275a",
+    "operations-review.json": "6d1bf3f7db02522a212dc1489430792f698cf0b257f31a22185573f2654e2a41",
+    "review-resolution-log.json": "ee043c2b1349166d8381f05d475059df399f6f0376a2ee12107250f40d2a30c2"
+  },
+  "independentAIReviewCoverage": {
+    "topLevelQuestions": 238,
+    "hardware": 70,
+    "protocol": 80,
+    "operations": 80,
+    "compound": 8,
+    "blockingIssuesRemaining": 0,
+    "teacherReviewCompleted": false
+  }
+}

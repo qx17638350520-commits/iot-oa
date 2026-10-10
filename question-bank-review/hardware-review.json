@@ -1,0 +1,1969 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "independent-ai-content-review",
+  "reviewer": "AI reviewer; not a human subject-matter expert or safety certifier",
+  "reviewedAt": "2026-10-10T08:42:00Z",
+  "verdict": "pass-ai-content-review-teacher-review-pending",
+  "coverage": {
+    "reviewedQuestionCount": 70,
+    "reviewedQuestionIds": [
+      "iot-ext-hw-001",
+      "iot-ext-hw-002",
+      "iot-ext-hw-003",
+      "iot-ext-hw-004",
+      "iot-ext-hw-005",
+      "iot-ext-hw-006",
+      "iot-ext-hw-007",
+      "iot-ext-hw-008",
+      "iot-ext-hw-009",
+      "iot-ext-hw-010",
+      "iot-ext-hw-011",
+      "iot-ext-hw-012",
+      "iot-ext-hw-013",
+      "iot-ext-hw-014",
+      "iot-ext-hw-015",
+      "iot-ext-hw-016",
+      "iot-ext-hw-017",
+      "iot-ext-hw-018",
+      "iot-ext-hw-019",
+      "iot-ext-hw-020",
+      "iot-ext-hw-021",
+      "iot-ext-hw-022",
+      "iot-ext-hw-023",
+      "iot-ext-hw-024",
+      "iot-ext-hw-025",
+      "iot-ext-hw-026",
+      "iot-ext-hw-027",
+      "iot-ext-hw-028",
+      "iot-ext-hw-029",
+      "iot-ext-hw-030",
+      "iot-ext-hw-031",
+      "iot-ext-hw-032",
+      "iot-ext-hw-033",
+      "iot-ext-hw-034",
+      "iot-ext-hw-035",
+      "iot-ext-hw-036",
+      "iot-ext-hw-037",
+      "iot-ext-hw-038",
+      "iot-ext-hw-039",
+      "iot-ext-hw-040",
+      "iot-ext-hw-041",
+      "iot-ext-hw-042",
+      "iot-ext-hw-043",
+      "iot-ext-hw-044",
+      "iot-ext-hw-045",
+      "iot-ext-hw-046",
+      "iot-ext-hw-047",
+      "iot-ext-hw-048",
+      "iot-ext-hw-049",
+      "iot-ext-hw-050",
+      "iot-ext-hw-051",
+      "iot-ext-hw-052",
+      "iot-ext-hw-053",
+      "iot-ext-hw-054",
+      "iot-ext-hw-055",
+      "iot-ext-hw-056",
+      "iot-ext-hw-057",
+      "iot-ext-hw-058",
+      "iot-ext-hw-059",
+      "iot-ext-hw-060",
+      "iot-ext-hw-061",
+      "iot-ext-hw-062",
+      "iot-ext-hw-063",
+      "iot-ext-hw-064",
+      "iot-ext-hw-065",
+      "iot-ext-hw-066",
+      "iot-ext-hw-067",
+      "iot-ext-hw-068",
+      "iot-ext-hw-069",
+      "iot-ext-hw-070"
+    ],
+    "baselineQuestionCount": 42,
+    "method": "逐题阅读70题题干、所有选项、答案、解析及目标；对42道既有题逐题比较知识目标；检查规范化题干重复、计算和答案结构；对校准术语、SAR输入建立、混叠、仪表插孔安全、鼓包电池、NFC/标签锁定、RFID环境和标识语义使用官方/制造商资料复核。 完成修订后再次逐题核对当前70题及重新排序后的答案；重点复核004/006/007/017/027/031/035/043/050/053/059/060/068。",
+    "scopeLimitations": "未改动硬件题库或应用代码；未进行实体实验、授课试测或心理测量验证；未独立证明创作来源，仅审阅声明与可见内容；无网络来源不代表每题均独立逐条外部查证。",
+    "inputFiles": [
+      {
+        "path": "/workspace/scratch/5c01ab16e6dc/question-bank-work/hardware.json",
+        "sha256": "e7cb91957cab24513e5794e25560586c1ae98586be63e52b11f1fa8c7d29720c"
+      },
+      {
+        "path": "/workspace/scratch/5c01ab16e6dc/iot-platform/data/questions.json",
+        "sha256": "5fbd6c6857943e550d51db38ca622881fd814fe93545727a423e069b7c1d08e9"
+      }
+    ]
+  },
+  "summary": {
+    "correctness": "当前70题所有答案键与所选文字一致；原必改项004/006/007/027/035/053/060均已修复。",
+    "safety": "正确答案未鼓励危险操作；035已同时要求表笔插孔和电压档核对。学校低压、市电边界、异常电池及储能风险提醒合理。",
+    "countsByType": {
+      "single": 44,
+      "multiple": 7,
+      "truefalse": 9,
+      "fill": 10
+    },
+    "countsByCategory": {
+      "传感与校准": 30,
+      "低压供电与接线安全": 20,
+      "RFID与NFC调试": 20
+    },
+    "exactNormalizedTitleDuplicatesAgainstBaseline": [],
+    "exactNormalizedTitleDuplicatesWithinNewBank": [],
+    "requiredQuestionRevisionIds": [],
+    "currentBlockingIssues": [],
+    "countsByDifficulty": {
+      "初级": 46,
+      "中级": 24
+    },
+    "currentSingleAnswerDistribution": {
+      "B": 13,
+      "C": 15,
+      "D": 9,
+      "A": 7
+    },
+    "humanSubjectReviewPending": true
+  },
+  "globalFindings": [
+    {
+      "id": "hardware-review-G01",
+      "severity": "medium",
+      "kind": "distractor-quality",
+      "affectedQuestionIds": [
+        "iot-ext-hw-011",
+        "iot-ext-hw-012",
+        "iot-ext-hw-014",
+        "iot-ext-hw-017",
+        "iot-ext-hw-033",
+        "iot-ext-hw-039",
+        "iot-ext-hw-051",
+        "iot-ext-hw-057",
+        "iot-ext-hw-059"
+      ],
+      "finding": "作者已修改多题无关干扰项；当前012/014/017/057/059等仍有容易排除的软件或生活类干扰项，主要影响区分度，不影响答案正确性。",
+      "recommendation": "将至少两个干扰项换为同一技术领域的常见错误推断，保持只有一个最佳答案；不得为了难度加入具有实际危害且表述像操作建议的正确选项。",
+      "examples": [
+        {
+          "questionId": "iot-ext-hw-001",
+          "options": [
+            "短时随机噪声",
+            "近似固定的零点偏差",
+            "随输入比例变化的增益误差",
+            "仅在快速变化时出现的响应滞后"
+          ],
+          "answer": "B"
+        },
+        {
+          "questionId": "iot-ext-hw-014",
+          "options": [
+            "ADC结果的显示小数位",
+            "输入采样电容的建立时间",
+            "输出寄存器的大小端顺序",
+            "传感器标称测量范围的单位名称"
+          ],
+          "answer": "B"
+        }
+      ],
+      "blocking": false,
+      "status": "partially-improved-nonblocking"
+    },
+    {
+      "id": "hardware-review-G02",
+      "severity": "medium",
+      "kind": "answer-pattern",
+      "finding": "当前选项已重新排序，答案键同步正确，不再全部ABC或固定轮换。7道多选仍均有3个正确项，选择数量模式可进一步多样化。",
+      "affectedQuestionIds": [
+        "iot-ext-hw-001",
+        "iot-ext-hw-002",
+        "iot-ext-hw-003",
+        "iot-ext-hw-004",
+        "iot-ext-hw-005",
+        "iot-ext-hw-006",
+        "iot-ext-hw-007",
+        "iot-ext-hw-008",
+        "iot-ext-hw-009",
+        "iot-ext-hw-010",
+        "iot-ext-hw-011",
+        "iot-ext-hw-012",
+        "iot-ext-hw-013",
+        "iot-ext-hw-014",
+        "iot-ext-hw-015",
+        "iot-ext-hw-016",
+        "iot-ext-hw-017",
+        "iot-ext-hw-018",
+        "iot-ext-hw-019",
+        "iot-ext-hw-020",
+        "iot-ext-hw-021",
+        "iot-ext-hw-022",
+        "iot-ext-hw-023",
+        "iot-ext-hw-031",
+        "iot-ext-hw-032",
+        "iot-ext-hw-033",
+        "iot-ext-hw-034",
+        "iot-ext-hw-035",
+        "iot-ext-hw-036",
+        "iot-ext-hw-037",
+        "iot-ext-hw-038",
+        "iot-ext-hw-039",
+        "iot-ext-hw-040",
+        "iot-ext-hw-041",
+        "iot-ext-hw-042",
+        "iot-ext-hw-043",
+        "iot-ext-hw-044",
+        "iot-ext-hw-051",
+        "iot-ext-hw-052",
+        "iot-ext-hw-053",
+        "iot-ext-hw-054",
+        "iot-ext-hw-055",
+        "iot-ext-hw-056",
+        "iot-ext-hw-057",
+        "iot-ext-hw-058",
+        "iot-ext-hw-059",
+        "iot-ext-hw-060",
+        "iot-ext-hw-061",
+        "iot-ext-hw-062",
+        "iot-ext-hw-063",
+        "iot-ext-hw-064"
+      ],
+      "recommendation": "冻结可继续；后续补充真实的2项或4项正确多选，并结合抽卷打乱选项，避免只按固定正确项数作答。",
+      "blocking": false,
+      "status": "position-pattern-resolved-cardinality-suggestion-remains"
+    },
+    {
+      "id": "hardware-review-G03",
+      "severity": "medium",
+      "kind": "difficulty-label",
+      "finding": "当前为初级46题、中级24题，已纠正全部中级标签。难度仅为认知复杂度判断，仍需教师或试测数据确认。",
+      "recommendedBeginnerQuestionIds": [
+        "iot-ext-hw-009",
+        "iot-ext-hw-018",
+        "iot-ext-hw-019",
+        "iot-ext-hw-020",
+        "iot-ext-hw-024",
+        "iot-ext-hw-027",
+        "iot-ext-hw-028",
+        "iot-ext-hw-029",
+        "iot-ext-hw-030",
+        "iot-ext-hw-031",
+        "iot-ext-hw-032",
+        "iot-ext-hw-033",
+        "iot-ext-hw-035",
+        "iot-ext-hw-036",
+        "iot-ext-hw-037",
+        "iot-ext-hw-039",
+        "iot-ext-hw-041",
+        "iot-ext-hw-042",
+        "iot-ext-hw-043",
+        "iot-ext-hw-044",
+        "iot-ext-hw-045",
+        "iot-ext-hw-046",
+        "iot-ext-hw-047",
+        "iot-ext-hw-048",
+        "iot-ext-hw-049",
+        "iot-ext-hw-050",
+        "iot-ext-hw-054",
+        "iot-ext-hw-055",
+        "iot-ext-hw-056",
+        "iot-ext-hw-057",
+        "iot-ext-hw-058",
+        "iot-ext-hw-060",
+        "iot-ext-hw-061",
+        "iot-ext-hw-065",
+        "iot-ext-hw-066",
+        "iot-ext-hw-067",
+        "iot-ext-hw-068",
+        "iot-ext-hw-069",
+        "iot-ext-hw-070"
+      ],
+      "recommendation": "先按认知复杂度调整初级/中级标签，再结合学员试测答对率、区分度和课程目标修订。不得声称已经通过教育测量验证。",
+      "blocking": false,
+      "status": "resolved-provisional-difficulty"
+    },
+    {
+      "id": "hardware-review-G04",
+      "severity": "low",
+      "kind": "numeric-answer-equivalence",
+      "affectedQuestionIds": [
+        "iot-ext-hw-020",
+        "iot-ext-hw-029",
+        "iot-ext-hw-048",
+        "iot-ext-hw-050",
+        "iot-ext-hw-070"
+      ],
+      "finding": "作者已增加常见一位/两位小数形式。计算正确；未开展应用端输入标准化/评分端到端测试。",
+      "recommendation": "在既有评分机制许可的范围内验证25.30、3.0、1.00、95.00等正确数值是否被接受；题干“只填数值”可不接受附加单位。此项是评分测试建议，不是已确认的代码缺陷。",
+      "blocking": false,
+      "status": "common-numeric-aliases-added"
+    },
+    {
+      "id": "hardware-review-G05",
+      "severity": "medium",
+      "kind": "provenance-and-review-status",
+      "finding": "当前题库仍保留draft-needs-subject-review。允许记录已进行AI内容复核，不得改称人工专家审核或安全认证。官方参考清单已供作者合并。",
+      "recommendation": "可记录ai-content-reviewed-with-revisions并保留后续教师/学科审查需求；引用ID需要映射到真实官方来源。不要把没有独立外部查证的题标成逐题官方认证。",
+      "blocking": false,
+      "status": "teacher-review-still-pending"
+    },
+    {
+      "id": "hardware-review-G06",
+      "severity": "low",
+      "kind": "instructional-level",
+      "affectedQuestionIds": [
+        "iot-ext-hw-030",
+        "iot-ext-hw-049",
+        "iot-ext-hw-069"
+      ],
+      "finding": "068已更换为RFID防碰撞知识。保留的二选一和术语缩写填空已标初级，可用作基础练习。",
+      "recommendation": "用作初级练习可以保留；若定位中级题库，改为明确参数的读数解释、接口选型或标识语义情境。",
+      "blocking": false,
+      "status": "resolved-for-068-other-items-labeled-beginner"
+    }
+  ],
+  "baselineConceptOverlap": [
+    {
+      "newQuestionIds": [
+        "iot-ext-hw-043"
+      ],
+      "existingQuestionIds": [
+        "iot-q018"
+      ],
+      "level": "resolved-by-new-mechanical-scenario",
+      "finding": "043现考散股、连接器松动及绝缘损坏；与iot-q018电气/协议兼容检查不再实质重复。",
+      "recommendation": "可保留。"
+    },
+    {
+      "newQuestionIds": [
+        "iot-ext-hw-031",
+        "iot-ext-hw-037",
+        "iot-ext-hw-041"
+      ],
+      "existingQuestionIds": [
+        "iot-q018",
+        "iot-q031"
+      ],
+      "level": "related-application",
+      "finding": "电压、信号电平和极性是已有接口检查知识的具体安全应用；题干不同，非直接重复。",
+      "recommendation": "可以保留，按电源兼容/逻辑电平/极性三个学习目标区分，不将其宣称为完全不同领域。"
+    },
+    {
+      "newQuestionIds": [
+        "iot-ext-hw-053"
+      ],
+      "existingQuestionIds": [
+        "iot-q012",
+        "iot-q028",
+        "iot-q039"
+      ],
+      "level": "related-application",
+      "finding": "共用幂等与去重概念，但新题处理RFID连续识读到物理通行事件的映射。",
+      "recommendation": "保留事件边界和物理通行证据，使它超出通用消息去重的换皮。"
+    },
+    {
+      "newQuestionIds": [
+        "iot-ext-hw-005",
+        "iot-ext-hw-024"
+      ],
+      "existingQuestionIds": [
+        "iot-q027"
+      ],
+      "level": "related-foundation",
+      "finding": "均反对把一个指标等同准确度；新题分别考重复性和固定偏差，不是分辨率原题的重复。",
+      "recommendation": "可以保留。"
+    },
+    {
+      "newQuestionIds": [
+        "iot-ext-hw-067"
+      ],
+      "existingQuestionIds": [
+        "iot-q002"
+      ],
+      "level": "related-foundation",
+      "finding": "均涉及无源RFID取能，新题主要反驳无限读距。",
+      "recommendation": "可以保留，但避免与能量来源题相邻导致直接提示。"
+    }
+  ],
+  "internalConceptOverlap": [
+    {
+      "questionIds": [
+        "iot-ext-hw-001",
+        "iot-ext-hw-024",
+        "iot-ext-hw-030"
+      ],
+      "finding": "固定偏差识别、平均无效和模型常数项是同一知识簇的三个层次；可保留，但同卷抽题应避免过度集中。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-hw-007",
+        "iot-ext-hw-028"
+      ],
+      "finding": "抗混叠应用与混叠术语互相提示；可以保留为不同难度，避免同卷紧邻。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-hw-023",
+        "iot-ext-hw-027"
+      ],
+      "finding": "称重加载/卸载测试与迟滞定义相关；不是直接重复。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-hw-033",
+        "iot-ext-hw-036",
+        "iot-ext-hw-049"
+      ],
+      "finding": "断电不等于无储能是共同安全原则，分别考接线、电阻测量、器件识别；安全教学允许强化。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-hw-042",
+        "iot-ext-hw-044"
+      ],
+      "finding": "鼓包电池处理是重复安全子项；44还覆盖市电边界。"
+    },
+    {
+      "questionIds": [
+        "iot-ext-hw-052",
+        "iot-ext-hw-062",
+        "iot-ext-hw-063",
+        "iot-ext-hw-065"
+      ],
+      "finding": "读区、验收和射频实验变量高度相关；62/63的场景和变量内容较接近，建议同卷限制同知识簇抽题。"
+    }
+  ],
+  "references": [
+    {
+      "id": "bipm-vim-adjustment",
+      "title": "BIPM/JCGM VIM 3.11: adjustment of a measuring system",
+      "url": "https://jcgm.bipm.org/vim/en/3.11.html",
+      "supports": "区分调整和校准；调整包括零点、偏置和跨度调整。"
+    },
+    {
+      "id": "bipm-vim-calibration",
+      "title": "BIPM/JCGM VIM 2.39: calibration",
+      "url": "https://jcgm.bipm.org/vim/en/2.39.html",
+      "supports": "校准建立量值与示值关系，不等同于调整或验证。"
+    },
+    {
+      "id": "ti-sar-settling-review",
+      "title": "TI: Driving a SAR ADC directly without a front-end buffer circuit, SBAA256B",
+      "url": "https://www.ti.com/lit/pdf/sbaa256",
+      "supports": "源阻抗、输入电容与采集窗口决定输入建立。"
+    },
+    {
+      "id": "adi-antialiasing",
+      "title": "Analog Devices: Why is an input filter necessary when digitizing a baseband signal?",
+      "url": "https://www.analog.com/en/resources/faqs/FAQ_antialiasing_filter.html",
+      "supports": "带外成分可能混叠入基带；需在采样前考虑滤波。"
+    },
+    {
+      "id": "nist-sensor-hysteresis",
+      "title": "NIST/NBS Special Publication 615: Sensor handbook",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication615.pdf",
+      "supports": "迟滞是从上升与下降方向到达同一被测量值时的输出差异；审查建议进一步排除未稳定的动态过程。"
+    },
+    {
+      "id": "fluke-dc-voltage",
+      "title": "Fluke: How to Measure DC Voltage with a Digital Multimeter",
+      "url": "https://www.fluke.com/en-ca/learn/blog/digital-multimeters/how-to-measure-dc-voltage-with-a-digital-multimeter",
+      "supports": "直流电压档，黑表笔COM、红表笔V；误用A/mA插孔测电压可能短路。"
+    },
+    {
+      "id": "fluke-capacitance-safety",
+      "title": "Fluke: How to Measure Capacitance with a Digital Multimeter",
+      "url": "https://www.fluke.com/en-us/learn/blog/digital-multimeters/how-to-measure-capacitance",
+      "supports": "测量前断电、确认无电并按安全流程处理电容储能。"
+    },
+    {
+      "id": "dell-swollen-battery",
+      "title": "Dell: Handling swollen Lithium-ion batteries",
+      "url": "https://dl.dell.com/topicspdf/swollenbattery-3_en-us.pdf",
+      "supports": "鼓包电池不应继续使用或挤压、穿刺，应由合适人员更换和处置；不把笔记本专用放电流程外推到教学裸电池。"
+    },
+    {
+      "id": "impinj-material-effects",
+      "title": "Impinj AutoTune: Optimize RAIN RFID Tag Performance",
+      "url": "https://www.impinj.com/products/technology/key-features/autotune",
+      "supports": "附着材料及周围金属等环境会影响RAIN标签取能和性能。"
+    },
+    {
+      "id": "nfc-forum-technology",
+      "title": "NFC Forum: NFC Technology",
+      "url": "https://nfc-forum.org/learn/nfc-technology/",
+      "supports": "13.56 MHz载波及NDEF标签数据组织。"
+    },
+    {
+      "id": "nfc-forum-ndef",
+      "title": "NFC Forum: Data Exchange Format (NDEF) Technical Specification",
+      "url": "https://nfc-forum.org/build/specifications/data-exchange-format-ndef-technical-specification/",
+      "supports": "NFC应用数据的标准封装格式。"
+    },
+    {
+      "id": "nxp-ntag21x-datasheet",
+      "title": "NXP: NTAG213/215/216 NFC Forum Type 2 Tag IC datasheet",
+      "url": "https://www.nxp.com/docs/en/data-sheet/NTAG213_215_216.pdf",
+      "supports": "用户存储区域和锁定机制，部分锁定位不可逆；不得推广为所有NFC芯片完全相同。"
+    },
+    {
+      "id": "gs1-epcis-identification",
+      "title": "GS1: EPCIS and CBV Implementation Guideline",
+      "url": "https://www.gs1.org/standards/epcis-and-cbv-implementation-guideline/current-standardd",
+      "supports": "实例级唯一标识与可共享的类级标识不同，GTIN加序列号可标识单个实例。"
+    },
+    {
+      "id": "gs1-rfid",
+      "title": "GS1: RFID standards",
+      "url": "https://www.gs1.org/standards/rfid",
+      "supports": "EPC术语和对象唯一标识。"
+    },
+    {
+      "id": "gs1-tag-anticollision",
+      "title": "GS1 EPC UHF Gen2 RFID air interface standard",
+      "url": "https://www.gs1.org/sites/default/files/docs/epc/uhfc1g2_1_2_0-standard-20080511.pdf",
+      "supports": "多标签环境的碰撞仲裁与逐标签识别概念；仅用于支持基础机制，未主张这是最新标准版本。"
+    }
+  ],
+  "itemReviews": [
+    {
+      "questionId": "iot-ext-hw-001",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确：多个稳定参考点出现近似同量偏移提示加性偏差；“首先检查”而非断言唯一原因，保留了参考仪和环境条件的核对。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-002",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确：随输入比例增长的偏差与增益或比例映射相符；低量程与高量程对照比单点判断更有信息。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-003",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确：同场、稳定和热平衡是有效比较前提；若称正式校准，解析可补充参考仪溯源和不确定度。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [
+        "bipm-vim-calibration"
+      ],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-004",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "D",
+      "status": "pass",
+      "review": "答案正确。题干已改为验证测量链路性能，解析明确零点调整不等于校准或完整验证，并保留独立检查点和重新校准要求，初审问题已解决。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [
+        "bipm-vim-adjustment",
+        "bipm-vim-calibration"
+      ],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-005",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "D",
+      "status": "pass",
+      "review": "答案正确：重复性不能排除固定偏差；“接近真值”可作入门说明，严谨实验判断宜用参考量值和不确定度。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-006",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "A",
+      "status": "pass",
+      "review": "答案正确。题干已限定实时、仅当前及过去样本的因果移动平均；更长窗口的响应延迟结论适用，初审歧义已解决。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-007",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确。解析已明确目标频带、实际滤波器过渡带、带外信号混叠及补点不能恢复，初审措辞问题已解决。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [
+        "adi-antialiasing"
+      ],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-008",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确且使用“可能”适当；读寄存器不等于产生新转换，器件就绪标志和转换时序才是依据。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-009",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "A",
+      "status": "pass",
+      "review": "答案正确；去皮扣除当前容器质量，不校验跨度也不增加最大承载，基础应用题。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-010",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确；凝露后的恢复条件应由具体器件文档规定，未给出不适用于所有探头的加热/烘烤指令，安全边界合适。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-011",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；测量对象是环境温度，安装热耦合会产生代表性偏差；三个干扰项过于无关。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-012",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确；窗口影响透光、光谱和角度响应，安装整体评估合理；可用三个光学相关误解替代软件干扰项。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-013",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "D",
+      "status": "pass",
+      "review": "答案正确；满码可能来自真实过量程、参考或接线问题，解析未错误宣称只有单一原因。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-014",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "D",
+      "status": "pass",
+      "review": "答案正确，TI官方资料支持源阻抗、采样电容和采集窗口建立时间的关联；建议把“采样时间”明确为“采集窗口时长”。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [
+        "ti-sar-settling-review"
+      ],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-015",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "D",
+      "status": "pass",
+      "review": "答案正确；参考量值应保持稳定且参考仪自身温漂受控，否则不能归因于被测链路温漂。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-016",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "A",
+      "status": "pass",
+      "review": "答案正确；不接受CRC失败样本，并采用有界重读和错误计数，兼顾数据质量与避免无限阻塞。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-017",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确。题干已限定反射式光学距离传感器，目标角度、表面和视场与题设一致。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-018",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "D",
+      "status": "pass",
+      "review": "答案正确：机械触点可产生多次边沿，软硬件消抖是常见处理；不应通过随意延时漏掉真实快速事件。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-019",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；“通常”和“具体设备定义”保留了非标准映射及故障电流例外。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-020",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "A",
+      "status": "pass",
+      "review": "答案正确；(12-4)/(20-4)×100=50 ℃，题干已给理想线性映射，答案唯一。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-021",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "pass",
+      "review": "答案正确；参考状态、条件、原始值能支持复查；若作为正式验收模板，仍需判据、测量不确定度和设备标识等，题目未宣称列举完整。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-022",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "A",
+        "C",
+        "D"
+      ],
+      "status": "pass",
+      "review": "答案正确；原始时序、独立量测与故障/操作日志均能帮助辨别异常，不允许仅凭图形外观删数据。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-023",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "pass",
+      "review": "答案正确；升降载荷可检验迟滞，额定范围限制避免超载教学；参考载荷应具有适用准确度，加载卸载各点要等待稳定。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [
+        "nist-sensor-hysteresis"
+      ],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-024",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "false",
+      "status": "pass",
+      "review": "false正确；同条件增加平均不能保证消除固定系统偏差，校准是识别关系，消除偏差还需修正或调整。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "bipm-vim-calibration"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-025",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "true",
+      "status": "pass",
+      "review": "true正确；系数版本和生效时间对追溯历史换算重要，建议保留原始量与算法版本的关联。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-026",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "true",
+      "status": "pass",
+      "review": "true正确；静态准确度不保证短瞬态可见，响应时间与热惯性是不同维度。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-027",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "迟滞",
+        "回差",
+        "hysteresis"
+      ],
+      "status": "pass",
+      "review": "答案正确。题干增加充分稳定和静态路径差异，解析区分动态响应延迟，迟滞/回差/hysteresis是合适答案；可额外接受同义词滞环。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "nist-sensor-hysteresis"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-028",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "混叠",
+        "aliasing"
+      ],
+      "status": "pass",
+      "review": "混叠正确；可接受aliasing；“高频”应理解为相对所用采样率，解析要求采样前限制带宽合理。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "adi-antialiasing"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-029",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "25.3",
+        "25.30"
+      ],
+      "status": "pass",
+      "review": "25.3正确，253/10=25.3；给出明确比例和单位后答案唯一，基础换算。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-030",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "零点"
+      ],
+      "status": "pass",
+      "review": "零点正确；b是加性项、a是乘性项，二选一填空很简单，应标初级。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-031",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确。解析已明确额定5 V不能直接接12 V，需另选电气参数匹配电源。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-032",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确；优先按实验室流程停电并报告，避免触摸热部件或继续试验。若已出现烟火，应遵守应急撤离流程而非靠近操作。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-033",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "D",
+      "status": "pass",
+      "review": "答案正确；明确断电及剩余储能风险，未把关闭软件等同断电，符合学生低压实训边界。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "fluke-capacitance-safety"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-034",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "A",
+      "status": "pass",
+      "review": "答案正确；峰值电流、串联阻抗和去耦可以导致发射掉压，与原题低功耗平均电流目标不同。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-035",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确。题干选项及解析均核对电压输入插孔和直流电压档；并联测量并警示误用电流口/档的短路风险，安全遗漏已解决。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "fluke-dc-voltage"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-036",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；电阻/导通测量需无外加电源并妥善处理储能。可在解析补充隔离待测跳线避免电路并联路径误判。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "fluke-capacitance-safety"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-037",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；未声明5 V容忍就不应直接接入，电平转换器还须匹配方向、信号类型和时序。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-038",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；感性负载关断瞬态及驱动额定值是必要检查，不错误要求所有负载一律使用同一种二极管方案。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-039",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "D",
+      "status": "pass",
+      "review": "答案正确；合规驱动级而非硬并未知GPIO，避免过流。解析可补充每引脚及端口/芯片总电流限制。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-040",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确；持续限流先停电排障而不盲目提高阈值，保留负载正常额定需求这一可能原因。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-041",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；标识、原理图和测量确认优于导线颜色假设，符合极性核对目标。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-042",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确；停止使用、避免挤压穿刺和继续充电，与厂商安全资料一致。学校流程可明确由指导人员安排处理，学生不自行拆卸或运输异常电池。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "dell-swollen-battery"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-043",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "pass",
+      "review": "答案正确：散股可能短接、连接器松动及绝缘破损均需断电修正；清晰标签本身不是缺陷。新情境针对机械接线，与既有iot-q018接口电气兼容检查形成实质区别。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-044",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "pass",
+      "review": "答案正确；市电和异常电池超出低压学生实训范围，断电后检查标签是按已批准流程进行的低风险工作。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "dell-swollen-battery"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-045",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "false",
+      "status": "pass",
+      "review": "false正确；低压大电流仍能导致I²R发热，因此低电压并不意味着短路无害。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-046",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "true",
+      "status": "pass",
+      "review": "true正确；未上电器件也可能被ESD损坏，明确采用认可流程而非自行接地改造较合适。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-047",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "false",
+      "status": "pass",
+      "review": "false正确；反复熔断必须调查原因，任意加大保险额定值可能取消设计保护；正式更换亦需匹配其他规格。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-048",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "3",
+        "3.0",
+        "3.00"
+      ],
+      "status": "pass",
+      "review": "3 mA正确；3/1000 A=0.003 A=3 mA。只要求数值，建议数值答案匹配兼容3.0等数学等价输入。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-049",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "电容"
+      ],
+      "status": "pass",
+      "review": "电容正确；两选一排除了其他储能元件歧义，断电后保留电荷的安全提醒正确，属初级。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "fluke-capacitance-safety"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-050",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "1",
+        "1.0",
+        "1.00"
+      ],
+      "status": "pass",
+      "review": "答案1 W正确。题干已明确平均输入功率，固定5 V乘平均电流0.2 A；补充1.00等价答案。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-051",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；普通UHF标签在金属附近可失谐或受屏蔽，需要相应标签选型和实测，未宣称所有金属场景绝对不可读。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [
+        "impinj-material-effects"
+      ],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-052",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确；读区越界与通行确认需联合天线、配置和业务证据，不可单凭读到标签判通行。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-053",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确。题干已限定一次已确认入库通行，解析明确真实再次通行需要新的事件边界，消除了仅凭两秒窗口一概去重的歧义。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-054",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；读取标识不等于真实性验证，具体芯片可有额外认证能力，但题目没有否认这种能力。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-055",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；观察到手机询问是否打开，并不表示写入失败，数据解释和用户操作策略受手机/应用控制。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-056",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确；NFC Forum官方技术介绍确认13.56 MHz，基础频率记忆题。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "nfc-forum-technology"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-057",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "C",
+      "status": "pass",
+      "review": "答案正确；编码记录有结构开销且文字字节数不等于字符数；三个干扰项质量低。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "nxp-ntag21x-datasheet",
+        "nfc-forum-ndef"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-058",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "A",
+      "status": "pass",
+      "review": "答案正确；NXP NTAG21x锁定位是不可逆例子，题目保留按具体芯片核对并要求明确授权，避免不可逆误操作。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "nxp-ntag21x-datasheet"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-059",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确。题干已限定UHF RFID，方向与极化关系符合远场标签识读情境。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-060",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "A",
+      "status": "pass",
+      "review": "答案正确。题干已规定每件货品标识唯一，解析将该场景与合法共享类别码区分，实例级唯一性前提充分。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "gs1-epcis-identification"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-061",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "B",
+      "status": "pass",
+      "review": "答案正确；未读到是观测结果，不是缺货结论，说明覆盖/姿态/材料等替代解释，教学价值较好。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-062",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "D",
+      "status": "pass",
+      "review": "答案正确；真实包装、负载、姿态和速度的场景化验收优于空场最大读距；“门禁”可换为“货物流转通道”以免误解为身份门禁。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-063",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "pass",
+      "review": "答案正确；现场和配置变量有助复现，采集私人密码既无关又不合适；D过于明显，测验区分度有限。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-064",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "pass",
+      "review": "答案正确；回读核验、实体绑定和失败日志互补，提示音不能单独证明业务成功。",
+      "suggestedDifficulty": "中级",
+      "referenceIds": [],
+      "currentDifficulty": "中级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-065",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "true",
+      "status": "pass",
+      "review": "true正确；功率与读区变大不等于盘点更准，解析提醒误读和法规限制但未引入任何地区功率数值。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-066",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "false",
+      "status": "pass",
+      "review": "false正确；手机NFC硬件、协议和软件支持有限，不能覆盖全部RFID；“所有”让题目过于显然，适合初级。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-067",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": "false",
+      "status": "pass",
+      "review": "false正确；无源取能不代表无限读距，与既有iot-q002能量来源有关但测的是距离限制，属于可保留的拓展。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-068",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "防碰撞",
+        "反碰撞",
+        "anti-collision",
+        "anticollision"
+      ],
+      "status": "pass",
+      "review": "防碰撞/反碰撞及给出的英文形式正确。新版从翻译词义改为多标签应答协调机制，GS1空中接口标准支持此概念；解析没有错误承诺消除全部漏读。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "gs1-tag-anticollision"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-069",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "NDEF"
+      ],
+      "status": "pass",
+      "review": "NDEF正确；NFC Forum官方格式说明支持，给出英文全称后属于初级缩写题。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [
+        "nfc-forum-ndef"
+      ],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    },
+    {
+      "questionId": "iot-ext-hw-070",
+      "checked": [
+        "stem",
+        "all-options",
+        "answer",
+        "explanation",
+        "safety",
+        "baseline-overlap"
+      ],
+      "answerKeyAsReviewed": [
+        "95",
+        "95.0",
+        "95.00"
+      ],
+      "status": "pass",
+      "review": "95%正确；190/200×100=95%，题干自定义比率且解析分开误读，可避免与准确率/精确率/召回率混用。",
+      "suggestedDifficulty": "初级",
+      "referenceIds": [],
+      "currentDifficulty": "初级",
+      "teacherReviewPending": true
+    }
+  ],
+  "releaseStatement": "当前70题内容可冻结；本次AI复核未发现仍需阻断冻结的答案、歧义或安全问题。仍需课程教师/学科人员按教学对象审定，不构成人工专家或实训安全认证。",
+  "resolvedRevisionIds": [
+    "iot-ext-hw-004",
+    "iot-ext-hw-006",
+    "iot-ext-hw-007",
+    "iot-ext-hw-017",
+    "iot-ext-hw-027",
+    "iot-ext-hw-031",
+    "iot-ext-hw-035",
+    "iot-ext-hw-050",
+    "iot-ext-hw-053",
+    "iot-ext-hw-059",
+    "iot-ext-hw-060",
+    "iot-ext-hw-068",
+    "iot-ext-hw-043"
+  ],
+  "revisionLog": [
+    {
+      "questionId": "iot-ext-hw-004",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "校准、调整与验证的术语应分开。"
+    },
+    {
+      "questionId": "iot-ext-hw-006",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "移动平均未说明实时因果处理；居中离线平滑不一定出现所述时间位移。"
+    },
+    {
+      "questionId": "iot-ext-hw-007",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "“低于采样要求的频率折叠”不能清楚表达混叠条件。"
+    },
+    {
+      "questionId": "iot-ext-hw-017",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "题干未限定测距原理，解析却采用反射式测距。"
+    },
+    {
+      "questionId": "iot-ext-hw-027",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "上升/下降时的不同读数可能来自响应未稳定，不能仅凭原题判断静态迟滞。"
+    },
+    {
+      "questionId": "iot-ext-hw-031",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "正确选项可以更明确否定现有12 V电源直接接入。"
+    },
+    {
+      "questionId": "iot-ext-hw-035",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "仅选择电压档未覆盖误插电流输入口造成短路的常见风险。"
+    },
+    {
+      "questionId": "iot-ext-hw-050",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "题干给平均电流，所求应明确为平均功率。"
+    },
+    {
+      "questionId": "iot-ext-hw-053",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "相同标签两秒内多次读到不一定只代表一个通行事件，需明确同一次业务通行。"
+    },
+    {
+      "questionId": "iot-ext-hw-059",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "方向和极化解释针对UHF远场场景最直接。"
+    },
+    {
+      "questionId": "iot-ext-hw-060",
+      "status": "resolved-by-author-revision",
+      "originalIssue": "共享品类码或批次码可合法，原题未明确逐件唯一约束。"
+    },
+    {
+      "questionId": "iot-ext-hw-068",
+      "status": "resolved-by-replacement-anticollision-item",
+      "originalIssue": "仅翻译Electronic没有有效检查EPC知识。"
+    }
+  ],
+  "questionChanges": []
+}

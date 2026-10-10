@@ -1,0 +1,3246 @@
+{
+  "iot-ext-hw-001": {
+    "tags": [
+      "传感与校准",
+      "识别零点偏差"
+    ],
+    "objective": "识别零点偏差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-002": {
+    "tags": [
+      "传感与校准",
+      "识别增益误差"
+    ],
+    "objective": "识别增益误差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-003": {
+    "tags": [
+      "传感与校准",
+      "控制校准比较条件"
+    ],
+    "objective": "控制校准比较条件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-004": {
+    "tags": [
+      "传感与校准",
+      "独立点验证校准"
+    ],
+    "objective": "独立点验证校准",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "bipm-vim-adjustment",
+        "bipm-vim-calibration"
+      ],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-005": {
+    "tags": [
+      "传感与校准",
+      "区分重复性与偏差"
+    ],
+    "objective": "区分重复性与偏差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-006": {
+    "tags": [
+      "传感与校准",
+      "滤波与延迟权衡"
+    ],
+    "objective": "滤波与延迟权衡",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-007": {
+    "tags": [
+      "传感与校准",
+      "抗混叠采样设计"
+    ],
+    "objective": "抗混叠采样设计",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "adi-antialiasing"
+      ],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-008": {
+    "tags": [
+      "传感与校准",
+      "区分读取与转换速率"
+    ],
+    "objective": "区分读取与转换速率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-009": {
+    "tags": [
+      "传感与校准",
+      "理解去皮与校准"
+    ],
+    "objective": "理解去皮与校准",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-010": {
+    "tags": [
+      "传感与校准",
+      "识别凝露测量限制"
+    ],
+    "objective": "识别凝露测量限制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-011": {
+    "tags": [
+      "传感与校准",
+      "避免自热与安装偏差"
+    ],
+    "objective": "避免自热与安装偏差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-012": {
+    "tags": [
+      "传感与校准",
+      "评估光学安装影响"
+    ],
+    "objective": "评估光学安装影响",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-013": {
+    "tags": [
+      "传感与校准",
+      "识别模拟饱和"
+    ],
+    "objective": "识别模拟饱和",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-014": {
+    "tags": [
+      "传感与校准",
+      "ADC建立时间"
+    ],
+    "objective": "ADC建立时间",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ti-sar-settling"
+      ],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-015": {
+    "tags": [
+      "传感与校准",
+      "验证温度漂移"
+    ],
+    "objective": "验证温度漂移",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-016": {
+    "tags": [
+      "传感与校准",
+      "处理传感器CRC错误"
+    ],
+    "objective": "处理传感器CRC错误",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-017": {
+    "tags": [
+      "传感与校准",
+      "测距目标条件"
+    ],
+    "objective": "测距目标条件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-018": {
+    "tags": [
+      "传感与校准",
+      "机械按键消抖"
+    ],
+    "objective": "机械按键消抖",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-019": {
+    "tags": [
+      "传感与校准",
+      "电流环活零点"
+    ],
+    "objective": "电流环活零点",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-020": {
+    "tags": [
+      "传感与校准",
+      "电流环工程量换算"
+    ],
+    "objective": "电流环工程量换算",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-021": {
+    "tags": [
+      "传感与校准",
+      "校准记录追溯"
+    ],
+    "objective": "校准记录追溯",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-022": {
+    "tags": [
+      "传感与校准",
+      "异常峰值证据"
+    ],
+    "objective": "异常峰值证据",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-023": {
+    "tags": [
+      "传感与校准",
+      "称重多点迟滞测试"
+    ],
+    "objective": "称重多点迟滞测试",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-024": {
+    "tags": [
+      "传感与校准",
+      "平均不能去固定偏差"
+    ],
+    "objective": "平均不能去固定偏差",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-025": {
+    "tags": [
+      "传感与校准",
+      "校准系数版本"
+    ],
+    "objective": "校准系数版本",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-026": {
+    "tags": [
+      "传感与校准",
+      "动态响应与静态校准"
+    ],
+    "objective": "动态响应与静态校准",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-027": {
+    "tags": [
+      "传感与校准",
+      "识别迟滞"
+    ],
+    "objective": "识别迟滞",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-028": {
+    "tags": [
+      "传感与校准",
+      "识别混叠术语"
+    ],
+    "objective": "识别混叠术语",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-029": {
+    "tags": [
+      "传感与校准",
+      "解释固定小数点编码"
+    ],
+    "objective": "解释固定小数点编码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-030": {
+    "tags": [
+      "传感与校准",
+      "校正模型加性项"
+    ],
+    "objective": "校正模型加性项",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-031": {
+    "tags": [
+      "低压供电与接线安全",
+      "同插头电源兼容性"
+    ],
+    "objective": "同插头电源兼容性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-032": {
+    "tags": [
+      "低压供电与接线安全",
+      "异常发热处置"
+    ],
+    "objective": "异常发热处置",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-033": {
+    "tags": [
+      "低压供电与接线安全",
+      "断电改线"
+    ],
+    "objective": "断电改线",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-034": {
+    "tags": [
+      "低压供电与接线安全",
+      "瞬态供电能力"
+    ],
+    "objective": "瞬态供电能力",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-035": {
+    "tags": [
+      "低压供电与接线安全",
+      "低压电压测量原则"
+    ],
+    "objective": "低压电压测量原则",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-036": {
+    "tags": [
+      "低压供电与接线安全",
+      "无电导通检查"
+    ],
+    "objective": "无电导通检查",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-037": {
+    "tags": [
+      "低压供电与接线安全",
+      "非容忍输入电平转换"
+    ],
+    "objective": "非容忍输入电平转换",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-038": {
+    "tags": [
+      "低压供电与接线安全",
+      "感性负载保护核对"
+    ],
+    "objective": "感性负载保护核对",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-039": {
+    "tags": [
+      "低压供电与接线安全",
+      "GPIO驱动能力"
+    ],
+    "objective": "GPIO驱动能力",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-040": {
+    "tags": [
+      "低压供电与接线安全",
+      "限流异常诊断"
+    ],
+    "objective": "限流异常诊断",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-041": {
+    "tags": [
+      "低压供电与接线安全",
+      "供电极性核对"
+    ],
+    "objective": "供电极性核对",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-042": {
+    "tags": [
+      "低压供电与接线安全",
+      "异常电池安全边界"
+    ],
+    "objective": "异常电池安全边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-043": {
+    "tags": [
+      "低压供电与接线安全",
+      "机械接线缺陷"
+    ],
+    "objective": "识别机械接线缺陷",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-044": {
+    "tags": [
+      "低压供电与接线安全",
+      "识别超范围危险任务"
+    ],
+    "objective": "识别超范围危险任务",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-045": {
+    "tags": [
+      "低压供电与接线安全",
+      "低压不等于无热风险"
+    ],
+    "objective": "低压不等于无热风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-046": {
+    "tags": [
+      "低压供电与接线安全",
+      "静电敏感防护"
+    ],
+    "objective": "静电敏感防护",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-047": {
+    "tags": [
+      "低压供电与接线安全",
+      "不得掩盖保护动作"
+    ],
+    "objective": "不得掩盖保护动作",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-048": {
+    "tags": [
+      "低压供电与接线安全",
+      "欧姆定律毫安换算"
+    ],
+    "objective": "欧姆定律毫安换算",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-049": {
+    "tags": [
+      "低压供电与接线安全",
+      "识别储能元件"
+    ],
+    "objective": "识别储能元件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-050": {
+    "tags": [
+      "低压供电与接线安全",
+      "直流功率计算"
+    ],
+    "objective": "直流功率计算",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-051": {
+    "tags": [
+      "RFID与NFC调试",
+      "金属环境标签选型"
+    ],
+    "objective": "金属环境标签选型",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "gs1-metal-water"
+      ],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-052": {
+    "tags": [
+      "RFID与NFC调试",
+      "读区越界与通行判定"
+    ],
+    "objective": "读区越界与通行判定",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-053": {
+    "tags": [
+      "RFID与NFC调试",
+      "RFID读数到业务事件"
+    ],
+    "objective": "RFID读数到业务事件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-054": {
+    "tags": [
+      "RFID与NFC调试",
+      "标识不等于认证"
+    ],
+    "objective": "标识不等于认证",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-055": {
+    "tags": [
+      "RFID与NFC调试",
+      "NFC数据与执行分离"
+    ],
+    "objective": "NFC数据与执行分离",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-056": {
+    "tags": [
+      "RFID与NFC调试",
+      "NFC频率"
+    ],
+    "objective": "NFC频率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "nxp-nfc"
+      ],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-057": {
+    "tags": [
+      "RFID与NFC调试",
+      "NFC容量与编码开销"
+    ],
+    "objective": "NFC容量与编码开销",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-058": {
+    "tags": [
+      "RFID与NFC调试",
+      "不可逆标签锁定边界"
+    ],
+    "objective": "不可逆标签锁定边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-059": {
+    "tags": [
+      "RFID与NFC调试",
+      "天线极化姿态影响"
+    ],
+    "objective": "天线极化姿态影响",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-060": {
+    "tags": [
+      "RFID与NFC调试",
+      "标签标识唯一性"
+    ],
+    "objective": "标签标识唯一性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-061": {
+    "tags": [
+      "RFID与NFC调试",
+      "漏读与缺货区分"
+    ],
+    "objective": "漏读与缺货区分",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-062": {
+    "tags": [
+      "RFID与NFC调试",
+      "RFID场景化验收"
+    ],
+    "objective": "RFID场景化验收",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-063": {
+    "tags": [
+      "RFID与NFC调试",
+      "漏读实验变量"
+    ],
+    "objective": "漏读实验变量",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-064": {
+    "tags": [
+      "RFID与NFC调试",
+      "写入与绑定验收"
+    ],
+    "objective": "写入与绑定验收",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-065": {
+    "tags": [
+      "RFID与NFC调试",
+      "功率与盘点准确率"
+    ],
+    "objective": "功率与盘点准确率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-066": {
+    "tags": [
+      "RFID与NFC调试",
+      "手机RFID兼容边界"
+    ],
+    "objective": "手机RFID兼容边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-067": {
+    "tags": [
+      "RFID与NFC调试",
+      "无源读距限制"
+    ],
+    "objective": "无源读距限制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-068": {
+    "tags": [
+      "RFID与NFC调试",
+      "多标签识别"
+    ],
+    "objective": "RFID多标签防碰撞",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-069": {
+    "tags": [
+      "RFID与NFC调试",
+      "NDEF格式"
+    ],
+    "objective": "NDEF格式",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-hw-070": {
+    "tags": [
+      "RFID与NFC调试",
+      "计算识读率并区分误读"
+    ],
+    "objective": "计算识读率并区分误读",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-proto-001": {
+    "tags": [
+      "RS485",
+      "协议分层"
+    ],
+    "objective": "区分RS485电气接口与Modbus应用协议",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485",
+        "proto-modbus-app"
+      ]
+    }
+  },
+  "iot-ext-proto-002": {
+    "tags": [
+      "RS485",
+      "布线",
+      "终端电阻"
+    ],
+    "objective": "确定RS485总线端接位置",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485"
+      ]
+    }
+  },
+  "iot-ext-proto-003": {
+    "tags": [
+      "Modbus RTU",
+      "串口配置"
+    ],
+    "objective": "识别串口速率不一致造成的帧接收失败",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  "iot-ext-proto-004": {
+    "tags": [
+      "Modbus RTU",
+      "从站地址",
+      "排障"
+    ],
+    "objective": "定位重复Modbus从站地址引发的争用",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  "iot-ext-proto-005": {
+    "tags": [
+      "Modbus",
+      "寄存器映射"
+    ],
+    "objective": "将手册寄存器编号换算成零基PDU地址",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-address",
+        "proto-modbus-app"
+      ]
+    }
+  },
+  "iot-ext-proto-006": {
+    "tags": [
+      "Modbus",
+      "功能码",
+      "数据模型"
+    ],
+    "objective": "依据数据模型选择读输入寄存器功能码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    }
+  },
+  "iot-ext-proto-007": {
+    "tags": [
+      "Modbus",
+      "字节序",
+      "报文解析"
+    ],
+    "objective": "按Modbus单寄存器大端字节序解码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    }
+  },
+  "iot-ext-proto-008": {
+    "tags": [
+      "Modbus",
+      "浮点解码",
+      "寄存器顺序"
+    ],
+    "objective": "核对跨寄存器32位值的厂商编码约定",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app",
+        "proto-modbus-address"
+      ]
+    }
+  },
+  "iot-ext-proto-009": {
+    "tags": [
+      "Modbus",
+      "异常响应",
+      "错误码"
+    ],
+    "objective": "解析Modbus异常功能码及非法地址错误",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    }
+  },
+  "iot-ext-proto-010": {
+    "tags": [
+      "Modbus",
+      "排障证据"
+    ],
+    "objective": "利用异常响应缩小Modbus排障范围",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    }
+  },
+  "iot-ext-proto-011": {
+    "tags": [
+      "RS485",
+      "半双工",
+      "方向控制"
+    ],
+    "objective": "控制半双工收发方向与发送完成时序",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485",
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  "iot-ext-proto-012": {
+    "tags": [
+      "Modbus",
+      "批量读取",
+      "报文长度"
+    ],
+    "objective": "识别Modbus标准批量读数量上限",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    }
+  },
+  "iot-ext-proto-013": {
+    "tags": [
+      "RS485",
+      "信号完整性",
+      "现场布线"
+    ],
+    "objective": "综合检查RS485反射和共模条件",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485"
+      ]
+    }
+  },
+  "iot-ext-proto-014": {
+    "tags": [
+      "RS485",
+      "空闲偏置",
+      "失效保护"
+    ],
+    "objective": "理解RS485空闲偏置的作用与约束",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ti-rs485"
+      ]
+    }
+  },
+  "iot-ext-proto-015": {
+    "tags": [
+      "Modbus TCP",
+      "协议网关",
+      "MBAP"
+    ],
+    "objective": "区分Modbus TCP网关的事务关联与下游寻址",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app",
+        "proto-modbus-tcp"
+      ]
+    }
+  },
+  "iot-ext-proto-016": {
+    "tags": [
+      "Modbus RTU",
+      "CRC",
+      "安全边界"
+    ],
+    "objective": "区分CRC差错检测与发送者认证",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  "iot-ext-proto-017": {
+    "tags": [
+      "Modbus",
+      "执行器",
+      "验收"
+    ],
+    "objective": "区分协议写成功与物理动作完成",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-app"
+      ]
+    }
+  },
+  "iot-ext-proto-018": {
+    "tags": [
+      "Modbus RTU",
+      "广播"
+    ],
+    "objective": "理解Modbus串行广播的无响应规则",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  "iot-ext-proto-019": {
+    "tags": [
+      "Modbus RTU",
+      "CRC",
+      "字节序"
+    ],
+    "objective": "掌握RTU CRC字段的线序",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  "iot-ext-proto-020": {
+    "tags": [
+      "Modbus RTU",
+      "帧边界",
+      "时序"
+    ],
+    "objective": "根据低速RTU要求设置帧间间隔",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-modbus-serial"
+      ]
+    }
+  },
+  "iot-ext-proto-021": {
+    "tags": [
+      "MQTT 5.0",
+      "Client ID",
+      "排障"
+    ],
+    "objective": "定位MQTT客户端标识冲突引发的会话接管",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-022": {
+    "tags": [
+      "MQTT",
+      "遗嘱",
+      "在线状态"
+    ],
+    "objective": "选择MQTT遗嘱实现异常离线通知",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-023": {
+    "tags": [
+      "MQTT",
+      "订阅QoS"
+    ],
+    "objective": "确定MQTT订阅侧实际交付QoS",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-024": {
+    "tags": [
+      "MQTT",
+      "保留消息",
+      "状态清理"
+    ],
+    "objective": "按MQTT规定删除某主题的保留消息",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-025": {
+    "tags": [
+      "MQTT",
+      "主题命名"
+    ],
+    "objective": "识别MQTT主题大小写匹配规则",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-026": {
+    "tags": [
+      "MQTT",
+      "二进制载荷",
+      "序列化"
+    ],
+    "objective": "区分MQTT载荷传输与应用数据编码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-027": {
+    "tags": [
+      "MQTT 5.0",
+      "消息过期"
+    ],
+    "objective": "应用MQTT 5.0消息过期约束处理陈旧指令",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-028": {
+    "tags": [
+      "MQTT 5.0",
+      "Receive Maximum",
+      "流控"
+    ],
+    "objective": "区分MQTT并发流控与单包大小限制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-029": {
+    "tags": [
+      "MQTT 5.0",
+      "订阅选项",
+      "消息回环"
+    ],
+    "objective": "用No Local避免同客户端消息回环",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-030": {
+    "tags": [
+      "MQTT 5.0",
+      "共享订阅"
+    ],
+    "objective": "理解MQTT共享订阅的负载分发范围",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-031": {
+    "tags": [
+      "MQTT 5.0",
+      "请求响应"
+    ],
+    "objective": "使用MQTT 5.0响应主题指定回包目的地",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-032": {
+    "tags": [
+      "MQTT 5.0",
+      "会话恢复",
+      "重连"
+    ],
+    "objective": "判断MQTT 5.0会话恢复是否真正发生",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-033": {
+    "tags": [
+      "MQTT 5.0",
+      "主题别名",
+      "报文优化"
+    ],
+    "objective": "正确管理MQTT主题别名的范围和生命周期",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-034": {
+    "tags": [
+      "MQTT 5.0",
+      "报文大小",
+      "应用分片"
+    ],
+    "objective": "针对MQTT最大报文限制设计发送策略",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-035": {
+    "tags": [
+      "MQTT 5.0",
+      "SUBACK",
+      "错误处理"
+    ],
+    "objective": "逐项解析MQTT多主题订阅确认结果",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-036": {
+    "tags": [
+      "MQTT",
+      "DUP",
+      "重传"
+    ],
+    "objective": "正确解释MQTT DUP标志的证据边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-037": {
+    "tags": [
+      "MQTT",
+      "主题合法性"
+    ],
+    "objective": "区分发布主题与订阅过滤器的合法字符用途",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-038": {
+    "tags": [
+      "MQTT",
+      "PUBACK",
+      "报文识别"
+    ],
+    "objective": "识别MQTT QoS 1的确认报文",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-039": {
+    "tags": [
+      "MQTT",
+      "Keep Alive",
+      "心跳"
+    ],
+    "objective": "识别MQTT客户端主动保活请求",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-040": {
+    "tags": [
+      "MQTT 5.0",
+      "关联数据",
+      "并发请求"
+    ],
+    "objective": "使用MQTT关联数据区分并发请求响应",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-mqtt5"
+      ]
+    }
+  },
+  "iot-ext-proto-041": {
+    "tags": [
+      "IPv4",
+      "子网掩码"
+    ],
+    "objective": "根据IPv4前缀判断直连子网关系",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host"
+      ]
+    }
+  },
+  "iot-ext-proto-042": {
+    "tags": [
+      "IPv4",
+      "ARP",
+      "以太网"
+    ],
+    "objective": "说明同子网IPv4发送前的ARP解析",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host",
+        "proto-arp"
+      ]
+    }
+  },
+  "iot-ext-proto-043": {
+    "tags": [
+      "IP路由",
+      "默认网关"
+    ],
+    "objective": "识别缺少默认路由导致的跨网段失败",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host"
+      ]
+    }
+  },
+  "iot-ext-proto-044": {
+    "tags": [
+      "TCP",
+      "字节流",
+      "粘包拆包"
+    ],
+    "objective": "为TCP字节流实现应用层分帧",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    }
+  },
+  "iot-ext-proto-045": {
+    "tags": [
+      "TCP",
+      "ACK",
+      "业务回执"
+    ],
+    "objective": "区分TCP传输确认与业务提交确认",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    }
+  },
+  "iot-ext-proto-046": {
+    "tags": [
+      "DNS",
+      "TTL",
+      "迁移排障"
+    ],
+    "objective": "解释DNS切换后客户端仍用旧地址的现象",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-dns"
+      ]
+    }
+  },
+  "iot-ext-proto-047": {
+    "tags": [
+      "HTTP/1.1",
+      "Host",
+      "虚拟主机"
+    ],
+    "objective": "用HTTP Host定位虚拟主机请求目标",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http",
+        "proto-http1"
+      ]
+    }
+  },
+  "iot-ext-proto-048": {
+    "tags": [
+      "HTTP",
+      "202",
+      "异步任务"
+    ],
+    "objective": "正确处理HTTP异步接受状态",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    }
+  },
+  "iot-ext-proto-049": {
+    "tags": [
+      "HTTP",
+      "JSON",
+      "Content-Type"
+    ],
+    "objective": "区分HTTP内容类型与响应格式偏好",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    }
+  },
+  "iot-ext-proto-050": {
+    "tags": [
+      "HTTP",
+      "ETag",
+      "并发控制"
+    ],
+    "objective": "使用ETag与If-Match避免配置丢失更新",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    }
+  },
+  "iot-ext-proto-051": {
+    "tags": [
+      "HTTP",
+      "429",
+      "退避"
+    ],
+    "objective": "依据HTTP限流反馈调整客户端发送速率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http-rate",
+        "proto-http"
+      ]
+    }
+  },
+  "iot-ext-proto-052": {
+    "tags": [
+      "IPv4",
+      "静态地址",
+      "地址管理"
+    ],
+    "objective": "降低静态地址配置与动态分配冲突风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host"
+      ]
+    }
+  },
+  "iot-ext-proto-053": {
+    "tags": [
+      "HTTP",
+      "方法语义",
+      "幂等"
+    ],
+    "objective": "依据HTTP方法语义判断安全重试基础",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    }
+  },
+  "iot-ext-proto-054": {
+    "tags": [
+      "TCP",
+      "抓包",
+      "连接排障"
+    ],
+    "objective": "从TCP握手证据区分拒绝和超时而避免误判",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    }
+  },
+  "iot-ext-proto-055": {
+    "tags": [
+      "HTTP/1.1",
+      "Content-Length",
+      "chunked"
+    ],
+    "objective": "正确实现HTTP/1.1消息体长度判断",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http1"
+      ]
+    }
+  },
+  "iot-ext-proto-056": {
+    "tags": [
+      "ICMP",
+      "HTTP",
+      "排障边界"
+    ],
+    "objective": "认识ping结果对应用可达性判断的局限",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ip-host",
+        "proto-tcp"
+      ]
+    }
+  },
+  "iot-ext-proto-057": {
+    "tags": [
+      "TCP",
+      "接收窗口",
+      "流控"
+    ],
+    "objective": "理解TCP接收窗口与发送背压",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    }
+  },
+  "iot-ext-proto-058": {
+    "tags": [
+      "HTTP",
+      "204",
+      "响应解析"
+    ],
+    "objective": "遵守HTTP 204的无消息体语义",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http",
+        "proto-http1"
+      ]
+    }
+  },
+  "iot-ext-proto-059": {
+    "tags": [
+      "TCP",
+      "FIN",
+      "连接关闭"
+    ],
+    "objective": "识别TCP有序半关闭标志",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-tcp"
+      ]
+    }
+  },
+  "iot-ext-proto-060": {
+    "tags": [
+      "HTTP",
+      "304",
+      "缓存校验"
+    ],
+    "objective": "识别HTTP条件读取的未修改响应",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-http"
+      ]
+    }
+  },
+  "iot-ext-proto-061": {
+    "tags": [
+      "WiFi",
+      "频段",
+      "接入调试"
+    ],
+    "objective": "核对WiFi终端与接入点的频段兼容性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-faq"
+      ]
+    }
+  },
+  "iot-ext-proto-062": {
+    "tags": [
+      "WiFi",
+      "RSSI",
+      "链路测量"
+    ],
+    "objective": "正确比较负dBm的WiFi RSSI读数",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-api"
+      ]
+    }
+  },
+  "iot-ext-proto-063": {
+    "tags": [
+      "WiFi",
+      "客户端隔离",
+      "排障"
+    ],
+    "objective": "定位无线客户端隔离造成的局域网互访失败",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-isolation"
+      ]
+    }
+  },
+  "iot-ext-proto-064": {
+    "tags": [
+      "WiFi",
+      "BSSID",
+      "漫游排障"
+    ],
+    "objective": "用BSSID区分同SSID下的实际无线连接对象",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-api"
+      ]
+    }
+  },
+  "iot-ext-proto-065": {
+    "tags": [
+      "Zigbee",
+      "节点角色",
+      "睡眠终端"
+    ],
+    "objective": "区分Zigbee睡眠终端与路由器职责",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-zigbee-nodes"
+      ]
+    }
+  },
+  "iot-ext-proto-066": {
+    "tags": [
+      "Zigbee",
+      "Permit Join",
+      "入网排障"
+    ],
+    "objective": "区分Zigbee网络发现与获准入网",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-zigbee-concepts"
+      ]
+    }
+  },
+  "iot-ext-proto-067": {
+    "tags": [
+      "BLE",
+      "GATT",
+      "UUID",
+      "服务发现"
+    ],
+    "objective": "正确处理BLE GATT属性数据库变化",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-gatt"
+      ]
+    }
+  },
+  "iot-ext-proto-068": {
+    "tags": [
+      "BLE",
+      "Notification",
+      "Indication"
+    ],
+    "objective": "区分BLE通知与指示的ATT确认语义",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-gatt",
+        "proto-ble-att"
+      ]
+    }
+  },
+  "iot-ext-proto-069": {
+    "tags": [
+      "BLE",
+      "ATT_MTU",
+      "载荷长度"
+    ],
+    "objective": "根据ATT MTU计算普通BLE通知的可用载荷",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-att"
+      ]
+    }
+  },
+  "iot-ext-proto-070": {
+    "tags": [
+      "LoRa",
+      "LoRaWAN",
+      "协议分层"
+    ],
+    "objective": "区分LoRa物理通信与LoRaWAN网络接入",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-lora-phy",
+        "proto-lorawan-developers"
+      ]
+    }
+  },
+  "iot-ext-proto-071": {
+    "tags": [
+      "LoRaWAN",
+      "Class A",
+      "接收窗口"
+    ],
+    "objective": "解释LoRaWAN Class A下行时延与上行节奏的关系",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-lorawan-classes"
+      ]
+    }
+  },
+  "iot-ext-proto-072": {
+    "tags": [
+      "WiFi",
+      "现场验收",
+      "性能测试"
+    ],
+    "objective": "设计可复现的WiFi现场链路验收",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-api"
+      ]
+    }
+  },
+  "iot-ext-proto-073": {
+    "tags": [
+      "Zigbee",
+      "Binding",
+      "Cluster",
+      "端点"
+    ],
+    "objective": "检查Zigbee入网后的应用端点和簇绑定",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-zigbee-binding",
+        "proto-zigbee-findbind"
+      ]
+    }
+  },
+  "iot-ext-proto-074": {
+    "tags": [
+      "BLE",
+      "CCCD",
+      "通知订阅"
+    ],
+    "objective": "排查BLE通知订阅配置与权限前提",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-gatt"
+      ]
+    }
+  },
+  "iot-ext-proto-075": {
+    "tags": [
+      "LoRaWAN",
+      "区域参数",
+      "射频配置"
+    ],
+    "objective": "核对LoRaWAN区域参数的部署适配性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-lorawan-regional",
+        "proto-semtech-faq"
+      ]
+    }
+  },
+  "iot-ext-proto-076": {
+    "tags": [
+      "LoRa",
+      "SF",
+      "空中时间"
+    ],
+    "objective": "评估LoRa扩频因子与空中时间的权衡",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-semtech-faq"
+      ]
+    }
+  },
+  "iot-ext-proto-077": {
+    "tags": [
+      "BLE",
+      "广播",
+      "连接"
+    ],
+    "objective": "区分BLE广播发现与连接状态",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-ble-primer"
+      ]
+    }
+  },
+  "iot-ext-proto-078": {
+    "tags": [
+      "WiFi",
+      "STA",
+      "工作模式"
+    ],
+    "objective": "选择WiFi采集器接入既有AP的工作角色",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-wifi-arduino"
+      ]
+    }
+  },
+  "iot-ext-proto-079": {
+    "tags": [
+      "Zigbee",
+      "Extended PAN ID",
+      "网络标识"
+    ],
+    "objective": "区分Zigbee网络标识的长度和用途",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-zigbee-concepts"
+      ]
+    }
+  },
+  "iot-ext-proto-080": {
+    "tags": [
+      "LoRaWAN",
+      "ADR",
+      "链路自适应"
+    ],
+    "objective": "识别LoRaWAN自适应数据率机制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "proto-lorawan-adr"
+      ]
+    }
+  },
+  "iot-ext-ops-001": {
+    "tags": [
+      "网关联调",
+      "保留协议转换中的数据质量语义"
+    ],
+    "objective": "保留协议转换中的数据质量语义",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-002": {
+    "tags": [
+      "网关联调",
+      "诊断双网口出口选路"
+    ],
+    "objective": "诊断双网口出口选路",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-003": {
+    "tags": [
+      "网关联调",
+      "控制边缘进程资源争用"
+    ],
+    "objective": "控制边缘进程资源争用",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-linux-cgroup"
+      ]
+    }
+  },
+  "iot-ext-ops-004": {
+    "tags": [
+      "网关联调",
+      "管理网关配置漂移"
+    ],
+    "objective": "管理网关配置漂移",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-005": {
+    "tags": [
+      "网关联调",
+      "选择超时测量时钟"
+    ],
+    "objective": "选择超时测量时钟",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-time"
+      ]
+    }
+  },
+  "iot-ext-ops-006": {
+    "tags": [
+      "网关联调",
+      "避免半写入配置生效"
+    ],
+    "objective": "避免半写入配置生效",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-007": {
+    "tags": [
+      "网关联调",
+      "判断持续过载积压"
+    ],
+    "objective": "判断持续过载积压",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-008": {
+    "tags": [
+      "网关联调",
+      "表达采集时间可信度"
+    ],
+    "objective": "表达采集时间可信度",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-009": {
+    "tags": [
+      "网关联调",
+      "设计无效输入的控制策略"
+    ],
+    "objective": "设计无效输入的控制策略",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-010": {
+    "tags": [
+      "网关联调",
+      "设计网关数据解码测试"
+    ],
+    "objective": "设计网关数据解码测试",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-011": {
+    "tags": [
+      "网关联调",
+      "验证网关冷启动依赖"
+    ],
+    "objective": "验证网关冷启动依赖",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-012": {
+    "tags": [
+      "网关联调",
+      "识别主备网关双主风险"
+    ],
+    "objective": "识别主备网关双主风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-013": {
+    "tags": [
+      "网关联调",
+      "区分网关存活与点位健康"
+    ],
+    "objective": "区分网关存活与点位健康",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-014": {
+    "tags": [
+      "网关联调",
+      "理解网关协议适配边界"
+    ],
+    "objective": "理解网关协议适配边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-015": {
+    "tags": [
+      "网关联调",
+      "识别网关接口方向"
+    ],
+    "objective": "识别网关接口方向",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-016": {
+    "tags": [
+      "网关联调",
+      "解读串口帧格式"
+    ],
+    "objective": "解读串口帧格式",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-017": {
+    "tags": [
+      "接口编程",
+      "选择字符串JSON解析函数"
+    ],
+    "objective": "选择字符串JSON解析函数",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-json"
+      ]
+    }
+  },
+  "iot-ext-ops-018": {
+    "tags": [
+      "接口编程",
+      "区分语法与业务校验"
+    ],
+    "objective": "区分语法与业务校验",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-rest"
+      ]
+    }
+  },
+  "iot-ext-ops-019": {
+    "tags": [
+      "接口编程",
+      "排除布尔值伪装整数"
+    ],
+    "objective": "排除布尔值伪装整数",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-types"
+      ]
+    }
+  },
+  "iot-ext-ops-020": {
+    "tags": [
+      "接口编程",
+      "区分字段缺失与显式空值"
+    ],
+    "objective": "区分字段缺失与显式空值",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-types"
+      ]
+    }
+  },
+  "iot-ext-ops-021": {
+    "tags": [
+      "接口编程",
+      "识别JSON重复键互操作风险"
+    ],
+    "objective": "识别JSON重复键互操作风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    }
+  },
+  "iot-ext-ops-022": {
+    "tags": [
+      "接口编程",
+      "规范跨时区时间表示"
+    ],
+    "objective": "规范跨时区时间表示",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-datetime"
+      ]
+    }
+  },
+  "iot-ext-ops-023": {
+    "tags": [
+      "接口编程",
+      "保留JSON解析失败证据"
+    ],
+    "objective": "保留JSON解析失败证据",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-errors",
+        "ops-python-json"
+      ]
+    }
+  },
+  "iot-ext-ops-024": {
+    "tags": [
+      "接口编程",
+      "正确转义JSON字符串"
+    ],
+    "objective": "正确转义JSON字符串",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259",
+        "ops-python-json"
+      ]
+    }
+  },
+  "iot-ext-ops-025": {
+    "tags": [
+      "接口编程",
+      "处理接口数值类型不一致"
+    ],
+    "objective": "处理接口数值类型不一致",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    }
+  },
+  "iot-ext-ops-026": {
+    "tags": [
+      "接口编程",
+      "设计接口容量边界测试"
+    ],
+    "objective": "设计接口容量边界测试",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-unittest"
+      ]
+    }
+  },
+  "iot-ext-ops-027": {
+    "tags": [
+      "接口编程",
+      "辨认JSON标准文本"
+    ],
+    "objective": "辨认JSON标准文本",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    }
+  },
+  "iot-ext-ops-028": {
+    "tags": [
+      "接口编程",
+      "正确完成游标分页导出"
+    ],
+    "objective": "正确完成游标分页导出",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-029": {
+    "tags": [
+      "接口编程",
+      "避免将外部数据作为代码执行"
+    ],
+    "objective": "避免将外部数据作为代码执行",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    }
+  },
+  "iot-ext-ops-030": {
+    "tags": [
+      "接口编程",
+      "避免依赖JSON对象字段顺序"
+    ],
+    "objective": "避免依赖JSON对象字段顺序",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    }
+  },
+  "iot-ext-ops-031": {
+    "tags": [
+      "接口编程",
+      "识别JSON空值的Python映射"
+    ],
+    "objective": "识别JSON空值的Python映射",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-python-json"
+      ]
+    }
+  },
+  "iot-ext-ops-032": {
+    "tags": [
+      "接口编程",
+      "选择JSON互操作编码"
+    ],
+    "objective": "选择JSON互操作编码",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-rfc8259"
+      ]
+    }
+  },
+  "iot-ext-ops-033": {
+    "tags": [
+      "运维排障",
+      "保留重启前故障现场"
+    ],
+    "objective": "保留重启前故障现场",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-034": {
+    "tags": [
+      "运维排障",
+      "使用单变量替换法"
+    ],
+    "objective": "使用单变量替换法",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-035": {
+    "tags": [
+      "运维排障",
+      "治理日志导致的磁盘耗尽"
+    ],
+    "objective": "治理日志导致的磁盘耗尽",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-logging"
+      ]
+    }
+  },
+  "iot-ext-ops-036": {
+    "tags": [
+      "运维排障",
+      "利用故障范围定位共享原因"
+    ],
+    "objective": "利用故障范围定位共享原因",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-037": {
+    "tags": [
+      "运维排障",
+      "识别平均值掩盖的尾延迟"
+    ],
+    "objective": "识别平均值掩盖的尾延迟",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-038": {
+    "tags": [
+      "运维排障",
+      "比较软硬件配置基线"
+    ],
+    "objective": "比较软硬件配置基线",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-039": {
+    "tags": [
+      "运维排障",
+      "识别存储等待型性能瓶颈"
+    ],
+    "objective": "识别存储等待型性能瓶颈",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-040": {
+    "tags": [
+      "运维排障",
+      "验证修复与回归结果"
+    ],
+    "objective": "验证修复与回归结果",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-041": {
+    "tags": [
+      "运维排障",
+      "计算平均修复时间"
+    ],
+    "objective": "计算平均修复时间",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-042": {
+    "tags": [
+      "运维排障",
+      "组织可执行的故障交接"
+    ],
+    "objective": "组织可执行的故障交接",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-043": {
+    "tags": [
+      "运维排障",
+      "核对备件替换兼容性"
+    ],
+    "objective": "核对备件替换兼容性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-044": {
+    "tags": [
+      "运维排障",
+      "制定安全的可视巡检项目"
+    ],
+    "objective": "制定安全的可视巡检项目",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-045": {
+    "tags": [
+      "运维排障",
+      "区分相关性与故障因果"
+    ],
+    "objective": "区分相关性与故障因果",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-046": {
+    "tags": [
+      "运维排障",
+      "验证备份可恢复性"
+    ],
+    "objective": "验证备份可恢复性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-047": {
+    "tags": [
+      "运维排障",
+      "计算服务可用率"
+    ],
+    "objective": "计算服务可用率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-048": {
+    "tags": [
+      "运维排障",
+      "计算请求失败率"
+    ],
+    "objective": "计算请求失败率",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-049": {
+    "tags": [
+      "冷链监测",
+      "确定产品特定冷链要求"
+    ],
+    "objective": "确定产品特定冷链要求",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-050": {
+    "tags": [
+      "冷链监测",
+      "理解冷藏空间温度分布验证"
+    ],
+    "objective": "理解冷藏空间温度分布验证",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-051": {
+    "tags": [
+      "冷链监测",
+      "核对冷链记录仪计量证据"
+    ],
+    "objective": "核对冷链记录仪计量证据",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-cdc-cold"
+      ]
+    }
+  },
+  "iot-ext-ops-052": {
+    "tags": [
+      "冷链监测",
+      "区分空气温度与货物热响应"
+    ],
+    "objective": "区分空气温度与货物热响应",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-cdc-cold"
+      ]
+    }
+  },
+  "iot-ext-ops-053": {
+    "tags": [
+      "冷链监测",
+      "减少装卸温控暴露"
+    ],
+    "objective": "减少装卸温控暴露",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-054": {
+    "tags": [
+      "冷链监测",
+      "计算分段累计超限时长"
+    ],
+    "objective": "计算分段累计超限时长",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-055": {
+    "tags": [
+      "冷链监测",
+      "维护记录仪批次绑定边界"
+    ],
+    "objective": "维护记录仪批次绑定边界",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-056": {
+    "tags": [
+      "冷链监测",
+      "处理冷链温度偏离待评估状态"
+    ],
+    "objective": "处理冷链温度偏离待评估状态",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-cdc-cold"
+      ]
+    }
+  },
+  "iot-ext-ops-057": {
+    "tags": [
+      "冷链监测",
+      "防范运输包装的冻结风险"
+    ],
+    "objective": "防范运输包装的冻结风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-058": {
+    "tags": [
+      "冷链监测",
+      "审查冷链记录覆盖完整性"
+    ],
+    "objective": "审查冷链记录覆盖完整性",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-059": {
+    "tags": [
+      "冷链监测",
+      "权衡冷链记录分辨率与续航"
+    ],
+    "objective": "权衡冷链记录分辨率与续航",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-060": {
+    "tags": [
+      "冷链监测",
+      "选择有代表性的冷链监测点"
+    ],
+    "objective": "选择有代表性的冷链监测点",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-061": {
+    "tags": [
+      "冷链监测",
+      "区分冷链插值估计与真实采样证据"
+    ],
+    "objective": "区分冷链插值估计与真实采样证据",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-062": {
+    "tags": [
+      "冷链监测",
+      "分析冷藏温升的多种成因"
+    ],
+    "objective": "分析冷藏温升的多种成因",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-063": {
+    "tags": [
+      "冷链监测",
+      "识别先到期先出库存原则"
+    ],
+    "objective": "识别先到期先出库存原则",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-064": {
+    "tags": [
+      "冷链监测",
+      "识别冷链设备转场凝露"
+    ],
+    "objective": "识别冷链设备转场凝露",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-065": {
+    "tags": [
+      "安全运维",
+      "区分多因素认证要素"
+    ],
+    "objective": "区分多因素认证要素",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-mfa"
+      ]
+    }
+  },
+  "iot-ext-ops-066": {
+    "tags": [
+      "安全运维",
+      "通过网络分区限制横向影响"
+    ],
+    "objective": "通过网络分区限制横向影响",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-067": {
+    "tags": [
+      "安全运维",
+      "处理TLS主机名校验失败"
+    ],
+    "objective": "处理TLS主机名校验失败",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-tls"
+      ]
+    }
+  },
+  "iot-ext-ops-068": {
+    "tags": [
+      "安全运维",
+      "评估漏洞公告适用范围"
+    ],
+    "objective": "评估漏洞公告适用范围",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-069": {
+    "tags": [
+      "安全运维",
+      "关闭临时远程维护入口"
+    ],
+    "objective": "关闭临时远程维护入口",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-070": {
+    "tags": [
+      "安全运维",
+      "独立核验可疑登录请求"
+    ],
+    "objective": "独立核验可疑登录请求",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-071": {
+    "tags": [
+      "安全运维",
+      "区分静态数据加密用途"
+    ],
+    "objective": "区分静态数据加密用途",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-nist-8259a"
+      ]
+    }
+  },
+  "iot-ext-ops-072": {
+    "tags": [
+      "安全运维",
+      "控制第三方依赖更新风险"
+    ],
+    "objective": "控制第三方依赖更新风险",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-supply"
+      ]
+    }
+  },
+  "iot-ext-ops-073": {
+    "tags": [
+      "安全运维",
+      "建立配置变更审计要素"
+    ],
+    "objective": "建立配置变更审计要素",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-owasp-logging"
+      ]
+    }
+  },
+  "iot-ext-ops-074": {
+    "tags": [
+      "安全运维",
+      "清理人员离组访问残留"
+    ],
+    "objective": "清理人员离组访问残留",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-075": {
+    "tags": [
+      "安全运维",
+      "识别控制请求防重放机制"
+    ],
+    "objective": "识别控制请求防重放机制",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-076": {
+    "tags": [
+      "安全运维",
+      "减少教学监测个人信息处理与暴露"
+    ],
+    "objective": "减少教学监测个人信息处理与暴露",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-077": {
+    "tags": [
+      "安全运维",
+      "认识隐藏SSID的安全局限"
+    ],
+    "objective": "认识隐藏SSID的安全局限",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-078": {
+    "tags": [
+      "安全运维",
+      "区分文件删除与介质净化"
+    ],
+    "objective": "区分文件删除与介质净化",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [
+        "ops-nist-sanitization"
+      ]
+    }
+  },
+  "iot-ext-ops-079": {
+    "tags": [
+      "安全运维",
+      "识别公开漏洞标识"
+    ],
+    "objective": "识别公开漏洞标识",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-ops-080": {
+    "tags": [
+      "安全运维",
+      "理解设备攻击面"
+    ],
+    "objective": "理解设备攻击面",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": []
+    }
+  },
+  "iot-ext-case-001": {
+    "tags": [
+      "传感与校准",
+      "综合实训"
+    ],
+    "objective": "从多点证据推导偏移校正并设计独立验证",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-case-002": {
+    "tags": [
+      "低压供电与接线安全",
+      "综合实训"
+    ],
+    "objective": "基于瞬态症状安全验证供电假设",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-case-003": {
+    "tags": [
+      "RS485/Modbus",
+      "综合实训"
+    ],
+    "objective": "使用厂商映射定位工程量缩放故障",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-case-004": {
+    "tags": [
+      "RFID与NFC调试",
+      "综合实训"
+    ],
+    "objective": "联合识读率与越区误读评估门区方案",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-case-005": {
+    "tags": [
+      "冷链物流",
+      "综合实训"
+    ],
+    "objective": "按给定合同与离散证据判定持续阈值",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-case-006": {
+    "tags": [
+      "边缘网关",
+      "综合实训"
+    ],
+    "objective": "区分业务去重与事件时间排序",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-case-007": {
+    "tags": [
+      "JSON与Python接口",
+      "综合实训"
+    ],
+    "objective": "按照明确接口合同实施类型校验与审计",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  },
+  "iot-ext-case-008": {
+    "tags": [
+      "网络安全基础",
+      "综合实训"
+    ],
+    "objective": "分离证书时间校验错误与安全绕过",
+    "provenance": {
+      "kind": "original-authored",
+      "reviewStatus": "draft-needs-subject-review",
+      "referenceIds": [],
+      "authoredAt": "2026-10-10"
+    }
+  }
+}
