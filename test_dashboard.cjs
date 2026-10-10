@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 global.window={};require('./static/learning.js');
 const source=fs.readFileSync(__dirname+'/static/app.js','utf8');
-const overview=source.slice(source.indexOf('async function overview(c)'),source.indexOf('\nnavigate(location.hash'));
+const overview=source.slice(source.indexOf('async function overview(c)'),source.indexOf('\n(window.PresetDemo?'));
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const state={questions:Array(42).fill({})};
 const context={Learning:window.Learning,Experiments:window.Experiments,window:{LOCAL_MODE:true},escapeHTML:esc,api:async k=>state[k]||null,fetch:()=>{throw Error('Unexpected fetch')},Date};vm.createContext(context);vm.runInContext(overview,context);

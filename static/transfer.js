@@ -75,6 +75,7 @@
     try{x=tf.tensor2d(features,[features.length,MODEL.embeddingSize]);p=head.predict(x);return metricsFromProbabilities(await p.array(),labels,numClasses);}finally{x?.dispose();p?.dispose();}
   }
   async function trainHead(tf,features,labels,numClasses,rawConfig,options={}){
+    if(root.PresetDemo?.enabled)throw Error('预设演示模式仅支持样例 / 流程回放，实际模型执行已关闭。');
     const config=validateConfig(rawConfig);validateFeatures(features,labels,numClasses);const split=stratifiedSplit(labels,numClasses,config.testFraction,config.seed);checkCancel(options.isCanceled);
     let head,x,y,vx,vy;const history=[];
     try{
@@ -176,6 +177,7 @@
     if(staged.length){ctx.samples.push(...staged);invalidate(ctx);await save(ctx);}setStatus(ctx,`添加 ${staged.length} 张图像${duplicates?'；跳过 '+duplicates+' 张相同缩放像素图像':''}`);
   }
   async function train(ctx){
+    if(root.PresetDemo?.enabled)throw Error('预设演示模式仅支持样例 / 流程回放，实际模型执行已关闭。');
     const config=validateConfig(ctx.state.config),classes=validateClasses(ctx.state.classes),labels=ctx.samples.map(x=>x.label);stratifiedSplit(labels,classes.length,config.testFraction,config.seed);
     ctx.training=true;ctx.cancel=false;ctx.progress=0;ctx.history=[];paint(ctx);let result;
     try{

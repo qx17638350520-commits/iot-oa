@@ -1,0 +1,312 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "test": "ROI actual inference and full-image coordinates",
+      "passed": true,
+      "result": {
+        "schema": "local-text-ocr.v1",
+        "engine": "Tesseract.js",
+        "engineVersion": "6.0.1",
+        "languages": "chi_sim+eng",
+        "text": "MODEL TH-204 POWER DC 24V\n",
+        "confidence": 93,
+        "words": [
+          {
+            "text": "MODEL",
+            "confidence": 92,
+            "bbox": {
+              "x0": 76,
+              "y0": 299,
+              "x1": 264,
+              "y1": 344
+            }
+          },
+          {
+            "text": "TH-204",
+            "confidence": 91,
+            "bbox": {
+              "x0": 281,
+              "y0": 300,
+              "x1": 470,
+              "y1": 344
+            }
+          },
+          {
+            "text": "POWER",
+            "confidence": 96,
+            "bbox": {
+              "x0": 491,
+              "y0": 299,
+              "x1": 685,
+              "y1": 344
+            }
+          },
+          {
+            "text": "DC",
+            "confidence": 95,
+            "bbox": {
+              "x0": 706,
+              "y0": 299,
+              "x1": 774,
+              "y1": 344
+            }
+          },
+          {
+            "text": "24V",
+            "confidence": 92,
+            "bbox": {
+              "x0": 792,
+              "y0": 300,
+              "x1": 887,
+              "y1": 343
+            }
+          }
+        ],
+        "automaticInference": true,
+        "inferenceLocation": "local_node_wasm",
+        "semantics": "text_only_no_gauge_or_diagram_understanding",
+        "recognizedAt": "2026-10-10T09:55:43.349Z"
+      }
+    },
+    {
+      "test": "Different image changes result; no fixed substitution",
+      "passed": true,
+      "result": {
+        "schema": "local-text-ocr.v1",
+        "engine": "Tesseract.js",
+        "engineVersion": "6.0.1",
+        "languages": "eng",
+        "text": "WAREHOUSE ZX-937 42 BOXES\n",
+        "confidence": 90,
+        "words": [
+          {
+            "text": "WAREHOUSE",
+            "confidence": 92,
+            "bbox": {
+              "x0": 52,
+              "y0": 79,
+              "x1": 399,
+              "y1": 124
+            }
+          },
+          {
+            "text": "ZX-937",
+            "confidence": 76,
+            "bbox": {
+              "x0": 418,
+              "y0": 80,
+              "x1": 595,
+              "y1": 124
+            }
+          },
+          {
+            "text": "42",
+            "confidence": 96,
+            "bbox": {
+              "x0": 625,
+              "y0": 81,
+              "x1": 686,
+              "y1": 123
+            }
+          },
+          {
+            "text": "BOXES",
+            "confidence": 96,
+            "bbox": {
+              "x0": 708,
+              "y0": 79,
+              "x1": 881,
+              "y1": 124
+            }
+          }
+        ],
+        "automaticInference": true,
+        "inferenceLocation": "local_node_wasm",
+        "semantics": "text_only_no_gauge_or_diagram_understanding",
+        "recognizedAt": "2026-10-10T09:55:43.719Z"
+      }
+    },
+    {
+      "test": "90-degree input corrected before actual inference",
+      "passed": true,
+      "result": {
+        "schema": "local-text-ocr.v1",
+        "engine": "Tesseract.js",
+        "engineVersion": "6.0.1",
+        "languages": "chi_sim+eng",
+        "text": "工业传感器 进度检测\nINDUSTRIAL SENSOR\n\nMODEL TH-204 POWER DC 24V\n安全生产 注意防护\n",
+        "confidence": 82,
+        "words": [
+          {
+            "text": "工业",
+            "confidence": 96,
+            "bbox": {
+              "x0": 73,
+              "y0": 64,
+              "x1": 205,
+              "y1": 118
+            }
+          },
+          {
+            "text": "传感器",
+            "confidence": 92,
+            "bbox": {
+              "x0": 214,
+              "y0": 60,
+              "x1": 358,
+              "y1": 140
+            }
+          },
+          {
+            "text": "进度",
+            "confidence": 0,
+            "bbox": {
+              "x0": 404,
+              "y0": 64,
+              "x1": 504,
+              "y1": 118
+            }
+          },
+          {
+            "text": "检测",
+            "confidence": 17,
+            "bbox": {
+              "x0": 507,
+              "y0": 64,
+              "x1": 601,
+              "y1": 118
+            }
+          },
+          {
+            "text": "INDUSTRIAL",
+            "confidence": 90,
+            "bbox": {
+              "x0": 76,
+              "y0": 184,
+              "x1": 397,
+              "y1": 229
+            }
+          },
+          {
+            "text": "SENSOR",
+            "confidence": 91,
+            "bbox": {
+              "x0": 415,
+              "y0": 184,
+              "x1": 635,
+              "y1": 229
+            }
+          },
+          {
+            "text": "MODEL",
+            "confidence": 92,
+            "bbox": {
+              "x0": 76,
+              "y0": 299,
+              "x1": 264,
+              "y1": 344
+            }
+          },
+          {
+            "text": "TH-204",
+            "confidence": 91,
+            "bbox": {
+              "x0": 281,
+              "y0": 300,
+              "x1": 470,
+              "y1": 344
+            }
+          },
+          {
+            "text": "POWER",
+            "confidence": 96,
+            "bbox": {
+              "x0": 491,
+              "y0": 299,
+              "x1": 685,
+              "y1": 344
+            }
+          },
+          {
+            "text": "DC",
+            "confidence": 95,
+            "bbox": {
+              "x0": 706,
+              "y0": 299,
+              "x1": 774,
+              "y1": 344
+            }
+          },
+          {
+            "text": "24V",
+            "confidence": 92,
+            "bbox": {
+              "x0": 792,
+              "y0": 300,
+              "x1": 887,
+              "y1": 343
+            }
+          },
+          {
+            "text": "安全",
+            "confidence": 95,
+            "bbox": {
+              "x0": 74,
+              "y0": 409,
+              "x1": 184,
+              "y1": 463
+            }
+          },
+          {
+            "text": "生产",
+            "confidence": 95,
+            "bbox": {
+              "x0": 201,
+              "y0": 409,
+              "x1": 298,
+              "y1": 463
+            }
+          },
+          {
+            "text": "注意",
+            "confidence": 96,
+            "bbox": {
+              "x0": 343,
+              "y0": 408,
+              "x1": 453,
+              "y1": 463
+            }
+          },
+          {
+            "text": "防护",
+            "confidence": 95,
+            "bbox": {
+              "x0": 454,
+              "y0": 409,
+              "x1": 543,
+              "y1": 463
+            }
+          }
+        ],
+        "automaticInference": true,
+        "inferenceLocation": "local_node_wasm",
+        "semantics": "text_only_no_gauge_or_diagram_understanding",
+        "recognizedAt": "2026-10-10T09:55:44.414Z"
+      },
+      "note": "Pixel rotation fixture verified; browser rotate interaction remains unverified"
+    },
+    {
+      "test": "Concurrent request rejected",
+      "passed": true
+    },
+    {
+      "test": "Unsupported language rejected, no fallback",
+      "passed": true
+    },
+    {
+      "test": "Corrupt image error returned",
+      "passed": true
+    }
+  ]
+}
