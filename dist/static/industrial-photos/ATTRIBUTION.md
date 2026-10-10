@@ -71,3 +71,17 @@ Images retain their original bytes. On-screen overlays and JSON annotations are 
 - Source: https://commons.wikimedia.org/wiki/File:Gears_large.jpg
 - License: https://creativecommons.org/licenses/by-sa/3.0/
 - Changes: None; original downloaded bytes preserved.
+
+## 工业原材料：装车钢卷
+- File: steel-coils-truck.jpg
+- Steel coils loaded on truck deck.jpg — Fumikas Sagisavas — CC0 1.0 — Wikimedia Commons
+- Source: https://commons.wikimedia.org/wiki/File:Steel_coils_loaded_on_truck_deck.jpg
+- License: https://creativecommons.org/publicdomain/zero/1.0/
+- Changes: None; original downloaded bytes preserved.
+
+## 工业原材料：铁路货场钢卷
+- File: steel-coils-rail.jpg
+- Rolled coils in Tornio Sep2008.jpg — Methem (Mikko J. Putkonen) — Public domain (PD-self) — Wikimedia Commons
+- Source: https://commons.wikimedia.org/wiki/File:Rolled_coils_in_Tornio_Sep2008.jpg
+- License: https://commons.wikimedia.org/wiki/File:Rolled_coils_in_Tornio_Sep2008.jpg#Licensing
+- Changes: None; original downloaded bytes preserved.

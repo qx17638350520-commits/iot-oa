@@ -1593,6 +1593,82 @@
       "attribution": "Jared C. Benedict / Wikimedia Commons / CC BY-SA 3.0",
       "licenseFullName": "Creative Commons Attribution-ShareAlike 3.0 Unported",
       "polygons": []
+    },
+    {
+      "id": "materials-steel-truck",
+      "file": "steel-coils-truck.jpg",
+      "title": "工业原材料：装车钢卷",
+      "category": "materials",
+      "source": "https://commons.wikimedia.org/wiki/File:Steel_coils_loaded_on_truck_deck.jpg",
+      "author": "Fumikas Sagisavas",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "Steel coils loaded on truck deck.jpg — Fumikas Sagisavas — CC0 1.0 — Wikimedia Commons",
+      "description": "卡车平板上的捆扎钢卷，背景为工程机械。框选可见钢卷主体；人工教学标注，非模型识别结果。",
+      "boxes": [
+        {
+          "id": "steel-coil-1",
+          "label": "钢卷",
+          "box": [
+            0.25,
+            0.132,
+            0.511,
+            0.628
+          ]
+        }
+      ],
+      "points": [],
+      "ocr": [],
+      "width": 4000,
+      "height": 3000,
+      "rawWidth": 4000,
+      "rawHeight": 3000,
+      "exifOrientation": 1,
+      "sha256": "4fbcf434b62e85650a90bf9c6cf7cff97a1e97b54c350e7457ff105cd922f42a",
+      "changes": "None; original downloaded bytes preserved."
+    },
+    {
+      "id": "materials-steel-rail",
+      "file": "steel-coils-rail.jpg",
+      "title": "工业原材料：铁路货场钢卷",
+      "category": "materials",
+      "source": "https://commons.wikimedia.org/wiki/File:Rolled_coils_in_Tornio_Sep2008.jpg",
+      "author": "Methem (Mikko J. Putkonen)",
+      "license": "Public domain (PD-self)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Rolled_coils_in_Tornio_Sep2008.jpg#Licensing",
+      "attribution": "Rolled coils in Tornio Sep2008.jpg — Methem (Mikko J. Putkonen) — Public domain (PD-self) — Wikimedia Commons",
+      "description": "芬兰托尔尼奥铁路货场中的钢卷。仅框选两件主体清晰的钢卷，画面左侧截断钢卷未标注；人工教学标注，非模型识别结果。",
+      "boxes": [
+        {
+          "id": "steel-coil-1",
+          "label": "钢卷",
+          "box": [
+            0.467,
+            0.151,
+            0.356,
+            0.443
+          ]
+        },
+        {
+          "id": "steel-coil-2",
+          "label": "钢卷",
+          "box": [
+            0.195,
+            0.23,
+            0.239,
+            0.274
+          ]
+        }
+      ],
+      "points": [],
+      "ocr": [],
+      "width": 1521,
+      "height": 1009,
+      "rawWidth": 1521,
+      "rawHeight": 1009,
+      "exifOrientation": 1,
+      "sha256": "fbb363f3a8b953af10063cfa88443589c14e28efcbabf0747f40147ca3819c1a",
+      "changes": "None; original downloaded bytes preserved."
     }
   ],
   "notes": "Original image bytes. Coordinates use displayed EXIF orientation. OCR includes only manually readable excerpts, not exhaustive transcription. Annotations are illustrative human-reviewed candidates, not validation ground truth. No external page instructions were followed."
