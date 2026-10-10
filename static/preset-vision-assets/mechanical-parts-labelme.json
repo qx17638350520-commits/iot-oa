@@ -1,0 +1,206 @@
+{
+  "version": "5.5.0",
+  "flags": {
+    "fixed_teaching_sample": true
+  },
+  "shapes": [
+    {
+      "label": "滚动轴承",
+      "points": [
+        [
+          80,
+          139
+        ],
+        [
+          270,
+          329
+        ]
+      ],
+      "group_id": "bearing",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "bearing",
+      "parent_id": null
+    },
+    {
+      "label": "阶梯轴",
+      "points": [
+        [
+          352,
+          186
+        ],
+        [
+          667,
+          282
+        ]
+      ],
+      "group_id": "shaft",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "shaft",
+      "parent_id": null
+    },
+    {
+      "label": "平键",
+      "points": [
+        [
+          395,
+          323
+        ],
+        [
+          576,
+          360
+        ]
+      ],
+      "group_id": "key",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "key",
+      "parent_id": null
+    },
+    {
+      "label": "轴承中心",
+      "points": [
+        [
+          175,
+          234
+        ]
+      ],
+      "group_id": "bearing",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "bearing-center",
+      "parent_id": "bearing"
+    },
+    {
+      "label": "轴端中心",
+      "points": [
+        [
+          662,
+          234
+        ]
+      ],
+      "group_id": "shaft",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "shaft-center",
+      "parent_id": "shaft"
+    },
+    {
+      "label": "键端点",
+      "points": [
+        [
+          413,
+          341
+        ]
+      ],
+      "group_id": "key",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "key-end",
+      "parent_id": "key"
+    }
+  ],
+  "imagePath": "mechanical-parts.svg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 800,
+  "labels": [
+    {
+      "id": 0,
+      "name": "工业对象",
+      "parent": null
+    },
+    {
+      "id": 1,
+      "name": "设备",
+      "parent": 0
+    },
+    {
+      "id": 2,
+      "name": "传感与仪表",
+      "parent": 1
+    },
+    {
+      "id": 3,
+      "name": "工具",
+      "parent": 0
+    },
+    {
+      "id": 4,
+      "name": "电气元件",
+      "parent": 0
+    },
+    {
+      "id": 5,
+      "name": "关键点",
+      "parent": 0
+    },
+    {
+      "id": 6,
+      "name": "机械零部件",
+      "parent": 0
+    },
+    {
+      "id": 7,
+      "name": "工业原材料",
+      "parent": 0
+    },
+    {
+      "id": 8,
+      "name": "管道接口",
+      "parent": 0
+    },
+    {
+      "id": 10,
+      "name": "滚动轴承",
+      "parent": 6
+    },
+    {
+      "id": 11,
+      "name": "阶梯轴",
+      "parent": 6
+    },
+    {
+      "id": 12,
+      "name": "平键",
+      "parent": 6
+    },
+    {
+      "id": 20,
+      "name": "轴承中心",
+      "parent": 5
+    },
+    {
+      "id": 21,
+      "name": "轴端中心",
+      "parent": 5
+    },
+    {
+      "id": 22,
+      "name": "键端点",
+      "parent": 5
+    }
+  ],
+  "provenance": {
+    "source": "original_vector_teaching_fixture",
+    "author": "platform_preset",
+    "fixedSample": true,
+    "modelExecuted": false,
+    "trainingExecuted": false,
+    "networkUsed": false,
+    "coordinates": "SVG viewBox pixels; origin top-left; x right; y down"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "version": "5.5.0",
+  "flags": {
+    "fixed_teaching_sample": true
+  },
+  "shapes": [
+    {
+      "label": "钢板叠料",
+      "points": [
+        [
+          72,
+          158
+        ],
+        [
+          347,
+          330
+        ]
+      ],
+      "group_id": "steel",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "steel",
+      "parent_id": null
+    },
+    {
+      "label": "铜锭",
+      "points": [
+        [
+          424,
+          192
+        ],
+        [
+          708,
+          310
+        ]
+      ],
+      "group_id": "copper",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "copper",
+      "parent_id": null
+    },
+    {
+      "label": "钢板角点",
+      "points": [
+        [
+          77,
+          240
+        ]
+      ],
+      "group_id": "steel",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "steel-corner",
+      "parent_id": "steel"
+    },
+    {
+      "label": "铜锭角点",
+      "points": [
+        [
+          475,
+          197
+        ]
+      ],
+      "group_id": "copper",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "copper-corner",
+      "parent_id": "copper"
+    }
+  ],
+  "imagePath": "industrial-materials.svg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 800,
+  "labels": [
+    {
+      "id": 0,
+      "name": "工业对象",
+      "parent": null
+    },
+    {
+      "id": 1,
+      "name": "设备",
+      "parent": 0
+    },
+    {
+      "id": 2,
+      "name": "传感与仪表",
+      "parent": 1
+    },
+    {
+      "id": 3,
+      "name": "工具",
+      "parent": 0
+    },
+    {
+      "id": 4,
+      "name": "电气元件",
+      "parent": 0
+    },
+    {
+      "id": 5,
+      "name": "关键点",
+      "parent": 0
+    },
+    {
+      "id": 6,
+      "name": "机械零部件",
+      "parent": 0
+    },
+    {
+      "id": 7,
+      "name": "工业原材料",
+      "parent": 0
+    },
+    {
+      "id": 8,
+      "name": "管道接口",
+      "parent": 0
+    },
+    {
+      "id": 10,
+      "name": "钢板叠料",
+      "parent": 7
+    },
+    {
+      "id": 11,
+      "name": "铜锭",
+      "parent": 7
+    },
+    {
+      "id": 20,
+      "name": "钢板角点",
+      "parent": 5
+    },
+    {
+      "id": 21,
+      "name": "铜锭角点",
+      "parent": 5
+    }
+  ],
+  "provenance": {
+    "source": "original_vector_teaching_fixture",
+    "author": "platform_preset",
+    "fixedSample": true,
+    "modelExecuted": false,
+    "trainingExecuted": false,
+    "networkUsed": false,
+    "coordinates": "SVG viewBox pixels; origin top-left; x right; y down"
+  }
+}

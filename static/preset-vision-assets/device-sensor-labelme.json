@@ -1,0 +1,260 @@
+{
+  "version": "5.5.0",
+  "flags": {
+    "fixed_teaching_sample": true
+  },
+  "shapes": [
+    {
+      "label": "泵总成",
+      "points": [
+        [
+          95,
+          60
+        ],
+        [
+          615,
+          345
+        ]
+      ],
+      "group_id": "assembly",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "assembly",
+      "parent_id": null
+    },
+    {
+      "label": "离心泵",
+      "points": [
+        [
+          215,
+          175
+        ],
+        [
+          370,
+          330
+        ]
+      ],
+      "group_id": "assembly",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "pump",
+      "parent_id": "assembly"
+    },
+    {
+      "label": "电动机",
+      "points": [
+        [
+          415,
+          190
+        ],
+        [
+          605,
+          330
+        ]
+      ],
+      "group_id": "assembly",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "motor",
+      "parent_id": "assembly"
+    },
+    {
+      "label": "压力表",
+      "points": [
+        [
+          257,
+          73
+        ],
+        [
+          333,
+          149
+        ]
+      ],
+      "group_id": "assembly",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "gauge",
+      "parent_id": "assembly"
+    },
+    {
+      "label": "温度传感器",
+      "points": [
+        [
+          636,
+          155
+        ],
+        [
+          691,
+          309
+        ]
+      ],
+      "group_id": "sensor",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "sensor",
+      "parent_id": null
+    },
+    {
+      "label": "泵连接端口",
+      "points": [
+        [
+          215,
+          181
+        ],
+        [
+          239,
+          208
+        ]
+      ],
+      "group_id": "pump",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "port",
+      "parent_id": "pump"
+    },
+    {
+      "label": "连接端口",
+      "points": [
+        [
+          222,
+          195
+        ]
+      ],
+      "group_id": "port",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "pump-port",
+      "parent_id": "port"
+    },
+    {
+      "label": "表盘中心",
+      "points": [
+        [
+          295,
+          111
+        ]
+      ],
+      "group_id": "gauge",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "gauge-center",
+      "parent_id": "gauge"
+    }
+  ],
+  "imagePath": "device-sensor.svg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 800,
+  "labels": [
+    {
+      "id": 0,
+      "name": "工业对象",
+      "parent": null
+    },
+    {
+      "id": 1,
+      "name": "设备",
+      "parent": 0
+    },
+    {
+      "id": 2,
+      "name": "传感与仪表",
+      "parent": 1
+    },
+    {
+      "id": 3,
+      "name": "工具",
+      "parent": 0
+    },
+    {
+      "id": 4,
+      "name": "电气元件",
+      "parent": 0
+    },
+    {
+      "id": 5,
+      "name": "关键点",
+      "parent": 0
+    },
+    {
+      "id": 6,
+      "name": "机械零部件",
+      "parent": 0
+    },
+    {
+      "id": 7,
+      "name": "工业原材料",
+      "parent": 0
+    },
+    {
+      "id": 8,
+      "name": "管道接口",
+      "parent": 0
+    },
+    {
+      "id": 10,
+      "name": "泵总成",
+      "parent": 1
+    },
+    {
+      "id": 11,
+      "name": "离心泵",
+      "parent": 1
+    },
+    {
+      "id": 12,
+      "name": "电动机",
+      "parent": 1
+    },
+    {
+      "id": 13,
+      "name": "压力表",
+      "parent": 2
+    },
+    {
+      "id": 14,
+      "name": "温度传感器",
+      "parent": 2
+    },
+    {
+      "id": 15,
+      "name": "泵连接端口",
+      "parent": 1
+    },
+    {
+      "id": 20,
+      "name": "连接端口",
+      "parent": 5
+    },
+    {
+      "id": 21,
+      "name": "表盘中心",
+      "parent": 5
+    }
+  ],
+  "provenance": {
+    "source": "original_vector_teaching_fixture",
+    "author": "platform_preset",
+    "fixedSample": true,
+    "modelExecuted": false,
+    "trainingExecuted": false,
+    "networkUsed": false,
+    "coordinates": "SVG viewBox pixels; origin top-left; x right; y down"
+  }
+}

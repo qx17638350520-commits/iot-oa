@@ -1,0 +1,29 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path');
+const source=fs.readFileSync(path.join(__dirname,'static/preset-vision.js'),'utf8');
+const storage=new Map(),intervals=new Map(),timeouts=new Map(),blobs=new Map(),downloads=[];let id=0,network=0;
+const fail=()=>{network++;throw Error('Engine or network must not be invoked');};
+const box={innerHTML:'',onclick:null};
+const w={PresetDemo:{storageKey:k=>'isolated:test:'+k},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},fetch:fail,tf:{loadLayersModel:fail},navigator:{mediaDevices:{getUserMedia:fail}}};
+const ctx={window:w,console,Blob,Map,URL:{createObjectURL:b=>{const key='blob:'+ ++id;blobs.set(key,b);return key;},revokeObjectURL:key=>blobs.delete(key)},document:{createElement:t=>({click(){downloads.push({name:this.download,blob:blobs.get(this.href)});}})},setInterval:f=>{intervals.set(++id,f);return id;},clearInterval:i=>intervals.delete(i),setTimeout:f=>{timeouts.set(++id,f);return id;},clearTimeout:i=>timeouts.delete(i)};
+vm.runInNewContext(source,ctx);const api=w.PresetVision;
+const click=d=>box.onclick({target:{closest:()=>({dataset:d})}});
+const json=async()=>JSON.parse(await downloads.at(-1).blob.text());
+const out=path.join(__dirname,'static/preset-vision-assets');
+async function main(){
+ api.render(box,'annotation','iot');assert.match(box.innerHTML,/工业视觉标注/);
+ const labels=['离心泵','开口扳手','断路器','滚动轴承','钢板叠料','法兰接口'];
+ for(const [i,tab] of ['device','tools','electrical','mechanical','materials','pipes'].entries()){
+  click({tab});assert.match(box.innerHTML,new RegExp(labels[i]));click({action:'next'});assert.match(box.innerHTML,/当前步骤 2 \/ 4/);click({action:'next'});click({action:'export'});const d=await json();assert.equal(d.imageWidth,800);assert.equal(d.imageHeight,480);assert.equal(d.provenance.modelExecuted,false);assert(d.shapes.some(s=>s.shape_type==='point'&&s.parent_id));assert(d.shapes.some(s=>s.label===labels[i]));assert(d.labels.some(l=>l.parent===1));
+  if(tab==='device'){const children=d.shapes.filter(s=>s.shape_type==='rectangle'&&s.parent_id);assert(children.length>=3);for(const c of children){const p=d.shapes.find(s=>s.object_id===c.parent_id);assert(p&&p.shape_type==='rectangle');assert(c.points[0][0]>=p.points[0][0]&&c.points[0][1]>=p.points[0][1]&&c.points[1][0]<=p.points[1][0]&&c.points[1][1]<=p.points[1][1]);}assert.match(box.innerHTML,/对象层级/);assert.match(box.innerHTML,/parent_id: assembly/);}
+  for(const shape of d.shapes)for(const [x,y] of shape.points){assert(x>=0&&x<=800&&y>=0&&y<=480);}
+  click({action:'image'});const img=await downloads.at(-1).blob.text();assert.match(img,/<svg/);if(process.argv.includes('--assets')){fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,downloads.at(-1).name),img);fs.writeFileSync(path.join(out,d.imagePath.replace('.svg','-labelme.json')),JSON.stringify(d,null,2));}
+ }
+ api.stop();assert.equal(box.onclick,null);assert.equal(timeouts.size,0);assert.equal(blobs.size,0);
+ api.render(box,'multimodal','iot');for(const sample of ['drawing','plate','safety','rotated']){click({sample});click({action:'export'});const d=await json();assert.equal(d.sample,sample);assert(d.regions.every(r=>r.polygon.length===4));if(sample==='rotated')assert(d.regions.some(r=>r.angle===90));click({action:'image'});if(process.argv.includes('--assets'))fs.writeFileSync(path.join(out,`ocr-${sample}.svg`),await downloads.at(-1).blob.text());}
+ click({tab:'gauge'});assert.match(box.innerHTML,/固定读数：0.60 MPa/);click({action:'export'});const g=await json();assert.equal(g.unit,'MPa');assert.equal(g.reading,0.6);assert.equal(g.automaticReading,false);assert.equal((g.pointer.angleDegreesFromPositiveX+180)/180,g.reading);click({action:'image'});assert.match(await downloads.at(-1).blob.text(),/443.26 166.85/);if(process.argv.includes('--assets'))fs.writeFileSync(path.join(out,'pressure-gauge.svg'),await downloads.at(-1).blob.text());
+ for(const tab of ['gesture','segmentation','generation','onnx']){click({tab});assert(box.innerHTML.includes('data-tab="'+tab+'"'));click({action:'next'});click({action:'export'});const d=await json();assert(d.schema.includes(tab==='gesture'?'geometry':tab==='generation'?'vector':tab==='segmentation'?'segmentation':'onnx'));if(tab==='generation'){assert.match(box.innerHTML,/GAN 概念流程/);assert.match(box.innerHTML,/生成器 G/);assert.match(box.innerHTML,/判别器 D/);assert.equal(d.ganConcept.executed,false);assert.equal(d.generationExecuted,false);}
+ if(tab==='onnx'){assert.equal(d.conversion.parserExecuted,false);assert.equal(d.conversion.converterExecuted,false);assert.equal(d.deployment.status,'not_deployed');}if(tab==='segmentation')assert(d.instances.every(x=>x.path.startsWith('M ')));if(tab==='generation'&&process.argv.includes('--assets'))for(let i=0;i<4;i++){click({action:'restart'});for(let n=0;n<i;n++)click({action:'next'});click({action:'image'});fs.writeFileSync(path.join(out,downloads.at(-1).name),await downloads.at(-1).blob.text());}}
+ click({tab:'gesture'});click({action:'play'});assert.equal(intervals.size,1);[...intervals.values()][0]();assert.match(box.innerHTML,/正在播放步骤 2 \/ 4/);click({action:'play'});assert.equal(intervals.size,0);click({action:'next'});api.stop();api.render(box,'multimodal','iot');assert.match(box.innerHTML,/当前步骤 3 \/ 4/);assert.match(box.innerHTML,/张口/);click({action:'play'});api.stop();assert.equal(intervals.size,0);assert.equal(timeouts.size,0);assert.equal(box.onclick,null);assert.equal(network,0);assert([...storage.keys()].every(k=>k.startsWith('isolated:test:')));
+ console.log('PASS: 6 annotation categories, 6 multimodal tabs (including gauge and GAN concept flow), 4 OCR samples, exports, SVGs, state, replay, pause and stop; zero engine/network invocation.');
+}
+main().catch(e=>{console.error(e);process.exitCode=1;});

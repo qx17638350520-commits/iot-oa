@@ -28,7 +28,7 @@ const click=(el,attr,val)=>{const found=el.listeners.filter(x=>x.attr===attr&&x.
    for(const sample of ['sensor','gauge','document','warehouse']){click(el,'data-sample',sample);assert(el.innerHTML.includes('SAMPLE'));assert(el.innerHTML.includes('固定'));}
   }
  }
- const el=container();await api.render(el,'transfer','iot');click(el,'data-step','2');assert(el.innerHTML.includes('不绘制或补造 epoch 曲线'));click(el,'data-step','3');assert(el.innerHTML.includes('50.00%'));
+ const el=container();await api.render(el,'transfer','iot');assert(el.innerHTML.includes('MobileNetV2'));assert(el.innerHTML.includes('Dense 32'));for(const shape of ['shape-red','shape-green','shape-blue']){click(el,'data-prediction',shape);assert.equal(JSON.parse(store.get('demo:isolated:replay_transfer')).predictionSample,shape);assert(el.innerHTML.includes('固定教学映射，未执行模型预测'));}click(el,'data-step','2');assert(el.innerHTML.includes('不绘制或补造 epoch 曲线'));click(el,'data-step','3');assert(el.innerHTML.includes('50.00%'));
  await api.render(el,'trainingReplay','iot');click(el,'data-step','2');assert(el.innerHTML.includes('polyline'));click(el,'data-step','3');assert(el.innerHTML.includes('内容退化'));
  await api.render(el,'neural','iot');click(el,'data-action','restart');click(el,'data-action','play');for(let i=0;i<3;i++){const fn=[...intervals.values()][0];assert(fn);fn();}assert.equal(intervals.size,0);assert(el.innerHTML.includes('步骤 4 / 4'));
  store.set('demo:isolated:replay_transfer','garbage');await api.render(el,'transfer','iot');assert(el.innerHTML.includes('步骤 1 / 4'));

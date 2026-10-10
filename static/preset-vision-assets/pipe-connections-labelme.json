@@ -1,0 +1,206 @@
+{
+  "version": "5.5.0",
+  "flags": {
+    "fixed_teaching_sample": true
+  },
+  "shapes": [
+    {
+      "label": "法兰接口",
+      "points": [
+        [
+          90,
+          142
+        ],
+        [
+          246,
+          336
+        ]
+      ],
+      "group_id": "flange",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "flange",
+      "parent_id": null
+    },
+    {
+      "label": "弯头接口",
+      "points": [
+        [
+          320,
+          116
+        ],
+        [
+          499,
+          317
+        ]
+      ],
+      "group_id": "elbow",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "elbow",
+      "parent_id": null
+    },
+    {
+      "label": "三通接口",
+      "points": [
+        [
+          522,
+          123
+        ],
+        [
+          753,
+          278
+        ]
+      ],
+      "group_id": "tee",
+      "shape_type": "rectangle",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "tee",
+      "parent_id": null
+    },
+    {
+      "label": "法兰中心",
+      "points": [
+        [
+          168,
+          239
+        ]
+      ],
+      "group_id": "flange",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "flange-center",
+      "parent_id": "flange"
+    },
+    {
+      "label": "弯头入口中心",
+      "points": [
+        [
+          356,
+          152
+        ]
+      ],
+      "group_id": "elbow",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "elbow-in",
+      "parent_id": "elbow"
+    },
+    {
+      "label": "支管入口中心",
+      "points": [
+        [
+          638,
+          159
+        ]
+      ],
+      "group_id": "tee",
+      "shape_type": "point",
+      "flags": {
+        "fixed_sample": true
+      },
+      "object_id": "tee-branch",
+      "parent_id": "tee"
+    }
+  ],
+  "imagePath": "pipe-connections.svg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 800,
+  "labels": [
+    {
+      "id": 0,
+      "name": "工业对象",
+      "parent": null
+    },
+    {
+      "id": 1,
+      "name": "设备",
+      "parent": 0
+    },
+    {
+      "id": 2,
+      "name": "传感与仪表",
+      "parent": 1
+    },
+    {
+      "id": 3,
+      "name": "工具",
+      "parent": 0
+    },
+    {
+      "id": 4,
+      "name": "电气元件",
+      "parent": 0
+    },
+    {
+      "id": 5,
+      "name": "关键点",
+      "parent": 0
+    },
+    {
+      "id": 6,
+      "name": "机械零部件",
+      "parent": 0
+    },
+    {
+      "id": 7,
+      "name": "工业原材料",
+      "parent": 0
+    },
+    {
+      "id": 8,
+      "name": "管道接口",
+      "parent": 0
+    },
+    {
+      "id": 10,
+      "name": "法兰接口",
+      "parent": 8
+    },
+    {
+      "id": 11,
+      "name": "弯头接口",
+      "parent": 8
+    },
+    {
+      "id": 12,
+      "name": "三通接口",
+      "parent": 8
+    },
+    {
+      "id": 20,
+      "name": "法兰中心",
+      "parent": 5
+    },
+    {
+      "id": 21,
+      "name": "弯头入口中心",
+      "parent": 5
+    },
+    {
+      "id": 22,
+      "name": "支管入口中心",
+      "parent": 5
+    }
+  ],
+  "provenance": {
+    "source": "original_vector_teaching_fixture",
+    "author": "platform_preset",
+    "fixedSample": true,
+    "modelExecuted": false,
+    "trainingExecuted": false,
+    "networkUsed": false,
+    "coordinates": "SVG viewBox pixels; origin top-left; x right; y down"
+  }
+}
