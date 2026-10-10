@@ -1,0 +1,145 @@
+PASS: 33 core assertions covering immutable transactions, inventory conservation, reservations, capacity, repeated actions, five alarms, recovery, signing and report snapshots.
+PASS: initializing examples preserves existing calendar and other workspace records.
+PASS: real rendered logistics handlers with explicit mock DOM: sample initialization, planning, inventory debit, alarm injection/recovery, signing, failed save rollback/retry, eight routes and export. Not browser rendering QA.
+PASS: JSONL validation, duplicate handling, rule extraction, provenance, extraction deduplication, 42 unique questions / six types.
+PASS: all sample question schemas, exact/multiple/truefalse/fill grading, pending manual grading, invalid answer rejection.
+PASS: reproducible train/validation partition, no overlapping samples, backup format/type/unknown-key validation.
+PASS: malformed exam/result/student/triple backups rejected; normalized question values retained.
+PASS: 3 scene presets and strict restore; 6 courses/18 lessons/6 experiments; MQTT matching edge cases; normalized learning/experiment backup.
+PASS: hosted browser-local adapter save/load roundtrip, endpoint normalization, and zero remote API calls.
+PASS: 137 pure assignment, time-window, weighted/compound, custom-rubric, backup, and 42-seed compatibility assertions.
+PASS: 220 total assertions, including local-profile visibility and resume binding, deadline submit, failed-save recovery, per-criterion grading persistence, assignment edit, structured editor/import and escaped markup.
+PASS: legacy roster migration, stable class/student references, source immutability, multi-class backup roundtrip, unknown class and duplicate ID rejection.
+PASS: full backup preserves local assignments/time windows, student/class snapshots, structured subquestions, custom rubric scores, and recomputed totals.
+PASS: same normalized key serializes writes until the prior response is parsed
+PASS: each write snapshots nested JSON at invocation, including queued writes
+PASS: a read waits for all earlier writes to its normalized key
+PASS: independent keys can write and read while another key is blocked
+PASS: network rejection propagates but does not poison the next queued write
+PASS: HTTP and response-JSON failures reach the caller and release the queue
+PASS: a failed write does not permanently prevent subsequent reads
+PASS: file and hosted-local modes retain localStorage keys and JSON behavior
+PASS: localStorage failure propagates and a later retry can save
+PASS: Knowledge keeps newer edits dirty when an older save finishes and flushes them on stop
+10/10 persistence regression tests passed (real api, gated fetch, mocked localStorage).
+PASS: 218 learning, experiment, topic matching, content integrity, and restore-normalization assertions.
+PASS: mocked-DOM async lifecycle, exit-before-debounce flush, awaited persistence, read-only report reopening, edit invalidation, and saved note/report verification.
+PASS: 225 total assertions. No browser/UI rendering verification is claimed.
+PASS: annotation lifecycle logic with mocked DOM (not browser QA): immediate save-on-leave, timer cancellation, stale result rejection, failed-save recovery, synthetic-output integration flow, review persistence, inference-error annotation retention.
+PASS presets expose distinct sensor units and required controls
+PASS all sampling stays within each component range at bounded environmental extremes
+PASS power, current and energy use kW/A/kWh consistently and integrate actual sample interval
+PASS lamp and curtains affect illumination while humidity and temperature remain separate
+PASS binary door/magnetic/alarm controls and curtain position return correct states
+PASS fingerprint is demo allow/deny and never claims or stores biometric data
+PASS legacy scenes keep control settings and archive lux readings with their correct unit
+PASS strict import rejects malformed new sensor/control/authorization data
+PASS integer-cents basket computes count plus weighed grams, net weight and rounding
+PASS insufficient balance or tender fails atomically with basket and receipts intact
+PASS cash receipt preserves purchased lines, exact totals/change and unchanged balance
+PASS balance purchase deducts correct amount; strict roundtrip includes unfinished cart and receipts
+PASS home real handlers update overlays, control snapshots and persist authorization across exit
+PASS building gas scenario triggers local alarm output, records acknowledgement and keeps gas distinct from smoke
+PASS shop UI adds weighed items, rejects insufficient balance, completes cash and autosaves actual receipt
+PASS switching scene templates preserves unfinished basket and previous purchases
+PASS complete-workspace backup validates and preserves control snapshots and checkout data
+17/17 twin demo tests passed (domain logic + mocked DOM/API integration).
+PASS navigation persists real unsaved scene/device edits and restores them on reentry
+PASS stop cancels simulation immediately and waits for persisted generated samples
+PASS failed navigation keeps edited state and a usable canvas; retry saves and navigates
+PASS concurrent stop requests await one write and later stops do not duplicate it
+PASS unused and unchanged modules stop without any persistence writes
+PASS a stopped initial async load cannot remount its old screen
+PASS an older load completing after reentry cannot overwrite the newer scene
+PASS a failed initial read never autosaves a replacement and can be retried
+8/8 digital-twin lifecycle tests passed (mock DOM/Canvas, real module/navigation).
+PASS: real 80-class map; clipping and filtering; invalid output rejection; reviewed/manual retention; repeated import; metadata; parent repair; SRI and all model shards.
+✔ CSV handles BOM, quoted commas, double quotes, CRLF and multiline values (2.482525ms)
+✔ CSV exports neutralize formula prefixes and preserve quoted text (0.325789ms)
+✔ shopping validation is strict and rejects partial imports (1.204688ms)
+✔ shopping totals, unique order counts and filters derive from records (6.543959ms)
+✔ drone plans enforce fence, payload, altitude and return reserve (0.56592ms)
+✔ drone advances deterministic segments and returns, emergency landing is distinct (1.667522ms)
+✔ topology detects gateway, duplicate addresses and serial protocol mismatches (0.761613ms)
+✔ MQTT teaching topology validates interface, identity and topic isolation (0.366089ms)
+✔ RFID identifies expected EPC, blocks duplicate receipt and records unknowns (0.392049ms)
+✔ neural CSV validates dimensions, finite values, class counts and minimum records (3.618149ms)
+✔ stratified split is deterministic and keeps test samples out of normalization (2.113281ms)
+✔ softmax is finite, normalized and numerically stable for large logits (0.208803ms)
+✔ gradient update matches finite difference derivative through tanh and softmax (0.586449ms)
+✔ actual training lowers loss and produces predictions and correct confusion totals (33.080666ms)
+✔ same seed and data reproduce exact training weights (10.420806ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 71.309639
+PASS: wiring completeness/mismatched signals/duplicate connections; RFID authentication, memory writes, read-only bands, reversible protection and deterministic shared-slot collision.
+PASS: real MQTT binary packet encoding/parsing, fragmented and concatenated frames, QoS1 identifiers, invalid topics/lengths, JSON type/range checks and actual local rule evaluation. No real Broker connection tested.
+PASS: class/config validation, deterministic disjoint stratified split, insufficient-class rejection, probabilities/confusion/recall, pixel deduplication, corrupt workspace rejection.
+PASS: real transfer UI handlers under explicit mock DOM: controls, insufficient data, class escaping/duplicates, config rollback, repeated-click guard, pending-save navigation, save failure/retry/export, stale reads, corrupt-load recovery. Not browser UI QA.
+
+============================
+Hi, looks like you are running TensorFlow.js in Node.js. To speed things up dramatically, install our node backend, visit https://github.com/tensorflow/tfjs-node for more details. 
+============================
+{
+  "status": "passed_real_pretrained_embeddings_and_gradient_training",
+  "initialLoss": 1.2144393920898438,
+  "finalLoss": 0.4773550033569336,
+  "heldOut": {
+    "accuracy": 0.5,
+    "loss": 1.195233176266222,
+    "total": 6,
+    "correct": 3,
+    "confusion": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "perClass": [
+      {
+        "support": 2,
+        "precision": 0,
+        "recall": 0
+      },
+      {
+        "support": 2,
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      {
+        "support": 2,
+        "precision": 0.6666666666666666,
+        "recall": 1
+      }
+    ]
+  },
+  "backboneFrozen": {
+    "weightTensorsChecked": 149,
+    "allWeightHashesUnchanged": true
+  },
+  "timingMs": {
+    "load": 77,
+    "extract18Images": 25147,
+    "trainAndChecks": 1260,
+    "total": 26484
+  }
+}
+PASS: actual MobileNetV2 pretrained embeddings; actual Adam gradient training; frozen backbone; held-out metrics; export/reload equivalence; cancellation; zero leaked tensors.
+PASS completed offline training schema, raw comparison, provenance, escaping and artifact links
+PASS provenance round-trip, additive IDs, modified/custom preservation, durable backup, deletion preservation, idempotence and failed-save retry

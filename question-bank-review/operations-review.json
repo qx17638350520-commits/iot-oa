@@ -1,0 +1,1092 @@
+{
+  "artifact": "operations.json",
+  "reviewedAt": "2026-10-10T08:40:06Z",
+  "reviewType": "independent-ai-content-review",
+  "reviewedSha256": "20bc453f0c6cc4b6f56ef701e320d7dc0e55f9df7bde8914ebd2aaaf51360bf1",
+  "reviewerRole": "protocol question author independently reviewing operations batch",
+  "coverage": {
+    "reviewedQuestionCount": 80,
+    "totalQuestionCount": 80,
+    "questionIds": [
+      "iot-ext-ops-001",
+      "iot-ext-ops-002",
+      "iot-ext-ops-003",
+      "iot-ext-ops-004",
+      "iot-ext-ops-005",
+      "iot-ext-ops-006",
+      "iot-ext-ops-007",
+      "iot-ext-ops-008",
+      "iot-ext-ops-009",
+      "iot-ext-ops-010",
+      "iot-ext-ops-011",
+      "iot-ext-ops-012",
+      "iot-ext-ops-013",
+      "iot-ext-ops-014",
+      "iot-ext-ops-015",
+      "iot-ext-ops-016",
+      "iot-ext-ops-017",
+      "iot-ext-ops-018",
+      "iot-ext-ops-019",
+      "iot-ext-ops-020",
+      "iot-ext-ops-021",
+      "iot-ext-ops-022",
+      "iot-ext-ops-023",
+      "iot-ext-ops-024",
+      "iot-ext-ops-025",
+      "iot-ext-ops-026",
+      "iot-ext-ops-027",
+      "iot-ext-ops-028",
+      "iot-ext-ops-029",
+      "iot-ext-ops-030",
+      "iot-ext-ops-031",
+      "iot-ext-ops-032",
+      "iot-ext-ops-033",
+      "iot-ext-ops-034",
+      "iot-ext-ops-035",
+      "iot-ext-ops-036",
+      "iot-ext-ops-037",
+      "iot-ext-ops-038",
+      "iot-ext-ops-039",
+      "iot-ext-ops-040",
+      "iot-ext-ops-041",
+      "iot-ext-ops-042",
+      "iot-ext-ops-043",
+      "iot-ext-ops-044",
+      "iot-ext-ops-045",
+      "iot-ext-ops-046",
+      "iot-ext-ops-047",
+      "iot-ext-ops-048",
+      "iot-ext-ops-049",
+      "iot-ext-ops-050",
+      "iot-ext-ops-051",
+      "iot-ext-ops-052",
+      "iot-ext-ops-053",
+      "iot-ext-ops-054",
+      "iot-ext-ops-055",
+      "iot-ext-ops-056",
+      "iot-ext-ops-057",
+      "iot-ext-ops-058",
+      "iot-ext-ops-059",
+      "iot-ext-ops-060",
+      "iot-ext-ops-061",
+      "iot-ext-ops-062",
+      "iot-ext-ops-063",
+      "iot-ext-ops-064",
+      "iot-ext-ops-065",
+      "iot-ext-ops-066",
+      "iot-ext-ops-067",
+      "iot-ext-ops-068",
+      "iot-ext-ops-069",
+      "iot-ext-ops-070",
+      "iot-ext-ops-071",
+      "iot-ext-ops-072",
+      "iot-ext-ops-073",
+      "iot-ext-ops-074",
+      "iot-ext-ops-075",
+      "iot-ext-ops-076",
+      "iot-ext-ops-077",
+      "iot-ext-ops-078",
+      "iot-ext-ops-079",
+      "iot-ext-ops-080"
+    ],
+    "method": "逐题读取题干、选项、答案、解析与目标；对JSON/Python关键细节及安全、冷链边界核对官方资料；执行Python行为和算术复核；重新审阅最终修改题。"
+  },
+  "conclusion": "No blocking content or answer-key issue identified in the reviewed snapshot. Suitable for integration as an AI-authored draft; human subject review remains required.",
+  "humanReviewPerformed": false,
+  "externalExpertReviewPerformed": false,
+  "structuralChecks": {
+    "passed": true,
+    "typeCounts": {
+      "single": 45,
+      "multiple": 15,
+      "truefalse": 10,
+      "fill": 10
+    },
+    "uniqueIds": 80,
+    "uniqueTitles": 80,
+    "referenceIdsResolved": true
+  },
+  "focusedChecks": [
+    {
+      "area": "JSON与Python",
+      "result": "通过",
+      "details": "loads/load/dumps方向、bool是int子类、字段缺失与None、重复键互操作风险、顶层JSON标量、对象字段名语义、UTF-8和eval风险均表述正确；未把Python解析器接受扩展值误当作JSON标准允许。"
+    },
+    {
+      "area": "冷链条件与证据",
+      "result": "通过",
+      "details": "温区由物品要求决定；累计超限题已给出累计口径；空气与缓冲对象响应区别合理；既往偏离不因当前恢复而被消除，放行由负责人员按流程评估；插值明确不是原始采样证据。未宣称某温区适用于所有冷链物品。"
+    },
+    {
+      "area": "安全边界",
+      "result": "通过",
+      "details": "不绕过TLS主机名校验；不让学生带电开盖；普通删除不等于介质净化；临时访问有撤销边界；防重放机制说明需要组合与完整性保护。"
+    },
+    {
+      "area": "可计算题",
+      "result": "通过",
+      "details": "041平均修复时间40分钟、047可用率99%、048失败率2%、054分段累计20分钟，均复算正确。"
+    },
+    {
+      "area": "最终修改复核",
+      "result": "通过",
+      "details": "重新审阅001、014、031、039、061、079。新目标可辨识且不改变题型数量；031题干已与忽略大小写的填空评分约定保持一致，解析仍使用正确的Python拼写None。"
+    }
+  ],
+  "issues": [
+    {
+      "id": "OPS-R01",
+      "severity": "minor",
+      "target": "operations-references.json: ops-cdc-cold.title",
+      "status": "recommended-metadata-fix",
+      "finding": "参考标题写January 2023，链接当前PDF封面标注March 2024及March 29, 2024。",
+      "recommendation": "将标题更新为CDC Vaccine Storage and Handling Toolkit, March 2024，保留疫苗来源不可外推为通用冷链法规的scope说明。",
+      "sourceUrl": "https://www.cdc.gov/vaccines/hcp/admin/storage/toolkit/storage-handling-toolkit.pdf"
+    },
+    {
+      "id": "OPS-R02",
+      "severity": "minor",
+      "target": "iot-ext-ops-079",
+      "status": "resolved-in-reviewed-snapshot",
+      "finding": "旧题干直接给出CVE前缀后要求填写同一前缀，形成答案泄露。",
+      "resolution": "新版已改为按编号体系作用识别CVE，不再把答案放入题干。"
+    },
+    {
+      "id": "OPS-R03",
+      "severity": "minor",
+      "target": "iot-ext-ops-014 / iot-ext-ops-061",
+      "status": "resolved-in-reviewed-snapshot",
+      "finding": "旧版两题都以平均值无法证明峰值为主要考点，辨识度不足。",
+      "resolution": "014改为网关协议适配边界，061改为插值与真实采样证据区别。"
+    },
+    {
+      "id": "OPS-R04",
+      "severity": "minor",
+      "target": "iot-ext-ops-031",
+      "status": "resolved-in-reviewed-snapshot",
+      "finding": "修订中曾出现要求大小写而平台评分忽略大小写的措辞不一致。",
+      "resolution": "当前题干已删除大小写要求；正确答案保留None。"
+    }
+  ],
+  "questionResults": [
+    {
+      "id": "iot-ext-ops-001",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-002",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-003",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-004",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-005",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-006",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-007",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-008",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-009",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-010",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-011",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-012",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-013",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-014",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-015",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-016",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-017",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-018",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-019",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-020",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-021",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-022",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-023",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-024",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-025",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-026",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-027",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-028",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-029",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-030",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-031",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-032",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-033",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-034",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-035",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-036",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-037",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-038",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-039",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-040",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-041",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-042",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-043",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-044",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-045",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-046",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-047",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-048",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-049",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-050",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-051",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-052",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-053",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-054",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-055",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-056",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-057",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-058",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-059",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-060",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-061",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-062",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-063",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-064",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-065",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-066",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-067",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-068",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-069",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-070",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-071",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-072",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-073",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-074",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-075",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-076",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "distractor-uniqueness"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-077",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-078",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-079",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    },
+    {
+      "id": "iot-ext-ops-080",
+      "result": "no-substantive-issue-identified",
+      "checked": [
+        "stem-condition",
+        "answer-key",
+        "explanation",
+        "response-format"
+      ],
+      "subjectReviewStillRequired": true
+    }
+  ],
+  "verificationSources": [
+    {
+      "url": "https://docs.python.org/3/library/json.html",
+      "scope": "解析序列化、异常、重复键、null映射和输入限制"
+    },
+    {
+      "url": "https://docs.python.org/3/builtins/stdtypes.html",
+      "scope": "bool继承int及字典成员语义"
+    },
+    {
+      "url": "https://docs.python.org/3/library/time.html",
+      "scope": "单调时钟"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc8259.html",
+      "scope": "JSON语法、顶层标量、UTF-8和重复键"
+    },
+    {
+      "url": "https://www.cdc.gov/vaccines/hcp/admin/storage/toolkit/storage-handling-toolkit.pdf",
+      "scope": "温度偏离的记录与待评估原则，仅限引用相应背景，不扩展为所有冷链货物规则"
+    },
+    {
+      "url": "https://csrc.nist.gov/pubs/sp/800/88/r2/final",
+      "scope": "介质净化"
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html",
+      "scope": "多因素认证类别"
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html",
+      "scope": "TLS主机名验证"
+    }
+  ],
+  "limitations": [
+    "这是AI内容审查，不是人工专家审定。",
+    "没有在真实IoT硬件、学校网络或冷链设备上执行场景。",
+    "官方资料用于核对稳定协议和原则，并不代替具体产品说明书、现场规程或监管要求。"
+  ]
+}

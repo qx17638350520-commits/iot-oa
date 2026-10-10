@@ -1,0 +1,178 @@
+PASS: real 80-class map; clipping and filtering; invalid output rejection; reviewed/manual retention; repeated import; metadata; parent repair; SRI and all model shards.
+
+============================
+Hi, looks like you are running TensorFlow.js in Node.js. To speed things up dramatically, install our node backend, visit https://github.com/tensorflow/tfjs-node for more details. 
+============================
+{
+  "verifiedAt": "2026-10-10T08:04:41.166Z",
+  "status": "passed_nonempty_real_inference",
+  "testEnvironment": "Node v24.19.0 / vendored browser TensorFlow.js CPU backend; local filesystem-only model transport",
+  "browserInteractionTested": false,
+  "model": {
+    "name": "COCO-SSD",
+    "version": "2.2.3",
+    "base": "lite_mobilenet_v2",
+    "runtime": "TensorFlow.js 4.22.0",
+    "modelUrl": "static/vendor/vision/model.json",
+    "upstreamModelUrl": "https://storage.googleapis.com/tfjs-models/savedmodel/ssdlite_mobilenet_v2/model.json",
+    "source": "https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd",
+    "license": "Apache-2.0"
+  },
+  "runtimeVersion": "4.22.0",
+  "modelPackageVersion": "2.2.3",
+  "image": {
+    "source": null,
+    "sha256": "1cce24f13eaee954c86fa72b1b1a1708c8dcbd385ae7411ada7a2f052aa0cb1b",
+    "width": 600,
+    "height": 399
+  },
+  "threshold": 0.5,
+  "modelFileReads": 6,
+  "externalInferenceRequests": 0,
+  "loadAndWarmupMs": 1617,
+  "inferenceMs": 1662,
+  "predictions": [
+    {
+      "bbox": [
+        265.79575538635254,
+        32.589077308773994,
+        35.273051261901855,
+        34.885580867528915
+      ],
+      "class": "kite",
+      "score": 0.8526806235313416
+    },
+    {
+      "bbox": [
+        207.4376106262207,
+        150.4734437763691,
+        8.28087329864502,
+        10.529782891273499
+      ],
+      "class": "kite",
+      "score": 0.8093283772468567
+    },
+    {
+      "bbox": [
+        235.0923478603363,
+        224.31930220127106,
+        9.090399742126465,
+        12.557267546653748
+      ],
+      "class": "person",
+      "score": 0.7786223888397217
+    },
+    {
+      "bbox": [
+        49.646683037281036,
+        269.78507244586945,
+        25.183895230293274,
+        63.60896587371826
+      ],
+      "class": "person",
+      "score": 0.728995144367218
+    },
+    {
+      "bbox": [
+        123.59013855457306,
+        108.90445518493652,
+        12.337106466293335,
+        14.516187965869904
+      ],
+      "class": "kite",
+      "score": 0.6898899674415588
+    },
+    {
+      "bbox": [
+        15.75334444642067,
+        228.50835585594177,
+        9.780693054199219,
+        18.603382229804993
+      ],
+      "class": "person",
+      "score": 0.600245475769043
+    },
+    {
+      "bbox": [
+        35.41427180171013,
+        227.34958934783936,
+        10.444367676973343,
+        20.124209761619568
+      ],
+      "class": "person",
+      "score": 0.5861519575119019
+    }
+  ],
+  "normalized": [
+    {
+      "type": "rectangle",
+      "className": "kite",
+      "displayName": "风筝 / kite",
+      "x": 266,
+      "y": 33,
+      "w": 35,
+      "h": 34,
+      "confidence": 0.8526806235313416
+    },
+    {
+      "type": "rectangle",
+      "className": "kite",
+      "displayName": "风筝 / kite",
+      "x": 207,
+      "y": 150,
+      "w": 9,
+      "h": 11,
+      "confidence": 0.8093283772468567
+    },
+    {
+      "type": "rectangle",
+      "className": "person",
+      "displayName": "人 / person",
+      "x": 235,
+      "y": 224,
+      "w": 9,
+      "h": 13,
+      "confidence": 0.7786223888397217
+    },
+    {
+      "type": "rectangle",
+      "className": "person",
+      "displayName": "人 / person",
+      "x": 50,
+      "y": 270,
+      "w": 25,
+      "h": 63,
+      "confidence": 0.728995144367218
+    },
+    {
+      "type": "rectangle",
+      "className": "kite",
+      "displayName": "风筝 / kite",
+      "x": 124,
+      "y": 109,
+      "w": 12,
+      "h": 14,
+      "confidence": 0.6898899674415588
+    },
+    {
+      "type": "rectangle",
+      "className": "person",
+      "displayName": "人 / person",
+      "x": 16,
+      "y": 229,
+      "w": 10,
+      "h": 18,
+      "confidence": 0.600245475769043
+    },
+    {
+      "type": "rectangle",
+      "className": "person",
+      "displayName": "人 / person",
+      "x": 35,
+      "y": 227,
+      "w": 11,
+      "h": 20,
+      "confidence": 0.5861519575119019
+    }
+  ]
+}
