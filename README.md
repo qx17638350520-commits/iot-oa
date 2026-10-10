@@ -61,6 +61,8 @@ JSONL 导入/校验/搜索/导出；明确短句规则提取三元组；关系�
 
 ## 测试
 
+完整回归命令：`sh verify.sh`（包含下列原有测试、题库迁移、多模态、训练记录、首页及真实 CPU 迁移学习测试）。
+
     python test_server.py
     node test_logic.js
     node test_detection.cjs

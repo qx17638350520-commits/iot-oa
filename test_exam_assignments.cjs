@@ -14,7 +14,17 @@ global.window={addEventListener(){}};
 require('./static/exams.js');
 const E=window.Exams,H=E.helpers;
 const seed=require('./data/questions.json');
-equal(seed.filter(q=>!q.id.startsWith('iot-ext-')).length,42);for(const q of seed)equal(E.validateQuestion(q).id,q.id);
+// Explicit generations prevent a new supplement from being mistaken for legacy seeds.
+const originalSeed=seed.filter(q=>/^iot-q\d{3}$/.test(q.id));
+const phase1Seed=seed.filter(q=>q.id.startsWith('iot-ext-'));
+const phase2Seed=seed.filter(q=>q.id.startsWith('iot-p2-'));
+equal(originalSeed.length,42,'Original seed generation');
+equal(phase1Seed.length,238,'Phase 1 additions');
+equal(phase2Seed.length,1220,'Phase 2 additions');
+equal(seed.length,1500,'Current default bank');
+equal(originalSeed.length+phase1Seed.length+phase2Seed.length,seed.length,'Every seed belongs to a declared generation');
+equal(new Set(seed.map(q=>q.id)).size,1500,'Default IDs are unique across generations');
+for(const q of seed)equal(E.validateQuestion(q).id,q.id);
 for(const q of seed.filter(q=>['compound','custom'].includes(q.type)&&!q.items&&!q.rubric))equal(E.gradeQuestion(q,'演示作答'),{score:0,pending:true,correct:null});
 const single={id:'choice',type:'single',title:'哪一个是消息协议？',category:'通信',difficulty:'初级',points:2,options:['MQTT','LED'],answer:'A',explanation:'MQTT 是消息协议。'};
 const custom=E.validateQuestion({id:'design',type:'custom',title:'说明离线缓冲设计',points:6,answer:'说明持久化和重试边界',fields:[{id:'solution',label:'方案',kind:'multiline',required:true},{id:'capacity',label:'容量',kind:'number',required:false}],rubric:[{id:'persistence',label:'说明持久化方式',fieldId:'solution',weight:1},{id:'boundary',label:'说明容量或重试边界',weight:2}]});
