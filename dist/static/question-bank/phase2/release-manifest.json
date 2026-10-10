@@ -1,0 +1,49 @@
+{
+  "version": "2026-10-10-1500-v1",
+  "status": "frozen",
+  "primaryQuestionCount": 1500,
+  "previousPrimaryCount": 280,
+  "addedPrimaryCount": 1220,
+  "embeddedChildQuestionCount": 124,
+  "childQuestionsCountedInHeadline": false,
+  "teacherSubjectReview": "pending",
+  "aiContentReview": "completed; does not constitute teacher certification",
+  "sameIdSeedCorrections": [
+    "iot-q035"
+  ],
+  "migrationRule": "Append missing iot-p2-* IDs using the new versioned migration. Preserve user edits, deletion choices and exam snapshots. Update q035 only when complete previous default content matches.",
+  "files": {
+    "questions-phase2-increment.json": {
+      "sha256": "a7fdc3918ecc9ea451f25e78ecc24d4d14ac2be34efc44a8e38789dbced2eb84",
+      "bytes": 1215220
+    },
+    "questions-combined.json": {
+      "sha256": "a219ee9ecfd68af5075108043a6cb9c4cb138be27cc3257d001eff13d3ba70df",
+      "bytes": 1467753
+    },
+    "metadata.json": {
+      "sha256": "55969ff487118f9c2a2bece3f0f718cb5a859ee12aed5c0819f248aa2135c61c",
+      "bytes": 522395
+    },
+    "references.json": {
+      "sha256": "d893c716f82f97a65c717d6a3c691b3914f09faf115ff9a1e24937f002aaad7f",
+      "bytes": 57220
+    },
+    "seed-corrections.json": {
+      "sha256": "c7aa08a018758b81163418198cf3561e3ed4ff6b8ac311d65243601355e8fe47",
+      "bytes": 1608
+    },
+    "quality-summary.json": {
+      "sha256": "2fc45c6b4355d255f3b4e3edf7d77b7f057c430328e5f098731aec859757c7c3",
+      "bytes": 2970
+    },
+    "validation-report.json": {
+      "sha256": "bf9a4d198014e40d81886b16f4158c7093e4ba47744025c1ef5138f36f6af3e3",
+      "bytes": 2299
+    },
+    "validate_question_bank.cjs": {
+      "sha256": "917e57905335fc1cc02dda124474e394160845b18d152ef5d0fbda1680b5da08",
+      "bytes": 3430
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "中文物联网与物流教学练习题库质量说明",
+  "version": "2026-10-10",
+  "primaryQuestionCount": 1500,
+  "countingRule": "每道组合题计1道，组合内小题不另计主问题数量。",
+  "targetPrimaryQuestionCount": 1500,
+  "remainingToTarget": 0,
+  "questionTypes": {
+    "single": 1015,
+    "multiple": 200,
+    "truefalse": 124,
+    "fill": 109,
+    "compound": 50,
+    "custom": 2
+  },
+  "difficultyLabels": {
+    "初级": 204,
+    "中级": 1058,
+    "高级": 238
+  },
+  "contentStatus": "原创教学练习草稿；已完成自动校验及AI内容复核，尚未经教师/学科专家审定或真实学生试测。",
+  "automatedChecks": [
+    "真实应用题目结构验证",
+    "客观题正确/错误答案评分",
+    "填空可接受答案检查",
+    "组合题自动与人工评分边界",
+    "题目ID及规范化题干重复检查",
+    "仅数字变化的题干筛查",
+    "来源标识与内容哈希核对"
+  ],
+  "reviewNotes": [
+    "发现的明确重复测点已改为不同学习目标；相近知识簇仍需在组卷时避免过度集中。",
+    "原始q035仅为q015更换ADC位数，已修订为芯片勘误文档学习目标，保留题目ID。",
+    "难度为教学设计标签，并非实测难度或区分度。",
+    "AI复核和机器校验不能替代教师审核。"
+  ],
+  "safetyBoundaries": [
+    "操作情境限于批准的低压、模拟或隔离教学环境；不安排学生进行市电接线、带电拆修或旁路保护。",
+    "冷链规则按题设或具体对象要求解释，不宣称统一温区或自动认定货品可用。",
+    "样例记录和业务事件为教学构造，不是实际设备采集或真实业务证明。"
+  ],
+  "teacherReviewPlan": [
+    "按学科逐题核对答案、条件、干扰项、填空等价表达与来源适用范围。",
+    "由另一位审核者复核安全题、高级题、组合量规及首轮有修改的题。",
+    "记录题目ID、内容哈希、审核日期、结论与修订理由。",
+    "开展小规模试测，校准可读性、难度、区分度和答题时间。"
+  ],
+  "dataProtection": "题库更新仅追加新ID；旧q035更正只匹配未修改的默认内容，不覆盖用户编辑、删除选择或考试题目快照。",
+  "files": {
+    "references.json": "d893c716f82f97a65c717d6a3c691b3914f09faf115ff9a1e24937f002aaad7f",
+    "questions-phase2-increment.json": "a7fdc3918ecc9ea451f25e78ecc24d4d14ac2be34efc44a8e38789dbced2eb84",
+    "questions-combined.json": "a219ee9ecfd68af5075108043a6cb9c4cb138be27cc3257d001eff13d3ba70df",
+    "seed-corrections.json": "c7aa08a018758b81163418198cf3561e3ed4ff6b8ac311d65243601355e8fe47"
+  },
+  "automatedAssertionCount": 9188,
+  "embeddedChildQuestionCount": 124,
+  "engineCompatibility": "在IoT与物流两套当前判题引擎上均通过同一完整题库验证。",
+  "referenceEntryCount": 185,
+  "uniqueReferenceURLCount": 168,
+  "metadataRecordCount": 1459
+}
